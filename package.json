@@ -1,0 +1,16 @@
+{
+  "name": "emojigotchi-emojis",
+  "version": "0.0.0",
+  "private": true,
+  "description": "emojigotchi emojis database",
+  "author": "Andreas Tietz https://github.com/dematerializer",
+  "main": "emojis.json",
+  "scripts": {
+    "start": "node scraper.js"
+  },
+  "devDependencies": {
+    "cheerio": "^0.20.0",
+    "co": "^4.6.0",
+    "node-fetch": "^1.5.3"
+  }
+}
