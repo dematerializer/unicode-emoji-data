@@ -1,8 +1,8 @@
 {
-  "name": "emojigotchi-emojis",
+  "name": "emojigotchi-data",
   "version": "0.0.0",
   "private": true,
-  "description": "emojigotchi emojis database",
+  "description": "emojigotchi emoji data",
   "author": "Andreas Tietz https://github.com/dematerializer",
   "main": "emojis.json",
   "scripts": {
