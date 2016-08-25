@@ -17,38 +17,43 @@ const parse = (text, fields) => {
 		}), {}));
 };
 
-const specs = [
-	{
+const specs = {
+	emojiData: {
 		// emoji code points
 		name: 'emoji-data',
 		url: 'http://www.unicode.org/Public/emoji/4.0/emoji-data.txt',
 		fields: ['codepoints', 'property'],
-		data: null,
-	},{
+	},
+	unicodeData: {
 		// code point names
 		name: 'unicode-data',
 		url: 'http://www.unicode.org/Public/UNIDATA/UnicodeData.txt',
 		fields: ['codepoint', 'name'],
-		data: null,
-	},{
+	},
+	emojiSequences: {
 		// combining, flag, modifier sequences
 		name: 'emoji-sequences',
 		url: 'http://www.unicode.org/Public/emoji/4.0/emoji-sequences.txt',
 		fields: ['codepoints', 'type', 'description'],
-		data: null,
-	},{
+	},
+	emojiZwjSequences: {
 		// zero-width-joiner sequences
 		name: 'emoji-zwj-sequences',
 		url: 'http://www.unicode.org/Public/emoji/4.0/emoji-zwj-sequences.txt',
 		fields: ['codepoints', 'type', 'description'],
-		data: null,
 	},
-];
+};
 
 co(function *() {
-	const results = yield specs.map(({ url }) => fetch(url));
+	const specsArray = [
+		specs.emojiData,
+		specs.unicodeData,
+		specs.emojiSequences,
+		specs.emojiZwjSequences,
+	];
+	const results = yield specsArray.map(spec => fetch(spec.url));
 	const texts = yield results.map(result => result.text());
-	const parsed = texts.map((text, i) => parse(text, specs[i].fields));
-	specs.forEach((spec, i) => spec.data = parsed[i]);
-	specs.forEach(spec => fs.writeFileSync(`./json/${spec.name}.json`, JSON.stringify(spec.data, null, 2)));
+	const parsed = texts.map((text, i) => parse(text, specsArray[i].fields));
+	specsArray.forEach((spec, i) => spec.data = parsed[i]);
+	specsArray.forEach(spec => fs.writeFileSync(`./json/${spec.name}.json`, JSON.stringify(spec.data, null, 2)));
 });
