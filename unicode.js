@@ -7,14 +7,27 @@ const parse = (text, fields) => {
 		return null;
 	}
 	return text.split('\n')
-		.map(line => line.slice(0, line.indexOf('#')).trim())
-		.filter(line => line.length > 0)
-		.map(line =>line.split(';').map(field => field.trim()))
-		.map(line => line.slice(0, fields.length + 1))
-		.map(line => fields.reduce(((obj, field, i) => {
-			obj[field] = line[i];
-			return obj;
-		}), {}));
+		.map(line => {
+			const indexOfComment = line.indexOf('#');
+			return {
+				fields: line.slice(0, indexOfComment > -1 ? indexOfComment : line.length).trim(),
+				comment: line.slice(indexOfComment, line.length).trim(),
+			};
+		})
+		.filter(line => line.fields.length > 0)
+		.map(line => ({
+			fields: line.fields.split(';').map(field => field.trim()),
+			comment: line.comment,
+		}))
+		.map(line => ({
+			fields: line.fields.slice(0, fields.length + 1),
+			comment: line.comment,
+		}))
+		// .forEach(line => console.log(line))
+		.map(line => fields.reduce(((newObj, field, i) => {
+			newObj[field] = line.fields[i];
+			return newObj;
+		}), { comment: line.comment }));
 };
 
 const specs = {
