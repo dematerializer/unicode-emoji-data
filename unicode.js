@@ -105,8 +105,9 @@ co(function *() {
 					codepoint: hexCp,
 					// codepointNumber: cp,
 					name: nameForCodepoint[hexCp],
+					emoji: String.fromCodePoint(cp),
 					// property: datum.property,
-					// comment: datum.comment,
+					comment: datum.comment,
 				}));
 			}
 		} else {
@@ -115,8 +116,9 @@ co(function *() {
 				codepoint: datum.codepoints,
 				// codepointNumber: parseInt(datum.codepoints, 16),
 				name: nameForCodepoint[datum.codepoints],
+				emoji: String.fromCodePoint(parseInt(datum.codepoints, 16)),
 				// property: datum.property,
-				// comment: datum.comment,
+				comment: datum.comment,
 			}));
 		}
 	});
