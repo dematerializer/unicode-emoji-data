@@ -12,5 +12,8 @@
     "cheerio": "^0.20.0",
     "co": "^4.6.0",
     "node-fetch": "^1.5.3"
+  },
+  "dependencies": {
+    "left-pad": "^1.1.1"
   }
 }
