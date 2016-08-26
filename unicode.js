@@ -41,17 +41,17 @@ const parse = (text, fieldNames) => {
 };
 
 const specs = {
-	emojiData: {
-		// emoji code points
-		name: 'emoji-data',
-		url: 'http://www.unicode.org/Public/emoji/4.0/emoji-data.txt',
-		fields: ['codepoints', 'property'],
-	},
 	unicodeData: {
 		// code point names
 		name: 'unicode-data',
 		url: 'http://www.unicode.org/Public/UNIDATA/UnicodeData.txt',
 		fields: ['codepoint', 'name'],
+	},
+	emojiData: {
+		// emoji code points
+		name: 'emoji-data',
+		url: 'http://www.unicode.org/Public/emoji/4.0/emoji-data.txt',
+		fields: ['codepoints', 'property'],
 	},
 	emojiSequences: {
 		// combining, flag, modifier sequences
@@ -82,7 +82,16 @@ co(function *() {
 	specsArray.forEach((spec, i) => spec.data = parsed[i]);
 	specsArray.forEach(spec => fs.writeFileSync(`./json/${spec.name}.json`, JSON.stringify(spec.data, null, 2)));
 
-	// expand, memoize and write expanded emojiData
+	// map code points to names
+	const nameForCodepoint = specs.unicodeData.data
+		.reduce((newObj, datum, i) => {
+			newObj[datum.codepoint] = datum.name;
+			return newObj;
+		}, {});
+	specs.unicodeData.data = nameForCodepoint;
+	fs.writeFileSync(`./json/unicode-data.json`, JSON.stringify(specs.unicodeData.data, null, 2));
+
+	// expand emojiData and name emoji code points
 	const expandedEmojiData = [];
 	specs.emojiData.data.forEach(datum => {
 		if (datum.codepoints.indexOf('..') > -1) {
@@ -90,11 +99,13 @@ co(function *() {
 			const lowCodepoint = codeRange[0];
 			const highCodepoint = codeRange[1];
 			for (cp = lowCodepoint; cp <= highCodepoint; cp++) {
+				const hexCp = leftPad(cp.toString(16), 4, 0).toUpperCase();
 				expandedEmojiData.push(Object.assign({}, {
 					// also reorder props
 					codepoints: undefined,
-					codepoint: leftPad(cp.toString(16), 4, 0).toUpperCase(),
+					codepoint: hexCp,
 					codepointNumber: cp,
+					name: nameForCodepoint[hexCp],
 					property: datum.property,
 					comment: datum.comment,
 				}));
@@ -105,11 +116,12 @@ co(function *() {
 				codepoints: undefined,
 				codepoint: datum.codepoints,
 				codepointNumber: parseInt(datum.codepoints, 16),
+				name: nameForCodepoint[datum.codepoints],
 				property: datum.property,
 				comment: datum.comment,
 			}));
 		}
 	});
 	specs.emojiData.data = expandedEmojiData;
-	fs.writeFileSync(`./json/emoji-data-expanded.json`, JSON.stringify(expandedEmojiData, null, 2));
+	fs.writeFileSync(`./json/emoji-data.json`, JSON.stringify(specs.emojiData.data, null, 2));
 });
