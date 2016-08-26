@@ -75,12 +75,12 @@ co(function *() {
 		specs.emojiSequences,
 		specs.emojiZwjSequences,
 	];
-	// fetch, parse, memoize and write spec files
+	// fetch, parse and memoize spec files
 	const results = yield specsArray.map(spec => fetch(spec.url));
 	const texts = yield results.map(result => result.text());
 	const parsed = texts.map((text, i) => parse(text, specsArray[i].fields));
 	specsArray.forEach((spec, i) => spec.data = parsed[i]);
-	specsArray.forEach(spec => fs.writeFileSync(`./json/${spec.name}.json`, JSON.stringify(spec.data, null, 2)));
+	// specsArray.forEach(spec => fs.writeFileSync(`./json/${spec.name}.json`, JSON.stringify(spec.data, null, 2)));
 
 	// map code points to names
 	const nameForCodepoint = specs.unicodeData.data
@@ -89,9 +89,9 @@ co(function *() {
 			return newObj;
 		}, {});
 	specs.unicodeData.data = nameForCodepoint;
-	fs.writeFileSync(`./json/unicode-data.json`, JSON.stringify(specs.unicodeData.data, null, 2));
+	// fs.writeFileSync(`./json/unicode-data.json`, JSON.stringify(specs.unicodeData.data, null, 2));
 
-	// expand emojiData and name emoji code points
+	// expand and extend emoji data with other sources
 	const expandedEmojiData = [];
 	specs.emojiData.data.forEach(datum => {
 		if (datum.codepoints.indexOf('..') > -1) {
@@ -101,24 +101,22 @@ co(function *() {
 			for (cp = lowCodepoint; cp <= highCodepoint; cp++) {
 				const hexCp = leftPad(cp.toString(16), 4, 0).toUpperCase();
 				expandedEmojiData.push(Object.assign({}, {
-					// also reorder props
-					codepoints: undefined,
+					// assign new and prettify (clean unused, reorder) props
 					codepoint: hexCp,
-					codepointNumber: cp,
+					// codepointNumber: cp,
 					name: nameForCodepoint[hexCp],
-					property: datum.property,
-					comment: datum.comment,
+					// property: datum.property,
+					// comment: datum.comment,
 				}));
 			}
 		} else {
 			expandedEmojiData.push(Object.assign({}, {
-				// also reorder props
-				codepoints: undefined,
+				// assign new and prettify (clean unused, reorder) props
 				codepoint: datum.codepoints,
-				codepointNumber: parseInt(datum.codepoints, 16),
+				// codepointNumber: parseInt(datum.codepoints, 16),
 				name: nameForCodepoint[datum.codepoints],
-				property: datum.property,
-				comment: datum.comment,
+				// property: datum.property,
+				// comment: datum.comment,
 			}));
 		}
 	});
