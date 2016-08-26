@@ -92,7 +92,7 @@ co(function *() {
 	// fs.writeFileSync(`./json/unicode-data.json`, JSON.stringify(specs.unicodeData.data, null, 2));
 
 	// expand and extend emoji data with other sources
-	const expandedEmojiData = [];
+	const enhancedEmojiData = [];
 	specs.emojiData.data.forEach(datum => {
 		if (datum.codepoints.indexOf('..') > -1) {
 			const codeRange = datum.codepoints.split('..').map(code => parseInt(code, 16));
@@ -100,7 +100,7 @@ co(function *() {
 			const highCodepoint = codeRange[1];
 			for (cp = lowCodepoint; cp <= highCodepoint; cp++) {
 				const hexCp = leftPad(cp.toString(16), 4, 0).toUpperCase();
-				expandedEmojiData.push(Object.assign({}, {
+				enhancedEmojiData.push(Object.assign({}, {
 					// assign new and prettify (clean unused, reorder) props
 					codepoint: hexCp,
 					// codepointNumber: cp,
@@ -111,7 +111,7 @@ co(function *() {
 				}));
 			}
 		} else {
-			expandedEmojiData.push(Object.assign({}, {
+			enhancedEmojiData.push(Object.assign({}, {
 				// assign new and prettify (clean unused, reorder) props
 				codepoint: datum.codepoints,
 				// codepointNumber: parseInt(datum.codepoints, 16),
@@ -122,6 +122,6 @@ co(function *() {
 			}));
 		}
 	});
-	specs.emojiData.data = expandedEmojiData;
+	specs.emojiData.data = enhancedEmojiData;
 	fs.writeFileSync(`./json/emoji-data.json`, JSON.stringify(specs.emojiData.data, null, 2));
 });
