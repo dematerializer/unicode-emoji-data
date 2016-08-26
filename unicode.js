@@ -70,8 +70,8 @@ const specs = {
 co(function *() {
 	// combine spec props in an array for easy processing
 	const specsArray = [
-		specs.emojiData,
 		specs.unicodeData,
+		specs.emojiData,
 		specs.emojiSequences,
 		specs.emojiZwjSequences,
 	];
