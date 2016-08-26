@@ -4,7 +4,7 @@ const fs = require('fs');
 const leftPad = require('left-pad');
 
 const parse = (text, fieldNames) => {
-	if (fields == null) {
+	if (fieldNames == null) {
 		return null;
 	}
 	const anyWhitespace = /([\s])+/g;
