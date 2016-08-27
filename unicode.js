@@ -3,6 +3,22 @@ const fetch = require('node-fetch');
 const fs = require('fs');
 const leftPad = require('left-pad');
 
+function codepointSequenceToString (codepointSequence) {
+	// string: codepointSequenceToString('0032-FE0E')
+	// argument list: codepointSequenceToString('0032', 'FE0E')
+	// array: codepointSequenceToString(['0032', 'FE0E'])
+	const sequence = arguments.length > 1 ? Array.prototype.slice.call(arguments) : codepointSequence;
+	const codepoints = typeof sequence === 'string' ? sequence.split('-') : sequence;
+	return codepoints
+		.map(codepoint => String.fromCodePoint(parseInt(codepoint, 16)))
+		.reduce((str, cp) => (str + cp), '');
+};
+
+console.log(codepointSequenceToString('0032-FE0E'));
+console.log(codepointSequenceToString('0032', 'FE0F'));
+console.log(codepointSequenceToString(['0032', 'FE0F', '20E3']));
+return;
+
 const parse = (text, fieldNames) => {
 	if (fieldNames == null) {
 		return null;
@@ -40,6 +56,12 @@ const parse = (text, fieldNames) => {
 		}), { comment: line.comment }));
 };
 
+// http://unicode.org/Public/9.0.0/ucd/StandardizedVariants.txt
+// contains emoji variation sequences (emoji or text representation)
+// variation selector that can modify the appearance of a preceding emoji character in a variation sequence
+// U+FE0E VARIATION SELECTOR-15 (VS15) for a text presentation
+// U+FE0F VARIATION SELECTOR-16 (VS16) for an emoji presentation
+
 const specs = {
 	unicodeData: {
 		// code point names
@@ -48,13 +70,20 @@ const specs = {
 		fields: ['codepoint', 'name'],
 	},
 	emojiData: {
-		// emoji code points
+		// contains emoji code points
+		// property="Emoji" means "emoji character", a character that is recommended for use as emoji
+		// property="Emoji_Presentation" means "default emoji presentation character", A character that, by default, should appear with an emoji presentation, rather than a text presentation
+		// a character that does not have the "Emoji_Presentation" property means "default text presentation character", A character that, by default, should appear with a text presentation, rather than an emoji presentation
+		// emoji variation selector is used to select which representation (emoji or text) a character has
+		// emoji modifier — A character that can be used to modify the appearance of a preceding emoji in an emoji modifier sequence
+		// property="Emoji_Modifier_Base" means A character whose appearance can be modified by a subsequent emoji modifier in an emoji modifier sequence
+		// If Emoji=No, then Emoji_Presentation=No, Emoji_Modifier=No, and Emoji_Modifier_Base=No.
 		name: 'emoji-data',
 		url: 'http://www.unicode.org/Public/emoji/4.0/emoji-data.txt',
 		fields: ['codepoints', 'property'],
 	},
 	emojiSequences: {
-		// combining, flag, modifier sequences
+		// contains combining, flag, modifier sequences
 		name: 'emoji-sequences',
 		url: 'http://www.unicode.org/Public/emoji/4.0/emoji-sequences.txt',
 		fields: ['codepoints', 'type', 'description'],
