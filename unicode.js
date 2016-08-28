@@ -3,22 +3,6 @@ const fetch = require('node-fetch');
 const fs = require('fs');
 const leftPad = require('left-pad');
 
-function codepointSequenceToString (codepointSequence) {
-	// string: codepointSequenceToString('0032-FE0E')
-	// argument list: codepointSequenceToString('0032', 'FE0E')
-	// array: codepointSequenceToString(['0032', 'FE0E'])
-	const sequence = arguments.length > 1 ? Array.prototype.slice.call(arguments) : codepointSequence;
-	const codepoints = typeof sequence === 'string' ? sequence.split('-') : sequence;
-	return codepoints
-		.map(codepoint => String.fromCodePoint(parseInt(codepoint, 16)))
-		.reduce((str, cp) => (str + cp), '');
-};
-
-console.log(codepointSequenceToString('0032-FE0E'));
-console.log(codepointSequenceToString('0032', 'FE0F'));
-console.log(codepointSequenceToString(['0032', 'FE0F', '20E3']));
-return;
-
 const parse = (text, fieldNames) => {
 	if (fieldNames == null) {
 		return null;
