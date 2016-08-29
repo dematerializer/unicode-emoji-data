@@ -166,29 +166,36 @@ co(function *() {
 		return emojiDataForProperty;
 	}, {});
 
+	// variation selector that can modify the appearance of
+	// a preceding emoji character in a variation sequence
+	const variationSelector = {
+		text: 'FE0E',  // U+FE0E VARIATION SELECTOR-15 (VS15) for a text presentation
+		emoji: 'FE0F', // U+FE0F VARIATION SELECTOR-16 (VS16) for an emoji presentation
+	}
+
 	// assemble combined emoji data
 	specs.emojiData.data.combined = specs.emojiData.data.Emoji.map(datum => {
 		const emojiPresentations = specs.emojiData.data.Emoji_Presentation;
 		const isEmojiPresentation = emojiPresentations.filter(ep => ep.codepoint === datum.codepoint).length > 0;
 		const codepoint = datum.codepoint;
-		const explicitTextPresentationSequence = `${codepoint}-FE0E`;
-		const explicitEmojiPresentationSequence = `${codepoint}-FE0F`;
+		const explicitTextVariationSequence = `${codepoint}-${variationSelector.text}`;
+		const explicitEmojiVariationSequence = `${codepoint}-${variationSelector.emoji}`;
 		return Object.assign({}, {
 			codepoint,
 			name: specs.unicodeData.data[datum.codepoint],
-			recommendedPresentation: isEmojiPresentation ? 'emoji' : 'text',
+			recommendedPresentationStyle: isEmojiPresentation ? 'emoji' : 'text',
 			presentation: {
 				default: {
-					sequence: codepoint,
+					sequence: codepoint, // no explicit variation
 					output: codepointSequenceToString(codepoint),
 				},
 				text: {
-					sequence: explicitTextPresentationSequence,
-					output: codepointSequenceToString(explicitTextPresentationSequence),
+					sequence: explicitTextVariationSequence,
+					output: codepointSequenceToString(explicitTextVariationSequence),
 				},
 				emoji: {
-					sequence: explicitEmojiPresentationSequence,
-					output: codepointSequenceToString(explicitEmojiPresentationSequence),
+					sequence: explicitEmojiVariationSequence,
+					output: codepointSequenceToString(explicitEmojiVariationSequence),
 				},
 			},
 		});
