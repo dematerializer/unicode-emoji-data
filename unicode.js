@@ -172,6 +172,10 @@ co(function *() {
 		text: 'FE0E',  // U+FE0E VARIATION SELECTOR-15 (VS15) for a text presentation
 		emoji: 'FE0F', // U+FE0F VARIATION SELECTOR-16 (VS16) for an emoji presentation
 	}
+	const combiningMark = {
+		keycap: '20E3', // U+20E3 COMBINING ENCLOSING KEYCAP
+		prohibit: '20E0', // U+20E0 COMBINING ENCLOSING CIRCLE BACKSLASH
+	}
 
 	// assemble combined emoji data
 	specs.emojiData.data.combined = specs.emojiData.data.Emoji.map(datum => {
@@ -180,6 +184,16 @@ co(function *() {
 		const codepoint = datum.codepoint;
 		const explicitTextVariationSequence = `${codepoint}-${variationSelector.text}`;
 		const explicitEmojiVariationSequence = `${codepoint}-${variationSelector.emoji}`;
+		const combiningSequenceWithKeycap = {
+			default: `${codepoint}-${combiningMark.keycap}`,
+			text: `${codepoint}-${variationSelector.text}-${combiningMark.keycap}`,
+			emoji: `${codepoint}-${variationSelector.emoji}-${combiningMark.keycap}`,
+		};
+		const combiningSequenceWithProhibit = {
+			default: `${codepoint}-${combiningMark.prohibit}`,
+			text: `${codepoint}-${variationSelector.text}-${combiningMark.prohibit}`,
+			emoji: `${codepoint}-${variationSelector.emoji}-${combiningMark.prohibit}`,
+		};
 		return Object.assign({}, {
 			codepoint,
 			name: specs.unicodeData.data[datum.codepoint],
@@ -196,6 +210,36 @@ co(function *() {
 				emoji: {
 					sequence: explicitEmojiVariationSequence,
 					output: codepointSequenceToString(explicitEmojiVariationSequence),
+				},
+				combining: {
+					keycap: { // TODO: only where recommended
+						default: {
+							sequence: combiningSequenceWithKeycap.default,
+							output: codepointSequenceToString(combiningSequenceWithKeycap.default),
+						},
+						text: {
+							sequence: combiningSequenceWithKeycap.text,
+							output: codepointSequenceToString(combiningSequenceWithKeycap.text),
+						},
+						emoji: {
+							sequence: combiningSequenceWithKeycap.emoji,
+							output: codepointSequenceToString(combiningSequenceWithKeycap.emoji),
+						},
+					},
+					prohibit: { // TODO: only where recommended
+						default: {
+							sequence: combiningSequenceWithProhibit.default,
+							output: codepointSequenceToString(combiningSequenceWithProhibit.default),
+						},
+						text: {
+							sequence: combiningSequenceWithProhibit.text,
+							output: codepointSequenceToString(combiningSequenceWithProhibit.text),
+						},
+						emoji: {
+							sequence: combiningSequenceWithProhibit.emoji,
+							output: codepointSequenceToString(combiningSequenceWithProhibit.emoji),
+						},
+					},
 				},
 			},
 		});
