@@ -222,23 +222,23 @@ co(function *() {
 		prohibit: '20E0', // U+20E0 COMBINING ENCLOSING CIRCLE BACKSLASH
 	}
 
-	// assemble combined emoji data
+	// Assemble combined emoji data:
 	const emojiPresentations = specs.emojiData.data.Emoji_Presentation;
 	specs.emojiData.data.combined = specs.emojiData.data.Emoji.map(datum => {
 		const codepoint = datum.codepoint;
 		const isDefaultEmojiPresentation = emojiPresentations.filter(ep => ep.codepoint === codepoint).length > 0;
 		const isDefaultTextPresentation = !isDefaultEmojiPresentation;
-		const variationSequences = specs.standardizedVariants.data[codepoint] || {};
+		const variationSequences = specs.standardizedVariants.data[codepoint];
 		const variation = {
 			none: {
 				sequence: codepoint, // only the base without explicit variation
 				output: codepointSequenceToString(codepoint),
 			},
-			text: variationSequences.text == null ? undefined : {
+			text: !(variationSequences && variationSequences.text) ? undefined : {
 				sequence: variationSequences.text,
 				output: codepointSequenceToString(variationSequences.text),
 			},
-			emoji: variationSequences.emoji == null ? undefined : {
+			emoji: !(variationSequences && variationSequences.emoji) ? undefined : {
 				sequence: variationSequences.emoji,
 				output: codepointSequenceToString(variationSequences.emoji),
 			},
