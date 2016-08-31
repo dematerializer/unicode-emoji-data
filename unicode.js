@@ -62,17 +62,11 @@ function codepointSequenceToString(codepointSequence) {
 	// argument list: codepointSequenceToString('0032', 'FE0F')
 	// array: codepointSequenceToString(['0032', 'FE0F', '20E3'])
 	const sequence = arguments.length > 1 ? Array.prototype.slice.call(arguments) : codepointSequence;
-	const codepoints = typeof sequence === 'string' ? sequence.split('-') : sequence;
+	const codepoints = typeof sequence === 'string' ? sequence.split(' ') : sequence;
 	return codepoints
 		.map(codepoint => String.fromCodePoint(parseInt(codepoint, 16)))
 		.reduce((str, cp) => (str + cp), '');
 }
-
-// http://unicode.org/Public/9.0.0/ucd/StandardizedVariants.txt
-// contains emoji variation sequences (emoji or text presentation)
-// variation selector that can modify the appearance of a preceding emoji character in a variation sequence
-// U+FE0E VARIATION SELECTOR-15 (VS15) for a text presentation
-// U+FE0F VARIATION SELECTOR-16 (VS16) for an emoji presentation
 
 const specs = {
 	unicodeData: {
@@ -97,6 +91,19 @@ const specs = {
 		fields: ['codepoints', 'property'],
 		data: null,
 	},
+	standardizedVariants: {
+		// Variation sequences:
+		// A variation selector that can modify the appearance of a preceding emoji character in
+		// a variation sequence is used to select which presentation style (emoji or text) a character should have
+		// U+FE0E VARIATION SELECTOR-15 (VS15) for a text presentation style
+		// U+FE0F VARIATION SELECTOR-16 (VS16) for an emoji presentation style
+		// Only a specific subset of emoji characters defined in this file  can have both emoji and text presentation
+		// styles - all others get their presentation style implicitly without the need to append a variation selector.
+		name: 'standardized-variants',
+		url: 'http://unicode.org/Public/9.0.0/ucd/StandardizedVariants.txt',
+		fields: ['sequence', 'description'],
+		data: null,
+	},
 	emojiSequences: {
 		// Combining, flag, modifier sequences:
 		name: 'emoji-sequences',
@@ -118,6 +125,7 @@ co(function *() {
 	const specsArray = [
 		specs.unicodeData,
 		specs.emojiData,
+		specs.standardizedVariants,
 		specs.emojiSequences,
 		specs.emojiZwjSequences,
 	];
@@ -175,81 +183,79 @@ co(function *() {
 	const variationSelector = {
 		text: 'FE0E',  // U+FE0E VARIATION SELECTOR-15 (VS15) for a text presentation
 		emoji: 'FE0F', // U+FE0F VARIATION SELECTOR-16 (VS16) for an emoji presentation
-	}
+	};
+
+	// Extract variation sequences grouped by style
+	// for each code point that supports both:
+	// {
+	// 	'0023': { // NUMBER SIGN
+	// 		'text': '0023 FE0E',
+	// 		'emoji': '0023 FE0F',
+	// 	},
+	// 	...
+	// }
+	specs.standardizedVariants.data = specs.standardizedVariants.data
+		.filter(datum => {
+			const hasTextVariationSelector = datum.sequence.indexOf(variationSelector.text) > -1;
+			const hasEmojiVariationSelector = datum.sequence.indexOf(variationSelector.emoji) > -1;
+			return hasTextVariationSelector || hasEmojiVariationSelector;
+		})
+		.reduce((variationSequenceForCodepoint, datum) => {
+			const [ cp, vs ] = datum.sequence.split(' ');
+			if (variationSequenceForCodepoint[cp] == null) {
+				variationSequenceForCodepoint[cp] = {};
+			}
+			Object.keys(variationSelector).forEach(style => {
+				if (vs === variationSelector[style]) {
+					variationSequenceForCodepoint[cp][style] = datum.sequence;
+				}
+			});
+			return variationSequenceForCodepoint;
+		}, {});
+
+	// TODO: what does this mean? # Emoji variation sequences for use as part of keycap symbols
+
+	// specsArray.forEach(spec => fs.writeFileSync(`./json/${spec.name}.json`, JSON.stringify(spec.data, null, 2)));
+
 	const combiningMark = {
 		keycap: '20E3', // U+20E3 COMBINING ENCLOSING KEYCAP
 		prohibit: '20E0', // U+20E0 COMBINING ENCLOSING CIRCLE BACKSLASH
 	}
 
 	// assemble combined emoji data
+	const emojiPresentations = specs.emojiData.data.Emoji_Presentation;
 	specs.emojiData.data.combined = specs.emojiData.data.Emoji.map(datum => {
-		const emojiPresentations = specs.emojiData.data.Emoji_Presentation;
-		const isEmojiPresentation = emojiPresentations.filter(ep => ep.codepoint === datum.codepoint).length > 0;
 		const codepoint = datum.codepoint;
-		const explicitTextVariationSequence = `${codepoint}-${variationSelector.text}`;
-		const explicitEmojiVariationSequence = `${codepoint}-${variationSelector.emoji}`;
-		const combiningSequenceWithKeycap = {
-			default: `${codepoint}-${combiningMark.keycap}`,
-			text: `${codepoint}-${variationSelector.text}-${combiningMark.keycap}`,
-			emoji: `${codepoint}-${variationSelector.emoji}-${combiningMark.keycap}`,
-		};
-		const combiningSequenceWithProhibit = {
-			default: `${codepoint}-${combiningMark.prohibit}`,
-			text: `${codepoint}-${variationSelector.text}-${combiningMark.prohibit}`,
-			emoji: `${codepoint}-${variationSelector.emoji}-${combiningMark.prohibit}`,
+		const isDefaultEmojiPresentation = emojiPresentations.filter(ep => ep.codepoint === codepoint).length > 0;
+		const isDefaultTextPresentation = !isDefaultEmojiPresentation;
+		const variationSequences = specs.standardizedVariants.data[codepoint] || {};
+		const variation = {
+			none: {
+				sequence: codepoint, // only the base without explicit variation
+				output: codepointSequenceToString(codepoint),
+			},
+			text: variationSequences.text == null ? undefined : {
+				sequence: variationSequences.text,
+				output: codepointSequenceToString(variationSequences.text),
+			},
+			emoji: variationSequences.emoji == null ? undefined : {
+				sequence: variationSequences.emoji,
+				output: codepointSequenceToString(variationSequences.emoji),
+			},
 		};
 		return Object.assign({}, {
 			codepoint,
-			name: specs.unicodeData.data[datum.codepoint],
-			recommendedPresentationStyle: isEmojiPresentation ? 'emoji' : 'text',
+			name: specs.unicodeData.data[codepoint],
+			defaultPresentation: isDefaultEmojiPresentation ? 'emoji' : 'text',
 			presentation: {
-				default: {
-					sequence: codepoint, // no explicit variation
-					output: codepointSequenceToString(codepoint),
+				default: variation.none,
+				variation: variationSequences == null ? undefined : {
+					text: variationSequences.text ? variation.text : undefined,
+					emoji: variationSequences.emoji ? variation.emoji : undefined,
 				},
-				text: {
-					sequence: explicitTextVariationSequence,
-					output: codepointSequenceToString(explicitTextVariationSequence),
-				},
-				emoji: {
-					sequence: explicitEmojiVariationSequence,
-					output: codepointSequenceToString(explicitEmojiVariationSequence),
-				},
-				combining: {
-					keycap: { // TODO: only where recommended
-						default: {
-							sequence: combiningSequenceWithKeycap.default,
-							output: codepointSequenceToString(combiningSequenceWithKeycap.default),
-						},
-						text: {
-							sequence: combiningSequenceWithKeycap.text,
-							output: codepointSequenceToString(combiningSequenceWithKeycap.text),
-						},
-						emoji: {
-							sequence: combiningSequenceWithKeycap.emoji,
-							output: codepointSequenceToString(combiningSequenceWithKeycap.emoji),
-						},
-					},
-					prohibit: { // TODO: only where recommended
-						default: {
-							sequence: combiningSequenceWithProhibit.default,
-							output: codepointSequenceToString(combiningSequenceWithProhibit.default),
-						},
-						text: {
-							sequence: combiningSequenceWithProhibit.text,
-							output: codepointSequenceToString(combiningSequenceWithProhibit.text),
-						},
-						emoji: {
-							sequence: combiningSequenceWithProhibit.emoji,
-							output: codepointSequenceToString(combiningSequenceWithProhibit.emoji),
-						},
-					},
-				},
-			},
+			}
 		});
 	});
 
 	fs.writeFileSync('./json/combined.json', JSON.stringify(specs.emojiData.data.combined, null, 2));
-
-	// specsArray.forEach(spec => fs.writeFileSync(`./json/${spec.name}.json`, JSON.stringify(spec.data, null, 2)));
 });
