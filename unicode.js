@@ -213,21 +213,44 @@ co(function *() {
 			return variationSequenceForCodepoint;
 		}, {});
 
-	// TODO: what does this mean? # Emoji variation sequences for use as part of keycap symbols
-
 	// specsArray.forEach(spec => fs.writeFileSync(`./json/${spec.name}.json`, JSON.stringify(spec.data, null, 2)));
 
+	// Combining marks can modify the appearance of an
+	// emoji character when used in a combining sequence.
 	const combiningMark = {
-		keycap: '20E3', // U+20E3 COMBINING ENCLOSING KEYCAP
-		prohibit: '20E0', // U+20E0 COMBINING ENCLOSING CIRCLE BACKSLASH
-	}
+		keycap: {
+			codepoint: '20E3', // COMBINING ENCLOSING KEYCAP
+			// Compatible codepoints derived from StandardizedVariants.txt.
+			// Names follow naming convention of pure emoji U+1F51F KEYCAP TEN:
+			compatibleCodepoints: {
+				'0023': 'KEYCAP NUMBER SIGN', // NUMBER SIGN
+				'002A': 'KEYCAP ASTERISK', // ASTERISK
+				'0030': 'KEYCAP ZERO', // DIGIT ZERO
+				'0031': 'KEYCAP ONE', // DIGIT ONE
+				'0032': 'KEYCAP TWO', // DIGIT TWO
+				'0033': 'KEYCAP THREE', // DIGIT THREE
+				'0034': 'KEYCAP FOUR', // DIGIT FOUR
+				'0035': 'KEYCAP FIVE', // DIGIT FIVE
+				'0036': 'KEYCAP SIX', // DIGIT SIX
+				'0037': 'KEYCAP SEVEN', // DIGIT SEVEN
+				'0038': 'KEYCAP EIGHT', // DIGIT EIGHT
+				'0039': 'KEYCAP NINE', // DIGIT NINE
+			},
+		},
+		// Prohibition mark is generally recommended in tr51 but there are
+		// no compatible code points mentioned in StandardizedVariants.txt
+		// and implementations don't seem to support this yet.
+		prohibit: {
+			codepoint: '20E0', // COMBINING ENCLOSING CIRCLE BACKSLASH
+			compatibleCodepoints: [], // nothing yet
+		},
+	};
 
 	// Assemble combined emoji data:
 	const emojiPresentations = specs.emojiData.data.Emoji_Presentation;
 	specs.emojiData.data.combined = specs.emojiData.data.Emoji.map(datum => {
 		const codepoint = datum.codepoint;
-		const isDefaultEmojiPresentation = emojiPresentations.filter(ep => ep.codepoint === codepoint).length > 0;
-		const isDefaultTextPresentation = !isDefaultEmojiPresentation;
+		const isDefaultEmojiPresentation = emojiPresentations.some(ep => ep.codepoint === codepoint);
 		const variationSequences = specs.standardizedVariants.data[codepoint];
 		const variation = {
 			none: {
@@ -243,6 +266,13 @@ co(function *() {
 				output: codepointSequenceToString(variationSequences.emoji),
 			},
 		};
+		const keycapName = combiningMark.keycap.compatibleCodepoints[codepoint];
+		// tr51: When a combining mark is applied to a codepoint, the combination should
+		// take on an emoji presentation.
+		// BUT: StandardizedVariants.txt defines both emoji and text variations to be
+		// compatible with keycap marks and implementations also support both.
+		const textKeycapCombinationSequence = `${codepoint} ${variationSelector.text} ${combiningMark.keycap.codepoint}`;
+		const emojiKeycapCombinationSequence = `${codepoint} ${variationSelector.emoji} ${combiningMark.keycap.codepoint}`;
 		return Object.assign({}, {
 			codepoint,
 			name: specs.unicodeData.data[codepoint],
@@ -253,7 +283,24 @@ co(function *() {
 					text: variationSequences.text ? variation.text : undefined,
 					emoji: variationSequences.emoji ? variation.emoji : undefined,
 				},
-			}
+			},
+			combination: !keycapName ? undefined : {
+				keycap: {
+					name: keycapName,
+					presentation: {
+						variation: {
+							text: {
+								sequence: textKeycapCombinationSequence,
+								output: codepointSequenceToString(textKeycapCombinationSequence),
+							},
+							emoji: {
+								sequence: emojiKeycapCombinationSequence,
+								output: codepointSequenceToString(emojiKeycapCombinationSequence),
+							},
+						},
+					},
+				},
+			},
 		});
 	});
 
