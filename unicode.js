@@ -253,51 +253,53 @@ co(function *() {
 	specs.emojiData.data.combined = specs.emojiData.data.Emoji.map(datum => {
 		const codepoint = datum.codepoint;
 		const isDefaultEmojiPresentation = emojiPresentations.some(ep => ep.codepoint === codepoint);
-		const variationSequences = specs.standardizedVariants.data[codepoint];
-		const variation = {
-			none: {
-				sequence: codepoint, // only the base without explicit variation
-				output: codepointSequenceToString(codepoint),
-			},
-			text: !(variationSequences && variationSequences.text) ? undefined : {
-				sequence: variationSequences.text,
-				output: codepointSequenceToString(variationSequences.text),
-			},
-			emoji: !(variationSequences && variationSequences.emoji) ? undefined : {
-				sequence: variationSequences.emoji,
-				output: codepointSequenceToString(variationSequences.emoji),
-			},
-		};
+		const variationSequence = specs.standardizedVariants.data[codepoint];
 		const keycapName = combiningMark.keycap.compatibleCodepoints[codepoint];
 		// tr51: When a combining mark is applied to a code point, the combination should
 		// take on an emoji presentation.
 		// BUT: StandardizedVariants.txt defines both emoji and text variations to be
 		// compatible with keycap marks and implementations also support both.
-		const textKeycapCombinationSequence = `${codepoint} ${variationSelector.text} ${combiningMark.keycap.codepoint}`;
-		const emojiKeycapCombinationSequence = `${codepoint} ${variationSelector.emoji} ${combiningMark.keycap.codepoint}`;
+		const keycapPresentation = {
+			default: `${codepoint} ${combiningMark.keycap.codepoint}`,
+			text: `${codepoint} ${variationSelector.text} ${combiningMark.keycap.codepoint}`,
+			emoji: `${codepoint} ${variationSelector.emoji} ${combiningMark.keycap.codepoint}`,
+		};
 		return Object.assign({}, {
 			codepoint,
 			name: specs.unicodeData.data[codepoint],
 			defaultPresentation: isDefaultEmojiPresentation ? 'emoji' : 'text',
 			presentation: {
-				default: variation.none,
-				variation: variationSequences == null ? undefined : {
-					text: variationSequences.text ? variation.text : undefined,
-					emoji: variationSequences.emoji ? variation.emoji : undefined,
+				default: {
+					sequence: codepoint, // only the base without explicit variation
+					output: codepointSequenceToString(codepoint),
+				},
+				variation: !variationSequence ? undefined : {
+					text: {
+						sequence: variationSequence.text,
+						output: codepointSequenceToString(variationSequence.text),
+					},
+					emoji: {
+						sequence: variationSequence.emoji,
+						output: codepointSequenceToString(variationSequence.emoji),
+					},
 				},
 			},
 			combination: !keycapName ? undefined : {
 				keycap: {
 					name: keycapName,
 					presentation: {
+						default: {
+							sequence: keycapPresentation.default,
+							output: codepointSequenceToString(keycapPresentation.default),
+						},
 						variation: {
 							text: {
-								sequence: textKeycapCombinationSequence,
-								output: codepointSequenceToString(textKeycapCombinationSequence),
+								sequence: keycapPresentation.text,
+								output: codepointSequenceToString(keycapPresentation.text),
 							},
 							emoji: {
-								sequence: emojiKeycapCombinationSequence,
-								output: codepointSequenceToString(emojiKeycapCombinationSequence),
+								sequence: keycapPresentation.emoji,
+								output: codepointSequenceToString(keycapPresentation.emoji),
 							},
 						},
 					},
