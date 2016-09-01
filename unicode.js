@@ -58,7 +58,7 @@ const parse = (text, fieldNames) => {
 };
 
 function codepointSequenceToString(codepointSequence) {
-	// string: codepointSequenceToString('0032-FE0E')
+	// string: codepointSequenceToString('0032 FE0E')
 	// argument list: codepointSequenceToString('0032', 'FE0F')
 	// array: codepointSequenceToString(['0032', 'FE0F', '20E3'])
 	const sequence = arguments.length > 1 ? Array.prototype.slice.call(arguments) : codepointSequence;
