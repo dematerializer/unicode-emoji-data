@@ -1,7 +1,7 @@
 const co = require('co');
 const fetch = require('node-fetch');
 const fs = require('fs');
-const leftPad = require('left-pad');
+const leftPad = require('left-pad'); // FTW!
 
 // Parses a CSV formatted <text> that may contain comments,
 // extracting only relevant fields given by <fieldNames>:
@@ -136,8 +136,10 @@ co(function *() {
 
 	// Transform unicodeData to map each code point to a name, e.g.
 	// {
+	// 	...
 	// 	'1F600': 'GRINNING FACE',
 	// 	'1F601': 'GRINNING FACE WITH SMILING EYES',
+	// 	...
 	// }
 	specs.unicodeData.data = specs.unicodeData.data
 		.reduce((nameForCodepoint, datum, i) => {
@@ -215,12 +217,12 @@ co(function *() {
 
 	// specsArray.forEach(spec => fs.writeFileSync(`./json/${spec.name}.json`, JSON.stringify(spec.data, null, 2)));
 
-	// Combining marks can modify the appearance of an
-	// emoji character when used in a combining sequence.
+	// Combining marks can modify the appearance of a preceding
+	// emoji variation sequence when used in a combining sequence.
 	const combiningMark = {
 		keycap: {
 			codepoint: '20E3', // COMBINING ENCLOSING KEYCAP
-			// Compatible codepoints derived from StandardizedVariants.txt.
+			// Compatible code points derived from StandardizedVariants.txt.
 			// Names follow naming convention of pure emoji U+1F51F KEYCAP TEN:
 			compatibleCodepoints: {
 				'0023': 'KEYCAP NUMBER SIGN', // NUMBER SIGN
@@ -267,7 +269,7 @@ co(function *() {
 			},
 		};
 		const keycapName = combiningMark.keycap.compatibleCodepoints[codepoint];
-		// tr51: When a combining mark is applied to a codepoint, the combination should
+		// tr51: When a combining mark is applied to a code point, the combination should
 		// take on an emoji presentation.
 		// BUT: StandardizedVariants.txt defines both emoji and text variations to be
 		// compatible with keycap marks and implementations also support both.
