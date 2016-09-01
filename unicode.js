@@ -97,7 +97,7 @@ const specs = {
 		// a variation sequence is used to select which presentation style (emoji or text) a character should have
 		// U+FE0E VARIATION SELECTOR-15 (VS15) for a text presentation style
 		// U+FE0F VARIATION SELECTOR-16 (VS16) for an emoji presentation style
-		// Only a specific subset of emoji characters defined in this file  can have both emoji and text presentation
+		// Only a specific subset of emoji characters defined in this file can have both emoji and text presentation
 		// styles - all others get their presentation style implicitly without the need to append a variation selector.
 		name: 'standardized-variants',
 		url: 'http://unicode.org/Public/9.0.0/ucd/StandardizedVariants.txt',
@@ -181,8 +181,8 @@ co(function *() {
 	// Variation selector that can modify the appearance of
 	// a preceding emoji character in a variation sequence:
 	const variationSelector = {
-		text: 'FE0E',  // U+FE0E VARIATION SELECTOR-15 (VS15) for a text presentation
-		emoji: 'FE0F', // U+FE0F VARIATION SELECTOR-16 (VS16) for an emoji presentation
+		text: 'FE0E',  // VARIATION SELECTOR-15 (VS15) for a text presentation
+		emoji: 'FE0F', // VARIATION SELECTOR-16 (VS16) for an emoji presentation
 	};
 
 	// Extract variation sequences grouped by style
