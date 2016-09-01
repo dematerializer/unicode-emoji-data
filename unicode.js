@@ -255,10 +255,14 @@ co(function *() {
 		const isDefaultEmojiPresentation = emojiPresentations.some(ep => ep.codepoint === codepoint);
 		const variationSequence = specs.standardizedVariants.data[codepoint];
 		const keycapName = combiningMark.keycap.compatibleCodepoints[codepoint];
-		// tr51: When a combining mark is applied to a code point, the combination should
-		// take on an emoji presentation.
-		// BUT: StandardizedVariants.txt defines both emoji and text variations to be
+		// tr51: Combining marks may be applied to emoji, just like they can
+		// be applied to other characters. When a combining mark is applied
+		// to a code point, the combination should take on an emoji presentation.
+		// StandardizedVariants.txt defines both emoji and text variations to be
 		// compatible with keycap marks and implementations also support both.
+		// Furthermore, EmojiSources.txt indicates keycap mark be joined
+		// without a variation sequence present.
+		// -> So as a consequence we support all three presentations:
 		const keycapPresentation = {
 			default: `${codepoint} ${combiningMark.keycap.codepoint}`,
 			text: `${codepoint} ${variationSelector.text} ${combiningMark.keycap.codepoint}`,
