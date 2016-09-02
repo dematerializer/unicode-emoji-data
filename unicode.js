@@ -74,7 +74,10 @@ const specs = {
 		name: 'unicode-data',
 		url: 'http://www.unicode.org/Public/UNIDATA/UnicodeData.txt',
 		fields: ['codepoint', 'name'],
-		data: null,
+		data: {
+			parsed: null,
+			nameForCodepoint: null,
+		},
 	},
 	emojiSources: {
 		// Provides mappings between unicode code points and sequences on one hand
@@ -82,7 +85,10 @@ const specs = {
 		name: 'emoji-sources',
 		url: 'http://www.unicode.org/Public/UNIDATA/EmojiSources.txt',
 		fields: ['unicode', 'docomo', 'kddi', 'softbank'],
-		data: null,
+		data: {
+			parsed: null,
+			shiftJisByCarrierForCodepoint: null,
+		},
 	},
 	emojiData: {
 		// Emoji code points:
@@ -97,7 +103,14 @@ const specs = {
 		name: 'emoji-data',
 		url: 'http://www.unicode.org/Public/emoji/4.0/emoji-data.txt',
 		fields: ['codepoints', 'property'],
-		data: null,
+		data: {
+			parsed: null,
+			emoji: null,
+			emojiPresentation: null,
+			emojiModifier: null,
+			emojiModifierBase: null,
+			combined: null,
+		},
 	},
 	standardizedVariants: {
 		// Variation sequences:
@@ -110,7 +123,10 @@ const specs = {
 		name: 'standardized-variants',
 		url: 'http://unicode.org/Public/9.0.0/ucd/StandardizedVariants.txt',
 		fields: ['sequence', 'description'],
-		data: null,
+		data: {
+			parsed: null,
+			variationSequencesForCodepoint: null,
+		},
 	},
 	emojiSequences: {
 		// Combining, flag, modifier sequences.
@@ -118,14 +134,19 @@ const specs = {
 		name: 'emoji-sequences',
 		url: 'http://www.unicode.org/Public/emoji/4.0/emoji-sequences.txt',
 		fields: ['codepoints', 'type', 'description'],
-		data: null,
+		data: {
+			parsed: null,
+			flags: null,
+		},
 	},
 	emojiZwjSequences: {
 		// Zero-Width-Joiner sequences:
 		name: 'emoji-zwj-sequences',
 		url: 'http://www.unicode.org/Public/emoji/4.0/emoji-zwj-sequences.txt',
 		fields: ['codepoints', 'type', 'description'],
-		data: null,
+		data: {
+			parsed: null,
+		},
 	},
 };
 
@@ -142,7 +163,7 @@ co(function *() {
 
 	// Batch fetch and parse spec files:
 	const texts = yield specsArray.map(spec => fetch(spec.url).then(res => res.text()));
-	specsArray.forEach((spec, i) => spec.data = parse(texts[i], spec.fields));
+	specsArray.forEach((spec, i) => spec.data.parsed = parse(texts[i], spec.fields));
 
 	// Transform unicodeData to map each code point to a name, e.g.
 	// {
@@ -151,7 +172,7 @@ co(function *() {
 	// 	'1F601': 'GRINNING FACE WITH SMILING EYES',
 	// 	...
 	// }
-	specs.unicodeData.data = specs.unicodeData.data
+	specs.unicodeData.data.nameForCodepoint = specs.unicodeData.data.parsed
 		.reduce((nameForCodepoint, datum) => {
 			nameForCodepoint[datum.codepoint] = datum.name;
 			return nameForCodepoint;
@@ -168,18 +189,18 @@ co(function *() {
 	// 	},
 	// 	...
 	// }
-	specs.emojiSources.data = specs.emojiSources.data
-		.reduce((shiftJisByCarrierForUnicode, datum) => {
-			shiftJisByCarrierForUnicode[datum.unicode] = {
+	specs.emojiSources.data.shiftJisByCarrierForCodepoint = specs.emojiSources.data.parsed
+		.reduce((shiftJisByCarrierForCodepoint, datum) => {
+			shiftJisByCarrierForCodepoint[datum.unicode] = {
 				docomo: datum.docomo.length > 0 ? datum.docomo : undefined,
 				kddi: datum.kddi.length > 0 ? datum.kddi : undefined,
 				softbank: datum.softbank.length > 0 ? datum.softbank : undefined,
 			};
-			return shiftJisByCarrierForUnicode;
+			return shiftJisByCarrierForCodepoint;
 		}, {});
 
 	// Expand emojiData code point ranges (e.g. '1F601..1F610') into separate objects:
-	specs.emojiData.data = specs.emojiData.data
+	specs.emojiData.data.parsed = specs.emojiData.data.parsed
 		.reduce((expandedEmojiData, datum) => {
 			if (datum.codepoints.indexOf('..') > -1) {
 				const codepointRange = datum.codepoints.split('..').map(cp => parseInt(cp, 16));
@@ -201,23 +222,21 @@ co(function *() {
 		}, []);
 
 	// Group emojiData by property:
-	specs.emojiData.data = [
-		'Emoji',
-		'Emoji_Presentation',
-		'Emoji_Modifier',
-		'Emoji_Modifier_Base',
-	].reduce((emojiDataForProperty, prop) => {
-		emojiDataForProperty[prop] = specs.emojiData.data.filter(datum => datum.property === prop);
-		return emojiDataForProperty;
-	}, {});
+	const emojiDataParsed = specs.emojiData.data.parsed;
+	specs.emojiData.data = Object.assign({}, specs.emojiData.data, {
+		emoji: emojiDataParsed.filter(datum => datum.property === 'Emoji'),
+		emojiPresentation: emojiDataParsed.filter(datum => datum.property === 'Emoji_Presentation'),
+		emojiModifier: emojiDataParsed.filter(datum => datum.property === 'Emoji_Modifier'),
+		emojiModifierBase: emojiDataParsed.filter(datum => datum.property === 'Emoji_Modifier_Base'),
+	});
 
 	// Build additional flag entries
-	specs.emojiData.data.Flags = specs.emojiSequences.data
+	specs.emojiSequences.data.flags = specs.emojiSequences.data.parsed
 		.filter(datum => datum.type === 'Emoji_Flag_Sequence')
 		.map(datum => ({
 			codepoint: datum.codepoints,
 			name: datum.codepoints.split(' ').reduce((combinedName, codepoint) => {
-				const cpName = specs.unicodeData.data[codepoint];
+				const cpName = specs.unicodeData.data.nameForCodepoint[codepoint];
 				return combinedName + cpName[cpName.length - 1];
 			}, 'REGIONAL INDICATOR SYMBOL LETTERS '),
 			defaultPresentation: 'emoji',
@@ -235,20 +254,20 @@ co(function *() {
 	// 	'1F3FB': 'EMOJI MODIFIER FITZPATRICK TYPE-1-2',
 	// 	...
 	// }
-	specs.emojiData.data.Emoji_Modifier = specs.emojiData.data.Emoji_Modifier
+	specs.emojiData.data.emojiModifier = specs.emojiData.data.emojiModifier
 		.reduce((nameForModifierCodepoint, datum) => {
-			nameForModifierCodepoint[datum.codepoint] = specs.unicodeData.data[datum.codepoint];
+			nameForModifierCodepoint[datum.codepoint] = specs.unicodeData.data.nameForCodepoint[datum.codepoint];
 			return nameForModifierCodepoint;
 		}, {});
 
 	// Build map of emojis that can be modified (maps each modifiable code point to a modifier sequence).
 	// Those are basically all emojis that have skin variations:
-	specs.emojiData.data.Emoji_Modifier_Base = specs.emojiData.data.Emoji_Modifier_Base
+	specs.emojiData.data.emojiModifierBase = specs.emojiData.data.emojiModifierBase
 		.reduce((modifierSequencesForModifiableCodepoint, baseDatum) => {
-			modifierSequencesForModifiableCodepoint[baseDatum.codepoint] = Object.keys(specs.emojiData.data.Emoji_Modifier)
+			modifierSequencesForModifiableCodepoint[baseDatum.codepoint] = Object.keys(specs.emojiData.data.emojiModifier)
 				.reduce((sequenceForModifierName, modifierCodepoint) => {
 					const sequence = `${baseDatum.codepoint} ${modifierCodepoint}`;
-					sequenceForModifierName[specs.emojiData.data.Emoji_Modifier[modifierCodepoint]] = {
+					sequenceForModifierName[specs.emojiData.data.emojiModifier[modifierCodepoint]] = {
 						sequence,
 						output: codepointSequenceToString(sequence),
 					};
@@ -273,26 +292,24 @@ co(function *() {
 	// 	},
 	// 	...
 	// }
-	specs.standardizedVariants.data = specs.standardizedVariants.data
+	specs.standardizedVariants.data.variationSequencesForCodepoint = specs.standardizedVariants.data.parsed
 		.filter(datum => {
 			const hasTextVariationSelector = datum.sequence.indexOf(variationSelector.text) > -1;
 			const hasEmojiVariationSelector = datum.sequence.indexOf(variationSelector.emoji) > -1;
 			return hasTextVariationSelector || hasEmojiVariationSelector;
 		})
-		.reduce((variationSequenceForCodepoint, datum) => {
+		.reduce((variationSequencesForCodepoint, datum) => {
 			const [ cp, vs ] = datum.sequence.split(' ');
-			if (variationSequenceForCodepoint[cp] == null) {
-				variationSequenceForCodepoint[cp] = {};
+			if (variationSequencesForCodepoint[cp] == null) {
+				variationSequencesForCodepoint[cp] = {};
 			}
 			Object.keys(variationSelector).forEach(style => {
 				if (vs === variationSelector[style]) {
-					variationSequenceForCodepoint[cp][style] = datum.sequence;
+					variationSequencesForCodepoint[cp][style] = datum.sequence;
 				}
 			});
-			return variationSequenceForCodepoint;
+			return variationSequencesForCodepoint;
 		}, {});
-
-	specsArray.forEach(spec => fs.writeFileSync(`./json/${spec.name}.json`, JSON.stringify(spec.data, null, 2)));
 
 	// Combining marks can modify the appearance of a preceding
 	// emoji variation sequence when used in a combining sequence.
@@ -326,8 +343,8 @@ co(function *() {
 	};
 
 	// Assemble combined emoji data:
-	const emojiPresentations = specs.emojiData.data.Emoji_Presentation;
-	specs.emojiData.data.combined = specs.emojiData.data.Emoji.map(datum => {
+	const emojiPresentations = specs.emojiData.data.emojiPresentation;
+	specs.emojiData.data.combined = specs.emojiData.data.emoji.map(datum => {
 		const codepoint = datum.codepoint;
 		const isDefaultEmojiPresentation = emojiPresentations.some(ep => ep.codepoint === codepoint);
 		const variationSequence = specs.standardizedVariants.data[codepoint];
@@ -345,11 +362,11 @@ co(function *() {
 			text: `${codepoint} ${variationSelector.text} ${combiningMark.keycap.codepoint}`,
 			emoji: `${codepoint} ${variationSelector.emoji} ${combiningMark.keycap.codepoint}`,
 		};
-		const modification = specs.emojiData.data.Emoji_Modifier_Base[codepoint];
+		const modification = specs.emojiData.data.emojiModifierBase[codepoint];
 		return Object.assign({}, {
 			codepoint,
-			shiftJis: specs.emojiSources.data[codepoint],
-			name: specs.unicodeData.data[codepoint],
+			shiftJis: specs.emojiSources.data.shiftJisByCarrierForCodepoint[codepoint],
+			name: specs.unicodeData.data.nameForCodepoint[codepoint],
 			defaultPresentation: isDefaultEmojiPresentation ? 'emoji' : 'text',
 			presentation: {
 				default: {
@@ -391,7 +408,8 @@ co(function *() {
 			modification,
 		});
 	})
-	.concat(specs.emojiData.data.Flags);
+	.concat(specs.emojiSequences.data.flags);
 
+	specsArray.forEach(spec => fs.writeFileSync(`./json/${spec.name}.json`, JSON.stringify(spec.data, null, 2)));
 	fs.writeFileSync('./json/combined.json', JSON.stringify(specs.emojiData.data.combined, null, 2));
 });
