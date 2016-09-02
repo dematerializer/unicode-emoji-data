@@ -113,7 +113,8 @@ const specs = {
 		data: null,
 	},
 	emojiSequences: {
-		// Combining, flag, modifier sequences:
+		// Combining, flag, modifier sequences.
+		// We use this only to get flag sequences.
 		name: 'emoji-sequences',
 		url: 'http://www.unicode.org/Public/emoji/4.0/emoji-sequences.txt',
 		fields: ['codepoints', 'type', 'description'],
@@ -209,6 +210,24 @@ co(function *() {
 		emojiDataForProperty[prop] = specs.emojiData.data.filter(datum => datum.property === prop);
 		return emojiDataForProperty;
 	}, {});
+
+	// Build additional flag entries
+	specs.emojiData.data.Flags = specs.emojiSequences.data
+		.filter(datum => datum.type === 'Emoji_Flag_Sequence')
+		.map(datum => ({
+			codepoint: datum.codepoints,
+			name: datum.codepoints.split(' ').reduce((combinedName, codepoint) => {
+				const cpName = specs.unicodeData.data[codepoint];
+				return combinedName + cpName[cpName.length - 1];
+			}, 'REGIONAL INDICATOR SYMBOL LETTERS '),
+			defaultPresentation: 'emoji',
+			presentation: {
+				default: {
+					sequence: datum.codepoints,
+					output: codepointSequenceToString(datum.codepoints),
+				},
+			},
+		}));
 
 	// Build emoji modifier map (maps each modifier code point to a name), e.g.
 	// {
@@ -371,7 +390,8 @@ co(function *() {
 			},
 			modification,
 		});
-	});
+	})
+	.concat(specs.emojiData.data.Flags);
 
 	fs.writeFileSync('./json/combined.json', JSON.stringify(specs.emojiData.data.combined, null, 2));
 });
