@@ -210,6 +210,34 @@ co(function *() {
 		return emojiDataForProperty;
 	}, {});
 
+	// Build emoji modifier map (maps each modifier code point to a name), e.g.
+	// {
+	// 	...
+	// 	'1F3FB': 'EMOJI MODIFIER FITZPATRICK TYPE-1-2',
+	// 	...
+	// }
+	specs.emojiData.data.Emoji_Modifier = specs.emojiData.data.Emoji_Modifier
+		.reduce((nameForModifierCodepoint, datum) => {
+			nameForModifierCodepoint[datum.codepoint] = specs.unicodeData.data[datum.codepoint];
+			return nameForModifierCodepoint;
+		}, {});
+
+	// Build map of emojis that can be modified (maps each modifiable code point to a modifier sequence).
+	// Those are basically all emojis that have skin variations:
+	specs.emojiData.data.Emoji_Modifier_Base = specs.emojiData.data.Emoji_Modifier_Base
+		.reduce((modifierSequencesForModifiableCodepoint, baseDatum) => {
+			modifierSequencesForModifiableCodepoint[baseDatum.codepoint] = Object.keys(specs.emojiData.data.Emoji_Modifier)
+				.reduce((sequenceForModifierName, modifierCodepoint) => {
+					const sequence = `${baseDatum.codepoint} ${modifierCodepoint}`;
+					sequenceForModifierName[specs.emojiData.data.Emoji_Modifier[modifierCodepoint]] = {
+						sequence,
+						output: codepointSequenceToString(sequence),
+					};
+					return sequenceForModifierName;
+				}, {});
+			return modifierSequencesForModifiableCodepoint;
+		}, {});
+
 	// Variation selector that can modify the appearance of
 	// a preceding emoji character in a variation sequence:
 	const variationSelector = {
@@ -298,6 +326,7 @@ co(function *() {
 			text: `${codepoint} ${variationSelector.text} ${combiningMark.keycap.codepoint}`,
 			emoji: `${codepoint} ${variationSelector.emoji} ${combiningMark.keycap.codepoint}`,
 		};
+		const modification = specs.emojiData.data.Emoji_Modifier_Base[codepoint];
 		return Object.assign({}, {
 			codepoint,
 			shiftJis: specs.emojiSources.data[codepoint],
@@ -340,6 +369,7 @@ co(function *() {
 					},
 				},
 			},
+			modification,
 		});
 	});
 
