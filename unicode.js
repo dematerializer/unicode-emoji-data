@@ -76,6 +76,14 @@ const specs = {
 		fields: ['codepoint', 'name'],
 		data: null,
 	},
+	emojiSources: {
+		// Provides mappings between unicode code points and sequences on one hand
+		// and Shift-JIS codes for cell phone carrier symbols on the other hand:
+		name: 'emoji-sources',
+		url: 'http://www.unicode.org/Public/UNIDATA/EmojiSources.txt',
+		fields: ['unicode', 'docomo', 'kddi', 'softbank'],
+		data: null,
+	},
 	emojiData: {
 		// Emoji code points:
 		// Property "Emoji=Yes" means "emoji character", a character that is recommended for use as emoji
@@ -124,6 +132,7 @@ co(function *() {
 	// Combine spec props in an array for batch processing:
 	const specsArray = [
 		specs.unicodeData,
+		specs.emojiSources,
 		specs.emojiData,
 		specs.standardizedVariants,
 		specs.emojiSequences,
@@ -142,9 +151,30 @@ co(function *() {
 	// 	...
 	// }
 	specs.unicodeData.data = specs.unicodeData.data
-		.reduce((nameForCodepoint, datum, i) => {
+		.reduce((nameForCodepoint, datum) => {
 			nameForCodepoint[datum.codepoint] = datum.name;
 			return nameForCodepoint;
+		}, {});
+
+	// Transform emojiSources to map unicode code points or sequences
+	// to Shift-JIS code for different cell phone carrier symbols, e.g.
+	// {
+	// 	...
+	// 	'0023 20E3': { // unicode
+	// 		'docomo': 'F985',
+	// 		'kddi': 'F489',
+	// 		'softbank': 'F7B0',
+	// 	},
+	// 	...
+	// }
+	specs.emojiSources.data = specs.emojiSources.data
+		.reduce((shiftJisByCarrierForUnicode, datum) => {
+			shiftJisByCarrierForUnicode[datum.unicode] = {
+				docomo: datum.docomo.length > 0 ? datum.docomo : undefined,
+				kddi: datum.kddi.length > 0 ? datum.kddi : undefined,
+				softbank: datum.softbank.length > 0 ? datum.softbank : undefined,
+			};
+			return shiftJisByCarrierForUnicode;
 		}, {});
 
 	// Expand emojiData code point ranges (e.g. '1F601..1F610') into separate objects:
@@ -215,7 +245,7 @@ co(function *() {
 			return variationSequenceForCodepoint;
 		}, {});
 
-	// specsArray.forEach(spec => fs.writeFileSync(`./json/${spec.name}.json`, JSON.stringify(spec.data, null, 2)));
+	specsArray.forEach(spec => fs.writeFileSync(`./json/${spec.name}.json`, JSON.stringify(spec.data, null, 2)));
 
 	// Combining marks can modify the appearance of a preceding
 	// emoji variation sequence when used in a combining sequence.
@@ -270,6 +300,7 @@ co(function *() {
 		};
 		return Object.assign({}, {
 			codepoint,
+			shiftJis: specs.emojiSources.data[codepoint],
 			name: specs.unicodeData.data[codepoint],
 			defaultPresentation: isDefaultEmojiPresentation ? 'emoji' : 'text',
 			presentation: {
