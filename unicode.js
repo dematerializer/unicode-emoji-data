@@ -72,7 +72,7 @@ const specs = {
 	unicodeData: {
 		// Code point names:
 		name: 'unicode-data',
-		url: 'http://www.unicode.org/Public/UNIDATA/UnicodeData.txt',
+		url: 'http://www.unicode.org/Public/9.0.0/ucd/UnicodeData.txt',
 		fields: ['codepoint', 'name'],
 		data: {
 			parsed: null,
@@ -83,7 +83,7 @@ const specs = {
 		// Provides mappings between unicode code points and sequences on one hand
 		// and Shift-JIS codes for cell phone carrier symbols on the other hand:
 		name: 'emoji-sources',
-		url: 'http://www.unicode.org/Public/UNIDATA/EmojiSources.txt',
+		url: 'http://unicode.org/Public/9.0.0/ucd/EmojiSources.txt',
 		fields: ['unicode', 'docomo', 'kddi', 'softbank'],
 		data: {
 			parsed: null,
@@ -101,7 +101,7 @@ const specs = {
 		// Property "Emoji_Modifier=Yes" — A character that can be used to modify the appearance of a preceding emoji in an emoji modifier sequence
 		// property="Emoji_Modifier_Base" means A character whose appearance can be modified by a subsequent emoji modifier in an emoji modifier sequence
 		name: 'emoji-data',
-		url: 'http://www.unicode.org/Public/emoji/4.0/emoji-data.txt',
+		url: 'http://www.unicode.org/Public/emoji/3.0/emoji-data.txt',
 		fields: ['codepoints', 'property'],
 		data: {
 			parsed: null,
@@ -132,7 +132,7 @@ const specs = {
 		// Combining, flag, modifier sequences.
 		// We use this only to get flag sequences.
 		name: 'emoji-sequences',
-		url: 'http://www.unicode.org/Public/emoji/4.0/emoji-sequences.txt',
+		url: 'http://www.unicode.org/Public/emoji/3.0/emoji-sequences.txt',
 		fields: ['codepoints', 'type', 'description'],
 		data: {
 			parsed: null,
@@ -142,7 +142,7 @@ const specs = {
 	emojiZwjSequences: {
 		// Zero-Width-Joiner sequences:
 		name: 'emoji-zwj-sequences',
-		url: 'http://www.unicode.org/Public/emoji/4.0/emoji-zwj-sequences.txt',
+		url: 'http://www.unicode.org/Public/emoji/3.0/emoji-zwj-sequences.txt',
 		fields: ['codepoints', 'type', 'description'],
 		data: {
 			parsed: null,
