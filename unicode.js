@@ -347,7 +347,7 @@ co(function *() {
 	specs.emojiData.data.combined = specs.emojiData.data.emoji.map(datum => {
 		const codepoint = datum.codepoint;
 		const isDefaultEmojiPresentation = emojiPresentations.some(ep => ep.codepoint === codepoint);
-		const variationSequence = specs.standardizedVariants.data[codepoint];
+		const variationSequence = specs.standardizedVariants.data.variationSequencesForCodepoint[codepoint];
 		const keycapName = combiningMark.keycap.compatibleCodepoints[codepoint];
 		// tr51: Combining marks may be applied to emoji, just like they can
 		// be applied to other characters. When a combining mark is applied
