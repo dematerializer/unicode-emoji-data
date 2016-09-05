@@ -310,6 +310,21 @@ co(function *() {
 			});
 			return variationSequencesForCodepoint;
 		}, {});
+	// emoji-zwj-sequences.txt mentions: "three characters used in emoji zwj sequences
+	// with the emoji variation selector do not yet appear in StandardizedVariants.txt"
+	// - so we add them here manually:
+	specs.standardizedVariants.data.variationSequencesForCodepoint['2640'] = { // FEMALE SIGN
+		'text': `2640 ${variationSelector.text}`,
+		'emoji': `2640 ${variationSelector.emoji}`,
+	};
+	specs.standardizedVariants.data.variationSequencesForCodepoint['2642'] = { // MALE SIGN
+		'text': `2642 ${variationSelector.text}`,
+		'emoji': `2642 ${variationSelector.emoji}`,
+	};
+	specs.standardizedVariants.data.variationSequencesForCodepoint['2695'] = { // STAFF OF AESCULAPIUS
+		'text': `2695 ${variationSelector.text}`,
+		'emoji': `2695 ${variationSelector.emoji}`,
+	};
 
 	// Combining marks can modify the appearance of a preceding
 	// emoji variation sequence when used in a combining sequence.
