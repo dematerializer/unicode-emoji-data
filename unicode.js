@@ -109,6 +109,7 @@ const specs = {
 			emojiPresentation: null,
 			emojiModifier: null,
 			emojiModifierBase: null,
+			enhanced: null,
 			combined: null,
 		},
 	},
@@ -136,6 +137,7 @@ const specs = {
 		fields: ['sequence', 'type', 'description'],
 		data: {
 			parsed: null,
+			compatibleCodepointsForCombiningMark: null,
 			flags: null,
 		},
 	},
@@ -369,24 +371,24 @@ co(function *() {
 	// 	'emoji': `2695 ${variationSelector.emoji}`,
 	// };
 
-	// Assemble combined emoji data:
+	// Assemble enhanced emoji data:
 	const emojiPresentations = specs.emojiData.data.emojiPresentation;
-	specs.emojiData.data.combined = specs.emojiData.data.emoji.map(datum => {
+	specs.emojiData.data.enhanced = specs.emojiData.data.emoji.map(datum => {
 		const codepoint = datum.codepoint;
 		const isDefaultEmojiPresentation = emojiPresentations.some(ep => ep.codepoint === codepoint);
 		const variationSequence = specs.standardizedVariants.data.variationSequencesForCodepoint[codepoint];
-		// tr51: Combining marks may be applied to emoji, just like they can
-		// be applied to other characters. When a combining mark is applied
-		// to a code point, the combination should take on an emoji presentation.
-		// StandardizedVariants.txt defines both emoji and text variations to be
-		// compatible with keycap marks and implementations also support both.
-		// Furthermore, EmojiSources.txt indicates keycap mark be joined
-		// without a variation sequence present.
-		// -> So as a consequence we support all three presentations:
 		const combination = Object.keys(specs.emojiSequences.data.compatibleCodepointsForCombiningMark)
 			.reduce((combinationForCombiningMarkProp, mark) => {
 				const markPropertyKey = combiningMarks[mark].propertyKey;
 				const compatibleCodepoints = specs.emojiSequences.data.compatibleCodepointsForCombiningMark[mark];
+				// tr51: Combining marks may be applied to emoji, just like they can
+				// be applied to other characters. When a combining mark is applied
+				// to a code point, the combination should take on an emoji presentation.
+				// StandardizedVariants.txt defines both emoji and text variations to be
+				// compatible with keycap marks and implementations also support both.
+				// Furthermore, EmojiSources.txt indicates keycap mark be joined
+				// without a variation sequence present.
+				// -> So as a consequence we support all three presentations:
 				const defaultPresentation = `${codepoint} ${mark}`;
 				const textPresentation = `${codepoint} ${variationSelector.text} ${mark}`;
 				const emojiPresentation = `${codepoint} ${variationSelector.emoji} ${mark}`;
@@ -436,9 +438,13 @@ co(function *() {
 			combination,
 			modification,
 		});
-	})
-	.concat(specs.emojiSequences.data.flags);
+	});
 
-	specsArray.forEach(spec => fs.writeFileSync(`./json/${spec.name}.json`, JSON.stringify(spec.data, null, 2)));
+	specs.emojiData.data.combined = [
+		specs.emojiData.data.enhanced,
+		specs.emojiSequences.data.flags,
+	];
+
+	// specsArray.forEach(spec => fs.writeFileSync(`./json/${spec.name}.json`, JSON.stringify(spec.data, null, 2)));
 	fs.writeFileSync('./json/combined.json', JSON.stringify(specs.emojiData.data.combined, null, 2));
 });
