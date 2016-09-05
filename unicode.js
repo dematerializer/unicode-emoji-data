@@ -130,10 +130,10 @@ const specs = {
 	},
 	emojiSequences: {
 		// Combining, flag, modifier sequences.
-		// We use this only to get flag sequences.
+		// We use this only to get combining and flag sequences.
 		name: 'emoji-sequences',
 		url: 'http://www.unicode.org/Public/emoji/3.0/emoji-sequences.txt',
-		fields: ['codepoints', 'type', 'description'],
+		fields: ['sequence', 'type', 'description'],
 		data: {
 			parsed: null,
 			flags: null,
@@ -230,20 +230,63 @@ co(function *() {
 		emojiModifierBase: emojiDataParsed.filter(datum => datum.property === 'Emoji_Modifier_Base'),
 	});
 
-	// Build additional flag entries
+	// Combining marks can modify the appearance of a preceding
+	// emoji variation sequence when used in a combining sequence.
+
+	const combiningMarks = {
+		'20E3': { // COMBINING ENCLOSING KEYCAP
+			propertyKey: 'keycap',
+			// For digits, follow naming convention of pure emoji U+1F51F (KEYCAP TEN)
+			combinedName: name => name.startsWith('DIGIT') ? name.replace('DIGIT', 'KEYCAP') : `KEYCAP ${name}`,
+		},
+		'20E0': { // COMBINING ENCLOSING CIRCLE BACKSLASH
+			// Prohibition mark is generally recommended in tr51 but there are
+			// no compatible code points mentioned in StandardizedVariants.txt
+			// and implementations don't seem to support this yet
+		},
+	};
+
+	// Build a map of compatible code points for each combining mark
+	// while associating with them their transformed/combined name:
+	// {
+	// 	...
+	// 	'20E3': { // COMBINING ENCLOSING KEYCAP
+	// 		...
+	// 		'002A': 'KEYCAP ASTERISK', // ASTERISK
+	// 		'0030': 'KEYCAP ZERO', // DIGIT ZERO
+	// 		...
+	// 	},
+	// 	...
+	// }
+	specs.emojiSequences.data.compatibleCodepointsForCombiningMark = specs.emojiSequences.data.parsed
+		.filter(datum => datum.type === 'Emoji_Combining_Sequence')
+		.reduce((compatibleCodepointsForCombiningMark, datum) => {
+			const codepoints = datum.sequence.split(' ');
+			const compatibleCodepoint = codepoints[0]; // ignore the variation selector
+			const combiningMark = codepoints[codepoints.length - 1];
+			if (compatibleCodepointsForCombiningMark[combiningMark] == null) {
+				compatibleCodepointsForCombiningMark[combiningMark] = {};
+			}
+			const compatibleCodepointName = specs.unicodeData.data.nameForCodepoint[compatibleCodepoint];
+			const combinedName = combiningMarks[combiningMark].combinedName(compatibleCodepointName);
+			compatibleCodepointsForCombiningMark[combiningMark][compatibleCodepoint] = combinedName;
+			return compatibleCodepointsForCombiningMark;
+		}, {});
+
+	// Build additional flag entries from flag sequences:
 	specs.emojiSequences.data.flags = specs.emojiSequences.data.parsed
 		.filter(datum => datum.type === 'Emoji_Flag_Sequence')
 		.map(datum => ({
-			codepoint: datum.codepoints,
-			name: datum.codepoints.split(' ').reduce((combinedName, codepoint) => {
+			codepoint: datum.sequence,
+			name: datum.sequence.split(' ').reduce((combinedName, codepoint) => {
 				const cpName = specs.unicodeData.data.nameForCodepoint[codepoint];
 				return combinedName + cpName[cpName.length - 1];
 			}, 'REGIONAL INDICATOR SYMBOL LETTERS '),
 			defaultPresentation: 'emoji',
 			presentation: {
 				default: {
-					sequence: datum.codepoints,
-					output: codepointSequenceToString(datum.codepoints),
+					sequence: datum.sequence,
+					output: codepointSequenceToString(datum.sequence),
 				},
 			},
 		}));
@@ -310,52 +353,21 @@ co(function *() {
 			});
 			return variationSequencesForCodepoint;
 		}, {});
-	// emoji-zwj-sequences.txt mentions: "three characters used in emoji zwj sequences
+	// emoji-zwj-sequences.txt v4.0 mentions: "three characters used in emoji zwj sequences
 	// with the emoji variation selector do not yet appear in StandardizedVariants.txt"
 	// - so we add them here manually:
-	specs.standardizedVariants.data.variationSequencesForCodepoint['2640'] = { // FEMALE SIGN
-		'text': `2640 ${variationSelector.text}`,
-		'emoji': `2640 ${variationSelector.emoji}`,
-	};
-	specs.standardizedVariants.data.variationSequencesForCodepoint['2642'] = { // MALE SIGN
-		'text': `2642 ${variationSelector.text}`,
-		'emoji': `2642 ${variationSelector.emoji}`,
-	};
-	specs.standardizedVariants.data.variationSequencesForCodepoint['2695'] = { // STAFF OF AESCULAPIUS
-		'text': `2695 ${variationSelector.text}`,
-		'emoji': `2695 ${variationSelector.emoji}`,
-	};
-
-	// Combining marks can modify the appearance of a preceding
-	// emoji variation sequence when used in a combining sequence.
-	const combiningMark = {
-		keycap: {
-			codepoint: '20E3', // COMBINING ENCLOSING KEYCAP
-			// Compatible code points derived from StandardizedVariants.txt.
-			// Names follow naming convention of pure emoji U+1F51F KEYCAP TEN:
-			compatibleCodepoints: {
-				'0023': 'KEYCAP NUMBER SIGN', // NUMBER SIGN
-				'002A': 'KEYCAP ASTERISK', // ASTERISK
-				'0030': 'KEYCAP ZERO', // DIGIT ZERO
-				'0031': 'KEYCAP ONE', // DIGIT ONE
-				'0032': 'KEYCAP TWO', // DIGIT TWO
-				'0033': 'KEYCAP THREE', // DIGIT THREE
-				'0034': 'KEYCAP FOUR', // DIGIT FOUR
-				'0035': 'KEYCAP FIVE', // DIGIT FIVE
-				'0036': 'KEYCAP SIX', // DIGIT SIX
-				'0037': 'KEYCAP SEVEN', // DIGIT SEVEN
-				'0038': 'KEYCAP EIGHT', // DIGIT EIGHT
-				'0039': 'KEYCAP NINE', // DIGIT NINE
-			},
-		},
-		// Prohibition mark is generally recommended in tr51 but there are
-		// no compatible code points mentioned in StandardizedVariants.txt
-		// and implementations don't seem to support this yet.
-		prohibit: {
-			codepoint: '20E0', // COMBINING ENCLOSING CIRCLE BACKSLASH
-			compatibleCodepoints: [], // nothing yet
-		},
-	};
+	// specs.standardizedVariants.data.variationSequencesForCodepoint['2640'] = { // FEMALE SIGN
+	// 	'text': `2640 ${variationSelector.text}`,
+	// 	'emoji': `2640 ${variationSelector.emoji}`,
+	// };
+	// specs.standardizedVariants.data.variationSequencesForCodepoint['2642'] = { // MALE SIGN
+	// 	'text': `2642 ${variationSelector.text}`,
+	// 	'emoji': `2642 ${variationSelector.emoji}`,
+	// };
+	// specs.standardizedVariants.data.variationSequencesForCodepoint['2695'] = { // STAFF OF AESCULAPIUS
+	// 	'text': `2695 ${variationSelector.text}`,
+	// 	'emoji': `2695 ${variationSelector.emoji}`,
+	// };
 
 	// Assemble combined emoji data:
 	const emojiPresentations = specs.emojiData.data.emojiPresentation;
@@ -363,7 +375,6 @@ co(function *() {
 		const codepoint = datum.codepoint;
 		const isDefaultEmojiPresentation = emojiPresentations.some(ep => ep.codepoint === codepoint);
 		const variationSequence = specs.standardizedVariants.data.variationSequencesForCodepoint[codepoint];
-		const keycapName = combiningMark.keycap.compatibleCodepoints[codepoint];
 		// tr51: Combining marks may be applied to emoji, just like they can
 		// be applied to other characters. When a combining mark is applied
 		// to a code point, the combination should take on an emoji presentation.
@@ -372,11 +383,34 @@ co(function *() {
 		// Furthermore, EmojiSources.txt indicates keycap mark be joined
 		// without a variation sequence present.
 		// -> So as a consequence we support all three presentations:
-		const keycapPresentation = {
-			default: `${codepoint} ${combiningMark.keycap.codepoint}`,
-			text: `${codepoint} ${variationSelector.text} ${combiningMark.keycap.codepoint}`,
-			emoji: `${codepoint} ${variationSelector.emoji} ${combiningMark.keycap.codepoint}`,
-		};
+		const combination = Object.keys(specs.emojiSequences.data.compatibleCodepointsForCombiningMark)
+			.reduce((combinationForCombiningMarkProp, mark) => {
+				const markPropertyKey = combiningMarks[mark].propertyKey;
+				const compatibleCodepoints = specs.emojiSequences.data.compatibleCodepointsForCombiningMark[mark];
+				const defaultPresentation = `${codepoint} ${mark}`;
+				const textPresentation = `${codepoint} ${variationSelector.text} ${mark}`;
+				const emojiPresentation = `${codepoint} ${variationSelector.emoji} ${mark}`;
+				combinationForCombiningMarkProp[markPropertyKey] = compatibleCodepoints[codepoint] == null ? undefined : {
+					name: compatibleCodepoints[codepoint],
+					presentation: {
+						default: {
+							sequence: defaultPresentation,
+							output: codepointSequenceToString(defaultPresentation),
+						},
+						variation: {
+							text: {
+								sequence: textPresentation,
+								output: codepointSequenceToString(textPresentation),
+							},
+							emoji: {
+								sequence: emojiPresentation,
+								output: codepointSequenceToString(emojiPresentation),
+							},
+						},
+					},
+				};
+				return combinationForCombiningMarkProp;
+			}, {});
 		const modification = specs.emojiData.data.emojiModifierBase[codepoint];
 		return Object.assign({}, {
 			codepoint,
@@ -399,27 +433,7 @@ co(function *() {
 					},
 				},
 			},
-			combination: !keycapName ? undefined : {
-				keycap: {
-					name: keycapName,
-					presentation: {
-						default: {
-							sequence: keycapPresentation.default,
-							output: codepointSequenceToString(keycapPresentation.default),
-						},
-						variation: {
-							text: {
-								sequence: keycapPresentation.text,
-								output: codepointSequenceToString(keycapPresentation.text),
-							},
-							emoji: {
-								sequence: keycapPresentation.emoji,
-								output: codepointSequenceToString(keycapPresentation.emoji),
-							},
-						},
-					},
-				},
-			},
+			combination,
 			modification,
 		});
 	})
