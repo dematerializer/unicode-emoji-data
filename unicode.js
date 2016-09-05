@@ -115,11 +115,13 @@ const specs = {
 	},
 	standardizedVariants: {
 		// Variation sequences:
+		// Some Unicode characters are normally displayed as emoji; some are normally
+		// displayed as ordinary text, and some can be displayed both ways.
 		// A variation selector that can modify the appearance of a preceding emoji character in
 		// a variation sequence is used to select which presentation style (emoji or text) a character should have
 		// U+FE0E VARIATION SELECTOR-15 (VS15) for a text presentation style
 		// U+FE0F VARIATION SELECTOR-16 (VS16) for an emoji presentation style
-		// Only a specific subset of emoji characters defined in this file can have both emoji and text presentation
+		// Only the specific subset of emoji characters defined in this file can have both emoji and text presentation
 		// styles - all others get their presentation style implicitly without the need to append a variation selector.
 		name: 'standardized-variants',
 		url: 'http://unicode.org/Public/9.0.0/ucd/StandardizedVariants.txt',
