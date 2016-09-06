@@ -140,16 +140,17 @@ const specs = {
 		data: {
 			parsed: null,
 			compatibleCodepointsForCombiningMark: null,
-			flags: null,
+			flagEmoji: null,
 		},
 	},
 	emojiZwjSequences: {
 		// Zero-Width-Joiner sequences:
 		name: 'emoji-zwj-sequences',
 		url: 'http://www.unicode.org/Public/emoji/3.0/emoji-zwj-sequences.txt',
-		fields: ['codepoints', 'type', 'description'],
+		fields: ['sequence', 'type', 'description'],
 		data: {
 			parsed: null,
+			joinedEmoji: null,
 		},
 	},
 };
@@ -278,7 +279,7 @@ co(function *() {
 		}, {});
 
 	// Build additional flag entries from flag sequences:
-	specs.emojiSequences.data.flags = specs.emojiSequences.data.parsed
+	specs.emojiSequences.data.flagEmoji = specs.emojiSequences.data.parsed
 		.filter(datum => datum.type === 'Emoji_Flag_Sequence')
 		.map(datum => ({
 			codepoint: datum.sequence,
@@ -307,8 +308,8 @@ co(function *() {
 			return nameForModifierCodepoint;
 		}, {});
 
-	// Build map of emojis that can be modified (maps each modifiable code point to a modifier sequence).
-	// Those are basically all emojis that have skin variations:
+	// Build map of emoji that can be modified (maps each modifiable code point to a modifier sequence).
+	// Those are basically all emoji that have skin variations:
 	specs.emojiData.data.emojiModifierBase = specs.emojiData.data.emojiModifierBase
 		.reduce((modifierSequencesForModifiableCodepoint, baseDatum) => {
 			modifierSequencesForModifiableCodepoint[baseDatum.codepoint] = Object.keys(specs.emojiData.data.emojiModifier)
@@ -372,6 +373,31 @@ co(function *() {
 	// 	'text': `2695 ${variationSelector.text}`,
 	// 	'emoji': `2695 ${variationSelector.emoji}`,
 	// };
+
+	// Build additional emoji entries from Zero-Width-Joiner sequences:
+	const zeroWidthJoiner = '200D';
+	specs.emojiZwjSequences.data.joinedEmoji = specs.emojiZwjSequences.data.parsed
+		.map(datum => {
+			const anyVariationSelector = new RegExp(`${variationSelector.text}|${variationSelector.emoji}`, 'g');
+			const joinedName = datum.sequence
+				.replace(anyVariationSelector, '')
+				.split(zeroWidthJoiner)
+				.map(codepoint => codepoint.trim())
+				.map(codepoint => specs.unicodeData.data.nameForCodepoint[codepoint])
+				.map(name => name.replace('HEAVY BLACK HEART', 'HEART'))
+				.map(name => name.replace('KISS MARK', 'KISS'))
+				.join(', ');
+			return {
+				name: joinedName,
+				defaultPresentation: 'emoji',
+				presentation: {
+					default: {
+						sequence: datum.sequence,
+						output: codepointSequenceToString(datum.sequence),
+					},
+				},
+			}
+		});
 
 	// Assemble enhanced emoji data:
 	const emojiPresentations = specs.emojiData.data.emojiPresentation;
@@ -444,7 +470,8 @@ co(function *() {
 
 	specs.emojiData.data.combined = [
 		specs.emojiData.data.enhanced,
-		specs.emojiSequences.data.flags,
+		specs.emojiSequences.data.flagEmoji,
+		specs.emojiZwjSequences.data.joinedEmoji,
 	];
 
 	// specsArray.forEach(spec => fs.writeFileSync(`./json/${spec.name}.json`, JSON.stringify(spec.data, null, 2)));
