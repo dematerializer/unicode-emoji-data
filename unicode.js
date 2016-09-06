@@ -426,7 +426,7 @@ co(function *() {
 				const emojiPresentation = `${codepoint} ${variationSelector.emoji} ${mark}`;
 				combinationForCombiningMarkProp[markPropertyKey] = compatibleCodepoints[codepoint] == null ? undefined : {
 					name: compatibleCodepoints[codepoint],
-					// TODO: should this also have a defaultPresentation prop just for consistency?
+					// TODO: should this also have a defaultPresentation=emoji prop just for consistency?
 					presentation: {
 						default: {
 							sequence: defaultPresentation,
