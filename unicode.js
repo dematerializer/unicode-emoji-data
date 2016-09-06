@@ -63,9 +63,8 @@ function codepointSequenceToString(codepointSequence) {
 	// array: codepointSequenceToString(['0032', 'FE0F', '20E3'])
 	const sequence = arguments.length > 1 ? Array.prototype.slice.call(arguments) : codepointSequence;
 	const codepoints = typeof sequence === 'string' ? sequence.split(' ') : sequence;
-	return codepoints
-		.map(codepoint => String.fromCodePoint(parseInt(codepoint, 16)))
-		.reduce((str, cp) => (str + cp), '');
+	const numericCodepoints = codepoints.map(codepoint => parseInt(codepoint, 16));
+	return String.fromCodePoint(...numericCodepoints);
 }
 
 const specs = {
