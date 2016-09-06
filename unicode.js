@@ -378,14 +378,15 @@ co(function *() {
 	const zeroWidthJoiner = '200D';
 	specs.emojiZwjSequences.data.joinedEmoji = specs.emojiZwjSequences.data.parsed
 		.map(datum => {
+			const nameForCp = specs.unicodeData.data.nameForCodepoint;
 			const anyVariationSelector = new RegExp(`${variationSelector.text}|${variationSelector.emoji}`, 'g');
 			const joinedName = datum.sequence
 				.replace(anyVariationSelector, '')
 				.split(zeroWidthJoiner)
-				.map(codepoint => codepoint.trim())
-				.map(codepoint => specs.unicodeData.data.nameForCodepoint[codepoint])
-				.map(name => name.replace('HEAVY BLACK HEART', 'HEART'))
-				.map(name => name.replace('KISS MARK', 'KISS'))
+				.map(codepoint => {
+					const [cp, mod] = codepoint.trim().split(' ');
+					return nameForCp[cp] + (mod ? `, ${nameForCp[mod]}` : '');
+				})
 				.join(', ');
 			return {
 				name: joinedName,
