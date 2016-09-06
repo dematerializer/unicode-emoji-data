@@ -281,7 +281,7 @@ co(function *() {
 	specs.emojiSequences.data.flagEmoji = specs.emojiSequences.data.parsed
 		.filter(datum => datum.type === 'Emoji_Flag_Sequence')
 		.map(datum => ({
-			codepoint: datum.sequence,
+			codepoint: datum.sequence, // TODO: this is technically not true, because it's just a sequence
 			name: datum.sequence.split(' ').reduce((combinedName, codepoint) => {
 				const cpName = specs.unicodeData.data.nameForCodepoint[codepoint];
 				return combinedName + cpName[cpName.length - 1];
@@ -388,6 +388,7 @@ co(function *() {
 				})
 				.join(', ');
 			return {
+				codepoint: datum.sequence, // TODO: this is technically not true, because it's just a sequence
 				name: joinedName,
 				defaultPresentation: 'emoji',
 				presentation: {
@@ -425,6 +426,7 @@ co(function *() {
 				const emojiPresentation = `${codepoint} ${variationSelector.emoji} ${mark}`;
 				combinationForCombiningMarkProp[markPropertyKey] = compatibleCodepoints[codepoint] == null ? undefined : {
 					name: compatibleCodepoints[codepoint],
+					// TODO: should this also have a defaultPresentation prop just for consistency?
 					presentation: {
 						default: {
 							sequence: defaultPresentation,
