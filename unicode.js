@@ -410,6 +410,9 @@ co(function *() {
 			.reduce((combinationForCombiningMarkProp, mark) => {
 				const markPropertyKey = combiningMarks[mark].propertyKey;
 				const compatibleCodepoints = specs.emojiSequences.data.compatibleCodepointsForCombiningMark[mark];
+				if (compatibleCodepoints[codepoint] == null) {
+					return combinationForCombiningMarkProp; // return early
+				}
 				// tr51: Combining marks may be applied to emoji, just like they can
 				// be applied to other characters. When a combining mark is applied
 				// to a code point, the combination should take on an emoji presentation.
@@ -464,7 +467,7 @@ co(function *() {
 					},
 				},
 			},
-			combination,
+			combination: Object.keys(combination).length > 0 ? combination : undefined,
 			modification,
 		});
 	});
