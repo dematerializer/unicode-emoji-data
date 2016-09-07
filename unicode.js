@@ -145,7 +145,7 @@ const specs = {
 	emojiZwjSequences: {
 		// Zero-Width-Joiner sequences:
 		name: 'emoji-zwj-sequences',
-		url: 'http://www.unicode.org/Public/emoji/3.0/emoji-zwj-sequences.txt',
+		url: 'http://www.unicode.org/Public/emoji/4.0/emoji-zwj-sequences.txt',
 		fields: ['sequence', 'type', 'description'],
 		data: {
 			parsed: null,
@@ -375,16 +375,21 @@ co(function *() {
 
 	// Build additional emoji entries from Zero-Width-Joiner sequences:
 	const zeroWidthJoiner = '200D';
-	specs.emojiZwjSequences.data.joinedEmoji = specs.emojiZwjSequences.data.parsed
+	const anyVariationSelector = new RegExp(`${variationSelector.text}|${variationSelector.emoji}`, 'g');
+	const anyModifier = /1F3FB|1F3FC|1F3FD|1F3FE|1F3FF/g
+	specs.emojiZwjSequences.data.joinedEmoji = {
+		withoutModifiers: null,
+		withModifiers: null,
+	};
+	specs.emojiZwjSequences.data.joinedEmoji.withoutModifiers = specs.emojiZwjSequences.data.parsed
+		.filter(datum => datum.sequence.match(anyModifier) == null)
 		.map(datum => {
-			const nameForCp = specs.unicodeData.data.nameForCodepoint;
-			const anyVariationSelector = new RegExp(`${variationSelector.text}|${variationSelector.emoji}`, 'g');
 			const joinedName = datum.sequence
 				.replace(anyVariationSelector, '')
 				.split(zeroWidthJoiner)
 				.map(codepoint => {
-					const [cp, mod] = codepoint.trim().split(' ');
-					return nameForCp[cp] + (mod ? `, ${nameForCp[mod]}` : '');
+					const [cp] = codepoint.trim().split(' ');
+					return specs.unicodeData.data.nameForCodepoint[cp];
 				})
 				.join(', ');
 			return {
@@ -397,6 +402,27 @@ co(function *() {
 						output: codepointSequenceToString(datum.sequence),
 					},
 				},
+			}
+		});
+
+	specs.emojiZwjSequences.data.joinedEmoji.withModifiers = specs.emojiZwjSequences.data.parsed
+		.filter(datum => datum.sequence.match(anyModifier) != null)
+		// .map(datum => { console.log(datum); return datum; })
+		.map(datum => {
+			const [cp, mod, ...rest] = datum.sequence.replace(anyVariationSelector, '').trim().split(' ');
+			const parentDatum = specs.emojiZwjSequences.data.joinedEmoji.withoutModifiers.find(d =>
+				d.presentation.default.sequence.includes(cp) && d.presentation.default.sequence.includes(rest[rest.length - 1])
+			);
+			if (parentDatum) {
+				if (parentDatum.modification == null) {
+					parentDatum.modification = { skin: {} };
+				}
+				parentDatum.modification.skin[specs.unicodeData.data.nameForCodepoint[mod]] = {
+					sequence: datum.sequence,
+					output: codepointSequenceToString(datum.sequence),
+				};
+			} else {
+				console.warn('No parent datum found for', datum);
 			}
 		});
 
@@ -446,7 +472,10 @@ co(function *() {
 				};
 				return combinationForCombiningMarkProp;
 			}, {});
-		const modification = specs.emojiData.data.emojiModifierBase[codepoint];
+		const emojiModifierBase = specs.emojiData.data.emojiModifierBase[codepoint];
+		const modification = emojiModifierBase == null ? undefined : {
+			skin: emojiModifierBase,
+		};
 		return Object.assign({}, {
 			codepoint,
 			shiftJis: specs.emojiSources.data.shiftJisByCarrierForCodepoint[codepoint],
@@ -476,7 +505,7 @@ co(function *() {
 	specs.emojiData.data.combined = [
 		...specs.emojiData.data.enhanced,
 		...specs.emojiSequences.data.flagEmoji,
-		...specs.emojiZwjSequences.data.joinedEmoji,
+		...specs.emojiZwjSequences.data.joinedEmoji.withoutModifiers,
 	];
 
 	// specsArray.forEach(spec => fs.writeFileSync(`./json/${spec.name}.json`, JSON.stringify(spec.data, null, 2)));
