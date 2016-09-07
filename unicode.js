@@ -4,7 +4,7 @@ const fs = require('fs');
 const leftPad = require('left-pad'); // FTW!
 
 // Parses a CSV formatted <text> that may contain comments,
-// extracting only relevant fields given by <fieldNames>:
+// extracting only relevant fields given by <fieldNames> + comment:
 //
 // e.g. let <fieldNames> be ['codepoints', 'property']; <text> = '
 // 	# this is a comment
