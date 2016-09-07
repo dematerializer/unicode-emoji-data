@@ -474,9 +474,9 @@ co(function *() {
 	});
 
 	specs.emojiData.data.combined = [
-		specs.emojiData.data.enhanced,
-		specs.emojiSequences.data.flagEmoji,
-		specs.emojiZwjSequences.data.joinedEmoji,
+		...specs.emojiData.data.enhanced,
+		...specs.emojiSequences.data.flagEmoji,
+		...specs.emojiZwjSequences.data.joinedEmoji,
 	];
 
 	// specsArray.forEach(spec => fs.writeFileSync(`./json/${spec.name}.json`, JSON.stringify(spec.data, null, 2)));
