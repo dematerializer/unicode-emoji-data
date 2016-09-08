@@ -282,10 +282,7 @@ co(function *() {
 		.filter(datum => datum.type === 'Emoji_Flag_Sequence')
 		.map(datum => ({
 			// no codepoint prop here because it's technically just a combination of other codepoints
-			name: datum.sequence.split(' ').reduce((combinedName, codepoint) => {
-				const cpName = specs.unicodeData.data.nameForCodepoint[codepoint];
-				return combinedName + cpName[cpName.length - 1];
-			}, 'REGIONAL INDICATOR SYMBOL LETTERS '),
+			name: datum.sequence.split(' ').map(codepoint => specs.unicodeData.data.nameForCodepoint[codepoint]).join(', '),
 			defaultPresentation: 'emoji',
 			presentation: {
 				default: {
