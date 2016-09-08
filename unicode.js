@@ -474,9 +474,9 @@ co(function *() {
 			skin: emojiModifierBase,
 		};
 		return Object.assign({}, {
+			name: specs.unicodeData.data.nameForCodepoint[codepoint],
 			codepoint,
 			shiftJis: specs.emojiSources.data.shiftJisByCarrierForCodepoint[codepoint],
-			name: specs.unicodeData.data.nameForCodepoint[codepoint],
 			defaultPresentation: isDefaultEmojiPresentation ? 'emoji' : 'text',
 			presentation: {
 				default: {
