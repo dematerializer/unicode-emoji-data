@@ -54,18 +54,18 @@ module.exports = function* (url = defaultUrl) {
 			// emoji-zwj-sequences.txt v4.0 mentions: "three characters used in emoji zwj sequences
 			// with the emoji variation selector do not yet appear in StandardizedVariants.txt"
 			// - so we add them here manually:
-			// '2640': { // FEMALE SIGN
-			// 	'text': `2640 ${variationSelectors.text}`,
-			// 	'emoji': `2640 ${variationSelectors.emoji}`,
-			// },
-			// '2642': { // MALE SIGN
-			// 	'text': `2642 ${variationSelectors.text}`,
-			// 	'emoji': `2642 ${variationSelectors.emoji}`,
-			// },
-			// '2695': { // STAFF OF AESCULAPIUS
-			// 	'text': `2695 ${variationSelectors.text}`,
-			// 	'emoji': `2695 ${variationSelectors.emoji}`,
-			// },
+			'2640': { // FEMALE SIGN
+				'text': `2640 ${variationSelectors.text}`,
+				'emoji': `2640 ${variationSelectors.emoji}`,
+			},
+			'2642': { // MALE SIGN
+				'text': `2642 ${variationSelectors.text}`,
+				'emoji': `2642 ${variationSelectors.emoji}`,
+			},
+			'2695': { // STAFF OF AESCULAPIUS
+				'text': `2695 ${variationSelectors.text}`,
+				'emoji': `2695 ${variationSelectors.emoji}`,
+			},
 		});
 	return { // API
 		variationSelectors,
