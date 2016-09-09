@@ -115,7 +115,6 @@ module.exports = function* (url = defaultUrl, getNameForCodepoint) {
 		}));
 
 	return { // API
-		combiningMarks,
 		getCombinationsForCodepoint,
 		flagEmoji,
 	};

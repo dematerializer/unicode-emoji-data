@@ -21,18 +21,18 @@ module.exports = function* (url = defaultUrl) {
 	// 	},
 	// 	...
 	// }
-	const shiftJisCodeByCarrierForCodepointMap = data.reduce((map, datum) => {
+	const shiftJisCodeByCarrierForCodepoint = data.reduce((shiftJisCodeByCarrierForCodepoint, datum) => {
 		if (datum.docomo.length > 0 || datum.kddi.length > 0 || datum.softbank.length > 0) {
-			map[datum.unicode] = {
+			shiftJisCodeByCarrierForCodepoint[datum.unicode] = {
 				docomo: datum.docomo.length > 0 ? datum.docomo : undefined,
 				kddi: datum.kddi.length > 0 ? datum.kddi : undefined,
 				softbank: datum.softbank.length > 0 ? datum.softbank : undefined,
 			};
 		}
-		return map;
+		return shiftJisCodeByCarrierForCodepoint;
 	}, {});
-	
+
 	return { // API
-		getShiftJisCodeByCarrierForCodepoint: codepoint => shiftJisCodeByCarrierForCodepointMap[codepoint],
+		getShiftJisCodeByCarrierForCodepoint: codepoint => shiftJisCodeByCarrierForCodepoint[codepoint],
 	};
 };

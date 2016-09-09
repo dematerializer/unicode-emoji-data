@@ -16,12 +16,12 @@ module.exports = function* (url = defaultUrl) {
 	// 	'1F601': 'GRINNING FACE WITH SMILING EYES',
 	// 	...
 	// }
-	const nameForCodepointMap = data.reduce((map, datum) => {
-		map[datum.codepoint] = datum.name;
-		return map;
+	const nameForCodepoint = data.reduce((nameForCodepoint, datum) => {
+		nameForCodepoint[datum.codepoint] = datum.name;
+		return nameForCodepoint;
 	}, {});
-	
+
 	return { // API
-		getNameForCodepoint: codepoint => nameForCodepointMap[codepoint],
+		getNameForCodepoint: codepoint => nameForCodepoint[codepoint],
 	};
 };

@@ -62,8 +62,8 @@ module.exports = function* (url = defaultUrl, getNameForCodepoint, getVariationS
 	// Build map of emoji that can be modified (maps each modifiable code point to a modifier sequence).
 	// Those are basically all emoji that have skin variations:
 	const modifierSequencesForModifiableCodepoint = emojiModifierBase
-		.reduce((map, baseDatum) => {
-			map[baseDatum.codepoint] = Object.keys(nameForModifierCodepoint)
+		.reduce((modifierSequencesForModifiableCodepoint, baseDatum) => {
+			modifierSequencesForModifiableCodepoint[baseDatum.codepoint] = Object.keys(nameForModifierCodepoint)
 				.reduce((sequenceForModifierName, modifierCodepoint) => {
 					const sequence = `${baseDatum.codepoint} ${modifierCodepoint}`;
 					sequenceForModifierName[nameForModifierCodepoint[modifierCodepoint]] = {
@@ -72,7 +72,7 @@ module.exports = function* (url = defaultUrl, getNameForCodepoint, getVariationS
 					};
 					return sequenceForModifierName;
 				}, {});
-			return map;
+			return modifierSequencesForModifiableCodepoint;
 		}, {});
 
 		// Assemble enhanced emoji data:

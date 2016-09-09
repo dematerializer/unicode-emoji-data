@@ -33,23 +33,23 @@ module.exports = function* (url = defaultUrl) {
 	// 	},
 	// 	...
 	// }
-	const variationSequencesForCodepointMap = data
+	const variationSequencesForCodepoint = data
 		.filter(datum => {
 			const hasTextVariationSelector = datum.sequence.includes(variationSelectors.text);
 			const hasEmojiVariationSelector = datum.sequence.includes(variationSelectors.emoji);
 			return hasTextVariationSelector || hasEmojiVariationSelector;
 		})
-		.reduce((map, datum) => {
+		.reduce((variationSequencesForCodepoint, datum) => {
 			const [ cp, vs ] = datum.sequence.split(' ');
-			if (map[cp] == null) {
-				map[cp] = {};
+			if (variationSequencesForCodepoint[cp] == null) {
+				variationSequencesForCodepoint[cp] = {};
 			}
 			Object.keys(variationSelectors).forEach(style => {
 				if (vs === variationSelectors[style]) {
-					map[cp][style] = datum.sequence;
+					variationSequencesForCodepoint[cp][style] = datum.sequence;
 				}
 			});
-			return map;
+			return variationSequencesForCodepoint;
 		}, { // initial map
 			// emoji-zwj-sequences.txt v4.0 mentions: "three characters used in emoji zwj sequences
 			// with the emoji variation selector do not yet appear in StandardizedVariants.txt"
@@ -68,7 +68,6 @@ module.exports = function* (url = defaultUrl) {
 			},
 		});
 	return { // API
-		variationSelectors,
-		getVariationSequencesForCodepoint: codepoint => variationSequencesForCodepointMap[codepoint],
+		getVariationSequencesForCodepoint: codepoint => variationSequencesForCodepoint[codepoint],
 	};
 };
