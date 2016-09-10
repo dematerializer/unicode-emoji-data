@@ -4,7 +4,7 @@ const defaultUrl = 'http://www.unicode.org/Public/emoji/4.0/emoji-zwj-sequences.
 
 import fetch from 'node-fetch';
 import parse from '../utils/parse';
-import { codepointSequenceToString } from '../utils/encoding';
+import { codepointSequenceToString } from '../utils/convert';
 
 export default function* EmojiZwjSequences(url = defaultUrl, getNameForCodepoint) {
 	const content = yield fetch(url).then(res => res.text());

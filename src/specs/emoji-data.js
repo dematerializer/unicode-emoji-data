@@ -13,7 +13,7 @@ const defaultUrl = 'http://www.unicode.org/Public/emoji/3.0/emoji-data.txt';
 import fetch from 'node-fetch';
 import leftPad from 'left-pad'; // FTW!
 import parse from '../utils/parse';
-import { codepointSequenceToString } from '../utils/encoding';
+import { codepointSequenceToString } from '../utils/convert';
 
 export default function* EmojiData(url = defaultUrl, getNameForCodepoint, getVariationSequencesForCodepoint, getCombinationsForCodepoint, getShiftJisCodeByCarrierForCodepoint) {
 	const content = yield fetch(url).then(res => res.text());
