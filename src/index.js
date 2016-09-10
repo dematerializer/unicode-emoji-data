@@ -12,18 +12,30 @@ import EmojiZwjSequences from './specs/emoji-zwj-sequences';
 import EmojiData from './specs/emoji-data';
 
 co(function* () {
-	const unicodeData = yield UnicodeData('http://www.unicode.org/Public/9.0.0/ucd/UnicodeData.txt');
-	const emojiSources = yield EmojiSources('http://unicode.org/Public/9.0.0/ucd/EmojiSources.txt');
-	const emojiSequences = yield EmojiSequences('http://www.unicode.org/Public/emoji/3.0/emoji-sequences.txt', unicodeData.getNameForCodepoint);
-	const standardizedVariants = yield StandardizedVariants('http://unicode.org/Public/9.0.0/ucd/StandardizedVariants.txt');
-	const emojiZwjSequences = yield EmojiZwjSequences('http://www.unicode.org/Public/emoji/4.0/emoji-zwj-sequences.txt', unicodeData.getNameForCodepoint);
-	const emojiData = yield EmojiData(
-		'http://www.unicode.org/Public/emoji/3.0/emoji-data.txt',
-		unicodeData.getNameForCodepoint,
-		standardizedVariants.getVariationSequencesForCodepoint,
-		emojiSequences.getCombinationsForCodepoint,
-		emojiSources.getShiftJisCodeByCarrierForCodepoint
-	);
+	const unicodeData = yield UnicodeData({
+		url: 'http://www.unicode.org/Public/9.0.0/ucd/UnicodeData.txt',
+	});
+	const emojiSources = yield EmojiSources({
+		url: 'http://unicode.org/Public/9.0.0/ucd/EmojiSources.txt',
+	});
+	const emojiSequences = yield EmojiSequences({
+		url: 'http://www.unicode.org/Public/emoji/3.0/emoji-sequences.txt',
+		getNameForCodepoint: unicodeData.getNameForCodepoint,
+	});
+	const standardizedVariants = yield StandardizedVariants({
+		url: 'http://unicode.org/Public/9.0.0/ucd/StandardizedVariants.txt',
+	});
+	const emojiZwjSequences = yield EmojiZwjSequences({
+		url: 'http://www.unicode.org/Public/emoji/4.0/emoji-zwj-sequences.txt',
+		getNameForCodepoint: unicodeData.getNameForCodepoint,
+	});
+	const emojiData = yield EmojiData({
+		url: 'http://www.unicode.org/Public/emoji/3.0/emoji-data.txt',
+		getNameForCodepoint: unicodeData.getNameForCodepoint,
+		getVariationSequencesForCodepoint: standardizedVariants.getVariationSequencesForCodepoint,
+		getCombinationsForCodepoint: emojiSequences.getCombinationsForCodepoint,
+		getShiftJisCodeByCarrierForCodepoint: emojiSources.getShiftJisCodeByCarrierForCodepoint,
+	});
 	const combined = [
 		...emojiData.emoji,
 		...emojiSequences.flagEmoji,

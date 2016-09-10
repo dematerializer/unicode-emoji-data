@@ -5,7 +5,7 @@ const defaultUrl = 'http://www.unicode.org/Public/9.0.0/ucd/UnicodeData.txt';
 import fetch from 'node-fetch';
 import parse from '../utils/parse';
 
-export default function* UnicodeData(url = defaultUrl) {
+export default function* UnicodeData({ url = defaultUrl }) {
 	const content = yield fetch(url).then(res => res.text());
 	const data = parse(content, ['codepoint', 'name']);
 

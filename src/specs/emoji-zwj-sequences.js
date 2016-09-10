@@ -6,7 +6,7 @@ import fetch from 'node-fetch';
 import parse from '../utils/parse';
 import { codepointSequenceToString } from '../utils/convert';
 
-export default function* EmojiZwjSequences(url = defaultUrl, getNameForCodepoint) {
+export default function* EmojiZwjSequences({ url = defaultUrl, getNameForCodepoint }) {
 	const content = yield fetch(url).then(res => res.text());
 	const data = parse(content, ['sequence', 'type', 'description']);
 

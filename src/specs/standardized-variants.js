@@ -13,7 +13,7 @@ const defaultUrl = 'http://unicode.org/Public/9.0.0/ucd/StandardizedVariants.txt
 import fetch from 'node-fetch';
 import parse from '../utils/parse';
 
-export default function* StandardizedVariants(url = defaultUrl) {
+export default function* StandardizedVariants({ url = defaultUrl }) {
 	const content = yield fetch(url).then(res => res.text());
 	const data = parse(content, ['sequence', 'description']);
 

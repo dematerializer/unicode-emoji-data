@@ -6,7 +6,7 @@ const defaultUrl = 'http://unicode.org/Public/9.0.0/ucd/EmojiSources.txt';
 import fetch from 'node-fetch';
 import parse from '../utils/parse';
 
-export default function* EmojiSources(url = defaultUrl) {
+export default function* EmojiSources({ url = defaultUrl }) {
 	const content = yield fetch(url).then(res => res.text());
 	const data = parse(content, ['unicode', 'docomo', 'kddi', 'softbank']);
 
