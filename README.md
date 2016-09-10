@@ -1,24 +1,30 @@
-# emojigotchi-data
+# Unicode Emoji Data
 
-## Data Sources
+Your single source of truth for unicode compliant emoji data.
+- complete
+- up-to-date
+- fully tested
+- lightweight, easily parsable JSON format
+- comprehensible for humans by means of [Unicode® Technical Report #51 - UNICODE EMOJI](http://www.unicode.org/reports/tr51)
 
-- http://www.unicode.org/Public/UNIDATA/UnicodeData.txt
-- http://www.unicode.org/Public/UNIDATA/EmojiSources.txt
-- http://unicode.org/emoji/charts/emoji-list.html
-- http://unicode.org/Public/emoji/
-- http://unicode.org/repos/cldr/tags/latest/common/annotations/ short names and keywords by language
-- http://www.unicode.org/Public/7.0.0/ucd/StandardizedVariants.txt variants
+## Install
 
-- use iamcal/emoji-data as a main source, also for categories (do I need categories at all?)
-- use muan/emojilib emojis.json as an extended and curated source for keywords
-- use emoji-data-js directly or as an inspiration for data-wrangling and coding stuff in js
-- use missive/emoji-mart as an inspiration for generating a tailored database and how to do search
-- https://github.com/github/gemoji
+`npm install unicode-emoji-data`
 
-- http://www.joelonsoftware.com/articles/Unicode.html
-- https://theopatt.com/blog/adventures-with-emoji/
-- https://mathiasbynens.be/notes/javascript-unicode
+## Usage
 
+### CommonJS
 
-- http://www.unicode.org/reports/tr51/
-	- Some Unicode characters are normally displayed as emoji; some are normally displayed as ordinary text, and some can be displayed both ways.
+`const emoji = require('unicode-emoji-data');`
+
+### ES6, babel
+
+`import emoji from 'unicode-emoji-data';`
+
+## Structure
+
+TODO
+
+## License
+
+MIT [http://www.opensource.org/licenses/mit-license.php](http://www.opensource.org/licenses/mit-license.php)
