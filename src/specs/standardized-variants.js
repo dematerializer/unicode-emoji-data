@@ -10,10 +10,10 @@
 // styles - all others get their presentation style implicitly without the need to append a variation selector.
 const defaultUrl = 'http://unicode.org/Public/9.0.0/ucd/StandardizedVariants.txt';
 
-const parse = require('./parse');
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
+import parse from '../utils/parse';
 
-module.exports = function* (url = defaultUrl) {
+export default function* StandardizedVariants(url = defaultUrl) {
 	const content = yield fetch(url).then(res => res.text());
 	const data = parse(content, ['sequence', 'description']);
 
@@ -70,4 +70,4 @@ module.exports = function* (url = defaultUrl) {
 	return { // API
 		getVariationSequencesForCodepoint: codepoint => variationSequencesForCodepoint[codepoint],
 	};
-};
+}

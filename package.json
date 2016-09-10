@@ -4,16 +4,19 @@
   "private": true,
   "description": "emojigotchi emoji data",
   "author": "Andreas Tietz https://github.com/dematerializer",
-  "main": "emojis.json",
+  "main": "lib/emoji.json",
   "scripts": {
-    "start": "node scraper.js"
+    "start": "npm run build",
+    "build": "node index.js"
   },
   "devDependencies": {
+    "babel-polyfill": "^6.13.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.14.0",
     "cheerio": "^0.20.0",
     "co": "^4.6.0",
+    "left-pad": "^1.1.1",
     "node-fetch": "^1.5.3"
-  },
-  "dependencies": {
-    "left-pad": "^1.1.1"
   }
 }

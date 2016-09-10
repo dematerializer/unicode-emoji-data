@@ -16,5 +16,5 @@ co(function *() {
 		};
 	}).get();
 	const text = JSON.stringify(json, null, 2);
-	fs.writeFileSync('emojis.json', text);
+	// fs.writeFileSync('../lib/emoji-scraped.json', text);
 });

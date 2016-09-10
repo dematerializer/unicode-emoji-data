@@ -3,11 +3,11 @@
 // We use this only to get combining and flag sequences.
 const defaultUrl = 'http://www.unicode.org/Public/emoji/3.0/emoji-sequences.txt';
 
-const parse = require('./parse');
-const fetch = require('node-fetch');
-const codepointSequenceToString = require('./encoding').codepointSequenceToString;
+import fetch from 'node-fetch';
+import parse from '../utils/parse';
+import { codepointSequenceToString } from '../utils/encoding';
 
-module.exports = function* (url = defaultUrl, getNameForCodepoint) {
+export default function* EmojiSequences(url = defaultUrl, getNameForCodepoint) {
 	const content = yield fetch(url).then(res => res.text());
 	const data = parse(content, ['sequence', 'type', 'description']);
 
@@ -118,4 +118,4 @@ module.exports = function* (url = defaultUrl, getNameForCodepoint) {
 		getCombinationsForCodepoint,
 		flagEmoji,
 	};
-};
+}

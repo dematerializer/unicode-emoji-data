@@ -21,7 +21,7 @@
 // 	},
 // ]
 const anyWhitespace = /([\s])+/g;
-module.exports = function (text, fieldNames) {
+export default function parse(text, fieldNames) {
 	if (fieldNames == null) {
 		return null;
 	}
@@ -50,4 +50,4 @@ module.exports = function (text, fieldNames) {
 			if (field != null) newObj[field] = line.fields[i];
 			return newObj;
 		}), { comment: line.comment }));
-};
+}

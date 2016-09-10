@@ -3,10 +3,10 @@
 // on one hand and Shift-JIS codes for cell phone carrier symbols on the other hand.
 const defaultUrl = 'http://unicode.org/Public/9.0.0/ucd/EmojiSources.txt';
 
-const parse = require('./parse');
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
+import parse from '../utils/parse';
 
-module.exports = function* (url = defaultUrl) {
+export default function* EmojiSources(url = defaultUrl) {
 	const content = yield fetch(url).then(res => res.text());
 	const data = parse(content, ['unicode', 'docomo', 'kddi', 'softbank']);
 
@@ -35,4 +35,4 @@ module.exports = function* (url = defaultUrl) {
 	return { // API
 		getShiftJisCodeByCarrierForCodepoint: codepoint => shiftJisCodeByCarrierForCodepoint[codepoint],
 	};
-};
+}

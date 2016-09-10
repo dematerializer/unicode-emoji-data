@@ -10,12 +10,12 @@
 // property="Emoji_Modifier_Base" means A character whose appearance can be modified by a subsequent emoji modifier in an emoji modifier sequence
 const defaultUrl = 'http://www.unicode.org/Public/emoji/3.0/emoji-data.txt';
 
-const parse = require('./parse');
-const fetch = require('node-fetch');
-const leftPad = require('left-pad'); // FTW!
-const codepointSequenceToString = require('./encoding').codepointSequenceToString;
+import fetch from 'node-fetch';
+import leftPad from 'left-pad'; // FTW!
+import parse from '../utils/parse';
+import { codepointSequenceToString } from '../utils/encoding';
 
-module.exports = function* (url = defaultUrl, getNameForCodepoint, getVariationSequencesForCodepoint, getCombinationsForCodepoint, getShiftJisCodeByCarrierForCodepoint) {
+export default function* EmojiData(url = defaultUrl, getNameForCodepoint, getVariationSequencesForCodepoint, getCombinationsForCodepoint, getShiftJisCodeByCarrierForCodepoint) {
 	const content = yield fetch(url).then(res => res.text());
 	const data = parse(content, ['codepoints', 'property']);
 
@@ -27,16 +27,18 @@ module.exports = function* (url = defaultUrl, getNameForCodepoint, getVariationS
 				const [lowCodepoint, highCodepoint] = codepointRange;
 				for (let cp = lowCodepoint; cp <= highCodepoint; cp++) {
 					const cpHex = leftPad(cp.toString(16), 4, 0).toUpperCase();
-					expanded.push(Object.assign({}, datum, {
+					expanded.push({
+						...datum,
 						codepoint: cpHex,
 						codepoints: undefined, // no longer needed
-					}));
+					});
 				}
 			} else {
-				expanded.push(Object.assign({}, datum, {
+				expanded.push({
+					...datum,
 					codepoint: datum.codepoints,
 					codepoints: undefined, // no longer needed
-				}));
+				});
 			}
 			return expanded;
 		}, []);
@@ -84,7 +86,7 @@ module.exports = function* (url = defaultUrl, getNameForCodepoint, getVariationS
 			const modifications = modifierSequencesForModifiableCodepoint[codepoint] == null ? undefined : {
 				skin: modifierSequencesForModifiableCodepoint[codepoint],
 			};
-			return Object.assign({}, {
+			return {
 				name: getNameForCodepoint(codepoint),
 				codepoint,
 				shiftJis: getShiftJisCodeByCarrierForCodepoint(codepoint),
@@ -107,10 +109,10 @@ module.exports = function* (url = defaultUrl, getNameForCodepoint, getVariationS
 				},
 				combination: Object.keys(combinations).length > 0 ? combinations : undefined,
 				modification: modifications,
-			});
+			};
 		});
 
 	return { // API
 		emoji: enhanced,
 	};
-};
+}
