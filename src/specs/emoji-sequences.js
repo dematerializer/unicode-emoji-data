@@ -1,11 +1,11 @@
+import fetch from 'node-fetch';
+import parse from '../utils/parse';
+import { codepointSequenceToString } from '../utils/convert';
+
 // emoji-sequences
 // emoji-sequences.txt provides combining, flag and modifier sequences.
 // We use this only to get combining and flag sequences.
 const defaultUrl = 'http://www.unicode.org/Public/emoji/3.0/emoji-sequences.txt';
-
-import fetch from 'node-fetch';
-import parse from '../utils/parse';
-import { codepointSequenceToString } from '../utils/convert';
 
 export default function* EmojiSequences({ url = defaultUrl, getNameForCodepoint }) {
 	const content = yield fetch(url).then(res => res.text());
@@ -17,10 +17,11 @@ export default function* EmojiSequences({ url = defaultUrl, getNameForCodepoint 
 		'20E3': { // COMBINING ENCLOSING KEYCAP
 			propertyKey: 'keycap',
 			// For digits, follow naming convention of pure emoji U+1F51F (KEYCAP TEN)
-			getCombinedName: name =>
+			getCombinedName: name => (
 				name.startsWith('DIGIT')
 					? name.replace('DIGIT', 'KEYCAP')
-					: `KEYCAP ${name}`,
+					: `KEYCAP ${name}`
+			),
 		},
 		'20E0': { // COMBINING ENCLOSING CIRCLE BACKSLASH
 			// Prohibition mark is generally recommended in tr51 but there are
@@ -43,26 +44,26 @@ export default function* EmojiSequences({ url = defaultUrl, getNameForCodepoint 
 	// }
 	const compatibleCodepointsForCombiningMark = data
 		.filter(datum => datum.type === 'Emoji_Combining_Sequence')
-		.reduce((compatibleCodepointsForCombiningMark, datum) => {
+		.reduce((cpsForMark, datum) => {
 			const codepoints = datum.sequence.split(' ');
 			const compatibleCodepoint = codepoints[0]; // ignore the variation selector
 			const combiningMark = codepoints[codepoints.length - 1];
-			if (compatibleCodepointsForCombiningMark[combiningMark] == null) {
-				compatibleCodepointsForCombiningMark[combiningMark] = {};
+			if (cpsForMark[combiningMark] == null) {
+				cpsForMark[combiningMark] = {}; // eslint-disable-line no-param-reassign
 			}
 			const compatibleCodepointName = getNameForCodepoint(compatibleCodepoint);
 			const combinedName = combiningMarks[combiningMark].getCombinedName(compatibleCodepointName);
-			compatibleCodepointsForCombiningMark[combiningMark][compatibleCodepoint] = combinedName;
-			return compatibleCodepointsForCombiningMark;
+			cpsForMark[combiningMark][compatibleCodepoint] = combinedName; // eslint-disable-line no-param-reassign
+			return cpsForMark;
 		}, {});
 
 	// Assemble combination data for a codepoint:
 	const getCombinationsForCodepoint = codepoint =>
-		Object.keys(compatibleCodepointsForCombiningMark).reduce((combinationForCombiningMarkProp, mark) => {
+		Object.keys(compatibleCodepointsForCombiningMark).reduce((combForMarkProp, mark) => {
 			const markPropertyKey = combiningMarks[mark].propertyKey;
 			const compatibleCodepoints = compatibleCodepointsForCombiningMark[mark];
 			if (compatibleCodepoints[codepoint] == null) {
-				return combinationForCombiningMarkProp; // return early
+				return combForMarkProp; // return early
 			}
 			// tr51: Combining marks may be applied to emoji, just like they can
 			// be applied to other characters. When a combining mark is applied
@@ -75,7 +76,7 @@ export default function* EmojiSequences({ url = defaultUrl, getNameForCodepoint 
 			const defaultPresentation = `${codepoint} ${mark}`;
 			const textPresentation = `${codepoint} FE0E ${mark}`;
 			const emojiPresentation = `${codepoint} FE0F ${mark}`;
-			combinationForCombiningMarkProp[markPropertyKey] = compatibleCodepoints[codepoint] == null ? undefined : {
+			combForMarkProp[markPropertyKey] = compatibleCodepoints[codepoint] == null ? undefined : { // eslint-disable-line no-param-reassign
 				name: compatibleCodepoints[codepoint],
 				defaultPresentation: 'emoji', // combination should take on an emoji presentation
 				presentation: {
@@ -95,7 +96,7 @@ export default function* EmojiSequences({ url = defaultUrl, getNameForCodepoint 
 					},
 				},
 			};
-			return combinationForCombiningMarkProp;
+			return combForMarkProp;
 		}, {});
 
 	// Build additional flag emoji entries from flag sequences:

@@ -1,10 +1,10 @@
+import fetch from 'node-fetch';
+import parse from '../utils/parse';
+
 // emoji-sources
 // EmojiSources.txt provides mappings between unicode code points and sequences
 // on one hand and Shift-JIS codes for cell phone carrier symbols on the other hand.
 const defaultUrl = 'http://unicode.org/Public/9.0.0/ucd/EmojiSources.txt';
-
-import fetch from 'node-fetch';
-import parse from '../utils/parse';
 
 export default function* EmojiSources({ url = defaultUrl }) {
 	const content = yield fetch(url).then(res => res.text());
@@ -21,15 +21,15 @@ export default function* EmojiSources({ url = defaultUrl }) {
 	// 	},
 	// 	...
 	// }
-	const shiftJisCodeByCarrierForCodepoint = data.reduce((shiftJisCodeByCarrierForCodepoint, datum) => {
+	const shiftJisCodeByCarrierForCodepoint = data.reduce((sjisForCp, datum) => {
 		if (datum.docomo.length > 0 || datum.kddi.length > 0 || datum.softbank.length > 0) {
-			shiftJisCodeByCarrierForCodepoint[datum.unicode] = {
+			sjisForCp[datum.unicode] = { // eslint-disable-line no-param-reassign
 				docomo: datum.docomo.length > 0 ? datum.docomo : undefined,
 				kddi: datum.kddi.length > 0 ? datum.kddi : undefined,
 				softbank: datum.softbank.length > 0 ? datum.softbank : undefined,
 			};
 		}
-		return shiftJisCodeByCarrierForCodepoint;
+		return sjisForCp;
 	}, {});
 
 	return { // API

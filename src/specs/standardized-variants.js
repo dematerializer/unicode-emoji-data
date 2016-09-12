@@ -1,3 +1,6 @@
+import fetch from 'node-fetch';
+import parse from '../utils/parse';
+
 // standardized-variants
 // StandardizedVariants.txt provides variation sequences.
 // Some Unicode characters are normally displayed as emoji; some are normally
@@ -9,9 +12,6 @@
 // Only the specific subset of emoji characters defined in this file can have both emoji and text presentation
 // styles - all others get their presentation style implicitly without the need to append a variation selector.
 const defaultUrl = 'http://unicode.org/Public/9.0.0/ucd/StandardizedVariants.txt';
-
-import fetch from 'node-fetch';
-import parse from '../utils/parse';
 
 export default function* StandardizedVariants({ url = defaultUrl }) {
 	const content = yield fetch(url).then(res => res.text());
@@ -34,37 +34,38 @@ export default function* StandardizedVariants({ url = defaultUrl }) {
 	// 	...
 	// }
 	const variationSequencesForCodepoint = data
-		.filter(datum => {
+		.filter((datum) => {
 			const hasTextVariationSelector = datum.sequence.includes(variationSelectors.text);
 			const hasEmojiVariationSelector = datum.sequence.includes(variationSelectors.emoji);
 			return hasTextVariationSelector || hasEmojiVariationSelector;
 		})
-		.reduce((variationSequencesForCodepoint, datum) => {
-			const [ cp, vs ] = datum.sequence.split(' ');
-			if (variationSequencesForCodepoint[cp] == null) {
-				variationSequencesForCodepoint[cp] = {};
+		.reduce((varSeqForCp, datum) => {
+			const [cp, vs] = datum.sequence.split(' ');
+			const newVarSeqForCp = { ...varSeqForCp };
+			if (newVarSeqForCp[cp] == null) {
+				newVarSeqForCp[cp] = {};
 			}
-			Object.keys(variationSelectors).forEach(style => {
+			Object.keys(variationSelectors).forEach((style) => {
 				if (vs === variationSelectors[style]) {
-					variationSequencesForCodepoint[cp][style] = datum.sequence;
+					newVarSeqForCp[cp][style] = datum.sequence;
 				}
 			});
-			return variationSequencesForCodepoint;
+			return newVarSeqForCp;
 		}, { // initial map
 			// emoji-zwj-sequences.txt v4.0 mentions: "three characters used in emoji zwj sequences
 			// with the emoji variation selector do not yet appear in StandardizedVariants.txt"
 			// - so we add them here manually:
-			'2640': { // FEMALE SIGN
-				'text': `2640 ${variationSelectors.text}`,
-				'emoji': `2640 ${variationSelectors.emoji}`,
+			2640: { // FEMALE SIGN
+				text: `2640 ${variationSelectors.text}`,
+				emoji: `2640 ${variationSelectors.emoji}`,
 			},
-			'2642': { // MALE SIGN
-				'text': `2642 ${variationSelectors.text}`,
-				'emoji': `2642 ${variationSelectors.emoji}`,
+			2642: { // MALE SIGN
+				text: `2642 ${variationSelectors.text}`,
+				emoji: `2642 ${variationSelectors.emoji}`,
 			},
-			'2695': { // STAFF OF AESCULAPIUS
-				'text': `2695 ${variationSelectors.text}`,
-				'emoji': `2695 ${variationSelectors.emoji}`,
+			2695: { // STAFF OF AESCULAPIUS
+				text: `2695 ${variationSelectors.text}`,
+				emoji: `2695 ${variationSelectors.emoji}`,
 			},
 		});
 	return { // API

@@ -29,7 +29,7 @@ export default function parse(text, fieldNames) {
 		// Collapse any amount of whitespace to a single space:
 		.map(line => line.replace(anyWhitespace, ' '))
 		// Separate fields and comment:
-		.map(line => {
+		.map((line) => {
 			const indexOfComment = line.indexOf('#');
 			return {
 				fields: line.slice(0, indexOfComment > -1 ? indexOfComment : line.length).trim(),
@@ -46,8 +46,9 @@ export default function parse(text, fieldNames) {
 			comment: line.comment,
 		}))
 		// Map fields to props while only keeping fields that we're interested in via fieldNames:
-		.map(line => fieldNames.reduce(((newObj, field, i) => {
-			if (field != null) newObj[field] = line.fields[i];
-			return newObj;
+		.map(line => fieldNames.reduce(((datum, field, i) => {
+			const extDatum = { ...datum };
+			if (field != null) extDatum[field] = line.fields[i];
+			return extDatum;
 		}), { comment: line.comment }));
 }

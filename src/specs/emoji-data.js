@@ -1,3 +1,8 @@
+import fetch from 'node-fetch';
+import leftPad from 'left-pad'; // FTW!
+import parse from '../utils/parse';
+import { codepointSequenceToString } from '../utils/convert';
+
 // emoji-data
 // emoji-data.txt provides emoji code points.
 // Property "Emoji=Yes" means "emoji character", a character that is recommended for use as emoji
@@ -10,11 +15,6 @@
 // property="Emoji_Modifier_Base" means A character whose appearance can be modified by a subsequent emoji modifier in an emoji modifier sequence
 const defaultUrl = 'http://www.unicode.org/Public/emoji/3.0/emoji-data.txt';
 
-import fetch from 'node-fetch';
-import leftPad from 'left-pad'; // FTW!
-import parse from '../utils/parse';
-import { codepointSequenceToString } from '../utils/convert';
-
 export default function* EmojiData({ url = defaultUrl, getNameForCodepoint, getVariationSequencesForCodepoint, getCombinationsForCodepoint, getShiftJisCodeByCarrierForCodepoint }) {
 	const content = yield fetch(url).then(res => res.text());
 	const data = parse(content, ['codepoints', 'property']);
@@ -25,7 +25,7 @@ export default function* EmojiData({ url = defaultUrl, getNameForCodepoint, getV
 			if (datum.codepoints.indexOf('..') > -1) {
 				const codepointRange = datum.codepoints.split('..').map(cp => parseInt(cp, 16));
 				const [lowCodepoint, highCodepoint] = codepointRange;
-				for (let cp = lowCodepoint; cp <= highCodepoint; cp++) {
+				for (let cp = lowCodepoint; cp <= highCodepoint; cp += 1) {
 					const cpHex = leftPad(cp.toString(16), 4, 0).toUpperCase();
 					expanded.push({
 						...datum,
@@ -56,61 +56,61 @@ export default function* EmojiData({ url = defaultUrl, getNameForCodepoint, getV
 	// 	...
 	// }
 	const nameForModifierCodepoint = emojiModifier
-		.reduce((nameForModifierCodepoint, datum) => {
-			nameForModifierCodepoint[datum.codepoint] = getNameForCodepoint(datum.codepoint);
-			return nameForModifierCodepoint;
+		.reduce((nameForCp, datum) => {
+			nameForCp[datum.codepoint] = getNameForCodepoint(datum.codepoint); // eslint-disable-line no-param-reassign
+			return nameForCp;
 		}, {});
 
 	// Build map of emoji that can be modified (maps each modifiable code point to a modifier sequence).
 	// Those are basically all emoji that have skin variations:
 	const modifierSequencesForModifiableCodepoint = emojiModifierBase
-		.reduce((modifierSequencesForModifiableCodepoint, baseDatum) => {
-			modifierSequencesForModifiableCodepoint[baseDatum.codepoint] = Object.keys(nameForModifierCodepoint)
-				.reduce((sequenceForModifierName, modifierCodepoint) => {
+		.reduce((seqForCp, baseDatum) => {
+			seqForCp[baseDatum.codepoint] = Object.keys(nameForModifierCodepoint) // eslint-disable-line no-param-reassign
+				.reduce((seqForModName, modifierCodepoint) => {
 					const sequence = `${baseDatum.codepoint} ${modifierCodepoint}`;
-					sequenceForModifierName[nameForModifierCodepoint[modifierCodepoint]] = {
+					seqForModName[nameForModifierCodepoint[modifierCodepoint]] = { // eslint-disable-line no-param-reassign
 						sequence,
 						output: codepointSequenceToString(sequence),
 					};
-					return sequenceForModifierName;
+					return seqForModName;
 				}, {});
-			return modifierSequencesForModifiableCodepoint;
+			return seqForCp;
 		}, {});
 
-		// Assemble enhanced emoji data:
-		const enhanced = emoji.map(datum => {
-			const codepoint = datum.codepoint;
-			const isDefaultEmojiPresentation = emojiPresentation.some(ep => ep.codepoint === codepoint);
-			const variationSequences = getVariationSequencesForCodepoint(codepoint);
-			const combinations = getCombinationsForCodepoint(codepoint);
-			const modifications = modifierSequencesForModifiableCodepoint[codepoint] == null ? undefined : {
-				skin: modifierSequencesForModifiableCodepoint[codepoint],
-			};
-			return {
-				name: getNameForCodepoint(codepoint),
-				codepoint,
-				shiftJis: getShiftJisCodeByCarrierForCodepoint(codepoint),
-				defaultPresentation: isDefaultEmojiPresentation ? 'emoji' : 'text',
-				presentation: {
-					default: {
-						sequence: codepoint, // only the base without explicit variation
-						output: codepointSequenceToString(codepoint),
+	// Assemble enhanced emoji data:
+	const enhanced = emoji.map((datum) => {
+		const codepoint = datum.codepoint;
+		const isDefaultEmojiPresentation = emojiPresentation.some(ep => ep.codepoint === codepoint);
+		const variationSequences = getVariationSequencesForCodepoint(codepoint);
+		const combinations = getCombinationsForCodepoint(codepoint);
+		const modifications = modifierSequencesForModifiableCodepoint[codepoint] == null ? undefined : {
+			skin: modifierSequencesForModifiableCodepoint[codepoint],
+		};
+		return {
+			name: getNameForCodepoint(codepoint),
+			codepoint,
+			shiftJis: getShiftJisCodeByCarrierForCodepoint(codepoint),
+			defaultPresentation: isDefaultEmojiPresentation ? 'emoji' : 'text',
+			presentation: {
+				default: {
+					sequence: codepoint, // only the base without explicit variation
+					output: codepointSequenceToString(codepoint),
+				},
+				variation: !variationSequences ? undefined : {
+					text: {
+						sequence: variationSequences.text,
+						output: codepointSequenceToString(variationSequences.text),
 					},
-					variation: !variationSequences ? undefined : {
-						text: {
-							sequence: variationSequences.text,
-							output: codepointSequenceToString(variationSequences.text),
-						},
-						emoji: {
-							sequence: variationSequences.emoji,
-							output: codepointSequenceToString(variationSequences.emoji),
-						},
+					emoji: {
+						sequence: variationSequences.emoji,
+						output: codepointSequenceToString(variationSequences.emoji),
 					},
 				},
-				combination: Object.keys(combinations).length > 0 ? combinations : undefined,
-				modification: modifications,
-			};
-		});
+			},
+			combination: Object.keys(combinations).length > 0 ? combinations : undefined,
+			modification: modifications,
+		};
+	});
 
 	return { // API
 		emoji: enhanced,

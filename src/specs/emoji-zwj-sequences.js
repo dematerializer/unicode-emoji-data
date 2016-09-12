@@ -1,10 +1,10 @@
-// emoji-zwj-sequences
-// emoji-zwj-sequences.txt provides Zero-Width-Joiner sequences.
-const defaultUrl = 'http://www.unicode.org/Public/emoji/4.0/emoji-zwj-sequences.txt';
-
 import fetch from 'node-fetch';
 import parse from '../utils/parse';
 import { codepointSequenceToString } from '../utils/convert';
+
+// emoji-zwj-sequences
+// emoji-zwj-sequences.txt provides Zero-Width-Joiner sequences.
+const defaultUrl = 'http://www.unicode.org/Public/emoji/4.0/emoji-zwj-sequences.txt';
 
 export default function* EmojiZwjSequences({ url = defaultUrl, getNameForCodepoint }) {
 	const content = yield fetch(url).then(res => res.text());
@@ -17,11 +17,11 @@ export default function* EmojiZwjSequences({ url = defaultUrl, getNameForCodepoi
 	// Build additional emoji entries from Zero-Width-Joiner sequences:
 	const zwjEmoji = data
 		.filter(datum => datum.sequence.match(anyModifier) == null)
-		.map(datum => {
+		.map((datum) => {
 			const joinedName = datum.sequence
 				.replace(anyVariationSelector, '')
 				.split(zeroWidthJoiner)
-				.map(codepoint => {
+				.map((codepoint) => {
 					const [cp] = codepoint.trim().split(' ');
 					return getNameForCodepoint(cp);
 				})
@@ -36,12 +36,12 @@ export default function* EmojiZwjSequences({ url = defaultUrl, getNameForCodepoi
 						output: codepointSequenceToString(datum.sequence),
 					},
 				},
-			}
+			};
 		});
 
 	data
 		.filter(datum => datum.sequence.match(anyModifier) != null)
-		.forEach(datum => {
+		.forEach((datum) => {
 			const [cp, mod, ...rest] = datum.sequence.replace(anyVariationSelector, '').trim().split(' ');
 			const parentDatum = zwjEmoji.find(d =>
 				d.presentation.default.sequence.includes(cp) && d.presentation.default.sequence.includes(rest[rest.length - 1])
@@ -55,7 +55,7 @@ export default function* EmojiZwjSequences({ url = defaultUrl, getNameForCodepoi
 					output: codepointSequenceToString(datum.sequence),
 				};
 			} else {
-				console.warn('No parent datum found for', datum);
+				console.warn('No parent datum found for', datum); // eslint-disable-line no-console
 			}
 		});
 
