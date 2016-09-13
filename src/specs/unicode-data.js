@@ -17,8 +17,9 @@ export default function* UnicodeData({ url = defaultUrl }) {
 	// 	...
 	// }
 	const nameForCodepoint = data.reduce((nameForCp, datum) => {
-		nameForCp[datum.codepoint] = datum.name; // eslint-disable-line no-param-reassign
-		return nameForCp;
+		const extNameForCp = nameForCp;
+		extNameForCp[datum.codepoint] = datum.name;
+		return extNameForCp;
 	}, {});
 
 	return { // API

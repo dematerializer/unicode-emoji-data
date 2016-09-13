@@ -55,7 +55,7 @@ export default function* EmojiZwjSequences({ url = defaultUrl, getNameForCodepoi
 					output: codepointSequenceToString(datum.sequence),
 				};
 			} else {
-				console.warn('No parent datum found for', datum); // eslint-disable-line no-console
+				console.warn('No parent datum found for', datum);
 			}
 		});
 

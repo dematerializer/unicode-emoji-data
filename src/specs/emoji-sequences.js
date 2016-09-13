@@ -45,25 +45,27 @@ export default function* EmojiSequences({ url = defaultUrl, getNameForCodepoint 
 	const compatibleCodepointsForCombiningMark = data
 		.filter(datum => datum.type === 'Emoji_Combining_Sequence')
 		.reduce((cpsForMark, datum) => {
+			const extCpsForMark = cpsForMark;
 			const codepoints = datum.sequence.split(' ');
 			const compatibleCodepoint = codepoints[0]; // ignore the variation selector
 			const combiningMark = codepoints[codepoints.length - 1];
-			if (cpsForMark[combiningMark] == null) {
-				cpsForMark[combiningMark] = {}; // eslint-disable-line no-param-reassign
+			if (extCpsForMark[combiningMark] == null) {
+				extCpsForMark[combiningMark] = {};
 			}
 			const compatibleCodepointName = getNameForCodepoint(compatibleCodepoint);
 			const combinedName = combiningMarks[combiningMark].getCombinedName(compatibleCodepointName);
-			cpsForMark[combiningMark][compatibleCodepoint] = combinedName; // eslint-disable-line no-param-reassign
-			return cpsForMark;
+			extCpsForMark[combiningMark][compatibleCodepoint] = combinedName;
+			return extCpsForMark;
 		}, {});
 
 	// Assemble combination data for a codepoint:
 	const getCombinationsForCodepoint = codepoint =>
 		Object.keys(compatibleCodepointsForCombiningMark).reduce((combForMarkProp, mark) => {
+			const extCombForMarkProp = combForMarkProp;
 			const markPropertyKey = combiningMarks[mark].propertyKey;
 			const compatibleCodepoints = compatibleCodepointsForCombiningMark[mark];
 			if (compatibleCodepoints[codepoint] == null) {
-				return combForMarkProp; // return early
+				return extCombForMarkProp; // return early
 			}
 			// tr51: Combining marks may be applied to emoji, just like they can
 			// be applied to other characters. When a combining mark is applied
@@ -76,7 +78,7 @@ export default function* EmojiSequences({ url = defaultUrl, getNameForCodepoint 
 			const defaultPresentation = `${codepoint} ${mark}`;
 			const textPresentation = `${codepoint} FE0E ${mark}`;
 			const emojiPresentation = `${codepoint} FE0F ${mark}`;
-			combForMarkProp[markPropertyKey] = compatibleCodepoints[codepoint] == null ? undefined : { // eslint-disable-line no-param-reassign
+			extCombForMarkProp[markPropertyKey] = compatibleCodepoints[codepoint] == null ? undefined : {
 				name: compatibleCodepoints[codepoint],
 				defaultPresentation: 'emoji', // combination should take on an emoji presentation
 				presentation: {
@@ -96,7 +98,7 @@ export default function* EmojiSequences({ url = defaultUrl, getNameForCodepoint 
 					},
 				},
 			};
-			return combForMarkProp;
+			return extCombForMarkProp;
 		}, {});
 
 	// Build additional flag emoji entries from flag sequences:

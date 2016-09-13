@@ -56,25 +56,28 @@ export default function* EmojiData({ url = defaultUrl, getNameForCodepoint, getV
 	// 	...
 	// }
 	const nameForModifierCodepoint = emojiModifier
-		.reduce((nameForCp, datum) => {
-			nameForCp[datum.codepoint] = getNameForCodepoint(datum.codepoint); // eslint-disable-line no-param-reassign
-			return nameForCp;
+		.reduce((nameForModCp, datum) => {
+			const extNameForModCp = nameForModCp;
+			extNameForModCp[datum.codepoint] = getNameForCodepoint(datum.codepoint);
+			return extNameForModCp;
 		}, {});
 
 	// Build map of emoji that can be modified (maps each modifiable code point to a modifier sequence).
 	// Those are basically all emoji that have skin variations:
 	const modifierSequencesForModifiableCodepoint = emojiModifierBase
-		.reduce((seqForCp, baseDatum) => {
-			seqForCp[baseDatum.codepoint] = Object.keys(nameForModifierCodepoint) // eslint-disable-line no-param-reassign
+		.reduce((seqForModCp, baseDatum) => {
+			const extSeqForModCp = seqForModCp;
+			extSeqForModCp[baseDatum.codepoint] = Object.keys(nameForModifierCodepoint)
 				.reduce((seqForModName, modifierCodepoint) => {
+					const extSeqForModName = seqForModName;
 					const sequence = `${baseDatum.codepoint} ${modifierCodepoint}`;
-					seqForModName[nameForModifierCodepoint[modifierCodepoint]] = { // eslint-disable-line no-param-reassign
+					extSeqForModName[nameForModifierCodepoint[modifierCodepoint]] = {
 						sequence,
 						output: codepointSequenceToString(sequence),
 					};
-					return seqForModName;
+					return extSeqForModName;
 				}, {});
-			return seqForCp;
+			return extSeqForModCp;
 		}, {});
 
 	// Assemble enhanced emoji data:

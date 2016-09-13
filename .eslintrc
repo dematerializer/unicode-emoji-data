@@ -1,25 +1,11 @@
 {
   "parser": "babel-eslint",
-  "extends": "airbnb-base",
-  "env": {
-    "node": true,
-    "mocha": true,
-    "es6": true
-  },
-  "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "module",
-  },
+  "extends": "eslint-config-airbnb-base",
   "rules": {
-    "import/no-extraneous-dependencies": 0,
-    "import/no-unresolved": 2,
-    "comma-dangle": [2, "always-multiline"],
-    "no-tabs": 0,
-    "indent": [2, "tab", { "SwitchCase": 1 }],
-    "max-len": 0,
-    "prefer-template": 2,
-    "no-use-before-define": 0,
-    "newline-per-chained-call": 0,
-    "arrow-body-style": [2, "as-needed"]
+    "import/no-extraneous-dependencies": "off",
+    "no-tabs": "off",
+    "indent": ["error", "tab", { "SwitchCase": 1 }],
+    "max-len": "off",
+    "no-console": "off"
   }
 }
