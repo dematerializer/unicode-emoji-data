@@ -42,40 +42,21 @@ co(function* main() {
 		...emojiZwjSequences.zwjEmoji,
 	];
 	fs.writeFileSync('lib/emoji.json', JSON.stringify(combined, null, 2));
-	const minified = combined.map((datum) => {
-		const newDatum = { ...datum };
-		if (datum.presentation) {
-			if (datum.presentation.default) {
-				newDatum.presentation.default = datum.presentation.default.sequence;
-			}
-			if (datum.presentation.variation) {
-				if (datum.presentation.variation.text) {
-					newDatum.presentation.variation.text = datum.presentation.variation.text.sequence;
-				}
-				if (datum.presentation.variation.emoji) {
-					newDatum.presentation.variation.emoji = datum.presentation.variation.emoji.sequence;
-				}
-			}
-			if (datum.combination && datum.combination.keycap && datum.combination.keycap.presentation) {
-				if (datum.combination.keycap.presentation.default) {
-					newDatum.combination.keycap.presentation.default = datum.combination.keycap.presentation.default.sequence;
-				}
-				if (datum.combination.keycap.presentation.variation) {
-					if (datum.combination.keycap.presentation.variation.text) {
-						newDatum.combination.keycap.presentation.variation.text = datum.combination.keycap.presentation.variation.text.sequence;
-					}
-					if (datum.combination.keycap.presentation.variation.emoji) {
-						newDatum.combination.keycap.presentation.variation.emoji = datum.combination.keycap.presentation.variation.emoji.sequence;
-					}
-				}
-			}
-			if (datum.modification && datum.modification.skin) {
-				newDatum.modification.skin = Object.keys(datum.modification.skin).map(skinType =>
-					newDatum.modification.skin[skinType].sequence
-				);
+
+	const minifyDatum = (parentNode, nodeKey) => {
+		const node = nodeKey == null ? { ...parentNode } : parentNode[nodeKey];
+		if (node === Object(node) && Object.prototype.toString.call(node) !== '[object Array]') {
+			if (node.sequence && node.output) {
+				parentNode[nodeKey] = node.sequence;
+			} else {
+				Object.keys(node).forEach(key => {
+					minifyDatum(node, key);
+				});
 			}
 		}
-		return newDatum;
-	});
+		return node;
+	};
+
+	const minified = combined.map(datum => minifyDatum(datum));
 	fs.writeFileSync('lib/emoji.min.json', JSON.stringify(minified));
 });
