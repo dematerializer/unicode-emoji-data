@@ -22,14 +22,15 @@ export default function* EmojiSources({ url = defaultUrl }) {
 	// 	...
 	// }
 	const shiftJisCodeByCarrierForCodepoint = data.reduce((sjisForCp, datum) => {
+		const extSjisForCp = sjisForCp;
 		if (datum.docomo.length > 0 || datum.kddi.length > 0 || datum.softbank.length > 0) {
-			sjisForCp[datum.unicode] = { // eslint-disable-line no-param-reassign
+			extSjisForCp[datum.unicode] = {
 				docomo: datum.docomo.length > 0 ? datum.docomo : undefined,
 				kddi: datum.kddi.length > 0 ? datum.kddi : undefined,
 				softbank: datum.softbank.length > 0 ? datum.softbank : undefined,
 			};
 		}
-		return sjisForCp;
+		return extSjisForCp;
 	}, {});
 
 	return { // API

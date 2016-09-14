@@ -12,7 +12,6 @@ process.on('uncaughtException', (err) => { throw err; });
 process.on('unhandledRejection', (err) => { throw err; });
 
 co(function* main() {
-
 	const unicodeData = yield generateUnicodeData({
 		url: 'http://www.unicode.org/Public/9.0.0/ucd/UnicodeData.txt',
 	});
@@ -56,11 +55,9 @@ co(function* main() {
 		const node = nodeKey == null ? { ...parentNode } : parentNode[nodeKey];
 		if (node === Object(node) && Object.prototype.toString.call(node) !== '[object Array]') {
 			if (node.sequence && node.output) {
-				parentNode[nodeKey] = node.sequence;
+				parentNode[nodeKey] = node.sequence; // eslint-disable-line no-param-reassign
 			} else {
-				Object.keys(node).forEach(key => {
-					minifyDatum(node, key);
-				});
+				Object.keys(node).forEach(key => minifyDatum(node, key));
 			}
 		}
 		return node;
