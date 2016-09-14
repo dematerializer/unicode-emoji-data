@@ -3,7 +3,6 @@ import leftPad from 'left-pad'; // FTW!
 import parse from '../utils/parse';
 import { codepointSequenceToString } from '../utils/convert';
 
-// emoji-data
 // emoji-data.txt provides emoji code points.
 // Property "Emoji=Yes" means "emoji character", a character that is recommended for use as emoji
 // If property "Emoji=No", then "Emoji_Presentation=No", "Emoji_Modifier=No" and "Emoji_Modifier_Base=No"
@@ -15,7 +14,7 @@ import { codepointSequenceToString } from '../utils/convert';
 // property="Emoji_Modifier_Base" means A character whose appearance can be modified by a subsequent emoji modifier in an emoji modifier sequence
 const defaultUrl = 'http://www.unicode.org/Public/emoji/3.0/emoji-data.txt';
 
-export default function* EmojiData({ url = defaultUrl, getNameForCodepoint, getVariationSequencesForCodepoint, getCombinationsForCodepoint, getShiftJisCodeByCarrierForCodepoint }) {
+export default function* EmojiData({ url = defaultUrl, getNameForCodepoint, getVariationSequencesForCodepoint, getCombinationsForCodepoint, getShiftJisCodesForCodepoint }) {
 	const content = yield fetch(url).then(res => res.text());
 	const data = parse(content, ['codepoints', 'property']);
 
@@ -92,7 +91,7 @@ export default function* EmojiData({ url = defaultUrl, getNameForCodepoint, getV
 		return {
 			name: getNameForCodepoint(codepoint),
 			codepoint,
-			shiftJis: getShiftJisCodeByCarrierForCodepoint(codepoint),
+			shiftJis: getShiftJisCodesForCodepoint(codepoint),
 			defaultPresentation: isDefaultEmojiPresentation ? 'emoji' : 'text',
 			presentation: {
 				default: {

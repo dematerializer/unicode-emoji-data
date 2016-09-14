@@ -20,13 +20,14 @@ co(function* main() {
 		url: 'http://unicode.org/Public/9.0.0/ucd/EmojiSources.txt',
 	});
 
+	const standardizedVariants = yield generateStandardizedVariants({
+		url: 'http://unicode.org/Public/9.0.0/ucd/StandardizedVariants.txt',
+	});
+
 	const emojiSequences = yield generateEmojiSequences({
 		url: 'http://www.unicode.org/Public/emoji/3.0/emoji-sequences.txt',
 		getNameForCodepoint: unicodeData.getNameForCodepoint,
-	});
-
-	const standardizedVariants = yield generateStandardizedVariants({
-		url: 'http://unicode.org/Public/9.0.0/ucd/StandardizedVariants.txt',
+		getVariationSequencesForCodepoint: standardizedVariants.getVariationSequencesForCodepoint,
 	});
 
 	const emojiZwjSequences = yield generateEmojiZwjSequences({
@@ -39,8 +40,7 @@ co(function* main() {
 		getNameForCodepoint: unicodeData.getNameForCodepoint,
 		getVariationSequencesForCodepoint: standardizedVariants.getVariationSequencesForCodepoint,
 		getCombinationsForCodepoint: emojiSequences.getCombinationsForCodepoint,
-		getShiftJisCodeByCarrierForCodepoint: emojiSources.getShiftJisCodeByCarrierForCodepoint,
-
+		getShiftJisCodesForCodepoint: emojiSources.getShiftJisCodesForCodepoint,
 	});
 
 	const combined = [
