@@ -1,6 +1,5 @@
 import fetch from 'node-fetch';
 import parse from '../utils/parse';
-import { codepointSequenceToString } from '../utils/convert';
 
 // emoji-sequences.txt provides combining, flag and modifier sequences.
 // We use this only to get combining and flag sequences.
@@ -61,19 +60,10 @@ function buildCompatibleCodepointsForCombiningMark(data, getNameForCodepoint) {
 // 		"name": "KEYCAP ZERO",
 // 		"defaultPresentation": "emoji",
 // 		"presentation": {
-// 			"default": {
-// 				"sequence": "0030 20E3",
-// 				"output": "0⃣"
-// 			},
+// 			"default": "0030 20E3",
 // 			"variation": {
-// 				"text": {
-// 					"sequence": "0030 FE0E 20E3",
-// 					"output": "0︎⃣"
-// 				},
-// 				"emoji": {
-// 					"sequence": "0030 FE0F 20E3",
-// 					"output": "0️⃣"
-// 				}
+// 				"text": "0030 FE0E 20E3",
+// 				"emoji": "0030 FE0F 20E3",
 // 			}
 // 		}
 // 	}
@@ -102,19 +92,10 @@ function combinationsForCodepoint(codepoint, compatibleCodepointsForCombiningMar
 			name: compatibleCodepoints[codepoint],
 			defaultPresentation: 'emoji', // combination should take on an emoji presentation
 			presentation: {
-				default: {
-					sequence: defaultPresentation,
-					output: codepointSequenceToString(defaultPresentation),
-				},
+				default: defaultPresentation,
 				variation: !variationSequences ? undefined : {
-					text: {
-						sequence: textPresentation,
-						output: codepointSequenceToString(textPresentation),
-					},
-					emoji: {
-						sequence: emojiPresentation,
-						output: codepointSequenceToString(emojiPresentation),
-					},
+					text: textPresentation,
+					emoji: emojiPresentation,
 				},
 			},
 		};
@@ -128,10 +109,7 @@ function combinationsForCodepoint(codepoint, compatibleCodepointsForCombiningMar
 // 	{
 // 		"name": "REGIONAL INDICATOR SYMBOL LETTER D, REGIONAL INDICATOR SYMBOL LETTER E",
 // 		"defaultPresentation": "emoji",
-// 		"presentation": {
-// 			sequence: "1F1E9 1F1EA",
-// 			output: "🇩🇪"
-// 		}
+// 		"presentation": "1F1E9 1F1EA",
 // 	}
 // 	...
 // ]
@@ -145,10 +123,7 @@ function buildFlagEmoji(data, getNameForCodepoint) {
 		name: datum.sequence.split(' ').map(cp => getNameForCodepoint(cp)).join(', '),
 		defaultPresentation: 'emoji', // always for flags
 		presentation: {
-			default: {
-				sequence: datum.sequence,
-				output: codepointSequenceToString(datum.sequence),
-			},
+			default: datum.sequence,
 		},
 	}));
 }

@@ -1,6 +1,5 @@
 import fetch from 'node-fetch';
 import parse from '../utils/parse';
-import { codepointSequenceToString } from '../utils/convert';
 
 // emoji-zwj-sequences.txt provides Zero-Width-Joiner sequences.
 const defaultUrl = 'http://www.unicode.org/Public/emoji/4.0/emoji-zwj-sequences.txt';
@@ -16,33 +15,15 @@ const anyModifier = /1F3FB|1F3FC|1F3FD|1F3FE|1F3FF/g;
 // 		"name": "MAN, ROCKET",
 // 		"defaultPresentation": "emoji",
 // 		"presentation": {
-// 			"default": {
-// 				"sequence": "1F468 200D 1F680",
-// 				"output": "👨‍🚀"
-// 			}
+// 			"default": "1F468 200D 1F680",
 // 		},
 // 		"modification": {
 // 			"skin": {
-// 				"EMOJI MODIFIER FITZPATRICK TYPE-1-2": {
-// 					"sequence": "1F468 1F3FB 200D 1F680",
-// 					"output": "👨🏻‍🚀"
-// 				},
-// 				"EMOJI MODIFIER FITZPATRICK TYPE-3": {
-// 					"sequence": "1F468 1F3FC 200D 1F680",
-// 					"output": "👨🏼‍🚀"
-// 				},
-// 				"EMOJI MODIFIER FITZPATRICK TYPE-4": {
-// 					"sequence": "1F468 1F3FD 200D 1F680",
-// 					"output": "👨🏽‍🚀"
-// 				},
-// 				"EMOJI MODIFIER FITZPATRICK TYPE-5": {
-// 					"sequence": "1F468 1F3FE 200D 1F680",
-// 					"output": "👨🏾‍🚀"
-// 				},
-// 				"EMOJI MODIFIER FITZPATRICK TYPE-6": {
-// 					"sequence": "1F468 1F3FF 200D 1F680",
-// 					"output": "👨🏿‍🚀"
-// 				}
+// 				"EMOJI MODIFIER FITZPATRICK TYPE-1-2": "1F468 1F3FB 200D 1F680",
+// 				"EMOJI MODIFIER FITZPATRICK TYPE-3": "1F468 1F3FC 200D 1F680",
+// 				"EMOJI MODIFIER FITZPATRICK TYPE-4": "1F468 1F3FD 200D 1F680",
+// 				"EMOJI MODIFIER FITZPATRICK TYPE-5": "1F468 1F3FE 200D 1F680",
+// 				"EMOJI MODIFIER FITZPATRICK TYPE-6": "1F468 1F3FF 200D 1F680",
 // 			}
 // 		}
 // 	},
@@ -66,10 +47,7 @@ function buildZwjEmoji(data, getNameForCodepoint) {
 			name: joinedName,
 			defaultPresentation: 'emoji',
 			presentation: {
-				default: {
-					sequence: datum.sequence,
-					output: codepointSequenceToString(datum.sequence),
-				},
+				default: datum.sequence,
 			},
 		};
 	});
@@ -79,16 +57,13 @@ function buildZwjEmoji(data, getNameForCodepoint) {
 	.forEach((datum) => {
 		const [cp, mod, ...rest] = datum.sequence.replace(anyVariationSelector, '').trim().split(' ');
 		const parentDatum = zwjEmoji.find(d =>
-			d.presentation.default.sequence.includes(cp) && d.presentation.default.sequence.includes(rest[rest.length - 1])
+			d.presentation.default.includes(cp) && d.presentation.default.includes(rest[rest.length - 1])
 		);
 		if (parentDatum) {
 			if (parentDatum.modification == null) {
 				parentDatum.modification = { skin: {} };
 			}
-			parentDatum.modification.skin[getNameForCodepoint(mod)] = {
-				sequence: datum.sequence,
-				output: codepointSequenceToString(datum.sequence),
-			};
+			parentDatum.modification.skin[getNameForCodepoint(mod)] = datum.sequence;
 		} else {
 			console.warn('No parent datum found for', datum);
 		}

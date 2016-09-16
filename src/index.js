@@ -7,6 +7,7 @@ import generateEmojiSequences from './specs/emoji-sequences';
 import generateStandardizedVariants from './specs/standardized-variants';
 import generateEmojiZwjSequences from './specs/emoji-zwj-sequences';
 import generateEmojiData from './specs/emoji-data';
+import { codepointSequenceToString } from './utils/convert';
 
 process.on('uncaughtException', (err) => { throw err; });
 process.on('unhandledRejection', (err) => { throw err; });
@@ -49,21 +50,33 @@ co(function* main() {
 		...emojiZwjSequences.zwjEmoji,
 	];
 
-	fs.writeFileSync('lib/emoji.json', JSON.stringify(combined, null, 2));
+	fs.writeFileSync('lib/emoji.min.json', JSON.stringify(combined));
 
-	const minifyDatum = (parentNode, nodeKey) => {
-		const node = nodeKey == null ? { ...parentNode } : parentNode[nodeKey];
-		if (node === Object(node) && Object.prototype.toString.call(node) !== '[object Array]') {
-			if (node.sequence && node.output) {
-				parentNode[nodeKey] = node.sequence; // eslint-disable-line no-param-reassign
-			} else {
-				Object.keys(node).forEach(key => minifyDatum(node, key));
+	const makeDatumReadable = (node) => {
+		Object.keys(node).forEach((key) => {
+			const prop = node[key];
+			if (['default', 'text', 'emoji'].includes(key)) {
+				node[key] = {
+					sequence: prop,
+					output: codepointSequenceToString(prop),
+				};
+			} else if (key === 'skin') {
+				node[key] = Object.keys(prop).reduce((skinModifications, modifier) => {
+					const extSkinModifications = skinModifications;
+					extSkinModifications[modifier] = {
+						sequence: prop[modifier],
+						output: codepointSequenceToString(prop[modifier]),
+					}
+					return extSkinModifications;
+				}, {});
+			} else if (prop === Object(prop) && Object.prototype.toString.call(prop) !== '[object Array]' && typeof prop !== 'string') {
+				makeDatumReadable(prop);
 			}
-		}
+		});
 		return node;
 	};
 
-	const minified = combined.map(datum => minifyDatum(datum));
+	const readable = combined.map(datum => makeDatumReadable(datum));
 
-	fs.writeFileSync('lib/emoji.min.json', JSON.stringify(minified));
+	fs.writeFileSync('lib/emoji.json', JSON.stringify(readable, null, 2));
 });
