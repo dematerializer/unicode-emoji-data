@@ -1,42 +1,43 @@
 import co from 'co';
 import fs from 'fs';
 
-import generateUnicodeData from './specs/unicode-data';
-import generateEmojiSources from './specs/emoji-sources';
-import generateEmojiSequences from './specs/emoji-sequences';
-import generateStandardizedVariants from './specs/standardized-variants';
-import generateEmojiZwjSequences from './specs/emoji-zwj-sequences';
-import generateEmojiData from './specs/emoji-data';
+import buildUnicodeData from './specs/unicode-data';
+import buildEmojiSources from './specs/emoji-sources';
+import buildEmojiSequences from './specs/emoji-sequences';
+import buildStandardizedVariants from './specs/standardized-variants';
+import buildEmojiZwjSequences from './specs/emoji-zwj-sequences';
+import buildEmojiData from './specs/emoji-data';
 import { codepointSequenceToString } from './utils/convert';
 
 process.on('uncaughtException', (err) => { throw err; });
 process.on('unhandledRejection', (err) => { throw err; });
 
 co(function* main() {
-	const unicodeData = yield generateUnicodeData({
+	
+	const unicodeData = yield buildUnicodeData({
 		url: 'http://www.unicode.org/Public/9.0.0/ucd/UnicodeData.txt',
 	});
 
-	const emojiSources = yield generateEmojiSources({
+	const emojiSources = yield buildEmojiSources({
 		url: 'http://unicode.org/Public/9.0.0/ucd/EmojiSources.txt',
 	});
 
-	const standardizedVariants = yield generateStandardizedVariants({
+	const standardizedVariants = yield buildStandardizedVariants({
 		url: 'http://unicode.org/Public/9.0.0/ucd/StandardizedVariants.txt',
 	});
 
-	const emojiSequences = yield generateEmojiSequences({
+	const emojiSequences = yield buildEmojiSequences({
 		url: 'http://www.unicode.org/Public/emoji/3.0/emoji-sequences.txt',
 		getNameForCodepoint: unicodeData.getNameForCodepoint,
 		getVariationSequencesForCodepoint: standardizedVariants.getVariationSequencesForCodepoint,
 	});
 
-	const emojiZwjSequences = yield generateEmojiZwjSequences({
+	const emojiZwjSequences = yield buildEmojiZwjSequences({
 		url: 'http://www.unicode.org/Public/emoji/4.0/emoji-zwj-sequences.txt',
 		getNameForCodepoint: unicodeData.getNameForCodepoint,
 	});
 
-	const emojiData = yield generateEmojiData({
+	const emojiData = yield buildEmojiData({
 		url: 'http://www.unicode.org/Public/emoji/3.0/emoji-data.txt',
 		getNameForCodepoint: unicodeData.getNameForCodepoint,
 		getVariationSequencesForCodepoint: standardizedVariants.getVariationSequencesForCodepoint,
