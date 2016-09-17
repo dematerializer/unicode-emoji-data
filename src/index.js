@@ -13,7 +13,6 @@ process.on('uncaughtException', (err) => { throw err; });
 process.on('unhandledRejection', (err) => { throw err; });
 
 co(function* main() {
-	
 	const unicodeData = yield buildUnicodeData({
 		url: 'http://www.unicode.org/Public/9.0.0/ucd/UnicodeData.txt',
 	});
@@ -57,17 +56,17 @@ co(function* main() {
 		Object.keys(node).forEach((key) => {
 			const prop = node[key];
 			if (['default', 'text', 'emoji'].includes(key)) {
-				node[key] = {
+				node[key] = { // eslint-disable-line no-param-reassign
 					sequence: prop,
 					output: codepointSequenceToString(prop),
 				};
 			} else if (key === 'skin') {
-				node[key] = Object.keys(prop).reduce((skinModifications, modifier) => {
+				node[key] = Object.keys(prop).reduce((skinModifications, modifier) => { // eslint-disable-line no-param-reassign
 					const extSkinModifications = skinModifications;
 					extSkinModifications[modifier] = {
 						sequence: prop[modifier],
 						output: codepointSequenceToString(prop[modifier]),
-					}
+					};
 					return extSkinModifications;
 				}, {});
 			} else if (prop === Object(prop) && Object.prototype.toString.call(prop) !== '[object Array]' && typeof prop !== 'string') {
