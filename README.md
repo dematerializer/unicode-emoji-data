@@ -5,7 +5,7 @@ Your single source of truth for unicode compliant emoji data.
 - up-to-date
 - fully tested
 - lightweight, precompiled, easily parseable JSON format
-- comprehensible for humans by means of [Unicode® Technical Report #51 - UNICODE EMOJI](http://www.unicode.org/reports/tr51)
+- comprehensive for humans by means of [Unicode® Technical Report #51 - UNICODE EMOJI](http://www.unicode.org/reports/tr51)
 
 ## Install
 
