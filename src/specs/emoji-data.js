@@ -13,7 +13,8 @@ import parse from '../utils/parse';
 // property="Emoji_Modifier_Base" means A character whose appearance can be modified by a subsequent emoji modifier in an emoji modifier sequence
 const defaultUrl = 'http://www.unicode.org/Public/emoji/3.0/emoji-data.txt';
 
-// Expand code point ranges (e.g. '1F601..1F610') into separate objects:
+// Expand code point ranges (e.g. '1F601..1F610') into separate objects and filter
+// tr51: single regional indicators ("incomplete singletons") are not used as emoji by themselves
 // [
 // 	...
 // 	{
@@ -37,19 +38,21 @@ const defaultUrl = 'http://www.unicode.org/Public/emoji/3.0/emoji-data.txt';
 // 	}
 // 	...
 // ]
-function expandEmojiData(data) {
+function expandEmojiData(data, getNameForCodepoint) {
 	return data.reduce((expanded, datum) => {
 		if (datum.codepoints.indexOf('..') > -1) {
 			const codepointRange = datum.codepoints.split('..').map(cp => parseInt(cp, 16));
 			const [lowCodepoint, highCodepoint] = codepointRange;
 			for (let cp = lowCodepoint; cp <= highCodepoint; cp += 1) {
 				const cpHex = leftPad(cp.toString(16), 4, 0).toUpperCase();
-				expanded.push({
-					codepoint: cpHex,
-					property: datum.property,
-				});
+				if (!getNameForCodepoint(cpHex).includes('REGIONAL INDICATOR SYMBOL LETTER')) {
+					expanded.push({
+						codepoint: cpHex,
+						property: datum.property,
+					});
+				}
 			}
-		} else {
+		} else if (!getNameForCodepoint(datum.codepoints).includes('REGIONAL INDICATOR SYMBOL LETTER')) {
 			expanded.push({
 				codepoint: datum.codepoints,
 				property: datum.property,
@@ -193,7 +196,7 @@ export const internals = {
 export default function* EmojiData({ url = defaultUrl, getNameForCodepoint, getVariationSequencesForCodepoint, getCombinationsForCodepoint, getShiftJisCodesForCodepoint }) {
 	const content = yield fetch(url).then(res => res.text());
 	const data = parse(content, ['codepoints', 'property']);
-	const expandedEmojiData = expandEmojiData(data);
+	const expandedEmojiData = expandEmojiData(data, getNameForCodepoint);
 	const emojiCodepoints = getEmojiCodepoints(expandedEmojiData);
 	const emojiPresentationCodepoints = getEmojiPresentationCodepoints(expandedEmojiData);
 	const emojiModifierCodepoints = getEmojiModifierCodepoints(expandedEmojiData);
