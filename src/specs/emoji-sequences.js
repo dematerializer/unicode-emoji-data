@@ -9,7 +9,7 @@ const defaultUrl = 'http://www.unicode.org/Public/emoji/3.0/emoji-sequences.txt'
 // emoji variation sequence when used in a combining sequence.
 const combiningMarks = {
 	'20E3': { // COMBINING ENCLOSING KEYCAP
-		propertyKey: 'keycap',
+		propKey: 'keycap',
 		// For digits, follow naming convention of pure emoji U+1F51F (KEYCAP TEN)
 		getCombinedName: name => (
 			name.startsWith('DIGIT')
@@ -71,7 +71,7 @@ function buildCompatibleCodepointsForCombiningMark(data, getNameForCodepoint) {
 function combinationsForCodepoint(codepoint, compatibleCodepointsForCombiningMark, getVariationSequencesForCodepoint) {
 	return Object.keys(compatibleCodepointsForCombiningMark).reduce((combForMarkProp, mark) => {
 		const extCombForMarkProp = combForMarkProp;
-		const markPropertyKey = combiningMarks[mark].propertyKey;
+		const markPropKey = combiningMarks[mark].propKey;
 		const compatibleCodepoints = compatibleCodepointsForCombiningMark[mark];
 		if (compatibleCodepoints[codepoint] == null) {
 			return extCombForMarkProp; // return early
@@ -88,7 +88,7 @@ function combinationsForCodepoint(codepoint, compatibleCodepointsForCombiningMar
 		const defaultPresentation = `${codepoint} ${mark}`;
 		const textPresentation = `${codepoint} FE0E ${mark}`;
 		const emojiPresentation = `${codepoint} FE0F ${mark}`;
-		extCombForMarkProp[markPropertyKey] = compatibleCodepoints[codepoint] == null ? undefined : {
+		extCombForMarkProp[markPropKey] = compatibleCodepoints[codepoint] == null ? undefined : {
 			name: compatibleCodepoints[codepoint],
 			defaultPresentation: 'emoji', // combination should take on an emoji presentation
 			presentation: {

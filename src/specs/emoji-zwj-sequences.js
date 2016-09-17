@@ -19,17 +19,47 @@ const anyModifier = /1F3FB|1F3FC|1F3FD|1F3FE|1F3FF/g;
 // 		},
 // 		"modification": {
 // 			"skin": {
-// 				"EMOJI MODIFIER FITZPATRICK TYPE-1-2": "1F468 1F3FB 200D 1F680",
-// 				"EMOJI MODIFIER FITZPATRICK TYPE-3": "1F468 1F3FC 200D 1F680",
-// 				"EMOJI MODIFIER FITZPATRICK TYPE-4": "1F468 1F3FD 200D 1F680",
-// 				"EMOJI MODIFIER FITZPATRICK TYPE-5": "1F468 1F3FE 200D 1F680",
-// 				"EMOJI MODIFIER FITZPATRICK TYPE-6": "1F468 1F3FF 200D 1F680",
+// 				"type-1-2": { // modifier = EMOJI MODIFIER FITZPATRICK TYPE-1-2
+// 					"name": "MAN, ROCKET; TYPE-1-2",
+// 					"defaultPresentation": "emoji",
+// 					"presentation": {
+// 						"default": "1F468 1F3FB 200D 1F680",
+// 					}
+// 				},
+// 				"type-3": { // modifier = EMOJI MODIFIER FITZPATRICK TYPE-3
+// 					"name": "MAN, ROCKET; TYPE-3",
+// 					"defaultPresentation": "emoji",
+// 					"presentation": {
+// 						"default": "1F468 1F3FC 200D 1F680",
+// 					}
+// 				},
+// 				"type-4": { // modifier = EMOJI MODIFIER FITZPATRICK TYPE-4
+// 					"name": "MAN, ROCKET; TYPE-4",
+// 					"defaultPresentation": "emoji",
+// 					"presentation": {
+// 						"default": "1F468 1F3FD 200D 1F680",
+// 					}
+// 				},
+// 				"type-5": { // modifier = EMOJI MODIFIER FITZPATRICK TYPE-5
+// 					"name": "MAN, ROCKET; TYPE-5",
+// 					"defaultPresentation": "emoji",
+// 					"presentation": {
+// 						"default": "1F468 1F3FE 200D 1F680",
+// 					}
+// 				},
+// 				"type-6": { // modifier = EMOJI MODIFIER FITZPATRICK TYPE-6
+// 					"name": "MAN, ROCKET; TYPE-6",
+// 					"defaultPresentation": "emoji",
+// 					"presentation": {
+// 						"default": "1F468 1F3FF 200D 1F680",
+// 					}
+// 				}
 // 			}
 // 		}
 // 	},
 // 	...
 // ]
-function buildZwjEmoji(data, getNameForCodepoint) {
+function buildZwjEmoji(data, getNameForCodepoint, getMetaForModifierName) {
 	const zwjEmoji = data.filter(datum =>
 		datum.sequence.match(anyModifier) == null
 	)
@@ -63,7 +93,15 @@ function buildZwjEmoji(data, getNameForCodepoint) {
 			if (parentDatum.modification == null) {
 				parentDatum.modification = { skin: {} };
 			}
-			parentDatum.modification.skin[getNameForCodepoint(mod)] = datum.sequence;
+			const modName = getNameForCodepoint(mod);
+			const nameMeta = getMetaForModifierName(modName);
+			parentDatum.modification.skin[nameMeta.propKey] = {
+				name: `${parentDatum.name}; ${nameMeta.nameExt}`,
+				defaultPresentation: 'emoji',
+				presentation: {
+					default: datum.sequence,
+				},
+			};
 		} else {
 			console.warn('No parent datum found for', datum);
 		}
@@ -77,10 +115,10 @@ export const internals = {
 	buildZwjEmoji,
 };
 
-export default function* EmojiZwjSequences({ url = defaultUrl, getNameForCodepoint }) {
+export default function* EmojiZwjSequences({ url = defaultUrl, getNameForCodepoint, getMetaForModifierName }) {
 	const content = yield fetch(url).then(res => res.text());
 	const data = parse(content, ['sequence', 'type', 'description']);
-	const zwjEmoji = buildZwjEmoji(data, getNameForCodepoint);
+	const zwjEmoji = buildZwjEmoji(data, getNameForCodepoint, getMetaForModifierName);
 	return { // API
 		zeroWidthJoiner,
 		zwjEmoji,

@@ -31,17 +31,18 @@ co(function* main() {
 		getVariationSequencesForCodepoint: standardizedVariants.getVariationSequencesForCodepoint,
 	});
 
-	const emojiZwjSequences = yield buildEmojiZwjSequences({
-		url: 'http://www.unicode.org/Public/emoji/4.0/emoji-zwj-sequences.txt',
-		getNameForCodepoint: unicodeData.getNameForCodepoint,
-	});
-
 	const emojiData = yield buildEmojiData({
 		url: 'http://www.unicode.org/Public/emoji/3.0/emoji-data.txt',
 		getNameForCodepoint: unicodeData.getNameForCodepoint,
 		getVariationSequencesForCodepoint: standardizedVariants.getVariationSequencesForCodepoint,
 		getCombinationsForCodepoint: emojiSequences.getCombinationsForCodepoint,
 		getShiftJisCodesForCodepoint: emojiSources.getShiftJisCodesForCodepoint,
+	});
+
+	const emojiZwjSequences = yield buildEmojiZwjSequences({
+		url: 'http://www.unicode.org/Public/emoji/4.0/emoji-zwj-sequences.txt',
+		getNameForCodepoint: unicodeData.getNameForCodepoint,
+		getMetaForModifierName: emojiData.getMetaForModifierName,
 	});
 
 	const combined = [
@@ -60,15 +61,6 @@ co(function* main() {
 					sequence: prop,
 					output: codepointSequenceToString(prop),
 				};
-			} else if (key === 'skin') {
-				node[key] = Object.keys(prop).reduce((skinModifications, modifier) => { // eslint-disable-line no-param-reassign
-					const extSkinModifications = skinModifications;
-					extSkinModifications[modifier] = {
-						sequence: prop[modifier],
-						output: codepointSequenceToString(prop[modifier]),
-					};
-					return extSkinModifications;
-				}, {});
 			} else if (prop === Object(prop) && Object.prototype.toString.call(prop) !== '[object Array]' && typeof prop !== 'string') {
 				makeDatumReadable(prop);
 			}
