@@ -51,7 +51,7 @@ co(function* main() {
 		...emojiZwjSequences.zwjEmoji,
 	];
 
-	fs.writeFileSync('lib/emoji.min.json', JSON.stringify(combined));
+	fs.writeFileSync('lib/emoji.json', JSON.stringify(combined));
 
 	const makeDatumReadable = (node) => {
 		Object.keys(node).forEach((key) => {
@@ -70,5 +70,5 @@ co(function* main() {
 
 	const readable = combined.map(datum => makeDatumReadable(datum));
 
-	fs.writeFileSync('lib/emoji.json', JSON.stringify(readable, null, 2));
+	fs.writeFileSync('lib/emoji.readable.json', JSON.stringify(readable, null, 2));
 });
