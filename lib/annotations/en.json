@@ -1,0 +1,8261 @@
+{
+  "2049": {
+    "tts": "exclamation question mark",
+    "keywords": [
+      "exclamation",
+      "interrobang",
+      "mark",
+      "punctuation",
+      "question"
+    ]
+  },
+  "2122": {
+    "tts": "trade mark",
+    "keywords": [
+      "mark",
+      "tm",
+      "trademark"
+    ]
+  },
+  "2139": {
+    "tts": "information source",
+    "keywords": [
+      "i",
+      "information"
+    ]
+  },
+  "2194": {
+    "tts": "left-right arrow",
+    "keywords": [
+      "arrow"
+    ]
+  },
+  "2195": {
+    "tts": "up-down arrow",
+    "keywords": [
+      "arrow"
+    ]
+  },
+  "2196": {
+    "tts": "up-left arrow",
+    "keywords": [
+      "arrow",
+      "direction",
+      "intercardinal",
+      "northwest"
+    ]
+  },
+  "2197": {
+    "tts": "up-right arrow",
+    "keywords": [
+      "arrow",
+      "direction",
+      "intercardinal",
+      "northeast"
+    ]
+  },
+  "2198": {
+    "tts": "down-right arrow",
+    "keywords": [
+      "arrow",
+      "direction",
+      "intercardinal",
+      "southeast"
+    ]
+  },
+  "2199": {
+    "tts": "down-left arrow",
+    "keywords": [
+      "arrow",
+      "direction",
+      "intercardinal",
+      "southwest"
+    ]
+  },
+  "2328": {
+    "tts": "keyboard",
+    "keywords": [
+      "computer"
+    ]
+  },
+  "2600": {
+    "tts": "sun",
+    "keywords": [
+      "bright",
+      "rays",
+      "space",
+      "sunny",
+      "weather"
+    ]
+  },
+  "2601": {
+    "tts": "cloud",
+    "keywords": [
+      "weather"
+    ]
+  },
+  "2602": {
+    "tts": "umbrella",
+    "keywords": [
+      "clothing",
+      "rain",
+      "weather"
+    ]
+  },
+  "2603": {
+    "tts": "snowman",
+    "keywords": [
+      "cold",
+      "snow",
+      "weather"
+    ]
+  },
+  "2604": {
+    "tts": "comet",
+    "keywords": [
+      "space"
+    ]
+  },
+  "2611": {
+    "tts": "ballot box with check",
+    "keywords": [
+      "ballot",
+      "box",
+      "check"
+    ]
+  },
+  "2614": {
+    "tts": "umbrella with rain drops",
+    "keywords": [
+      "clothing",
+      "drop",
+      "rain",
+      "umbrella",
+      "weather"
+    ]
+  },
+  "2615": {
+    "tts": "hot beverage",
+    "keywords": [
+      "beverage",
+      "coffee",
+      "drink",
+      "hot",
+      "steaming",
+      "tea"
+    ]
+  },
+  "2618": {
+    "tts": "shamrock",
+    "keywords": [
+      "plant"
+    ]
+  },
+  "2620": {
+    "tts": "skull and crossbones",
+    "keywords": [
+      "body",
+      "crossbones",
+      "death",
+      "face",
+      "monster",
+      "skull"
+    ]
+  },
+  "2622": {
+    "tts": "radioactive",
+    "keywords": [
+      "radioactive"
+    ]
+  },
+  "2623": {
+    "tts": "biohazard",
+    "keywords": [
+      "biohazard"
+    ]
+  },
+  "2626": {
+    "tts": "orthodox cross",
+    "keywords": [
+      "christian",
+      "cross",
+      "religion"
+    ]
+  },
+  "2638": {
+    "tts": "wheel of dharma",
+    "keywords": [
+      "buddhist",
+      "dharma",
+      "religion",
+      "wheel"
+    ]
+  },
+  "2639": {
+    "tts": "frowning face",
+    "keywords": [
+      "face",
+      "frown"
+    ]
+  },
+  "2648": {
+    "tts": "aries",
+    "keywords": [
+      "ram",
+      "zodiac"
+    ]
+  },
+  "2649": {
+    "tts": "taurus",
+    "keywords": [
+      "bull",
+      "ox",
+      "zodiac"
+    ]
+  },
+  "2650": {
+    "tts": "sagittarius",
+    "keywords": [
+      "archer",
+      "zodiac"
+    ]
+  },
+  "2651": {
+    "tts": "capricorn",
+    "keywords": [
+      "goat",
+      "zodiac"
+    ]
+  },
+  "2652": {
+    "tts": "aquarius",
+    "keywords": [
+      "bearer",
+      "water",
+      "zodiac"
+    ]
+  },
+  "2653": {
+    "tts": "pisces",
+    "keywords": [
+      "fish",
+      "zodiac"
+    ]
+  },
+  "2660": {
+    "tts": "spade suit",
+    "keywords": [
+      "card",
+      "game",
+      "spade",
+      "suit"
+    ]
+  },
+  "2663": {
+    "tts": "club suit",
+    "keywords": [
+      "card",
+      "club",
+      "clubs",
+      "game",
+      "suit"
+    ]
+  },
+  "2665": {
+    "tts": "heart suit",
+    "keywords": [
+      "card",
+      "game",
+      "heart",
+      "hearts",
+      "suit"
+    ]
+  },
+  "2666": {
+    "tts": "diamond suit",
+    "keywords": [
+      "card",
+      "diamond",
+      "diamonds",
+      "game",
+      "suit"
+    ]
+  },
+  "2668": {
+    "tts": "hot springs",
+    "keywords": [
+      "hot",
+      "hotsprings",
+      "springs",
+      "steaming"
+    ]
+  },
+  "2692": {
+    "tts": "hammer and pick",
+    "keywords": [
+      "hammer",
+      "pick",
+      "tool"
+    ]
+  },
+  "2693": {
+    "tts": "anchor",
+    "keywords": [
+      "ship",
+      "tool"
+    ]
+  },
+  "2694": {
+    "tts": "crossed swords",
+    "keywords": [
+      "crossed",
+      "swords",
+      "weapon"
+    ]
+  },
+  "2696": {
+    "tts": "balance scale",
+    "keywords": [
+      "balance",
+      "justice",
+      "libra",
+      "scales",
+      "tool",
+      "weight",
+      "zodiac"
+    ]
+  },
+  "2697": {
+    "tts": "alembic",
+    "keywords": [
+      "chemistry",
+      "tool"
+    ]
+  },
+  "2699": {
+    "tts": "gear",
+    "keywords": [
+      "tool"
+    ]
+  },
+  "2702": {
+    "tts": "scissors",
+    "keywords": [
+      "tool"
+    ]
+  },
+  "2705": {
+    "tts": "white heavy check mark",
+    "keywords": [
+      "check",
+      "mark"
+    ]
+  },
+  "2708": {
+    "tts": "airplane",
+    "keywords": [
+      "vehicle"
+    ]
+  },
+  "2709": {
+    "tts": "envelope",
+    "keywords": [
+      "e-mail",
+      "email"
+    ]
+  },
+  "2712": {
+    "tts": "black nib",
+    "keywords": [
+      "nib",
+      "pen"
+    ]
+  },
+  "2714": {
+    "tts": "heavy check mark",
+    "keywords": [
+      "check",
+      "mark"
+    ]
+  },
+  "2716": {
+    "tts": "heavy multiplication x",
+    "keywords": [
+      "cancel",
+      "multiplication",
+      "multiply",
+      "x"
+    ]
+  },
+  "2721": {
+    "tts": "star of david",
+    "keywords": [
+      "david",
+      "jew",
+      "jewish",
+      "religion",
+      "star"
+    ]
+  },
+  "2728": {
+    "tts": "sparkles",
+    "keywords": [
+      "sparkle",
+      "star"
+    ]
+  },
+  "2733": {
+    "tts": "eight-spoked asterisk",
+    "keywords": [
+      "asterisk"
+    ]
+  },
+  "2734": {
+    "tts": "eight-pointed star",
+    "keywords": [
+      "star"
+    ]
+  },
+  "2744": {
+    "tts": "snowflake",
+    "keywords": [
+      "cold",
+      "snow",
+      "weather"
+    ]
+  },
+  "2747": {
+    "tts": "sparkle",
+    "keywords": [
+      "sparkle"
+    ]
+  },
+  "2753": {
+    "tts": "question mark",
+    "keywords": [
+      "mark",
+      "punctuation",
+      "question"
+    ]
+  },
+  "2754": {
+    "tts": "white question mark",
+    "keywords": [
+      "mark",
+      "outlined",
+      "punctuation",
+      "question"
+    ]
+  },
+  "2755": {
+    "tts": "white exclamation mark",
+    "keywords": [
+      "exclamation",
+      "mark",
+      "outlined",
+      "punctuation"
+    ]
+  },
+  "2757": {
+    "tts": "exclamation mark",
+    "keywords": [
+      "exclamation",
+      "mark",
+      "punctuation"
+    ]
+  },
+  "2763": {
+    "tts": "heavy heart exclamation mark ornament",
+    "keywords": [
+      "exclamation",
+      "heart",
+      "mark",
+      "punctuation"
+    ]
+  },
+  "2764": {
+    "tts": "red heart",
+    "keywords": [
+      "heart"
+    ]
+  },
+  "2795": {
+    "tts": "heavy plus sign",
+    "keywords": [
+      "math",
+      "plus"
+    ]
+  },
+  "2796": {
+    "tts": "heavy minus sign",
+    "keywords": [
+      "math",
+      "minus"
+    ]
+  },
+  "2797": {
+    "tts": "heavy division sign",
+    "keywords": [
+      "division",
+      "math"
+    ]
+  },
+  "2934": {
+    "tts": "right arrow curving up",
+    "keywords": [
+      "arrow"
+    ]
+  },
+  "2935": {
+    "tts": "right arrow curving down",
+    "keywords": [
+      "arrow",
+      "down"
+    ]
+  },
+  "3030": {
+    "tts": "wavy dash",
+    "keywords": [
+      "dash",
+      "punctuation",
+      "wavy"
+    ]
+  },
+  "3297": {
+    "tts": "circled congratulate ideograph",
+    "keywords": [
+      "chinese",
+      "congratulation",
+      "congratulations",
+      "ideograph"
+    ]
+  },
+  "3299": {
+    "tts": "circled secret ideograph",
+    "keywords": [
+      "chinese",
+      "ideograph",
+      "secret"
+    ]
+  },
+  "1F600": {
+    "tts": "grinning face",
+    "keywords": [
+      "face",
+      "grin"
+    ]
+  },
+  "1F601": {
+    "tts": "grinning face with smiling eyes",
+    "keywords": [
+      "eye",
+      "face",
+      "grin",
+      "smile"
+    ]
+  },
+  "1F602": {
+    "tts": "face with tears of joy",
+    "keywords": [
+      "face",
+      "joy",
+      "laugh",
+      "tear"
+    ]
+  },
+  "1F603": {
+    "tts": "smiling face with open mouth",
+    "keywords": [
+      "face",
+      "mouth",
+      "open",
+      "smile"
+    ]
+  },
+  "1F604": {
+    "tts": "smiling face with open mouth and smiling eyes",
+    "keywords": [
+      "eye",
+      "face",
+      "mouth",
+      "open",
+      "smile"
+    ]
+  },
+  "1F605": {
+    "tts": "smiling face with open mouth and cold sweat",
+    "keywords": [
+      "cold",
+      "face",
+      "open",
+      "smile",
+      "sweat"
+    ]
+  },
+  "1F606": {
+    "tts": "smiling face with open mouth and tightly-closed eyes",
+    "keywords": [
+      "face",
+      "laugh",
+      "mouth",
+      "open",
+      "satisfied",
+      "smile"
+    ]
+  },
+  "1F609": {
+    "tts": "winking face",
+    "keywords": [
+      "face",
+      "wink"
+    ]
+  },
+  "1F60A": {
+    "tts": "smiling face with smiling eyes",
+    "keywords": [
+      "blush",
+      "eye",
+      "face",
+      "smile"
+    ]
+  },
+  "1F60B": {
+    "tts": "face savouring delicious food",
+    "keywords": [
+      "delicious",
+      "face",
+      "savouring",
+      "smile",
+      "um",
+      "yum"
+    ]
+  },
+  "1F60E": {
+    "tts": "smiling face with sunglasses",
+    "keywords": [
+      "bright",
+      "cool",
+      "eye",
+      "eyewear",
+      "face",
+      "glasses",
+      "smile",
+      "sun",
+      "sunglasses",
+      "weather"
+    ]
+  },
+  "1F60D": {
+    "tts": "smiling face with heart-shaped eyes",
+    "keywords": [
+      "eye",
+      "face",
+      "heart",
+      "love",
+      "smile"
+    ]
+  },
+  "1F618": {
+    "tts": "face throwing a kiss",
+    "keywords": [
+      "face",
+      "heart",
+      "kiss"
+    ]
+  },
+  "1F617": {
+    "tts": "kissing face",
+    "keywords": [
+      "face",
+      "kiss"
+    ]
+  },
+  "1F619": {
+    "tts": "kissing face with smiling eyes",
+    "keywords": [
+      "eye",
+      "face",
+      "kiss",
+      "smile"
+    ]
+  },
+  "1F61A": {
+    "tts": "kissing face with closed eyes",
+    "keywords": [
+      "closed",
+      "eye",
+      "face",
+      "kiss"
+    ]
+  },
+  "263A": {
+    "tts": "smiling face",
+    "keywords": [
+      "face",
+      "outlined",
+      "relaxed",
+      "smile"
+    ]
+  },
+  "1F642": {
+    "tts": "slightly smiling face",
+    "keywords": [
+      "face",
+      "smile"
+    ]
+  },
+  "1F917": {
+    "tts": "hugging face",
+    "keywords": [
+      "face",
+      "hug",
+      "hugging"
+    ]
+  },
+  "1F607": {
+    "tts": "smiling face with halo",
+    "keywords": [
+      "angel",
+      "face",
+      "fairy tale",
+      "fantasy",
+      "halo",
+      "innocent",
+      "smile"
+    ]
+  },
+  "1F914": {
+    "tts": "thinking face",
+    "keywords": [
+      "face",
+      "thinking"
+    ]
+  },
+  "1F610": {
+    "tts": "neutral face",
+    "keywords": [
+      "deadpan",
+      "face",
+      "neutral"
+    ]
+  },
+  "1F611": {
+    "tts": "expressionless face",
+    "keywords": [
+      "expressionless",
+      "face",
+      "inexpressive",
+      "unexpressive"
+    ]
+  },
+  "1F636": {
+    "tts": "face without mouth",
+    "keywords": [
+      "face",
+      "mouth",
+      "quiet",
+      "silent"
+    ]
+  },
+  "1F644": {
+    "tts": "face with rolling eyes",
+    "keywords": [
+      "eyes",
+      "face",
+      "rolling"
+    ]
+  },
+  "1F60F": {
+    "tts": "smirking face",
+    "keywords": [
+      "face",
+      "smirk"
+    ]
+  },
+  "1F623": {
+    "tts": "persevering face",
+    "keywords": [
+      "face",
+      "persevere"
+    ]
+  },
+  "1F625": {
+    "tts": "disappointed but relieved face",
+    "keywords": [
+      "disappointed",
+      "face",
+      "relieved",
+      "whew"
+    ]
+  },
+  "1F62E": {
+    "tts": "face with open mouth",
+    "keywords": [
+      "face",
+      "mouth",
+      "open",
+      "sympathy"
+    ]
+  },
+  "1F910": {
+    "tts": "zipper-mouth face",
+    "keywords": [
+      "face",
+      "mouth",
+      "zipper"
+    ]
+  },
+  "1F62F": {
+    "tts": "hushed face",
+    "keywords": [
+      "face",
+      "hushed",
+      "stunned",
+      "surprised"
+    ]
+  },
+  "1F62A": {
+    "tts": "sleepy face",
+    "keywords": [
+      "face",
+      "sleep"
+    ]
+  },
+  "1F62B": {
+    "tts": "tired face",
+    "keywords": [
+      "face",
+      "tired"
+    ]
+  },
+  "1F634": {
+    "tts": "sleeping face",
+    "keywords": [
+      "face",
+      "sleep",
+      "zzz"
+    ]
+  },
+  "1F60C": {
+    "tts": "relieved face",
+    "keywords": [
+      "face",
+      "relieved"
+    ]
+  },
+  "1F913": {
+    "tts": "nerd face",
+    "keywords": [
+      "face",
+      "geek",
+      "nerd"
+    ]
+  },
+  "1F61B": {
+    "tts": "face with stuck-out tongue",
+    "keywords": [
+      "face",
+      "tongue"
+    ]
+  },
+  "1F61C": {
+    "tts": "face with stuck-out tongue and winking eye",
+    "keywords": [
+      "eye",
+      "face",
+      "joke",
+      "tongue",
+      "wink"
+    ]
+  },
+  "1F61D": {
+    "tts": "face with stuck-out tongue and tightly-closed eyes",
+    "keywords": [
+      "eye",
+      "face",
+      "horrible",
+      "taste",
+      "tongue"
+    ]
+  },
+  "1F641": {
+    "tts": "slightly frowning face",
+    "keywords": [
+      "face",
+      "frown"
+    ]
+  },
+  "1F612": {
+    "tts": "unamused face",
+    "keywords": [
+      "face",
+      "unamused",
+      "unhappy"
+    ]
+  },
+  "1F613": {
+    "tts": "face with cold sweat",
+    "keywords": [
+      "cold",
+      "face",
+      "sweat"
+    ]
+  },
+  "1F614": {
+    "tts": "pensive face",
+    "keywords": [
+      "dejected",
+      "face",
+      "pensive"
+    ]
+  },
+  "1F615": {
+    "tts": "confused face",
+    "keywords": [
+      "confused",
+      "face"
+    ]
+  },
+  "1F616": {
+    "tts": "confounded face",
+    "keywords": [
+      "confounded",
+      "face"
+    ]
+  },
+  "1F643": {
+    "tts": "upside-down face",
+    "keywords": [
+      "face",
+      "upside-down"
+    ]
+  },
+  "1F637": {
+    "tts": "face with medical mask",
+    "keywords": [
+      "cold",
+      "doctor",
+      "face",
+      "mask",
+      "medicine",
+      "sick"
+    ]
+  },
+  "1F912": {
+    "tts": "face with thermometer",
+    "keywords": [
+      "face",
+      "ill",
+      "sick",
+      "thermometer"
+    ]
+  },
+  "1F915": {
+    "tts": "face with head-bandage",
+    "keywords": [
+      "bandage",
+      "face",
+      "hurt",
+      "injury"
+    ]
+  },
+  "1F911": {
+    "tts": "money-mouth face",
+    "keywords": [
+      "face",
+      "money",
+      "mouth"
+    ]
+  },
+  "1F632": {
+    "tts": "astonished face",
+    "keywords": [
+      "astonished",
+      "face",
+      "shocked",
+      "totally"
+    ]
+  },
+  "1F61E": {
+    "tts": "disappointed face",
+    "keywords": [
+      "disappointed",
+      "face"
+    ]
+  },
+  "1F61F": {
+    "tts": "worried face",
+    "keywords": [
+      "face",
+      "worried"
+    ]
+  },
+  "1F624": {
+    "tts": "face with steam from nose",
+    "keywords": [
+      "face",
+      "triumph",
+      "won"
+    ]
+  },
+  "1F622": {
+    "tts": "crying face",
+    "keywords": [
+      "cry",
+      "face",
+      "sad",
+      "tear"
+    ]
+  },
+  "1F62D": {
+    "tts": "loudly crying face",
+    "keywords": [
+      "cry",
+      "face",
+      "sad",
+      "sob",
+      "tear"
+    ]
+  },
+  "1F626": {
+    "tts": "frowning face with open mouth",
+    "keywords": [
+      "face",
+      "frown",
+      "mouth",
+      "open"
+    ]
+  },
+  "1F627": {
+    "tts": "anguished face",
+    "keywords": [
+      "anguished",
+      "face"
+    ]
+  },
+  "1F628": {
+    "tts": "fearful face",
+    "keywords": [
+      "face",
+      "fear",
+      "fearful",
+      "scared"
+    ]
+  },
+  "1F629": {
+    "tts": "weary face",
+    "keywords": [
+      "face",
+      "tired",
+      "weary"
+    ]
+  },
+  "1F62C": {
+    "tts": "grimacing face",
+    "keywords": [
+      "face",
+      "grimace"
+    ]
+  },
+  "1F630": {
+    "tts": "face with open mouth and cold sweat",
+    "keywords": [
+      "blue",
+      "cold",
+      "face",
+      "mouth",
+      "open",
+      "rushed",
+      "sweat"
+    ]
+  },
+  "1F631": {
+    "tts": "face screaming in fear",
+    "keywords": [
+      "face",
+      "fear",
+      "fearful",
+      "munch",
+      "scared",
+      "scream"
+    ]
+  },
+  "1F633": {
+    "tts": "flushed face",
+    "keywords": [
+      "dazed",
+      "face",
+      "flushed"
+    ]
+  },
+  "1F635": {
+    "tts": "dizzy face",
+    "keywords": [
+      "dizzy",
+      "face"
+    ]
+  },
+  "1F621": {
+    "tts": "pouting face",
+    "keywords": [
+      "angry",
+      "face",
+      "mad",
+      "pouting",
+      "rage",
+      "red"
+    ]
+  },
+  "1F620": {
+    "tts": "angry face",
+    "keywords": [
+      "angry",
+      "face",
+      "mad"
+    ]
+  },
+  "1F608": {
+    "tts": "smiling face with horns",
+    "keywords": [
+      "face",
+      "fairy tale",
+      "fantasy",
+      "horns",
+      "smile"
+    ]
+  },
+  "1F47F": {
+    "tts": "imp",
+    "keywords": [
+      "demon",
+      "devil",
+      "face",
+      "fairy tale",
+      "fantasy"
+    ]
+  },
+  "1F479": {
+    "tts": "ogre",
+    "keywords": [
+      "creature",
+      "face",
+      "fairy tale",
+      "fantasy",
+      "japanese",
+      "monster"
+    ]
+  },
+  "1F47A": {
+    "tts": "goblin",
+    "keywords": [
+      "creature",
+      "face",
+      "fairy tale",
+      "fantasy",
+      "japanese",
+      "monster"
+    ]
+  },
+  "1F480": {
+    "tts": "skull",
+    "keywords": [
+      "body",
+      "death",
+      "face",
+      "fairy tale",
+      "monster"
+    ]
+  },
+  "1F47B": {
+    "tts": "ghost",
+    "keywords": [
+      "creature",
+      "face",
+      "fairy tale",
+      "fantasy",
+      "monster"
+    ]
+  },
+  "1F47D": {
+    "tts": "alien",
+    "keywords": [
+      "creature",
+      "extraterrestrial",
+      "face",
+      "fairy tale",
+      "fantasy",
+      "monster",
+      "space",
+      "ufo"
+    ]
+  },
+  "1F47E": {
+    "tts": "alien monster",
+    "keywords": [
+      "alien",
+      "creature",
+      "extraterrestrial",
+      "face",
+      "fairy tale",
+      "fantasy",
+      "monster",
+      "space",
+      "ufo"
+    ]
+  },
+  "1F916": {
+    "tts": "robot face",
+    "keywords": [
+      "face",
+      "monster",
+      "robot"
+    ]
+  },
+  "1F4A9": {
+    "tts": "pile of poo",
+    "keywords": [
+      "comic",
+      "dung",
+      "face",
+      "monster",
+      "poo",
+      "poop"
+    ]
+  },
+  "1F63A": {
+    "tts": "smiling cat face with open mouth",
+    "keywords": [
+      "cat",
+      "face",
+      "mouth",
+      "open",
+      "smile"
+    ]
+  },
+  "1F638": {
+    "tts": "grinning cat face with smiling eyes",
+    "keywords": [
+      "cat",
+      "eye",
+      "face",
+      "grin",
+      "smile"
+    ]
+  },
+  "1F639": {
+    "tts": "cat face with tears of joy",
+    "keywords": [
+      "cat",
+      "face",
+      "joy",
+      "tear"
+    ]
+  },
+  "1F63B": {
+    "tts": "smiling cat face with heart-shaped eyes",
+    "keywords": [
+      "cat",
+      "eye",
+      "face",
+      "heart",
+      "love",
+      "smile"
+    ]
+  },
+  "1F63C": {
+    "tts": "cat face with wry smile",
+    "keywords": [
+      "cat",
+      "face",
+      "ironic",
+      "smile",
+      "wry"
+    ]
+  },
+  "1F63D": {
+    "tts": "kissing cat face with closed eyes",
+    "keywords": [
+      "cat",
+      "eye",
+      "face",
+      "kiss"
+    ]
+  },
+  "1F640": {
+    "tts": "weary cat face",
+    "keywords": [
+      "cat",
+      "face",
+      "oh",
+      "surprised",
+      "weary"
+    ]
+  },
+  "1F63F": {
+    "tts": "crying cat face",
+    "keywords": [
+      "cat",
+      "cry",
+      "face",
+      "sad",
+      "tear"
+    ]
+  },
+  "1F63E": {
+    "tts": "pouting cat face",
+    "keywords": [
+      "cat",
+      "face",
+      "pouting"
+    ]
+  },
+  "1F648": {
+    "tts": "see-no-evil",
+    "keywords": [
+      "evil",
+      "face",
+      "forbidden",
+      "gesture",
+      "monkey",
+      "no",
+      "not",
+      "prohibited",
+      "see"
+    ]
+  },
+  "1F649": {
+    "tts": "hear-no-evil",
+    "keywords": [
+      "evil",
+      "face",
+      "forbidden",
+      "gesture",
+      "hear",
+      "monkey",
+      "no",
+      "not",
+      "prohibited"
+    ]
+  },
+  "1F64A": {
+    "tts": "speak-no-evil",
+    "keywords": [
+      "evil",
+      "face",
+      "forbidden",
+      "gesture",
+      "monkey",
+      "no",
+      "not",
+      "prohibited",
+      "speak"
+    ]
+  },
+  "1F466": {
+    "tts": "boy",
+    "keywords": [
+      "boy"
+    ]
+  },
+  "1F467": {
+    "tts": "girl",
+    "keywords": [
+      "maiden",
+      "virgin",
+      "virgo",
+      "zodiac"
+    ]
+  },
+  "1F468": {
+    "tts": "man",
+    "keywords": [
+      "man"
+    ]
+  },
+  "1F469": {
+    "tts": "woman",
+    "keywords": [
+      "woman"
+    ]
+  },
+  "1F474": {
+    "tts": "old man",
+    "keywords": [
+      "man",
+      "old"
+    ]
+  },
+  "1F475": {
+    "tts": "old woman",
+    "keywords": [
+      "old",
+      "woman"
+    ]
+  },
+  "1F476": {
+    "tts": "baby",
+    "keywords": [
+      "baby"
+    ]
+  },
+  "1F471": {
+    "tts": "person with blond hair",
+    "keywords": [
+      "blond"
+    ]
+  },
+  "1F46E": {
+    "tts": "police officer",
+    "keywords": [
+      "cop",
+      "officer",
+      "police"
+    ]
+  },
+  "1F472": {
+    "tts": "man with chinese cap",
+    "keywords": [
+      "gua pi mao",
+      "hat",
+      "man"
+    ]
+  },
+  "1F473": {
+    "tts": "man with turban",
+    "keywords": [
+      "man",
+      "turban"
+    ]
+  },
+  "1F477": {
+    "tts": "construction worker",
+    "keywords": [
+      "construction",
+      "hat",
+      "worker"
+    ]
+  },
+  "26D1": {
+    "tts": "helmet with white cross",
+    "keywords": [
+      "aid",
+      "cross",
+      "face",
+      "hat",
+      "helmet"
+    ]
+  },
+  "1F478": {
+    "tts": "princess",
+    "keywords": [
+      "fairy tale",
+      "fantasy"
+    ]
+  },
+  "1F482": {
+    "tts": "guardsman",
+    "keywords": [
+      "guard"
+    ]
+  },
+  "1F575": {
+    "tts": "detective",
+    "keywords": [
+      "sleuth",
+      "spy"
+    ]
+  },
+  "1F385": {
+    "tts": "santa claus",
+    "keywords": [
+      "celebration",
+      "christmas",
+      "fairy tale",
+      "fantasy",
+      "father",
+      "santa"
+    ]
+  },
+  "1F47C": {
+    "tts": "baby angel",
+    "keywords": [
+      "angel",
+      "baby",
+      "face",
+      "fairy tale",
+      "fantasy"
+    ]
+  },
+  "1F486": {
+    "tts": "face massage",
+    "keywords": [
+      "massage",
+      "salon"
+    ]
+  },
+  "1F487": {
+    "tts": "haircut",
+    "keywords": [
+      "barber",
+      "beauty",
+      "parlor"
+    ]
+  },
+  "1F470": {
+    "tts": "bride with veil",
+    "keywords": [
+      "bride",
+      "veil",
+      "wedding"
+    ]
+  },
+  "1F64D": {
+    "tts": "person frowning",
+    "keywords": [
+      "frown",
+      "gesture"
+    ]
+  },
+  "1F64E": {
+    "tts": "person pouting",
+    "keywords": [
+      "gesture",
+      "pouting"
+    ]
+  },
+  "1F645": {
+    "tts": "gesturing no",
+    "keywords": [
+      "forbidden",
+      "gesture",
+      "hand",
+      "no",
+      "not",
+      "prohibited"
+    ]
+  },
+  "1F646": {
+    "tts": "gesturing ok",
+    "keywords": [
+      "gesture",
+      "hand",
+      "ok"
+    ]
+  },
+  "1F481": {
+    "tts": "information desk person",
+    "keywords": [
+      "hand",
+      "help",
+      "information",
+      "sassy"
+    ]
+  },
+  "1F64B": {
+    "tts": "happy person raising hand",
+    "keywords": [
+      "gesture",
+      "hand",
+      "happy",
+      "raised"
+    ]
+  },
+  "1F647": {
+    "tts": "person bowing",
+    "keywords": [
+      "apology",
+      "bow",
+      "gesture",
+      "sorry"
+    ]
+  },
+  "1F64C": {
+    "tts": "person raising hands",
+    "keywords": [
+      "body",
+      "celebration",
+      "gesture",
+      "hand",
+      "hooray",
+      "raised"
+    ]
+  },
+  "1F64F": {
+    "tts": "folded hands",
+    "keywords": [
+      "ask",
+      "body",
+      "bow",
+      "folded",
+      "gesture",
+      "hand",
+      "please",
+      "pray",
+      "thanks"
+    ]
+  },
+  "1F5E3": {
+    "tts": "speaking head",
+    "keywords": [
+      "face",
+      "head",
+      "silhouette",
+      "speak",
+      "speaking"
+    ]
+  },
+  "1F464": {
+    "tts": "bust in silhouette",
+    "keywords": [
+      "bust",
+      "silhouette"
+    ]
+  },
+  "1F465": {
+    "tts": "busts in silhouette",
+    "keywords": [
+      "bust",
+      "silhouette"
+    ]
+  },
+  "1F6B6": {
+    "tts": "pedestrian",
+    "keywords": [
+      "hike",
+      "walk",
+      "walking"
+    ]
+  },
+  "1F3C3": {
+    "tts": "runner",
+    "keywords": [
+      "marathon",
+      "running"
+    ]
+  },
+  "1F46F": {
+    "tts": "women partying",
+    "keywords": [
+      "bunny",
+      "dancer",
+      "ear",
+      "girl",
+      "woman"
+    ]
+  },
+  "1F483": {
+    "tts": "dancer",
+    "keywords": [
+      "dancer"
+    ]
+  },
+  "1F574": {
+    "tts": "man in business suit levitating",
+    "keywords": [
+      "business",
+      "man",
+      "suit"
+    ]
+  },
+  "1F48F": {
+    "tts": "kiss",
+    "keywords": [
+      "couple",
+      "romance"
+    ]
+  },
+  "1F491": {
+    "tts": "couple with heart",
+    "keywords": [
+      "couple",
+      "heart",
+      "love",
+      "romance"
+    ]
+  },
+  "1F46A": {
+    "tts": "family",
+    "keywords": [
+      "child",
+      "father",
+      "mother"
+    ]
+  },
+  "1F46B": {
+    "tts": "man and woman holding hands",
+    "keywords": [
+      "couple",
+      "hand",
+      "hold",
+      "man",
+      "woman"
+    ]
+  },
+  "1F46C": {
+    "tts": "two men holding hands",
+    "keywords": [
+      "couple",
+      "gemini",
+      "hand",
+      "hold",
+      "man",
+      "twins",
+      "zodiac"
+    ]
+  },
+  "1F46D": {
+    "tts": "two women holding hands",
+    "keywords": [
+      "couple",
+      "hand",
+      "hold",
+      "woman"
+    ]
+  },
+  "1F3FB": {
+    "tts": "skin type-1-2",
+    "keywords": [
+      "emoji modifier",
+      "fitzpatrick",
+      "skin",
+      "tone"
+    ]
+  },
+  "1F3FC": {
+    "tts": "skin type-3",
+    "keywords": [
+      "emoji modifier",
+      "fitzpatrick",
+      "skin",
+      "tone"
+    ]
+  },
+  "1F3FD": {
+    "tts": "skin type-4",
+    "keywords": [
+      "emoji modifier",
+      "fitzpatrick",
+      "skin",
+      "tone"
+    ]
+  },
+  "1F3FE": {
+    "tts": "skin type-5",
+    "keywords": [
+      "emoji modifier",
+      "fitzpatrick",
+      "skin",
+      "tone"
+    ]
+  },
+  "1F3FF": {
+    "tts": "skin type-6",
+    "keywords": [
+      "emoji modifier",
+      "fitzpatrick",
+      "skin",
+      "tone"
+    ]
+  },
+  "1F4AA": {
+    "tts": "flexed biceps",
+    "keywords": [
+      "biceps",
+      "body",
+      "comic",
+      "flex",
+      "muscle"
+    ]
+  },
+  "1F448": {
+    "tts": "backhand index pointing left",
+    "keywords": [
+      "backhand",
+      "body",
+      "finger",
+      "hand",
+      "index",
+      "point"
+    ]
+  },
+  "1F449": {
+    "tts": "backhand index pointing right",
+    "keywords": [
+      "backhand",
+      "body",
+      "finger",
+      "hand",
+      "index",
+      "point"
+    ]
+  },
+  "261D": {
+    "tts": "index pointing up",
+    "keywords": [
+      "body",
+      "finger",
+      "hand",
+      "index",
+      "point",
+      "up"
+    ]
+  },
+  "1F446": {
+    "tts": "backhand index pointing up",
+    "keywords": [
+      "backhand",
+      "body",
+      "finger",
+      "hand",
+      "index",
+      "point",
+      "up"
+    ]
+  },
+  "1F595": {
+    "tts": "middle finger",
+    "keywords": [
+      "body",
+      "finger",
+      "hand"
+    ]
+  },
+  "1F447": {
+    "tts": "backhand index pointing down",
+    "keywords": [
+      "backhand",
+      "body",
+      "down",
+      "finger",
+      "hand",
+      "index",
+      "point"
+    ]
+  },
+  "270C": {
+    "tts": "victory hand",
+    "keywords": [
+      "body",
+      "hand",
+      "v",
+      "victory"
+    ]
+  },
+  "1F596": {
+    "tts": "vulcan salute",
+    "keywords": [
+      "body",
+      "finger",
+      "hand",
+      "spock",
+      "vulcan"
+    ]
+  },
+  "1F918": {
+    "tts": "sign of the horns",
+    "keywords": [
+      "body",
+      "finger",
+      "hand",
+      "horns",
+      "rock-on"
+    ]
+  },
+  "1F590": {
+    "tts": "raised hand with fingers splayed",
+    "keywords": [
+      "body",
+      "finger",
+      "hand",
+      "splayed"
+    ]
+  },
+  "270B": {
+    "tts": "raised hand",
+    "keywords": [
+      "body",
+      "hand"
+    ]
+  },
+  "1F44C": {
+    "tts": "ok hand",
+    "keywords": [
+      "body",
+      "hand",
+      "ok"
+    ]
+  },
+  "1F44D": {
+    "tts": "thumbs up",
+    "keywords": [
+      "+1",
+      "body",
+      "hand",
+      "thumb",
+      "up"
+    ]
+  },
+  "1F44E": {
+    "tts": "thumbs down",
+    "keywords": [
+      "-1",
+      "body",
+      "down",
+      "hand",
+      "thumb"
+    ]
+  },
+  "270A": {
+    "tts": "raised fist",
+    "keywords": [
+      "body",
+      "clenched",
+      "fist",
+      "hand",
+      "punch"
+    ]
+  },
+  "1F44A": {
+    "tts": "oncoming fist",
+    "keywords": [
+      "body",
+      "clenched",
+      "fist",
+      "hand",
+      "punch"
+    ]
+  },
+  "1F44B": {
+    "tts": "waving hand",
+    "keywords": [
+      "body",
+      "hand",
+      "wave",
+      "waving"
+    ]
+  },
+  "1F44F": {
+    "tts": "clapping hands",
+    "keywords": [
+      "body",
+      "clap",
+      "hand"
+    ]
+  },
+  "1F450": {
+    "tts": "open hands",
+    "keywords": [
+      "body",
+      "hand",
+      "open"
+    ]
+  },
+  "270D": {
+    "tts": "writing hand",
+    "keywords": [
+      "body",
+      "hand",
+      "write"
+    ]
+  },
+  "1F485": {
+    "tts": "nail polish",
+    "keywords": [
+      "body",
+      "care",
+      "cosmetics",
+      "manicure",
+      "nail",
+      "polish"
+    ]
+  },
+  "1F442": {
+    "tts": "ear",
+    "keywords": [
+      "body"
+    ]
+  },
+  "1F443": {
+    "tts": "nose",
+    "keywords": [
+      "body"
+    ]
+  },
+  "1F463": {
+    "tts": "footprints",
+    "keywords": [
+      "body",
+      "clothing",
+      "footprint",
+      "print"
+    ]
+  },
+  "1F440": {
+    "tts": "eyes",
+    "keywords": [
+      "body",
+      "eye",
+      "face"
+    ]
+  },
+  "1F441": {
+    "tts": "eye",
+    "keywords": [
+      "body"
+    ]
+  },
+  "1F445": {
+    "tts": "tongue",
+    "keywords": [
+      "body"
+    ]
+  },
+  "1F444": {
+    "tts": "mouth",
+    "keywords": [
+      "body",
+      "lips"
+    ]
+  },
+  "1F48B": {
+    "tts": "kiss mark",
+    "keywords": [
+      "heart",
+      "kiss",
+      "lips",
+      "mark",
+      "romance"
+    ]
+  },
+  "1F498": {
+    "tts": "heart with arrow",
+    "keywords": [
+      "arrow",
+      "cupid",
+      "heart",
+      "romance"
+    ]
+  },
+  "1F493": {
+    "tts": "beating heart",
+    "keywords": [
+      "beating",
+      "heart",
+      "heartbeat",
+      "pulsating"
+    ]
+  },
+  "1F494": {
+    "tts": "broken heart",
+    "keywords": [
+      "break",
+      "broken",
+      "heart"
+    ]
+  },
+  "1F495": {
+    "tts": "two hearts",
+    "keywords": [
+      "heart",
+      "love"
+    ]
+  },
+  "1F496": {
+    "tts": "sparkling heart",
+    "keywords": [
+      "excited",
+      "heart",
+      "sparkle"
+    ]
+  },
+  "1F497": {
+    "tts": "growing heart",
+    "keywords": [
+      "excited",
+      "growing",
+      "heart",
+      "heartpulse",
+      "nervous"
+    ]
+  },
+  "1F499": {
+    "tts": "blue heart",
+    "keywords": [
+      "blue",
+      "heart"
+    ]
+  },
+  "1F49A": {
+    "tts": "green heart",
+    "keywords": [
+      "green",
+      "heart"
+    ]
+  },
+  "1F49B": {
+    "tts": "yellow heart",
+    "keywords": [
+      "heart",
+      "yellow"
+    ]
+  },
+  "1F49C": {
+    "tts": "purple heart",
+    "keywords": [
+      "heart",
+      "purple"
+    ]
+  },
+  "1F49D": {
+    "tts": "heart with ribbon",
+    "keywords": [
+      "heart",
+      "ribbon",
+      "valentine"
+    ]
+  },
+  "1F49E": {
+    "tts": "revolving hearts",
+    "keywords": [
+      "heart",
+      "revolving"
+    ]
+  },
+  "1F49F": {
+    "tts": "heart decoration",
+    "keywords": [
+      "heart"
+    ]
+  },
+  "1F48C": {
+    "tts": "love letter",
+    "keywords": [
+      "heart",
+      "letter",
+      "love",
+      "mail",
+      "romance"
+    ]
+  },
+  "1F4A4": {
+    "tts": "zzz",
+    "keywords": [
+      "comic",
+      "sleep"
+    ]
+  },
+  "1F4A2": {
+    "tts": "anger symbol",
+    "keywords": [
+      "angry",
+      "comic",
+      "mad"
+    ]
+  },
+  "1F4A3": {
+    "tts": "bomb",
+    "keywords": [
+      "comic"
+    ]
+  },
+  "1F4A5": {
+    "tts": "collision",
+    "keywords": [
+      "boom",
+      "comic"
+    ]
+  },
+  "1F4A6": {
+    "tts": "sweat droplets",
+    "keywords": [
+      "comic",
+      "splashing",
+      "sweat"
+    ]
+  },
+  "1F4A8": {
+    "tts": "dashing",
+    "keywords": [
+      "comic",
+      "dash",
+      "running"
+    ]
+  },
+  "1F4AB": {
+    "tts": "dizzy",
+    "keywords": [
+      "comic",
+      "star"
+    ]
+  },
+  "1F4AC": {
+    "tts": "speech balloon",
+    "keywords": [
+      "balloon",
+      "bubble",
+      "comic",
+      "dialog",
+      "speech"
+    ]
+  },
+  "1F5E8": {
+    "tts": "left speech bubble",
+    "keywords": [
+      "dialog",
+      "speech"
+    ]
+  },
+  "1F5EF": {
+    "tts": "right anger bubble",
+    "keywords": [
+      "angry",
+      "balloon",
+      "bubble",
+      "mad"
+    ]
+  },
+  "1F4AD": {
+    "tts": "thought balloon",
+    "keywords": [
+      "balloon",
+      "bubble",
+      "comic",
+      "thought"
+    ]
+  },
+  "1F573": {
+    "tts": "hole",
+    "keywords": [
+      "hole"
+    ]
+  },
+  "1F453": {
+    "tts": "glasses",
+    "keywords": [
+      "clothing",
+      "eye",
+      "eyeglasses",
+      "eyewear"
+    ]
+  },
+  "1F576": {
+    "tts": "sunglasses",
+    "keywords": [
+      "dark",
+      "eye",
+      "eyewear",
+      "glasses"
+    ]
+  },
+  "1F454": {
+    "tts": "necktie",
+    "keywords": [
+      "clothing"
+    ]
+  },
+  "1F455": {
+    "tts": "t-shirt",
+    "keywords": [
+      "clothing",
+      "shirt",
+      "tshirt"
+    ]
+  },
+  "1F456": {
+    "tts": "jeans",
+    "keywords": [
+      "clothing",
+      "pants",
+      "trousers"
+    ]
+  },
+  "1F457": {
+    "tts": "dress",
+    "keywords": [
+      "clothing"
+    ]
+  },
+  "1F458": {
+    "tts": "kimono",
+    "keywords": [
+      "clothing"
+    ]
+  },
+  "1F459": {
+    "tts": "bikini",
+    "keywords": [
+      "clothing",
+      "swim"
+    ]
+  },
+  "1F45A": {
+    "tts": "woman’s clothes",
+    "keywords": [
+      "clothing",
+      "woman"
+    ]
+  },
+  "1F45B": {
+    "tts": "purse",
+    "keywords": [
+      "clothing",
+      "coin"
+    ]
+  },
+  "1F45C": {
+    "tts": "handbag",
+    "keywords": [
+      "bag",
+      "clothing"
+    ]
+  },
+  "1F45D": {
+    "tts": "pouch",
+    "keywords": [
+      "bag",
+      "clothing"
+    ]
+  },
+  "1F6CD": {
+    "tts": "shopping bags",
+    "keywords": [
+      "bag",
+      "hotel",
+      "shopping"
+    ]
+  },
+  "1F392": {
+    "tts": "school backpack",
+    "keywords": [
+      "bag",
+      "satchel",
+      "school"
+    ]
+  },
+  "1F45E": {
+    "tts": "man’s shoe",
+    "keywords": [
+      "clothing",
+      "man",
+      "shoe"
+    ]
+  },
+  "1F45F": {
+    "tts": "running shoe",
+    "keywords": [
+      "athletic",
+      "clothing",
+      "shoe",
+      "sneaker"
+    ]
+  },
+  "1F460": {
+    "tts": "high-heeled shoe",
+    "keywords": [
+      "clothing",
+      "heel",
+      "shoe",
+      "woman"
+    ]
+  },
+  "1F461": {
+    "tts": "woman’s sandal",
+    "keywords": [
+      "clothing",
+      "sandal",
+      "shoe",
+      "woman"
+    ]
+  },
+  "1F462": {
+    "tts": "woman’s boot",
+    "keywords": [
+      "boot",
+      "clothing",
+      "shoe",
+      "woman"
+    ]
+  },
+  "1F451": {
+    "tts": "crown",
+    "keywords": [
+      "clothing",
+      "king",
+      "queen"
+    ]
+  },
+  "1F452": {
+    "tts": "woman’s hat",
+    "keywords": [
+      "clothing",
+      "hat",
+      "woman"
+    ]
+  },
+  "1F3A9": {
+    "tts": "top hat",
+    "keywords": [
+      "clothing",
+      "hat",
+      "top",
+      "tophat"
+    ]
+  },
+  "1F393": {
+    "tts": "graduation cap",
+    "keywords": [
+      "cap",
+      "celebration",
+      "clothing",
+      "graduation",
+      "hat"
+    ]
+  },
+  "1F4FF": {
+    "tts": "prayer beads",
+    "keywords": [
+      "beads",
+      "clothing",
+      "necklace",
+      "prayer",
+      "religion"
+    ]
+  },
+  "1F484": {
+    "tts": "lipstick",
+    "keywords": [
+      "cosmetics",
+      "makeup"
+    ]
+  },
+  "1F48D": {
+    "tts": "ring",
+    "keywords": [
+      "diamond",
+      "romance"
+    ]
+  },
+  "1F48E": {
+    "tts": "gem stone",
+    "keywords": [
+      "diamond",
+      "gem",
+      "jewel",
+      "romance"
+    ]
+  },
+  "1F435": {
+    "tts": "monkey face",
+    "keywords": [
+      "face",
+      "monkey"
+    ]
+  },
+  "1F412": {
+    "tts": "monkey",
+    "keywords": [
+      "monkey"
+    ]
+  },
+  "1F436": {
+    "tts": "dog face",
+    "keywords": [
+      "dog",
+      "face",
+      "pet"
+    ]
+  },
+  "1F415": {
+    "tts": "dog",
+    "keywords": [
+      "pet"
+    ]
+  },
+  "1F429": {
+    "tts": "poodle",
+    "keywords": [
+      "dog"
+    ]
+  },
+  "1F43A": {
+    "tts": "wolf face",
+    "keywords": [
+      "face",
+      "wolf"
+    ]
+  },
+  "1F431": {
+    "tts": "cat face",
+    "keywords": [
+      "cat",
+      "face",
+      "pet"
+    ]
+  },
+  "1F408": {
+    "tts": "cat",
+    "keywords": [
+      "pet"
+    ]
+  },
+  "1F981": {
+    "tts": "lion face",
+    "keywords": [
+      "face",
+      "leo",
+      "lion",
+      "zodiac"
+    ]
+  },
+  "1F42F": {
+    "tts": "tiger face",
+    "keywords": [
+      "face",
+      "tiger"
+    ]
+  },
+  "1F405": {
+    "tts": "tiger",
+    "keywords": [
+      "tiger"
+    ]
+  },
+  "1F406": {
+    "tts": "leopard",
+    "keywords": [
+      "leopard"
+    ]
+  },
+  "1F434": {
+    "tts": "horse face",
+    "keywords": [
+      "face",
+      "horse"
+    ]
+  },
+  "1F40E": {
+    "tts": "horse",
+    "keywords": [
+      "racehorse",
+      "racing"
+    ]
+  },
+  "1F984": {
+    "tts": "unicorn face",
+    "keywords": [
+      "face",
+      "unicorn"
+    ]
+  },
+  "1F42E": {
+    "tts": "cow face",
+    "keywords": [
+      "cow",
+      "face"
+    ]
+  },
+  "1F402": {
+    "tts": "ox",
+    "keywords": [
+      "bull",
+      "taurus",
+      "zodiac"
+    ]
+  },
+  "1F403": {
+    "tts": "water buffalo",
+    "keywords": [
+      "buffalo",
+      "water"
+    ]
+  },
+  "1F404": {
+    "tts": "cow",
+    "keywords": [
+      "cow"
+    ]
+  },
+  "1F437": {
+    "tts": "pig face",
+    "keywords": [
+      "face",
+      "pig"
+    ]
+  },
+  "1F416": {
+    "tts": "pig",
+    "keywords": [
+      "sow"
+    ]
+  },
+  "1F417": {
+    "tts": "boar",
+    "keywords": [
+      "pig"
+    ]
+  },
+  "1F43D": {
+    "tts": "pig nose",
+    "keywords": [
+      "face",
+      "nose",
+      "pig"
+    ]
+  },
+  "1F40F": {
+    "tts": "ram",
+    "keywords": [
+      "aries",
+      "sheep",
+      "zodiac"
+    ]
+  },
+  "1F411": {
+    "tts": "sheep",
+    "keywords": [
+      "ewe"
+    ]
+  },
+  "1F410": {
+    "tts": "goat",
+    "keywords": [
+      "capricorn",
+      "zodiac"
+    ]
+  },
+  "1F42A": {
+    "tts": "camel",
+    "keywords": [
+      "dromedary",
+      "hump"
+    ]
+  },
+  "1F42B": {
+    "tts": "two-hump camel",
+    "keywords": [
+      "bactrian",
+      "camel",
+      "hump"
+    ]
+  },
+  "1F418": {
+    "tts": "elephant",
+    "keywords": [
+      "elephant"
+    ]
+  },
+  "1F42D": {
+    "tts": "mouse face",
+    "keywords": [
+      "face",
+      "mouse"
+    ]
+  },
+  "1F401": {
+    "tts": "mouse",
+    "keywords": [
+      "mouse"
+    ]
+  },
+  "1F400": {
+    "tts": "rat",
+    "keywords": [
+      "rat"
+    ]
+  },
+  "1F439": {
+    "tts": "hamster face",
+    "keywords": [
+      "face",
+      "hamster",
+      "pet"
+    ]
+  },
+  "1F430": {
+    "tts": "rabbit face",
+    "keywords": [
+      "bunny",
+      "face",
+      "pet",
+      "rabbit"
+    ]
+  },
+  "1F407": {
+    "tts": "rabbit",
+    "keywords": [
+      "bunny",
+      "pet"
+    ]
+  },
+  "1F43F": {
+    "tts": "chipmunk",
+    "keywords": [
+      "chipmunk"
+    ]
+  },
+  "1F43B": {
+    "tts": "bear face",
+    "keywords": [
+      "bear",
+      "face"
+    ]
+  },
+  "1F428": {
+    "tts": "koala",
+    "keywords": [
+      "bear"
+    ]
+  },
+  "1F43C": {
+    "tts": "panda face",
+    "keywords": [
+      "face",
+      "panda"
+    ]
+  },
+  "1F43E": {
+    "tts": "paw prints",
+    "keywords": [
+      "feet",
+      "paw",
+      "print"
+    ]
+  },
+  "1F983": {
+    "tts": "turkey",
+    "keywords": [
+      "turkey"
+    ]
+  },
+  "1F414": {
+    "tts": "chicken",
+    "keywords": [
+      "chicken"
+    ]
+  },
+  "1F413": {
+    "tts": "rooster",
+    "keywords": [
+      "rooster"
+    ]
+  },
+  "1F423": {
+    "tts": "hatching chick",
+    "keywords": [
+      "baby",
+      "chick",
+      "hatching"
+    ]
+  },
+  "1F424": {
+    "tts": "baby chick",
+    "keywords": [
+      "baby",
+      "chick"
+    ]
+  },
+  "1F425": {
+    "tts": "front-facing baby chick",
+    "keywords": [
+      "baby",
+      "chick"
+    ]
+  },
+  "1F426": {
+    "tts": "bird",
+    "keywords": [
+      "bird"
+    ]
+  },
+  "1F427": {
+    "tts": "penguin",
+    "keywords": [
+      "penguin"
+    ]
+  },
+  "1F54A": {
+    "tts": "dove",
+    "keywords": [
+      "bird",
+      "fly",
+      "peace"
+    ]
+  },
+  "1F438": {
+    "tts": "frog face",
+    "keywords": [
+      "face",
+      "frog"
+    ]
+  },
+  "1F40A": {
+    "tts": "crocodile",
+    "keywords": [
+      "crocodile"
+    ]
+  },
+  "1F422": {
+    "tts": "turtle",
+    "keywords": [
+      "turtle"
+    ]
+  },
+  "1F40D": {
+    "tts": "snake",
+    "keywords": [
+      "bearer",
+      "ophiuchus",
+      "serpent",
+      "zodiac"
+    ]
+  },
+  "1F432": {
+    "tts": "dragon face",
+    "keywords": [
+      "dragon",
+      "face",
+      "fairy tale"
+    ]
+  },
+  "1F409": {
+    "tts": "dragon",
+    "keywords": [
+      "fairy tale"
+    ]
+  },
+  "1F433": {
+    "tts": "spouting whale",
+    "keywords": [
+      "face",
+      "spouting",
+      "whale"
+    ]
+  },
+  "1F40B": {
+    "tts": "whale",
+    "keywords": [
+      "whale"
+    ]
+  },
+  "1F42C": {
+    "tts": "dolphin",
+    "keywords": [
+      "flipper"
+    ]
+  },
+  "1F41F": {
+    "tts": "fish",
+    "keywords": [
+      "pisces",
+      "zodiac"
+    ]
+  },
+  "1F420": {
+    "tts": "tropical fish",
+    "keywords": [
+      "fish",
+      "tropical"
+    ]
+  },
+  "1F421": {
+    "tts": "blowfish",
+    "keywords": [
+      "fish"
+    ]
+  },
+  "1F419": {
+    "tts": "octopus",
+    "keywords": [
+      "octopus"
+    ]
+  },
+  "1F41A": {
+    "tts": "spiral shell",
+    "keywords": [
+      "shell",
+      "spiral"
+    ]
+  },
+  "1F980": {
+    "tts": "crab",
+    "keywords": [
+      "cancer",
+      "zodiac"
+    ]
+  },
+  "1F40C": {
+    "tts": "snail",
+    "keywords": [
+      "snail"
+    ]
+  },
+  "1F41B": {
+    "tts": "bug",
+    "keywords": [
+      "insect"
+    ]
+  },
+  "1F41C": {
+    "tts": "ant",
+    "keywords": [
+      "insect"
+    ]
+  },
+  "1F41D": {
+    "tts": "honeybee",
+    "keywords": [
+      "bee",
+      "insect"
+    ]
+  },
+  "1F41E": {
+    "tts": "lady beetle",
+    "keywords": [
+      "beetle",
+      "insect",
+      "ladybird",
+      "ladybug"
+    ]
+  },
+  "1F577": {
+    "tts": "spider",
+    "keywords": [
+      "insect"
+    ]
+  },
+  "1F578": {
+    "tts": "spider web",
+    "keywords": [
+      "spider",
+      "web"
+    ]
+  },
+  "1F982": {
+    "tts": "scorpion",
+    "keywords": [
+      "scorpio",
+      "scorpius",
+      "zodiac"
+    ]
+  },
+  "1F490": {
+    "tts": "bouquet",
+    "keywords": [
+      "flower",
+      "plant",
+      "romance"
+    ]
+  },
+  "1F338": {
+    "tts": "cherry blossom",
+    "keywords": [
+      "blossom",
+      "cherry",
+      "flower",
+      "plant"
+    ]
+  },
+  "1F4AE": {
+    "tts": "white flower",
+    "keywords": [
+      "flower"
+    ]
+  },
+  "1F3F5": {
+    "tts": "rosette",
+    "keywords": [
+      "plant"
+    ]
+  },
+  "1F339": {
+    "tts": "rose",
+    "keywords": [
+      "flower",
+      "plant"
+    ]
+  },
+  "1F33A": {
+    "tts": "hibiscus",
+    "keywords": [
+      "flower",
+      "plant"
+    ]
+  },
+  "1F33B": {
+    "tts": "sunflower",
+    "keywords": [
+      "flower",
+      "plant",
+      "sun"
+    ]
+  },
+  "1F33C": {
+    "tts": "blossom",
+    "keywords": [
+      "flower",
+      "plant"
+    ]
+  },
+  "1F337": {
+    "tts": "tulip",
+    "keywords": [
+      "flower",
+      "plant"
+    ]
+  },
+  "1F331": {
+    "tts": "seedling",
+    "keywords": [
+      "plant",
+      "young"
+    ]
+  },
+  "1F332": {
+    "tts": "evergreen",
+    "keywords": [
+      "plant",
+      "tree"
+    ]
+  },
+  "1F333": {
+    "tts": "deciduous tree",
+    "keywords": [
+      "deciduous",
+      "plant",
+      "shedding",
+      "tree"
+    ]
+  },
+  "1F334": {
+    "tts": "palm tree",
+    "keywords": [
+      "palm",
+      "plant",
+      "tree"
+    ]
+  },
+  "1F335": {
+    "tts": "cactus",
+    "keywords": [
+      "plant"
+    ]
+  },
+  "1F33E": {
+    "tts": "sheaf of rice",
+    "keywords": [
+      "ear",
+      "plant",
+      "rice"
+    ]
+  },
+  "1F33F": {
+    "tts": "herb",
+    "keywords": [
+      "leaf",
+      "plant"
+    ]
+  },
+  "1F340": {
+    "tts": "four leaf clover",
+    "keywords": [
+      "4",
+      "clover",
+      "four",
+      "leaf",
+      "plant"
+    ]
+  },
+  "1F341": {
+    "tts": "maple leaf",
+    "keywords": [
+      "falling",
+      "leaf",
+      "maple",
+      "plant"
+    ]
+  },
+  "1F342": {
+    "tts": "fallen leaf",
+    "keywords": [
+      "falling",
+      "leaf",
+      "plant"
+    ]
+  },
+  "1F343": {
+    "tts": "leaf fluttering in wind",
+    "keywords": [
+      "blow",
+      "flutter",
+      "leaf",
+      "plant",
+      "wind"
+    ]
+  },
+  "1F347": {
+    "tts": "grapes",
+    "keywords": [
+      "fruit",
+      "grape",
+      "plant"
+    ]
+  },
+  "1F348": {
+    "tts": "melon",
+    "keywords": [
+      "fruit",
+      "plant"
+    ]
+  },
+  "1F349": {
+    "tts": "watermelon",
+    "keywords": [
+      "fruit",
+      "plant"
+    ]
+  },
+  "1F34A": {
+    "tts": "tangerine",
+    "keywords": [
+      "fruit",
+      "orange",
+      "plant"
+    ]
+  },
+  "1F34B": {
+    "tts": "lemon",
+    "keywords": [
+      "citrus",
+      "fruit",
+      "plant"
+    ]
+  },
+  "1F34C": {
+    "tts": "banana",
+    "keywords": [
+      "fruit",
+      "plant"
+    ]
+  },
+  "1F34D": {
+    "tts": "pineapple",
+    "keywords": [
+      "fruit",
+      "plant"
+    ]
+  },
+  "1F34E": {
+    "tts": "red apple",
+    "keywords": [
+      "apple",
+      "fruit",
+      "plant",
+      "red"
+    ]
+  },
+  "1F34F": {
+    "tts": "green apple",
+    "keywords": [
+      "apple",
+      "fruit",
+      "green",
+      "plant"
+    ]
+  },
+  "1F350": {
+    "tts": "pear",
+    "keywords": [
+      "fruit",
+      "plant"
+    ]
+  },
+  "1F351": {
+    "tts": "peach",
+    "keywords": [
+      "fruit",
+      "plant"
+    ]
+  },
+  "1F352": {
+    "tts": "cherries",
+    "keywords": [
+      "cherry",
+      "fruit",
+      "plant"
+    ]
+  },
+  "1F353": {
+    "tts": "strawberry",
+    "keywords": [
+      "berry",
+      "fruit",
+      "plant"
+    ]
+  },
+  "1F345": {
+    "tts": "tomato",
+    "keywords": [
+      "plant",
+      "vegetable"
+    ]
+  },
+  "1F346": {
+    "tts": "eggplant",
+    "keywords": [
+      "aubergine",
+      "plant",
+      "vegetable"
+    ]
+  },
+  "1F33D": {
+    "tts": "ear of corn",
+    "keywords": [
+      "corn",
+      "ear",
+      "maize",
+      "maze",
+      "plant"
+    ]
+  },
+  "1F336": {
+    "tts": "hot pepper",
+    "keywords": [
+      "hot",
+      "pepper",
+      "plant"
+    ]
+  },
+  "1F344": {
+    "tts": "mushroom",
+    "keywords": [
+      "plant"
+    ]
+  },
+  "1F330": {
+    "tts": "chestnut",
+    "keywords": [
+      "plant"
+    ]
+  },
+  "1F35E": {
+    "tts": "bread",
+    "keywords": [
+      "loaf"
+    ]
+  },
+  "1F9C0": {
+    "tts": "cheese wedge",
+    "keywords": [
+      "cheese"
+    ]
+  },
+  "1F356": {
+    "tts": "meat on bone",
+    "keywords": [
+      "bone",
+      "meat"
+    ]
+  },
+  "1F357": {
+    "tts": "poultry leg",
+    "keywords": [
+      "bone",
+      "chicken",
+      "leg",
+      "poultry"
+    ]
+  },
+  "1F354": {
+    "tts": "hamburger",
+    "keywords": [
+      "burger"
+    ]
+  },
+  "1F35F": {
+    "tts": "french fries",
+    "keywords": [
+      "french",
+      "fries"
+    ]
+  },
+  "1F355": {
+    "tts": "pizza",
+    "keywords": [
+      "cheese",
+      "slice"
+    ]
+  },
+  "1F32D": {
+    "tts": "hot dog",
+    "keywords": [
+      "frankfurter",
+      "hotdog",
+      "sausage"
+    ]
+  },
+  "1F32E": {
+    "tts": "taco",
+    "keywords": [
+      "mexican"
+    ]
+  },
+  "1F32F": {
+    "tts": "burrito",
+    "keywords": [
+      "mexican"
+    ]
+  },
+  "1F37F": {
+    "tts": "popcorn",
+    "keywords": [
+      "popcorn"
+    ]
+  },
+  "1F372": {
+    "tts": "pot of food",
+    "keywords": [
+      "pot",
+      "stew"
+    ]
+  },
+  "1F371": {
+    "tts": "bento box",
+    "keywords": [
+      "bento",
+      "box"
+    ]
+  },
+  "1F358": {
+    "tts": "rice cracker",
+    "keywords": [
+      "cracker",
+      "rice"
+    ]
+  },
+  "1F359": {
+    "tts": "rice ball",
+    "keywords": [
+      "ball",
+      "japanese",
+      "rice"
+    ]
+  },
+  "1F35A": {
+    "tts": "cooked rice",
+    "keywords": [
+      "cooked",
+      "rice"
+    ]
+  },
+  "1F35B": {
+    "tts": "curry rice",
+    "keywords": [
+      "curry",
+      "rice"
+    ]
+  },
+  "1F35C": {
+    "tts": "steaming bowl",
+    "keywords": [
+      "bowl",
+      "noodle",
+      "ramen",
+      "steaming"
+    ]
+  },
+  "1F35D": {
+    "tts": "spaghetti",
+    "keywords": [
+      "pasta"
+    ]
+  },
+  "1F360": {
+    "tts": "roasted sweet potato",
+    "keywords": [
+      "potato",
+      "roasted",
+      "sweet"
+    ]
+  },
+  "1F362": {
+    "tts": "oden",
+    "keywords": [
+      "kebab",
+      "seafood",
+      "skewer",
+      "stick"
+    ]
+  },
+  "1F363": {
+    "tts": "sushi",
+    "keywords": [
+      "sushi"
+    ]
+  },
+  "1F364": {
+    "tts": "fried shrimp",
+    "keywords": [
+      "fried",
+      "prawn",
+      "shrimp",
+      "tempura"
+    ]
+  },
+  "1F365": {
+    "tts": "fish cake with swirl",
+    "keywords": [
+      "cake",
+      "fish",
+      "pastry",
+      "swirl"
+    ]
+  },
+  "1F361": {
+    "tts": "dango",
+    "keywords": [
+      "dessert",
+      "japanese",
+      "skewer",
+      "stick",
+      "sweet"
+    ]
+  },
+  "1F366": {
+    "tts": "soft ice cream",
+    "keywords": [
+      "cream",
+      "dessert",
+      "ice",
+      "icecream",
+      "soft",
+      "sweet"
+    ]
+  },
+  "1F367": {
+    "tts": "shaved ice",
+    "keywords": [
+      "dessert",
+      "ice",
+      "shaved",
+      "sweet"
+    ]
+  },
+  "1F368": {
+    "tts": "ice cream",
+    "keywords": [
+      "cream",
+      "dessert",
+      "ice",
+      "sweet"
+    ]
+  },
+  "1F369": {
+    "tts": "doughnut",
+    "keywords": [
+      "dessert",
+      "donut",
+      "sweet"
+    ]
+  },
+  "1F36A": {
+    "tts": "cookie",
+    "keywords": [
+      "dessert",
+      "sweet"
+    ]
+  },
+  "1F382": {
+    "tts": "birthday cake",
+    "keywords": [
+      "birthday",
+      "cake",
+      "celebration",
+      "dessert",
+      "pastry",
+      "sweet"
+    ]
+  },
+  "1F370": {
+    "tts": "shortcake",
+    "keywords": [
+      "cake",
+      "dessert",
+      "pastry",
+      "slice",
+      "sweet"
+    ]
+  },
+  "1F36B": {
+    "tts": "chocolate bar",
+    "keywords": [
+      "bar",
+      "chocolate",
+      "dessert",
+      "sweet"
+    ]
+  },
+  "1F36C": {
+    "tts": "candy",
+    "keywords": [
+      "dessert",
+      "sweet"
+    ]
+  },
+  "1F36D": {
+    "tts": "lollipop",
+    "keywords": [
+      "candy",
+      "dessert",
+      "sweet"
+    ]
+  },
+  "1F36E": {
+    "tts": "custard",
+    "keywords": [
+      "dessert",
+      "pudding",
+      "sweet"
+    ]
+  },
+  "1F36F": {
+    "tts": "honey pot",
+    "keywords": [
+      "honey",
+      "honeypot",
+      "pot",
+      "sweet"
+    ]
+  },
+  "1F37C": {
+    "tts": "baby bottle",
+    "keywords": [
+      "baby",
+      "bottle",
+      "drink",
+      "milk"
+    ]
+  },
+  "1F375": {
+    "tts": "teacup without handle",
+    "keywords": [
+      "beverage",
+      "cup",
+      "drink",
+      "tea",
+      "teacup"
+    ]
+  },
+  "1F376": {
+    "tts": "sake",
+    "keywords": [
+      "bar",
+      "beverage",
+      "bottle",
+      "cup",
+      "drink"
+    ]
+  },
+  "1F37E": {
+    "tts": "bottle with popping cork",
+    "keywords": [
+      "bar",
+      "bottle",
+      "cork",
+      "drink",
+      "popping"
+    ]
+  },
+  "1F377": {
+    "tts": "wine glass",
+    "keywords": [
+      "bar",
+      "beverage",
+      "drink",
+      "glass",
+      "wine"
+    ]
+  },
+  "1F378": {
+    "tts": "cocktail glass",
+    "keywords": [
+      "bar",
+      "cocktail",
+      "drink",
+      "glass"
+    ]
+  },
+  "1F379": {
+    "tts": "tropical drink",
+    "keywords": [
+      "bar",
+      "drink",
+      "tropical"
+    ]
+  },
+  "1F37A": {
+    "tts": "beer mug",
+    "keywords": [
+      "bar",
+      "beer",
+      "drink",
+      "mug"
+    ]
+  },
+  "1F37B": {
+    "tts": "clinking beer mugs",
+    "keywords": [
+      "bar",
+      "beer",
+      "clink",
+      "drink",
+      "mug"
+    ]
+  },
+  "1F37D": {
+    "tts": "fork and knife with plate",
+    "keywords": [
+      "cooking",
+      "fork",
+      "knife",
+      "plate"
+    ]
+  },
+  "1F374": {
+    "tts": "fork and knife",
+    "keywords": [
+      "cooking",
+      "fork",
+      "knife"
+    ]
+  },
+  "1F373": {
+    "tts": "cooking",
+    "keywords": [
+      "egg",
+      "frying",
+      "pan"
+    ]
+  },
+  "1F3FA": {
+    "tts": "amphora",
+    "keywords": [
+      "aquarius",
+      "cooking",
+      "drink",
+      "jug",
+      "tool",
+      "weapon",
+      "zodiac"
+    ]
+  },
+  "1F30D": {
+    "tts": "globe showing europe-africa",
+    "keywords": [
+      "africa",
+      "earth",
+      "europe",
+      "globe",
+      "world"
+    ]
+  },
+  "1F30E": {
+    "tts": "globe showing americas",
+    "keywords": [
+      "americas",
+      "earth",
+      "globe",
+      "world"
+    ]
+  },
+  "1F30F": {
+    "tts": "globe showing asia-australia",
+    "keywords": [
+      "asia",
+      "australia",
+      "earth",
+      "globe",
+      "world"
+    ]
+  },
+  "1F310": {
+    "tts": "globe with meridians",
+    "keywords": [
+      "earth",
+      "globe",
+      "meridians",
+      "world"
+    ]
+  },
+  "1F5FA": {
+    "tts": "world map",
+    "keywords": [
+      "map",
+      "world"
+    ]
+  },
+  "1F3D4": {
+    "tts": "snow-capped mountain",
+    "keywords": [
+      "cold",
+      "mountain",
+      "snow"
+    ]
+  },
+  "26F0": {
+    "tts": "mountain",
+    "keywords": [
+      "mountain"
+    ]
+  },
+  "1F30B": {
+    "tts": "volcano",
+    "keywords": [
+      "eruption",
+      "mountain",
+      "weather"
+    ]
+  },
+  "1F5FB": {
+    "tts": "mount fuji",
+    "keywords": [
+      "fuji",
+      "mountain"
+    ]
+  },
+  "1F3D5": {
+    "tts": "camping",
+    "keywords": [
+      "camping"
+    ]
+  },
+  "1F3D6": {
+    "tts": "beach with umbrella",
+    "keywords": [
+      "beach",
+      "umbrella"
+    ]
+  },
+  "1F3DC": {
+    "tts": "desert",
+    "keywords": [
+      "desert"
+    ]
+  },
+  "1F3DD": {
+    "tts": "desert island",
+    "keywords": [
+      "desert",
+      "island"
+    ]
+  },
+  "1F3DE": {
+    "tts": "national park",
+    "keywords": [
+      "park"
+    ]
+  },
+  "1F3DF": {
+    "tts": "stadium",
+    "keywords": [
+      "stadium"
+    ]
+  },
+  "1F3DB": {
+    "tts": "classical building",
+    "keywords": [
+      "building",
+      "classical"
+    ]
+  },
+  "1F3D7": {
+    "tts": "building construction",
+    "keywords": [
+      "building",
+      "construction"
+    ]
+  },
+  "1F3D8": {
+    "tts": "house buildings",
+    "keywords": [
+      "building",
+      "house"
+    ]
+  },
+  "1F3D9": {
+    "tts": "cityscape",
+    "keywords": [
+      "building",
+      "city"
+    ]
+  },
+  "1F3DA": {
+    "tts": "derelict house building",
+    "keywords": [
+      "building",
+      "derelict",
+      "house"
+    ]
+  },
+  "1F3E0": {
+    "tts": "house building",
+    "keywords": [
+      "building",
+      "home",
+      "house"
+    ]
+  },
+  "1F3E1": {
+    "tts": "house with garden",
+    "keywords": [
+      "building",
+      "garden",
+      "home",
+      "house"
+    ]
+  },
+  "26EA": {
+    "tts": "church",
+    "keywords": [
+      "building",
+      "christian",
+      "cross",
+      "religion"
+    ]
+  },
+  "1F54B": {
+    "tts": "kaaba",
+    "keywords": [
+      "islam",
+      "muslim",
+      "religion"
+    ]
+  },
+  "1F54C": {
+    "tts": "mosque",
+    "keywords": [
+      "islam",
+      "muslim",
+      "religion"
+    ]
+  },
+  "1F54D": {
+    "tts": "synagogue",
+    "keywords": [
+      "jew",
+      "jewish",
+      "religion",
+      "temple"
+    ]
+  },
+  "26E9": {
+    "tts": "shinto shrine",
+    "keywords": [
+      "religion",
+      "shinto",
+      "shrine"
+    ]
+  },
+  "1F3E2": {
+    "tts": "office building",
+    "keywords": [
+      "building"
+    ]
+  },
+  "1F3E3": {
+    "tts": "japanese post office",
+    "keywords": [
+      "building",
+      "japanese",
+      "post"
+    ]
+  },
+  "1F3E4": {
+    "tts": "post office",
+    "keywords": [
+      "building",
+      "european",
+      "post"
+    ]
+  },
+  "1F3E5": {
+    "tts": "hospital",
+    "keywords": [
+      "building",
+      "doctor",
+      "medicine"
+    ]
+  },
+  "1F3E6": {
+    "tts": "bank",
+    "keywords": [
+      "building"
+    ]
+  },
+  "1F3E8": {
+    "tts": "hotel",
+    "keywords": [
+      "building"
+    ]
+  },
+  "1F3E9": {
+    "tts": "love hotel",
+    "keywords": [
+      "building",
+      "hotel",
+      "love"
+    ]
+  },
+  "1F3EA": {
+    "tts": "convenience store",
+    "keywords": [
+      "building",
+      "convenience",
+      "store"
+    ]
+  },
+  "1F3EB": {
+    "tts": "school",
+    "keywords": [
+      "building"
+    ]
+  },
+  "1F3EC": {
+    "tts": "department store",
+    "keywords": [
+      "building",
+      "department",
+      "store"
+    ]
+  },
+  "1F3ED": {
+    "tts": "factory",
+    "keywords": [
+      "building"
+    ]
+  },
+  "1F3EF": {
+    "tts": "japanese castle",
+    "keywords": [
+      "building",
+      "castle",
+      "japanese"
+    ]
+  },
+  "1F3F0": {
+    "tts": "castle",
+    "keywords": [
+      "building",
+      "european"
+    ]
+  },
+  "1F492": {
+    "tts": "wedding",
+    "keywords": [
+      "chapel",
+      "romance"
+    ]
+  },
+  "1F5FC": {
+    "tts": "tokyo tower",
+    "keywords": [
+      "tokyo",
+      "tower"
+    ]
+  },
+  "1F5FD": {
+    "tts": "statue of liberty",
+    "keywords": [
+      "liberty",
+      "statue"
+    ]
+  },
+  "1F5FE": {
+    "tts": "map of japan",
+    "keywords": [
+      "japan",
+      "map"
+    ]
+  },
+  "26F2": {
+    "tts": "fountain",
+    "keywords": [
+      "fountain"
+    ]
+  },
+  "26FA": {
+    "tts": "tent",
+    "keywords": [
+      "camping"
+    ]
+  },
+  "1F301": {
+    "tts": "foggy",
+    "keywords": [
+      "fog",
+      "weather"
+    ]
+  },
+  "1F303": {
+    "tts": "night with stars",
+    "keywords": [
+      "night",
+      "star",
+      "weather"
+    ]
+  },
+  "1F304": {
+    "tts": "sunrise over mountains",
+    "keywords": [
+      "morning",
+      "mountain",
+      "sun",
+      "sunrise",
+      "weather"
+    ]
+  },
+  "1F305": {
+    "tts": "sunrise",
+    "keywords": [
+      "morning",
+      "sun",
+      "weather"
+    ]
+  },
+  "1F306": {
+    "tts": "cityscape at dusk",
+    "keywords": [
+      "building",
+      "city",
+      "dusk",
+      "evening",
+      "landscape",
+      "sun",
+      "sunset",
+      "weather"
+    ]
+  },
+  "1F307": {
+    "tts": "sunset",
+    "keywords": [
+      "building",
+      "dusk",
+      "sun",
+      "weather"
+    ]
+  },
+  "1F309": {
+    "tts": "bridge at night",
+    "keywords": [
+      "bridge",
+      "night",
+      "weather"
+    ]
+  },
+  "1F30C": {
+    "tts": "milky way",
+    "keywords": [
+      "space",
+      "weather"
+    ]
+  },
+  "1F3A0": {
+    "tts": "carousel horse",
+    "keywords": [
+      "carousel",
+      "horse"
+    ]
+  },
+  "1F3A1": {
+    "tts": "ferris wheel",
+    "keywords": [
+      "amusement park",
+      "ferris",
+      "wheel"
+    ]
+  },
+  "1F3A2": {
+    "tts": "roller coaster",
+    "keywords": [
+      "amusement park",
+      "coaster",
+      "roller"
+    ]
+  },
+  "1F488": {
+    "tts": "barber pole",
+    "keywords": [
+      "barber",
+      "haircut",
+      "pole"
+    ]
+  },
+  "1F3AA": {
+    "tts": "circus tent",
+    "keywords": [
+      "circus",
+      "tent"
+    ]
+  },
+  "1F3AD": {
+    "tts": "performing arts",
+    "keywords": [
+      "art",
+      "mask",
+      "performing",
+      "theater",
+      "theatre"
+    ]
+  },
+  "1F5BC": {
+    "tts": "frame with picture",
+    "keywords": [
+      "art",
+      "frame",
+      "museum",
+      "painting",
+      "picture"
+    ]
+  },
+  "1F3A8": {
+    "tts": "artist palette",
+    "keywords": [
+      "art",
+      "museum",
+      "painting",
+      "palette"
+    ]
+  },
+  "1F3B0": {
+    "tts": "slot machine",
+    "keywords": [
+      "game",
+      "slot"
+    ]
+  },
+  "1F682": {
+    "tts": "locomotive",
+    "keywords": [
+      "engine",
+      "railway",
+      "steam",
+      "train",
+      "vehicle"
+    ]
+  },
+  "1F683": {
+    "tts": "railway car",
+    "keywords": [
+      "car",
+      "electric",
+      "railway",
+      "train",
+      "tram",
+      "trolleybus",
+      "vehicle"
+    ]
+  },
+  "1F684": {
+    "tts": "high-speed train",
+    "keywords": [
+      "railway",
+      "shinkansen",
+      "speed",
+      "train",
+      "vehicle"
+    ]
+  },
+  "1F685": {
+    "tts": "high-speed train with bullet nose",
+    "keywords": [
+      "bullet",
+      "railway",
+      "shinkansen",
+      "speed",
+      "train",
+      "vehicle"
+    ]
+  },
+  "1F686": {
+    "tts": "train",
+    "keywords": [
+      "railway",
+      "vehicle"
+    ]
+  },
+  "1F687": {
+    "tts": "metro",
+    "keywords": [
+      "subway",
+      "vehicle"
+    ]
+  },
+  "1F688": {
+    "tts": "light rail",
+    "keywords": [
+      "railway",
+      "vehicle"
+    ]
+  },
+  "1F689": {
+    "tts": "station",
+    "keywords": [
+      "railway",
+      "train",
+      "vehicle"
+    ]
+  },
+  "1F68A": {
+    "tts": "tram",
+    "keywords": [
+      "trolleybus",
+      "vehicle"
+    ]
+  },
+  "1F69D": {
+    "tts": "monorail",
+    "keywords": [
+      "vehicle"
+    ]
+  },
+  "1F69E": {
+    "tts": "mountain railway",
+    "keywords": [
+      "car",
+      "mountain",
+      "railway",
+      "vehicle"
+    ]
+  },
+  "1F68B": {
+    "tts": "tram car",
+    "keywords": [
+      "car",
+      "tram",
+      "trolleybus",
+      "vehicle"
+    ]
+  },
+  "1F68C": {
+    "tts": "bus",
+    "keywords": [
+      "vehicle"
+    ]
+  },
+  "1F68D": {
+    "tts": "oncoming bus",
+    "keywords": [
+      "bus",
+      "oncoming",
+      "vehicle"
+    ]
+  },
+  "1F68E": {
+    "tts": "trolleybus",
+    "keywords": [
+      "bus",
+      "tram",
+      "trolley",
+      "vehicle"
+    ]
+  },
+  "1F68F": {
+    "tts": "bus stop",
+    "keywords": [
+      "bus",
+      "busstop",
+      "stop"
+    ]
+  },
+  "1F690": {
+    "tts": "minibus",
+    "keywords": [
+      "bus",
+      "vehicle"
+    ]
+  },
+  "1F691": {
+    "tts": "ambulance",
+    "keywords": [
+      "vehicle"
+    ]
+  },
+  "1F692": {
+    "tts": "fire engine",
+    "keywords": [
+      "engine",
+      "fire",
+      "truck",
+      "vehicle"
+    ]
+  },
+  "1F693": {
+    "tts": "police car",
+    "keywords": [
+      "car",
+      "patrol",
+      "police",
+      "vehicle"
+    ]
+  },
+  "1F694": {
+    "tts": "oncoming police car",
+    "keywords": [
+      "car",
+      "oncoming",
+      "police",
+      "vehicle"
+    ]
+  },
+  "1F695": {
+    "tts": "taxi",
+    "keywords": [
+      "vehicle"
+    ]
+  },
+  "1F696": {
+    "tts": "oncoming taxi",
+    "keywords": [
+      "oncoming",
+      "taxi",
+      "vehicle"
+    ]
+  },
+  "1F697": {
+    "tts": "automobile",
+    "keywords": [
+      "car",
+      "vehicle"
+    ]
+  },
+  "1F698": {
+    "tts": "oncoming automobile",
+    "keywords": [
+      "automobile",
+      "car",
+      "oncoming",
+      "vehicle"
+    ]
+  },
+  "1F699": {
+    "tts": "recreational vehicle",
+    "keywords": [
+      "recreational",
+      "rv",
+      "vehicle"
+    ]
+  },
+  "1F69A": {
+    "tts": "delivery truck",
+    "keywords": [
+      "delivery",
+      "truck",
+      "vehicle"
+    ]
+  },
+  "1F69B": {
+    "tts": "articulated lorry",
+    "keywords": [
+      "lorry",
+      "semi",
+      "truck",
+      "vehicle"
+    ]
+  },
+  "1F69C": {
+    "tts": "tractor",
+    "keywords": [
+      "vehicle"
+    ]
+  },
+  "1F6B2": {
+    "tts": "bicycle",
+    "keywords": [
+      "bike",
+      "vehicle"
+    ]
+  },
+  "26FD": {
+    "tts": "fuel pump",
+    "keywords": [
+      "fuel",
+      "fuelpump",
+      "gas",
+      "pump",
+      "station"
+    ]
+  },
+  "1F6E3": {
+    "tts": "motorway",
+    "keywords": [
+      "highway",
+      "road"
+    ]
+  },
+  "1F6E4": {
+    "tts": "railway track",
+    "keywords": [
+      "railway",
+      "train"
+    ]
+  },
+  "1F6A8": {
+    "tts": "police car’s light",
+    "keywords": [
+      "beacon",
+      "car",
+      "light",
+      "police",
+      "revolving",
+      "vehicle"
+    ]
+  },
+  "1F6A5": {
+    "tts": "horizontal traffic light",
+    "keywords": [
+      "light",
+      "signal",
+      "traffic"
+    ]
+  },
+  "1F6A6": {
+    "tts": "vertical traffic light",
+    "keywords": [
+      "light",
+      "signal",
+      "traffic"
+    ]
+  },
+  "1F6A7": {
+    "tts": "construction",
+    "keywords": [
+      "barrier"
+    ]
+  },
+  "26F5": {
+    "tts": "sailboat",
+    "keywords": [
+      "boat",
+      "resort",
+      "sea",
+      "vehicle",
+      "yacht"
+    ]
+  },
+  "1F6A3": {
+    "tts": "rowboat",
+    "keywords": [
+      "boat",
+      "vehicle"
+    ]
+  },
+  "1F6A4": {
+    "tts": "speedboat",
+    "keywords": [
+      "boat",
+      "vehicle"
+    ]
+  },
+  "1F6F3": {
+    "tts": "passenger ship",
+    "keywords": [
+      "passenger",
+      "ship",
+      "vehicle"
+    ]
+  },
+  "26F4": {
+    "tts": "ferry",
+    "keywords": [
+      "boat"
+    ]
+  },
+  "1F6E5": {
+    "tts": "motor boat",
+    "keywords": [
+      "boat",
+      "motorboat",
+      "vehicle"
+    ]
+  },
+  "1F6A2": {
+    "tts": "ship",
+    "keywords": [
+      "vehicle"
+    ]
+  },
+  "1F6E9": {
+    "tts": "small airplane",
+    "keywords": [
+      "airplane",
+      "vehicle"
+    ]
+  },
+  "1F6EB": {
+    "tts": "airplane departure",
+    "keywords": [
+      "airplane",
+      "check-in",
+      "departure",
+      "departures",
+      "vehicle"
+    ]
+  },
+  "1F6EC": {
+    "tts": "airplane arrival",
+    "keywords": [
+      "airplane",
+      "arrivals",
+      "arriving",
+      "landing",
+      "vehicle"
+    ]
+  },
+  "1F4BA": {
+    "tts": "seat",
+    "keywords": [
+      "chair"
+    ]
+  },
+  "1F681": {
+    "tts": "helicopter",
+    "keywords": [
+      "vehicle"
+    ]
+  },
+  "1F69F": {
+    "tts": "suspension railway",
+    "keywords": [
+      "railway",
+      "suspension",
+      "vehicle"
+    ]
+  },
+  "1F6A0": {
+    "tts": "mountain cableway",
+    "keywords": [
+      "cable",
+      "gondola",
+      "mountain",
+      "vehicle"
+    ]
+  },
+  "1F6A1": {
+    "tts": "aerial tramway",
+    "keywords": [
+      "aerial",
+      "cable",
+      "car",
+      "gondola",
+      "ropeway",
+      "tramway",
+      "vehicle"
+    ]
+  },
+  "1F680": {
+    "tts": "rocket",
+    "keywords": [
+      "space",
+      "vehicle"
+    ]
+  },
+  "1F6F0": {
+    "tts": "satellite",
+    "keywords": [
+      "space",
+      "vehicle"
+    ]
+  },
+  "1F6CE": {
+    "tts": "bellhop bell",
+    "keywords": [
+      "bell",
+      "bellhop",
+      "hotel"
+    ]
+  },
+  "1F6AA": {
+    "tts": "door",
+    "keywords": [
+      "door"
+    ]
+  },
+  "1F6CC": {
+    "tts": "person in bed",
+    "keywords": [
+      "hotel",
+      "sleep"
+    ]
+  },
+  "1F6CF": {
+    "tts": "bed",
+    "keywords": [
+      "hotel",
+      "sleep"
+    ]
+  },
+  "1F6CB": {
+    "tts": "couch and lamp",
+    "keywords": [
+      "couch",
+      "hotel",
+      "lamp"
+    ]
+  },
+  "1F6BD": {
+    "tts": "toilet",
+    "keywords": [
+      "toilet"
+    ]
+  },
+  "1F6BF": {
+    "tts": "shower",
+    "keywords": [
+      "water"
+    ]
+  },
+  "1F6C0": {
+    "tts": "person taking bath",
+    "keywords": [
+      "bathtub",
+      "bath"
+    ]
+  },
+  "1F6C1": {
+    "tts": "bathtub",
+    "keywords": [
+      "bath"
+    ]
+  },
+  "231B": {
+    "tts": "hourglass",
+    "keywords": [
+      "sand",
+      "timer"
+    ]
+  },
+  "23F3": {
+    "tts": "hourglass with flowing sand",
+    "keywords": [
+      "hourglass",
+      "sand",
+      "timer"
+    ]
+  },
+  "231A": {
+    "tts": "watch",
+    "keywords": [
+      "clock"
+    ]
+  },
+  "23F0": {
+    "tts": "alarm clock",
+    "keywords": [
+      "alarm",
+      "clock"
+    ]
+  },
+  "23F1": {
+    "tts": "stopwatch",
+    "keywords": [
+      "clock"
+    ]
+  },
+  "23F2": {
+    "tts": "timer clock",
+    "keywords": [
+      "clock",
+      "timer"
+    ]
+  },
+  "1F570": {
+    "tts": "mantelpiece clock",
+    "keywords": [
+      "clock"
+    ]
+  },
+  "1F55B": {
+    "tts": "twelve o’clock",
+    "keywords": [
+      "00",
+      "12",
+      "12:00",
+      "clock",
+      "o’clock",
+      "twelve"
+    ]
+  },
+  "1F567": {
+    "tts": "twelve-thirty",
+    "keywords": [
+      "12",
+      "12:30",
+      "30",
+      "clock",
+      "thirty",
+      "twelve"
+    ]
+  },
+  "1F550": {
+    "tts": "one o’clock",
+    "keywords": [
+      "00",
+      "1",
+      "1:00",
+      "clock",
+      "o’clock",
+      "one"
+    ]
+  },
+  "1F55C": {
+    "tts": "one-thirty",
+    "keywords": [
+      "1",
+      "1:30",
+      "30",
+      "clock",
+      "one",
+      "thirty"
+    ]
+  },
+  "1F551": {
+    "tts": "two o’clock",
+    "keywords": [
+      "00",
+      "2",
+      "2:00",
+      "clock",
+      "o’clock",
+      "two"
+    ]
+  },
+  "1F55D": {
+    "tts": "two-thirty",
+    "keywords": [
+      "2",
+      "2:30",
+      "30",
+      "clock",
+      "thirty",
+      "two"
+    ]
+  },
+  "1F552": {
+    "tts": "three o’clock",
+    "keywords": [
+      "00",
+      "3",
+      "3:00",
+      "clock",
+      "o’clock",
+      "three"
+    ]
+  },
+  "1F55E": {
+    "tts": "three-thirty",
+    "keywords": [
+      "3",
+      "3:30",
+      "30",
+      "clock",
+      "thirty",
+      "three"
+    ]
+  },
+  "1F553": {
+    "tts": "four o’clock",
+    "keywords": [
+      "00",
+      "4",
+      "4:00",
+      "clock",
+      "four",
+      "o’clock"
+    ]
+  },
+  "1F55F": {
+    "tts": "four-thirty",
+    "keywords": [
+      "30",
+      "4",
+      "4:30",
+      "clock",
+      "four",
+      "thirty"
+    ]
+  },
+  "1F554": {
+    "tts": "five o’clock",
+    "keywords": [
+      "00",
+      "5",
+      "5:00",
+      "clock",
+      "five",
+      "o’clock"
+    ]
+  },
+  "1F560": {
+    "tts": "five-thirty",
+    "keywords": [
+      "30",
+      "5",
+      "5:30",
+      "clock",
+      "five",
+      "thirty"
+    ]
+  },
+  "1F555": {
+    "tts": "six o’clock",
+    "keywords": [
+      "00",
+      "6",
+      "6:00",
+      "clock",
+      "o’clock",
+      "six"
+    ]
+  },
+  "1F561": {
+    "tts": "six-thirty",
+    "keywords": [
+      "30",
+      "6",
+      "6:30",
+      "clock",
+      "six",
+      "thirty"
+    ]
+  },
+  "1F556": {
+    "tts": "seven o’clock",
+    "keywords": [
+      "00",
+      "7",
+      "7:00",
+      "clock",
+      "o’clock",
+      "seven"
+    ]
+  },
+  "1F562": {
+    "tts": "seven-thirty",
+    "keywords": [
+      "30",
+      "7",
+      "7:30",
+      "clock",
+      "seven",
+      "thirty"
+    ]
+  },
+  "1F557": {
+    "tts": "eight o’clock",
+    "keywords": [
+      "00",
+      "8",
+      "8:00",
+      "clock",
+      "eight",
+      "o’clock"
+    ]
+  },
+  "1F563": {
+    "tts": "eight-thirty",
+    "keywords": [
+      "30",
+      "8",
+      "8:30",
+      "clock",
+      "eight",
+      "thirty"
+    ]
+  },
+  "1F558": {
+    "tts": "nine o’clock",
+    "keywords": [
+      "00",
+      "9",
+      "9:00",
+      "clock",
+      "nine",
+      "o’clock"
+    ]
+  },
+  "1F564": {
+    "tts": "nine-thirty",
+    "keywords": [
+      "30",
+      "9",
+      "9:30",
+      "clock",
+      "nine",
+      "thirty"
+    ]
+  },
+  "1F559": {
+    "tts": "ten o’clock",
+    "keywords": [
+      "00",
+      "10",
+      "10:00",
+      "clock",
+      "o’clock",
+      "ten"
+    ]
+  },
+  "1F565": {
+    "tts": "ten-thirty",
+    "keywords": [
+      "10",
+      "10:30",
+      "30",
+      "clock",
+      "ten",
+      "thirty"
+    ]
+  },
+  "1F55A": {
+    "tts": "eleven o’clock",
+    "keywords": [
+      "00",
+      "11",
+      "11:00",
+      "clock",
+      "eleven",
+      "o’clock"
+    ]
+  },
+  "1F566": {
+    "tts": "eleven-thirty",
+    "keywords": [
+      "11",
+      "11:30",
+      "30",
+      "clock",
+      "eleven",
+      "thirty"
+    ]
+  },
+  "1F311": {
+    "tts": "new moon",
+    "keywords": [
+      "dark",
+      "moon",
+      "space",
+      "weather"
+    ]
+  },
+  "1F312": {
+    "tts": "waxing crescent moon",
+    "keywords": [
+      "crescent",
+      "moon",
+      "space",
+      "waxing",
+      "weather"
+    ]
+  },
+  "1F313": {
+    "tts": "first quarter moon",
+    "keywords": [
+      "moon",
+      "quarter",
+      "space",
+      "weather"
+    ]
+  },
+  "1F314": {
+    "tts": "waxing gibbous moon",
+    "keywords": [
+      "gibbous",
+      "moon",
+      "space",
+      "waxing",
+      "weather"
+    ]
+  },
+  "1F315": {
+    "tts": "full moon",
+    "keywords": [
+      "full",
+      "moon",
+      "space",
+      "weather"
+    ]
+  },
+  "1F316": {
+    "tts": "waning gibbous moon",
+    "keywords": [
+      "gibbous",
+      "moon",
+      "space",
+      "waning",
+      "weather"
+    ]
+  },
+  "1F317": {
+    "tts": "last quarter moon",
+    "keywords": [
+      "moon",
+      "quarter",
+      "space",
+      "weather"
+    ]
+  },
+  "1F318": {
+    "tts": "waning crescent moon",
+    "keywords": [
+      "crescent",
+      "moon",
+      "space",
+      "waning",
+      "weather"
+    ]
+  },
+  "1F319": {
+    "tts": "crescent moon",
+    "keywords": [
+      "crescent",
+      "moon",
+      "space",
+      "weather"
+    ]
+  },
+  "1F31A": {
+    "tts": "new moon face",
+    "keywords": [
+      "face",
+      "moon",
+      "space",
+      "weather"
+    ]
+  },
+  "1F31B": {
+    "tts": "first quarter moon with face",
+    "keywords": [
+      "face",
+      "moon",
+      "quarter",
+      "space",
+      "weather"
+    ]
+  },
+  "1F31C": {
+    "tts": "last quarter moon with face",
+    "keywords": [
+      "face",
+      "moon",
+      "quarter",
+      "space",
+      "weather"
+    ]
+  },
+  "1F321": {
+    "tts": "thermometer",
+    "keywords": [
+      "weather"
+    ]
+  },
+  "1F31D": {
+    "tts": "full moon with face",
+    "keywords": [
+      "bright",
+      "face",
+      "full",
+      "moon",
+      "space",
+      "weather"
+    ]
+  },
+  "1F31E": {
+    "tts": "sun with face",
+    "keywords": [
+      "bright",
+      "face",
+      "space",
+      "sun",
+      "weather"
+    ]
+  },
+  "2B50": {
+    "tts": "white medium star",
+    "keywords": [
+      "star"
+    ]
+  },
+  "1F31F": {
+    "tts": "glowing star",
+    "keywords": [
+      "glittery",
+      "glow",
+      "shining",
+      "sparkle",
+      "star"
+    ]
+  },
+  "1F320": {
+    "tts": "shooting star",
+    "keywords": [
+      "falling",
+      "shooting",
+      "space",
+      "star"
+    ]
+  },
+  "26C5": {
+    "tts": "sun behind cloud",
+    "keywords": [
+      "cloud",
+      "sun",
+      "weather"
+    ]
+  },
+  "26C8": {
+    "tts": "cloud with lightning and rain",
+    "keywords": [
+      "cloud",
+      "rain",
+      "thunder",
+      "weather"
+    ]
+  },
+  "1F324": {
+    "tts": "sun behind small cloud",
+    "keywords": [
+      "cloud",
+      "sun",
+      "weather"
+    ]
+  },
+  "1F325": {
+    "tts": "sun behind large cloud",
+    "keywords": [
+      "cloud",
+      "sun",
+      "weather"
+    ]
+  },
+  "1F326": {
+    "tts": "sun behind cloud with rain",
+    "keywords": [
+      "cloud",
+      "rain",
+      "sun",
+      "weather"
+    ]
+  },
+  "1F327": {
+    "tts": "cloud with rain",
+    "keywords": [
+      "cloud",
+      "rain",
+      "weather"
+    ]
+  },
+  "1F328": {
+    "tts": "cloud with snow",
+    "keywords": [
+      "cloud",
+      "cold",
+      "snow",
+      "weather"
+    ]
+  },
+  "1F329": {
+    "tts": "cloud with lightning",
+    "keywords": [
+      "cloud",
+      "lightning",
+      "weather"
+    ]
+  },
+  "1F32A": {
+    "tts": "tornado",
+    "keywords": [
+      "cloud",
+      "weather",
+      "whirlwind"
+    ]
+  },
+  "1F32B": {
+    "tts": "fog",
+    "keywords": [
+      "cloud",
+      "weather"
+    ]
+  },
+  "1F32C": {
+    "tts": "wind face",
+    "keywords": [
+      "blow",
+      "cloud",
+      "face",
+      "weather",
+      "wind"
+    ]
+  },
+  "1F300": {
+    "tts": "cyclone",
+    "keywords": [
+      "dizzy",
+      "twister",
+      "typhoon",
+      "weather"
+    ]
+  },
+  "1F308": {
+    "tts": "rainbow",
+    "keywords": [
+      "rain",
+      "weather"
+    ]
+  },
+  "1F302": {
+    "tts": "closed umbrella",
+    "keywords": [
+      "clothing",
+      "rain",
+      "umbrella",
+      "weather"
+    ]
+  },
+  "26F1": {
+    "tts": "umbrella on ground",
+    "keywords": [
+      "rain",
+      "sun",
+      "umbrella",
+      "weather"
+    ]
+  },
+  "26A1": {
+    "tts": "high voltage",
+    "keywords": [
+      "danger",
+      "electric",
+      "electricity",
+      "lightning",
+      "voltage",
+      "zap"
+    ]
+  },
+  "26C4": {
+    "tts": "snowman without snow",
+    "keywords": [
+      "cold",
+      "snow",
+      "snowman",
+      "weather"
+    ]
+  },
+  "1F525": {
+    "tts": "fire",
+    "keywords": [
+      "flame",
+      "tool"
+    ]
+  },
+  "1F4A7": {
+    "tts": "droplet",
+    "keywords": [
+      "cold",
+      "comic",
+      "drop",
+      "sweat",
+      "weather"
+    ]
+  },
+  "1F30A": {
+    "tts": "water wave",
+    "keywords": [
+      "ocean",
+      "water",
+      "wave",
+      "weather"
+    ]
+  },
+  "1F383": {
+    "tts": "jack-o-lantern",
+    "keywords": [
+      "celebration",
+      "halloween",
+      "jack",
+      "lantern"
+    ]
+  },
+  "1F384": {
+    "tts": "christmas tree",
+    "keywords": [
+      "celebration",
+      "christmas",
+      "tree"
+    ]
+  },
+  "1F386": {
+    "tts": "fireworks",
+    "keywords": [
+      "celebration"
+    ]
+  },
+  "1F387": {
+    "tts": "sparkler",
+    "keywords": [
+      "celebration",
+      "fireworks",
+      "sparkle"
+    ]
+  },
+  "1F388": {
+    "tts": "balloon",
+    "keywords": [
+      "celebration"
+    ]
+  },
+  "1F389": {
+    "tts": "party popper",
+    "keywords": [
+      "celebration",
+      "party",
+      "popper",
+      "tada"
+    ]
+  },
+  "1F38A": {
+    "tts": "confetti ball",
+    "keywords": [
+      "ball",
+      "celebration",
+      "confetti"
+    ]
+  },
+  "1F38B": {
+    "tts": "tanabata tree",
+    "keywords": [
+      "banner",
+      "celebration",
+      "japanese",
+      "tree"
+    ]
+  },
+  "1F38C": {
+    "tts": "crossed flags",
+    "keywords": [
+      "celebration",
+      "cross",
+      "crossed",
+      "japanese"
+    ]
+  },
+  "1F38D": {
+    "tts": "pine decoration",
+    "keywords": [
+      "bamboo",
+      "celebration",
+      "japanese",
+      "pine",
+      "plant"
+    ]
+  },
+  "1F38E": {
+    "tts": "japanese dolls",
+    "keywords": [
+      "celebration",
+      "doll",
+      "festival",
+      "japanese"
+    ]
+  },
+  "1F38F": {
+    "tts": "carp streamer",
+    "keywords": [
+      "carp",
+      "celebration",
+      "streamer"
+    ]
+  },
+  "1F390": {
+    "tts": "wind chime",
+    "keywords": [
+      "bell",
+      "celebration",
+      "chime",
+      "wind"
+    ]
+  },
+  "1F391": {
+    "tts": "moon ceremony",
+    "keywords": [
+      "celebration",
+      "ceremony",
+      "moon"
+    ]
+  },
+  "1F380": {
+    "tts": "ribbon",
+    "keywords": [
+      "celebration"
+    ]
+  },
+  "1F381": {
+    "tts": "wrapped present",
+    "keywords": [
+      "box",
+      "celebration",
+      "gift",
+      "present",
+      "wrapped"
+    ]
+  },
+  "1F396": {
+    "tts": "military medal",
+    "keywords": [
+      "celebration",
+      "medal",
+      "military"
+    ]
+  },
+  "1F397": {
+    "tts": "reminder ribbon",
+    "keywords": [
+      "celebration",
+      "reminder",
+      "ribbon"
+    ]
+  },
+  "1F39E": {
+    "tts": "film frames",
+    "keywords": [
+      "cinema",
+      "film",
+      "frames",
+      "movie"
+    ]
+  },
+  "1F39F": {
+    "tts": "admission tickets",
+    "keywords": [
+      "admission",
+      "ticket"
+    ]
+  },
+  "1F3AB": {
+    "tts": "ticket",
+    "keywords": [
+      "admission"
+    ]
+  },
+  "1F3F7": {
+    "tts": "label",
+    "keywords": [
+      "label"
+    ]
+  },
+  "26BD": {
+    "tts": "soccer ball",
+    "keywords": [
+      "ball",
+      "soccer"
+    ]
+  },
+  "26BE": {
+    "tts": "baseball",
+    "keywords": [
+      "ball"
+    ]
+  },
+  "1F3C0": {
+    "tts": "basketball",
+    "keywords": [
+      "ball",
+      "hoop"
+    ]
+  },
+  "1F3C8": {
+    "tts": "american football",
+    "keywords": [
+      "american",
+      "ball",
+      "football"
+    ]
+  },
+  "1F3C9": {
+    "tts": "rugby football",
+    "keywords": [
+      "ball",
+      "football",
+      "rugby"
+    ]
+  },
+  "1F3BE": {
+    "tts": "tennis",
+    "keywords": [
+      "ball",
+      "racquet"
+    ]
+  },
+  "1F3B1": {
+    "tts": "billiards",
+    "keywords": [
+      "8",
+      "8 ball",
+      "ball",
+      "billiard",
+      "eight",
+      "game"
+    ]
+  },
+  "1F3B3": {
+    "tts": "bowling",
+    "keywords": [
+      "ball",
+      "game"
+    ]
+  },
+  "26F3": {
+    "tts": "flag in hole",
+    "keywords": [
+      "golf",
+      "hole"
+    ]
+  },
+  "1F3CC": {
+    "tts": "golfer",
+    "keywords": [
+      "ball",
+      "golf"
+    ]
+  },
+  "26F8": {
+    "tts": "ice skate",
+    "keywords": [
+      "ice",
+      "skate"
+    ]
+  },
+  "1F3A3": {
+    "tts": "fishing pole",
+    "keywords": [
+      "fish",
+      "pole"
+    ]
+  },
+  "1F3BD": {
+    "tts": "running shirt",
+    "keywords": [
+      "running",
+      "sash",
+      "shirt"
+    ]
+  },
+  "1F3BF": {
+    "tts": "skis",
+    "keywords": [
+      "ski",
+      "snow"
+    ]
+  },
+  "26F7": {
+    "tts": "skier",
+    "keywords": [
+      "ski",
+      "snow"
+    ]
+  },
+  "1F3C2": {
+    "tts": "snowboarder",
+    "keywords": [
+      "ski",
+      "snow",
+      "snowboard"
+    ]
+  },
+  "1F3C4": {
+    "tts": "surfer",
+    "keywords": [
+      "surfing"
+    ]
+  },
+  "1F3C7": {
+    "tts": "horse racing",
+    "keywords": [
+      "horse",
+      "jockey",
+      "racehorse",
+      "racing"
+    ]
+  },
+  "1F3CA": {
+    "tts": "swimmer",
+    "keywords": [
+      "swim"
+    ]
+  },
+  "26F9": {
+    "tts": "person with ball",
+    "keywords": [
+      "ball"
+    ]
+  },
+  "1F3CB": {
+    "tts": "weight lifter",
+    "keywords": [
+      "lifter",
+      "weight"
+    ]
+  },
+  "1F6B4": {
+    "tts": "bicyclist",
+    "keywords": [
+      "bicycle",
+      "bike",
+      "cyclist"
+    ]
+  },
+  "1F6B5": {
+    "tts": "mountain biker",
+    "keywords": [
+      "bicycle",
+      "bicyclist",
+      "bike",
+      "cyclist",
+      "mountain"
+    ]
+  },
+  "1F3CE": {
+    "tts": "racing car",
+    "keywords": [
+      "car",
+      "racing"
+    ]
+  },
+  "1F3CD": {
+    "tts": "motorcycle",
+    "keywords": [
+      "racing"
+    ]
+  },
+  "1F3C5": {
+    "tts": "sports medal",
+    "keywords": [
+      "medal"
+    ]
+  },
+  "1F3C6": {
+    "tts": "trophy",
+    "keywords": [
+      "prize"
+    ]
+  },
+  "1F3CF": {
+    "tts": "cricket",
+    "keywords": [
+      "ball",
+      "bat",
+      "game"
+    ]
+  },
+  "1F3D0": {
+    "tts": "volleyball",
+    "keywords": [
+      "ball",
+      "game"
+    ]
+  },
+  "1F3D1": {
+    "tts": "field hockey",
+    "keywords": [
+      "ball",
+      "field",
+      "game",
+      "hockey",
+      "stick"
+    ]
+  },
+  "1F3D2": {
+    "tts": "ice hockey stick and puck",
+    "keywords": [
+      "game",
+      "hockey",
+      "ice",
+      "puck",
+      "stick"
+    ]
+  },
+  "1F3D3": {
+    "tts": "ping pong",
+    "keywords": [
+      "ball",
+      "bat",
+      "game",
+      "paddle",
+      "table tennis"
+    ]
+  },
+  "1F3F8": {
+    "tts": "badminton",
+    "keywords": [
+      "birdie",
+      "game",
+      "racquet",
+      "shuttlecock"
+    ]
+  },
+  "1F3AF": {
+    "tts": "direct hit",
+    "keywords": [
+      "bull",
+      "bullseye",
+      "dart",
+      "eye",
+      "game",
+      "hit",
+      "target"
+    ]
+  },
+  "1F3AE": {
+    "tts": "video game",
+    "keywords": [
+      "controller",
+      "game"
+    ]
+  },
+  "1F579": {
+    "tts": "joystick",
+    "keywords": [
+      "game",
+      "video game"
+    ]
+  },
+  "1F3B2": {
+    "tts": "game die",
+    "keywords": [
+      "dice",
+      "die",
+      "game"
+    ]
+  },
+  "1F0CF": {
+    "tts": "joker",
+    "keywords": [
+      "card",
+      "game",
+      "playing"
+    ]
+  },
+  "1F004": {
+    "tts": "mahjong red dragon",
+    "keywords": [
+      "game",
+      "mahjong",
+      "red"
+    ]
+  },
+  "1F3B4": {
+    "tts": "flower playing cards",
+    "keywords": [
+      "card",
+      "flower",
+      "game",
+      "japanese",
+      "playing"
+    ]
+  },
+  "1F507": {
+    "tts": "speaker off",
+    "keywords": [
+      "mute",
+      "quiet",
+      "silent",
+      "speaker",
+      "volume"
+    ]
+  },
+  "1F508": {
+    "tts": "speaker",
+    "keywords": [
+      "volume"
+    ]
+  },
+  "1F509": {
+    "tts": "speaker on",
+    "keywords": [
+      "low",
+      "speaker",
+      "volume",
+      "wave"
+    ]
+  },
+  "1F50A": {
+    "tts": "speaker loud",
+    "keywords": [
+      "3",
+      "high",
+      "loud",
+      "speaker",
+      "three",
+      "volume"
+    ]
+  },
+  "1F4E2": {
+    "tts": "loudspeaker",
+    "keywords": [
+      "loud",
+      "public address"
+    ]
+  },
+  "1F4E3": {
+    "tts": "megaphone",
+    "keywords": [
+      "cheering"
+    ]
+  },
+  "1F4EF": {
+    "tts": "postal horn",
+    "keywords": [
+      "horn",
+      "post",
+      "postal"
+    ]
+  },
+  "1F514": {
+    "tts": "bell",
+    "keywords": [
+      "bell"
+    ]
+  },
+  "1F515": {
+    "tts": "bell with slash",
+    "keywords": [
+      "bell",
+      "forbidden",
+      "mute",
+      "no",
+      "not",
+      "prohibited",
+      "quiet",
+      "silent"
+    ]
+  },
+  "1F3BC": {
+    "tts": "musical score",
+    "keywords": [
+      "music",
+      "score"
+    ]
+  },
+  "1F3B5": {
+    "tts": "musical note",
+    "keywords": [
+      "music",
+      "note"
+    ]
+  },
+  "1F3B6": {
+    "tts": "musical notes",
+    "keywords": [
+      "music",
+      "note",
+      "notes"
+    ]
+  },
+  "1F399": {
+    "tts": "studio microphone",
+    "keywords": [
+      "mic",
+      "microphone",
+      "music",
+      "studio"
+    ]
+  },
+  "1F39A": {
+    "tts": "level slider",
+    "keywords": [
+      "level",
+      "music",
+      "slider"
+    ]
+  },
+  "1F39B": {
+    "tts": "control knobs",
+    "keywords": [
+      "control",
+      "knobs",
+      "music"
+    ]
+  },
+  "1F3A4": {
+    "tts": "microphone",
+    "keywords": [
+      "karaoke",
+      "mic"
+    ]
+  },
+  "1F3A7": {
+    "tts": "headphone",
+    "keywords": [
+      "earbud"
+    ]
+  },
+  "1F3B7": {
+    "tts": "saxophone",
+    "keywords": [
+      "instrument",
+      "music",
+      "sax"
+    ]
+  },
+  "1F3B8": {
+    "tts": "guitar",
+    "keywords": [
+      "instrument",
+      "music"
+    ]
+  },
+  "1F3B9": {
+    "tts": "musical keyboard",
+    "keywords": [
+      "instrument",
+      "keyboard",
+      "music",
+      "piano"
+    ]
+  },
+  "1F3BA": {
+    "tts": "trumpet",
+    "keywords": [
+      "instrument",
+      "music"
+    ]
+  },
+  "1F3BB": {
+    "tts": "violin",
+    "keywords": [
+      "instrument",
+      "music"
+    ]
+  },
+  "1F4FB": {
+    "tts": "radio",
+    "keywords": [
+      "video"
+    ]
+  },
+  "1F4F1": {
+    "tts": "mobile phone",
+    "keywords": [
+      "cell",
+      "mobile",
+      "phone",
+      "telephone"
+    ]
+  },
+  "1F4F2": {
+    "tts": "mobile phone with arrow",
+    "keywords": [
+      "arrow",
+      "call",
+      "cell",
+      "mobile",
+      "phone",
+      "receive",
+      "telephone"
+    ]
+  },
+  "260E": {
+    "tts": "telephone",
+    "keywords": [
+      "phone"
+    ]
+  },
+  "1F4DE": {
+    "tts": "telephone receiver",
+    "keywords": [
+      "phone",
+      "receiver",
+      "telephone"
+    ]
+  },
+  "1F4DF": {
+    "tts": "pager",
+    "keywords": [
+      "pager"
+    ]
+  },
+  "1F4E0": {
+    "tts": "fax machine",
+    "keywords": [
+      "fax"
+    ]
+  },
+  "1F50B": {
+    "tts": "battery",
+    "keywords": [
+      "battery"
+    ]
+  },
+  "1F50C": {
+    "tts": "electric plug",
+    "keywords": [
+      "electric",
+      "electricity",
+      "plug"
+    ]
+  },
+  "1F4BB": {
+    "tts": "laptop computer",
+    "keywords": [
+      "computer",
+      "pc",
+      "personal"
+    ]
+  },
+  "1F5A5": {
+    "tts": "desktop computer",
+    "keywords": [
+      "computer",
+      "desktop"
+    ]
+  },
+  "1F5A8": {
+    "tts": "printer",
+    "keywords": [
+      "computer"
+    ]
+  },
+  "1F5B1": {
+    "tts": "computer mouse",
+    "keywords": [
+      "3",
+      "button",
+      "computer",
+      "mouse",
+      "three"
+    ]
+  },
+  "1F5B2": {
+    "tts": "trackball",
+    "keywords": [
+      "computer"
+    ]
+  },
+  "1F4BD": {
+    "tts": "minidisc",
+    "keywords": [
+      "computer",
+      "disk",
+      "minidisk",
+      "optical"
+    ]
+  },
+  "1F4BE": {
+    "tts": "floppy disk",
+    "keywords": [
+      "computer",
+      "disk",
+      "floppy"
+    ]
+  },
+  "1F4BF": {
+    "tts": "optical disc",
+    "keywords": [
+      "dvd",
+      "blu-ray",
+      "cd",
+      "computer",
+      "disk",
+      "optical"
+    ]
+  },
+  "1F4C0": {
+    "tts": "dvd",
+    "keywords": [
+      "blu-ray",
+      "cd",
+      "computer",
+      "disk",
+      "optical"
+    ]
+  },
+  "1F3A5": {
+    "tts": "movie camera",
+    "keywords": [
+      "camera",
+      "cinema",
+      "movie"
+    ]
+  },
+  "1F3AC": {
+    "tts": "clapper board",
+    "keywords": [
+      "clapper",
+      "movie"
+    ]
+  },
+  "1F4FD": {
+    "tts": "film projector",
+    "keywords": [
+      "cinema",
+      "film",
+      "movie",
+      "projector",
+      "video"
+    ]
+  },
+  "1F4FA": {
+    "tts": "television",
+    "keywords": [
+      "tv",
+      "video"
+    ]
+  },
+  "1F4F7": {
+    "tts": "camera",
+    "keywords": [
+      "video"
+    ]
+  },
+  "1F4F8": {
+    "tts": "camera with flash",
+    "keywords": [
+      "camera",
+      "flash",
+      "video"
+    ]
+  },
+  "1F4F9": {
+    "tts": "video camera",
+    "keywords": [
+      "camera",
+      "video"
+    ]
+  },
+  "1F4FC": {
+    "tts": "videocassette",
+    "keywords": [
+      "tape",
+      "vhs",
+      "video"
+    ]
+  },
+  "1F50D": {
+    "tts": "left-pointing magnifying glass",
+    "keywords": [
+      "glass",
+      "magnifying",
+      "search",
+      "tool"
+    ]
+  },
+  "1F50E": {
+    "tts": "right-pointing magnifying glass",
+    "keywords": [
+      "glass",
+      "magnifying",
+      "search",
+      "tool"
+    ]
+  },
+  "1F52C": {
+    "tts": "microscope",
+    "keywords": [
+      "tool"
+    ]
+  },
+  "1F52D": {
+    "tts": "telescope",
+    "keywords": [
+      "tool"
+    ]
+  },
+  "1F4E1": {
+    "tts": "satellite antenna",
+    "keywords": [
+      "antenna",
+      "dish",
+      "satellite"
+    ]
+  },
+  "1F56F": {
+    "tts": "candle",
+    "keywords": [
+      "light"
+    ]
+  },
+  "1F4A1": {
+    "tts": "light bulb",
+    "keywords": [
+      "bulb",
+      "comic",
+      "electric",
+      "idea",
+      "light"
+    ]
+  },
+  "1F526": {
+    "tts": "flashlight",
+    "keywords": [
+      "electric",
+      "light",
+      "tool",
+      "torch"
+    ]
+  },
+  "1F3EE": {
+    "tts": "red paper lantern",
+    "keywords": [
+      "bar",
+      "japanese",
+      "lantern",
+      "light",
+      "red"
+    ]
+  },
+  "1F4D4": {
+    "tts": "notebook with decorative cover",
+    "keywords": [
+      "book",
+      "cover",
+      "decorated",
+      "notebook"
+    ]
+  },
+  "1F4D5": {
+    "tts": "closed book",
+    "keywords": [
+      "book",
+      "closed"
+    ]
+  },
+  "1F4D6": {
+    "tts": "open book",
+    "keywords": [
+      "book",
+      "open"
+    ]
+  },
+  "1F4D7": {
+    "tts": "green book",
+    "keywords": [
+      "book",
+      "green"
+    ]
+  },
+  "1F4D8": {
+    "tts": "blue book",
+    "keywords": [
+      "blue",
+      "book"
+    ]
+  },
+  "1F4D9": {
+    "tts": "orange book",
+    "keywords": [
+      "book",
+      "orange"
+    ]
+  },
+  "1F4DA": {
+    "tts": "books",
+    "keywords": [
+      "book"
+    ]
+  },
+  "1F4D3": {
+    "tts": "notebook",
+    "keywords": [
+      "notebook"
+    ]
+  },
+  "1F4D2": {
+    "tts": "ledger",
+    "keywords": [
+      "notebook"
+    ]
+  },
+  "1F4C3": {
+    "tts": "page with curl",
+    "keywords": [
+      "curl",
+      "document",
+      "page"
+    ]
+  },
+  "1F4DC": {
+    "tts": "scroll",
+    "keywords": [
+      "paper"
+    ]
+  },
+  "1F4C4": {
+    "tts": "page facing up",
+    "keywords": [
+      "document",
+      "page"
+    ]
+  },
+  "1F4F0": {
+    "tts": "newspaper",
+    "keywords": [
+      "news",
+      "paper"
+    ]
+  },
+  "1F5DE": {
+    "tts": "rolled-up newspaper",
+    "keywords": [
+      "news",
+      "newspaper",
+      "paper",
+      "rolled"
+    ]
+  },
+  "1F4D1": {
+    "tts": "bookmark tabs",
+    "keywords": [
+      "bookmark",
+      "mark",
+      "marker",
+      "tabs"
+    ]
+  },
+  "1F516": {
+    "tts": "bookmark",
+    "keywords": [
+      "mark"
+    ]
+  },
+  "1F4B0": {
+    "tts": "money bag",
+    "keywords": [
+      "bag",
+      "dollar",
+      "money",
+      "moneybag"
+    ]
+  },
+  "1F4B4": {
+    "tts": "yen banknote",
+    "keywords": [
+      "bank",
+      "banknote",
+      "bill",
+      "currency",
+      "money",
+      "note",
+      "yen"
+    ]
+  },
+  "1F4B5": {
+    "tts": "dollar banknote",
+    "keywords": [
+      "bank",
+      "banknote",
+      "bill",
+      "currency",
+      "dollar",
+      "money",
+      "note"
+    ]
+  },
+  "1F4B6": {
+    "tts": "euro banknote",
+    "keywords": [
+      "bank",
+      "banknote",
+      "bill",
+      "currency",
+      "euro",
+      "money",
+      "note"
+    ]
+  },
+  "1F4B7": {
+    "tts": "pound banknote",
+    "keywords": [
+      "bank",
+      "banknote",
+      "bill",
+      "currency",
+      "money",
+      "note",
+      "pound"
+    ]
+  },
+  "1F4B8": {
+    "tts": "money with wings",
+    "keywords": [
+      "bank",
+      "banknote",
+      "bill",
+      "dollar",
+      "fly",
+      "money",
+      "note",
+      "wings"
+    ]
+  },
+  "1F4B3": {
+    "tts": "credit card",
+    "keywords": [
+      "bank",
+      "card",
+      "credit",
+      "money"
+    ]
+  },
+  "1F4B9": {
+    "tts": "chart increasing with yen",
+    "keywords": [
+      "bank",
+      "chart",
+      "currency",
+      "graph",
+      "growth",
+      "market",
+      "money",
+      "rise",
+      "trend",
+      "upward",
+      "yen"
+    ]
+  },
+  "1F4E7": {
+    "tts": "e-mail",
+    "keywords": [
+      "email",
+      "letter",
+      "mail"
+    ]
+  },
+  "1F4E8": {
+    "tts": "incoming envelope",
+    "keywords": [
+      "e-mail",
+      "email",
+      "envelope",
+      "incoming",
+      "letter",
+      "mail",
+      "receive"
+    ]
+  },
+  "1F4E9": {
+    "tts": "envelope with arrow",
+    "keywords": [
+      "arrow",
+      "down",
+      "e-mail",
+      "email",
+      "envelope",
+      "letter",
+      "mail",
+      "outgoing",
+      "sent"
+    ]
+  },
+  "1F4E4": {
+    "tts": "outbox tray",
+    "keywords": [
+      "box",
+      "letter",
+      "mail",
+      "outbox",
+      "sent",
+      "tray"
+    ]
+  },
+  "1F4E5": {
+    "tts": "inbox tray",
+    "keywords": [
+      "box",
+      "inbox",
+      "letter",
+      "mail",
+      "receive",
+      "tray"
+    ]
+  },
+  "1F4E6": {
+    "tts": "package",
+    "keywords": [
+      "box",
+      "parcel"
+    ]
+  },
+  "1F4EB": {
+    "tts": "closed mailbox with raised flag",
+    "keywords": [
+      "closed",
+      "mail",
+      "mailbox",
+      "postbox"
+    ]
+  },
+  "1F4EA": {
+    "tts": "closed mailbox with lowered flag",
+    "keywords": [
+      "closed",
+      "lowered",
+      "mail",
+      "mailbox",
+      "postbox"
+    ]
+  },
+  "1F4EC": {
+    "tts": "open mailbox with raised flag",
+    "keywords": [
+      "mail",
+      "mailbox",
+      "open",
+      "postbox"
+    ]
+  },
+  "1F4ED": {
+    "tts": "open mailbox with lowered flag",
+    "keywords": [
+      "lowered",
+      "mail",
+      "mailbox",
+      "open",
+      "postbox"
+    ]
+  },
+  "1F4EE": {
+    "tts": "postbox",
+    "keywords": [
+      "mail",
+      "mailbox"
+    ]
+  },
+  "1F5F3": {
+    "tts": "ballot box with ballot",
+    "keywords": [
+      "ballot",
+      "box"
+    ]
+  },
+  "270F": {
+    "tts": "pencil",
+    "keywords": [
+      "pencil"
+    ]
+  },
+  "1F58B": {
+    "tts": "fountain pen",
+    "keywords": [
+      "fountain",
+      "pen"
+    ]
+  },
+  "1F58A": {
+    "tts": "pen",
+    "keywords": [
+      "ballpoint"
+    ]
+  },
+  "1F58C": {
+    "tts": "paintbrush",
+    "keywords": [
+      "painting"
+    ]
+  },
+  "1F58D": {
+    "tts": "crayon",
+    "keywords": [
+      "crayon"
+    ]
+  },
+  "1F4DD": {
+    "tts": "memo",
+    "keywords": [
+      "pencil"
+    ]
+  },
+  "1F4BC": {
+    "tts": "briefcase",
+    "keywords": [
+      "briefcase"
+    ]
+  },
+  "1F4C1": {
+    "tts": "file folder",
+    "keywords": [
+      "file",
+      "folder"
+    ]
+  },
+  "1F4C2": {
+    "tts": "open file folder",
+    "keywords": [
+      "file",
+      "folder",
+      "open"
+    ]
+  },
+  "1F5C2": {
+    "tts": "card index dividers",
+    "keywords": [
+      "card",
+      "dividers",
+      "index"
+    ]
+  },
+  "1F4C5": {
+    "tts": "calendar",
+    "keywords": [
+      "date"
+    ]
+  },
+  "1F4C6": {
+    "tts": "tear-off calendar",
+    "keywords": [
+      "calendar"
+    ]
+  },
+  "1F5D2": {
+    "tts": "spiral notepad",
+    "keywords": [
+      "note",
+      "pad",
+      "spiral"
+    ]
+  },
+  "1F5D3": {
+    "tts": "spiral calendar",
+    "keywords": [
+      "calendar",
+      "pad",
+      "spiral"
+    ]
+  },
+  "1F4C7": {
+    "tts": "card index",
+    "keywords": [
+      "card",
+      "index",
+      "rolodex"
+    ]
+  },
+  "1F4C8": {
+    "tts": "chart increasing",
+    "keywords": [
+      "chart",
+      "graph",
+      "growth",
+      "trend",
+      "upward"
+    ]
+  },
+  "1F4C9": {
+    "tts": "chart decreasing",
+    "keywords": [
+      "chart",
+      "down",
+      "graph",
+      "trend"
+    ]
+  },
+  "1F4CA": {
+    "tts": "bar chart",
+    "keywords": [
+      "bar",
+      "chart",
+      "graph"
+    ]
+  },
+  "1F4CB": {
+    "tts": "clipboard",
+    "keywords": [
+      "clipboard"
+    ]
+  },
+  "1F4CC": {
+    "tts": "pushpin",
+    "keywords": [
+      "pin"
+    ]
+  },
+  "1F4CD": {
+    "tts": "round pushpin",
+    "keywords": [
+      "pin",
+      "pushpin"
+    ]
+  },
+  "1F4CE": {
+    "tts": "paperclip",
+    "keywords": [
+      "paperclip"
+    ]
+  },
+  "1F587": {
+    "tts": "linked paperclips",
+    "keywords": [
+      "link",
+      "paperclip"
+    ]
+  },
+  "1F4CF": {
+    "tts": "straight ruler",
+    "keywords": [
+      "ruler",
+      "straight edge"
+    ]
+  },
+  "1F4D0": {
+    "tts": "triangular ruler",
+    "keywords": [
+      "ruler",
+      "set",
+      "triangle"
+    ]
+  },
+  "1F5C3": {
+    "tts": "card file box",
+    "keywords": [
+      "box",
+      "card",
+      "file"
+    ]
+  },
+  "1F5C4": {
+    "tts": "file cabinet",
+    "keywords": [
+      "cabinet",
+      "file"
+    ]
+  },
+  "1F5D1": {
+    "tts": "wastebasket",
+    "keywords": [
+      "wastebasket"
+    ]
+  },
+  "1F512": {
+    "tts": "lock",
+    "keywords": [
+      "closed"
+    ]
+  },
+  "1F513": {
+    "tts": "open lock",
+    "keywords": [
+      "lock",
+      "open",
+      "unlock"
+    ]
+  },
+  "1F50F": {
+    "tts": "lock with pen",
+    "keywords": [
+      "ink",
+      "lock",
+      "nib",
+      "pen",
+      "privacy"
+    ]
+  },
+  "1F510": {
+    "tts": "closed lock with key",
+    "keywords": [
+      "closed",
+      "key",
+      "lock",
+      "secure"
+    ]
+  },
+  "1F511": {
+    "tts": "key",
+    "keywords": [
+      "lock",
+      "password"
+    ]
+  },
+  "1F5DD": {
+    "tts": "old key",
+    "keywords": [
+      "clue",
+      "key",
+      "lock",
+      "old"
+    ]
+  },
+  "1F528": {
+    "tts": "hammer",
+    "keywords": [
+      "tool"
+    ]
+  },
+  "26CF": {
+    "tts": "pick",
+    "keywords": [
+      "mining",
+      "tool"
+    ]
+  },
+  "1F6E0": {
+    "tts": "hammer and wrench",
+    "keywords": [
+      "hammer",
+      "tool",
+      "wrench"
+    ]
+  },
+  "1F527": {
+    "tts": "wrench",
+    "keywords": [
+      "tool"
+    ]
+  },
+  "1F529": {
+    "tts": "nut and bolt",
+    "keywords": [
+      "bolt",
+      "nut",
+      "tool"
+    ]
+  },
+  "1F5DC": {
+    "tts": "compression",
+    "keywords": [
+      "tool",
+      "vice"
+    ]
+  },
+  "1F517": {
+    "tts": "link",
+    "keywords": [
+      "link"
+    ]
+  },
+  "26D3": {
+    "tts": "chains",
+    "keywords": [
+      "chain"
+    ]
+  },
+  "1F489": {
+    "tts": "syringe",
+    "keywords": [
+      "doctor",
+      "medicine",
+      "needle",
+      "shot",
+      "sick",
+      "tool"
+    ]
+  },
+  "1F48A": {
+    "tts": "pill",
+    "keywords": [
+      "doctor",
+      "medicine",
+      "sick"
+    ]
+  },
+  "1F5E1": {
+    "tts": "dagger",
+    "keywords": [
+      "knife",
+      "weapon"
+    ]
+  },
+  "1F52A": {
+    "tts": "kitchen knife",
+    "keywords": [
+      "cooking",
+      "hocho",
+      "knife",
+      "tool",
+      "weapon"
+    ]
+  },
+  "1F52B": {
+    "tts": "pistol",
+    "keywords": [
+      "gun",
+      "handgun",
+      "revolver",
+      "tool",
+      "weapon"
+    ]
+  },
+  "1F6E1": {
+    "tts": "shield",
+    "keywords": [
+      "weapon"
+    ]
+  },
+  "1F3F9": {
+    "tts": "bow and arrow",
+    "keywords": [
+      "archer",
+      "arrow",
+      "bow",
+      "sagittarius",
+      "tool",
+      "weapon",
+      "zodiac"
+    ]
+  },
+  "1F3C1": {
+    "tts": "chequered flag",
+    "keywords": [
+      "checkered",
+      "chequered",
+      "racing"
+    ]
+  },
+  "1F3F3": {
+    "tts": "waving white flag",
+    "keywords": [
+      "waving"
+    ]
+  },
+  "1F3F4": {
+    "tts": "waving black flag",
+    "keywords": [
+      "waving"
+    ]
+  },
+  "1F6A9": {
+    "tts": "triangular flag",
+    "keywords": [
+      "post"
+    ]
+  },
+  "1F6AC": {
+    "tts": "smoking",
+    "keywords": [
+      "smoking"
+    ]
+  },
+  "26B0": {
+    "tts": "coffin",
+    "keywords": [
+      "death"
+    ]
+  },
+  "26B1": {
+    "tts": "funeral urn",
+    "keywords": [
+      "death",
+      "funeral",
+      "urn"
+    ]
+  },
+  "1F5FF": {
+    "tts": "moai",
+    "keywords": [
+      "face",
+      "moyai",
+      "statue"
+    ]
+  },
+  "1F6E2": {
+    "tts": "oil drum",
+    "keywords": [
+      "drum",
+      "oil"
+    ]
+  },
+  "1F52E": {
+    "tts": "crystal ball",
+    "keywords": [
+      "ball",
+      "crystal",
+      "fairy tale",
+      "fantasy",
+      "fortune",
+      "tool"
+    ]
+  },
+  "1F3E7": {
+    "tts": "ATM sign",
+    "keywords": [
+      "atm",
+      "automated",
+      "bank",
+      "teller"
+    ]
+  },
+  "1F6AE": {
+    "tts": "litter in bin sign",
+    "keywords": [
+      "litter",
+      "litterbox"
+    ]
+  },
+  "1F6B0": {
+    "tts": "potable water",
+    "keywords": [
+      "drink",
+      "potable",
+      "water"
+    ]
+  },
+  "267F": {
+    "tts": "wheelchair",
+    "keywords": [
+      "access"
+    ]
+  },
+  "1F6B9": {
+    "tts": "men’s room",
+    "keywords": [
+      "lavatory",
+      "man",
+      "restroom",
+      "wc"
+    ]
+  },
+  "1F6BA": {
+    "tts": "women’s room",
+    "keywords": [
+      "lavatory",
+      "restroom",
+      "wc",
+      "woman"
+    ]
+  },
+  "1F6BB": {
+    "tts": "restroom",
+    "keywords": [
+      "lavatory",
+      "wc"
+    ]
+  },
+  "1F6BC": {
+    "tts": "baby symbol",
+    "keywords": [
+      "baby",
+      "changing"
+    ]
+  },
+  "1F6BE": {
+    "tts": "water closet",
+    "keywords": [
+      "closet",
+      "lavatory",
+      "restroom",
+      "water",
+      "wc"
+    ]
+  },
+  "1F6C2": {
+    "tts": "passport control",
+    "keywords": [
+      "control",
+      "passport"
+    ]
+  },
+  "1F6C3": {
+    "tts": "customs",
+    "keywords": [
+      "customs"
+    ]
+  },
+  "1F6C4": {
+    "tts": "baggage claim",
+    "keywords": [
+      "baggage",
+      "claim"
+    ]
+  },
+  "1F6C5": {
+    "tts": "left luggage",
+    "keywords": [
+      "baggage",
+      "locker",
+      "luggage"
+    ]
+  },
+  "26A0": {
+    "tts": "warning",
+    "keywords": [
+      "warning"
+    ]
+  },
+  "1F6B8": {
+    "tts": "children crossing",
+    "keywords": [
+      "child",
+      "crossing",
+      "pedestrian",
+      "traffic"
+    ]
+  },
+  "26D4": {
+    "tts": "no entry",
+    "keywords": [
+      "entry",
+      "forbidden",
+      "no",
+      "not",
+      "prohibited",
+      "traffic"
+    ]
+  },
+  "1F6AB": {
+    "tts": "prohibited",
+    "keywords": [
+      "entry",
+      "forbidden",
+      "no",
+      "not"
+    ]
+  },
+  "1F6B3": {
+    "tts": "no bicycles",
+    "keywords": [
+      "bicycle",
+      "bike",
+      "forbidden",
+      "no",
+      "not",
+      "prohibited",
+      "vehicle"
+    ]
+  },
+  "1F6AD": {
+    "tts": "no smoking",
+    "keywords": [
+      "forbidden",
+      "no",
+      "not",
+      "prohibited",
+      "smoking"
+    ]
+  },
+  "1F6AF": {
+    "tts": "no littering",
+    "keywords": [
+      "forbidden",
+      "litter",
+      "no",
+      "not",
+      "prohibited"
+    ]
+  },
+  "1F6B1": {
+    "tts": "non-potable water",
+    "keywords": [
+      "drink",
+      "forbidden",
+      "no",
+      "not",
+      "potable",
+      "prohibited",
+      "water"
+    ]
+  },
+  "1F6B7": {
+    "tts": "no pedestrians",
+    "keywords": [
+      "forbidden",
+      "no",
+      "not",
+      "pedestrian",
+      "prohibited"
+    ]
+  },
+  "2B06": {
+    "tts": "up arrow",
+    "keywords": [
+      "arrow",
+      "cardinal",
+      "direction",
+      "north"
+    ]
+  },
+  "27A1": {
+    "tts": "right arrow",
+    "keywords": [
+      "arrow",
+      "cardinal",
+      "direction",
+      "east"
+    ]
+  },
+  "2B07": {
+    "tts": "down arrow",
+    "keywords": [
+      "arrow",
+      "cardinal",
+      "direction",
+      "down",
+      "south"
+    ]
+  },
+  "2B05": {
+    "tts": "left arrow",
+    "keywords": [
+      "arrow",
+      "cardinal",
+      "direction",
+      "west"
+    ]
+  },
+  "21A9": {
+    "tts": "right arrow curving left",
+    "keywords": [
+      "arrow"
+    ]
+  },
+  "21AA": {
+    "tts": "left arrow curving right",
+    "keywords": [
+      "arrow"
+    ]
+  },
+  "1F503": {
+    "tts": "clockwise vertical arrows",
+    "keywords": [
+      "arrow",
+      "clockwise",
+      "reload"
+    ]
+  },
+  "1F504": {
+    "tts": "anticlockwise arrows button",
+    "keywords": [
+      "anticlockwise",
+      "arrow",
+      "counterclockwise",
+      "withershins"
+    ]
+  },
+  "1F519": {
+    "tts": "back arrow",
+    "keywords": [
+      "arrow",
+      "back"
+    ]
+  },
+  "1F51A": {
+    "tts": "end arrow",
+    "keywords": [
+      "arrow",
+      "end"
+    ]
+  },
+  "1F51B": {
+    "tts": "on! arrow",
+    "keywords": [
+      "arrow",
+      "mark",
+      "on"
+    ]
+  },
+  "1F51C": {
+    "tts": "soon arrow",
+    "keywords": [
+      "arrow",
+      "soon"
+    ]
+  },
+  "1F51D": {
+    "tts": "top arrow",
+    "keywords": [
+      "arrow",
+      "top",
+      "up"
+    ]
+  },
+  "1F6D0": {
+    "tts": "place of worship",
+    "keywords": [
+      "religion",
+      "worship"
+    ]
+  },
+  "269B": {
+    "tts": "atom symbol",
+    "keywords": [
+      "atheist",
+      "atom"
+    ]
+  },
+  "1F549": {
+    "tts": "om",
+    "keywords": [
+      "hindu",
+      "religion"
+    ]
+  },
+  "262F": {
+    "tts": "yin yang",
+    "keywords": [
+      "religion",
+      "tao",
+      "taoist",
+      "yang",
+      "yin"
+    ]
+  },
+  "271D": {
+    "tts": "latin cross",
+    "keywords": [
+      "christian",
+      "cross",
+      "religion"
+    ]
+  },
+  "262A": {
+    "tts": "star and crescent",
+    "keywords": [
+      "islam",
+      "muslim",
+      "religion"
+    ]
+  },
+  "262E": {
+    "tts": "peace symbol",
+    "keywords": [
+      "peace"
+    ]
+  },
+  "1F54E": {
+    "tts": "menorah",
+    "keywords": [
+      "candelabrum",
+      "candlestick",
+      "religion"
+    ]
+  },
+  "1F52F": {
+    "tts": "dotted six-pointed star",
+    "keywords": [
+      "fortune",
+      "star"
+    ]
+  },
+  "267B": {
+    "tts": "recycling symbol",
+    "keywords": [
+      "recycle"
+    ]
+  },
+  "1F4DB": {
+    "tts": "name badge",
+    "keywords": [
+      "badge",
+      "name"
+    ]
+  },
+  "269C": {
+    "tts": "fleur-de-lis",
+    "keywords": [
+      "fleur-de-lis"
+    ]
+  },
+  "1F530": {
+    "tts": "japanese symbol for beginner",
+    "keywords": [
+      "beginner",
+      "chevron",
+      "green",
+      "japanese",
+      "leaf",
+      "tool",
+      "yellow"
+    ]
+  },
+  "1F531": {
+    "tts": "trident emblem",
+    "keywords": [
+      "anchor",
+      "emblem",
+      "ship",
+      "tool",
+      "trident"
+    ]
+  },
+  "2B55": {
+    "tts": "heavy large circle",
+    "keywords": [
+      "circle",
+      "o"
+    ]
+  },
+  "274C": {
+    "tts": "cross mark",
+    "keywords": [
+      "cancel",
+      "mark",
+      "multiplication",
+      "multiply",
+      "x"
+    ]
+  },
+  "274E": {
+    "tts": "cross mark button",
+    "keywords": [
+      "mark",
+      "square"
+    ]
+  },
+  "27B0": {
+    "tts": "curly loop",
+    "keywords": [
+      "curl",
+      "loop"
+    ]
+  },
+  "27BF": {
+    "tts": "double curly loop",
+    "keywords": [
+      "curl",
+      "double",
+      "loop"
+    ]
+  },
+  "303D": {
+    "tts": "part alternation mark",
+    "keywords": [
+      "mark",
+      "part"
+    ]
+  },
+  "1F4B1": {
+    "tts": "currency exchange",
+    "keywords": [
+      "bank",
+      "currency",
+      "exchange",
+      "money"
+    ]
+  },
+  "1F4B2": {
+    "tts": "heavy dollar sign",
+    "keywords": [
+      "currency",
+      "dollar",
+      "money"
+    ]
+  },
+  "203C": {
+    "tts": "double exclamation mark",
+    "keywords": [
+      "bangbang",
+      "exclamation",
+      "mark",
+      "punctuation"
+    ]
+  },
+  "00A9": {
+    "tts": "copyright",
+    "keywords": [
+      "copyright"
+    ]
+  },
+  "00AE": {
+    "tts": "registered",
+    "keywords": [
+      "registered"
+    ]
+  },
+  "264A": {
+    "tts": "gemini",
+    "keywords": [
+      "twins",
+      "zodiac"
+    ]
+  },
+  "264B": {
+    "tts": "cancer",
+    "keywords": [
+      "crab",
+      "zodiac"
+    ]
+  },
+  "264C": {
+    "tts": "leo",
+    "keywords": [
+      "lion",
+      "zodiac"
+    ]
+  },
+  "264D": {
+    "tts": "virgo",
+    "keywords": [
+      "maiden",
+      "virgin",
+      "zodiac"
+    ]
+  },
+  "264E": {
+    "tts": "libra",
+    "keywords": [
+      "balance",
+      "justice",
+      "scales",
+      "zodiac"
+    ]
+  },
+  "264F": {
+    "tts": "scorpius",
+    "keywords": [
+      "scorpio",
+      "scorpion",
+      "zodiac"
+    ]
+  },
+  "26CE": {
+    "tts": "ophiuchus",
+    "keywords": [
+      "bearer",
+      "serpent",
+      "snake",
+      "zodiac"
+    ]
+  },
+  "1F500": {
+    "tts": "shuffle tracks button",
+    "keywords": [
+      "arrow",
+      "crossed"
+    ]
+  },
+  "1F501": {
+    "tts": "repeat button",
+    "keywords": [
+      "arrow",
+      "clockwise",
+      "repeat"
+    ]
+  },
+  "1F502": {
+    "tts": "repeat single button",
+    "keywords": [
+      "arrow",
+      "clockwise",
+      "once"
+    ]
+  },
+  "25B6": {
+    "tts": "play button",
+    "keywords": [
+      "arrow",
+      "play",
+      "right",
+      "triangle"
+    ]
+  },
+  "23E9": {
+    "tts": "fast-forword button",
+    "keywords": [
+      "arrow",
+      "double",
+      "fast",
+      "forward"
+    ]
+  },
+  "23ED": {
+    "tts": "next track button",
+    "keywords": [
+      "arrow",
+      "next scene",
+      "next track",
+      "triangle"
+    ]
+  },
+  "23EF": {
+    "tts": "play or pause button",
+    "keywords": [
+      "arrow",
+      "pause",
+      "play",
+      "right",
+      "triangle"
+    ]
+  },
+  "25C0": {
+    "tts": "reverse button",
+    "keywords": [
+      "arrow",
+      "left",
+      "reverse",
+      "triangle"
+    ]
+  },
+  "23EA": {
+    "tts": "fast reverse button",
+    "keywords": [
+      "arrow",
+      "double",
+      "rewind"
+    ]
+  },
+  "23EE": {
+    "tts": "last track button",
+    "keywords": [
+      "arrow",
+      "previous scene",
+      "previous track",
+      "triangle"
+    ]
+  },
+  "1F53C": {
+    "tts": "up button",
+    "keywords": [
+      "arrow",
+      "button",
+      "red"
+    ]
+  },
+  "23EB": {
+    "tts": "fast up button",
+    "keywords": [
+      "arrow",
+      "double"
+    ]
+  },
+  "1F53D": {
+    "tts": "down button",
+    "keywords": [
+      "arrow",
+      "button",
+      "down",
+      "red"
+    ]
+  },
+  "23EC": {
+    "tts": "fast down button",
+    "keywords": [
+      "arrow",
+      "double",
+      "down"
+    ]
+  },
+  "23F8": {
+    "tts": "pause button",
+    "keywords": [
+      "bar",
+      "double",
+      "pause",
+      "vertical"
+    ]
+  },
+  "23F9": {
+    "tts": "stop button",
+    "keywords": [
+      "square",
+      "stop"
+    ]
+  },
+  "23FA": {
+    "tts": "record button",
+    "keywords": [
+      "circle",
+      "record"
+    ]
+  },
+  "23CF": {
+    "tts": "eject button",
+    "keywords": [
+      "eject"
+    ]
+  },
+  "1F3A6": {
+    "tts": "cinema",
+    "keywords": [
+      "camera",
+      "film",
+      "movie"
+    ]
+  },
+  "1F505": {
+    "tts": "dim button",
+    "keywords": [
+      "brightness",
+      "dim",
+      "low"
+    ]
+  },
+  "1F506": {
+    "tts": "bright button",
+    "keywords": [
+      "bright",
+      "brightness"
+    ]
+  },
+  "1F4F6": {
+    "tts": "antenna bars",
+    "keywords": [
+      "antenna",
+      "bar",
+      "cell",
+      "mobile",
+      "phone",
+      "signal",
+      "telephone"
+    ]
+  },
+  "1F4F5": {
+    "tts": "no mobile phones",
+    "keywords": [
+      "cell",
+      "forbidden",
+      "mobile",
+      "no",
+      "not",
+      "phone",
+      "prohibited",
+      "telephone"
+    ]
+  },
+  "1F4F3": {
+    "tts": "vibration mode",
+    "keywords": [
+      "cell",
+      "mobile",
+      "mode",
+      "phone",
+      "telephone",
+      "vibration"
+    ]
+  },
+  "1F4F4": {
+    "tts": "mobile phone off",
+    "keywords": [
+      "cell",
+      "mobile",
+      "off",
+      "phone",
+      "telephone"
+    ]
+  },
+  "0023 20E3": {
+    "tts": "keycap number",
+    "keywords": [
+      "hash",
+      "keycap",
+      "pound"
+    ]
+  },
+  "002A 20E3": {
+    "tts": "keycap asterisk",
+    "keywords": [
+      "asterisk",
+      "keycap",
+      "star"
+    ]
+  },
+  "0030 20E3": {
+    "tts": "keycap digit zero",
+    "keywords": [
+      "0",
+      "keycap",
+      "zero"
+    ]
+  },
+  "0031 20E3": {
+    "tts": "keycap digit one",
+    "keywords": [
+      "1",
+      "keycap",
+      "one"
+    ]
+  },
+  "0032 20E3": {
+    "tts": "keycap digit two",
+    "keywords": [
+      "2",
+      "keycap",
+      "two"
+    ]
+  },
+  "0033 20E3": {
+    "tts": "keycap digit three",
+    "keywords": [
+      "3",
+      "keycap",
+      "three"
+    ]
+  },
+  "0034 20E3": {
+    "tts": "keycap digit four",
+    "keywords": [
+      "4",
+      "four",
+      "keycap"
+    ]
+  },
+  "0035 20E3": {
+    "tts": "keycap digit five",
+    "keywords": [
+      "5",
+      "five",
+      "keycap"
+    ]
+  },
+  "0036 20E3": {
+    "tts": "keycap digit six",
+    "keywords": [
+      "6",
+      "keycap",
+      "six"
+    ]
+  },
+  "0037 20E3": {
+    "tts": "keycap digit seven",
+    "keywords": [
+      "7",
+      "keycap",
+      "seven"
+    ]
+  },
+  "0038 20E3": {
+    "tts": "keycap digit eight",
+    "keywords": [
+      "8",
+      "eight",
+      "keycap"
+    ]
+  },
+  "0039 20E3": {
+    "tts": "keycap digit nine",
+    "keywords": [
+      "9",
+      "keycap",
+      "nine"
+    ]
+  },
+  "1F51F": {
+    "tts": "keycap ten",
+    "keywords": [
+      "10",
+      "keycap",
+      "ten"
+    ]
+  },
+  "1F4AF": {
+    "tts": "hundred points",
+    "keywords": [
+      "100",
+      "full",
+      "hundred",
+      "score"
+    ]
+  },
+  "1F51E": {
+    "tts": "no one under eighteen",
+    "keywords": [
+      "18",
+      "age restriction",
+      "eighteen",
+      "forbidden",
+      "no",
+      "not",
+      "prohibited",
+      "underage"
+    ]
+  },
+  "1F520": {
+    "tts": "input latin uppercase",
+    "keywords": [
+      "input",
+      "latin",
+      "letters",
+      "uppercase"
+    ]
+  },
+  "1F521": {
+    "tts": "input latin lowercase",
+    "keywords": [
+      "abcd",
+      "input",
+      "latin",
+      "letters",
+      "lowercase"
+    ]
+  },
+  "1F522": {
+    "tts": "input numbers",
+    "keywords": [
+      "1234",
+      "input",
+      "numbers"
+    ]
+  },
+  "1F523": {
+    "tts": "input symbols",
+    "keywords": [
+      "input"
+    ]
+  },
+  "1F524": {
+    "tts": "input latin letters",
+    "keywords": [
+      "abc",
+      "alphabet",
+      "input",
+      "latin",
+      "letters"
+    ]
+  },
+  "1F170": {
+    "tts": "a button",
+    "keywords": [
+      "a",
+      "blood"
+    ]
+  },
+  "1F18E": {
+    "tts": "ab button",
+    "keywords": [
+      "ab",
+      "blood"
+    ]
+  },
+  "1F171": {
+    "tts": "b button",
+    "keywords": [
+      "b",
+      "blood"
+    ]
+  },
+  "1F191": {
+    "tts": "squared cl",
+    "keywords": [
+      "cl"
+    ]
+  },
+  "1F192": {
+    "tts": "squared cool",
+    "keywords": [
+      "cool"
+    ]
+  },
+  "1F193": {
+    "tts": "squared free",
+    "keywords": [
+      "free"
+    ]
+  },
+  "1F194": {
+    "tts": "squared id",
+    "keywords": [
+      "id",
+      "identity"
+    ]
+  },
+  "24C2": {
+    "tts": "circled letter m",
+    "keywords": [
+      "circle",
+      "m"
+    ]
+  },
+  "1F195": {
+    "tts": "squared new",
+    "keywords": [
+      "new"
+    ]
+  },
+  "1F196": {
+    "tts": "squared ng",
+    "keywords": [
+      "ng"
+    ]
+  },
+  "1F17E": {
+    "tts": "o button",
+    "keywords": [
+      "blood",
+      "o"
+    ]
+  },
+  "1F197": {
+    "tts": "squared ok",
+    "keywords": [
+      "ok"
+    ]
+  },
+  "1F17F": {
+    "tts": "p button",
+    "keywords": [
+      "parking"
+    ]
+  },
+  "1F198": {
+    "tts": "squared sos",
+    "keywords": [
+      "help",
+      "sos"
+    ]
+  },
+  "1F199": {
+    "tts": "up! button",
+    "keywords": [
+      "mark",
+      "up"
+    ]
+  },
+  "1F19A": {
+    "tts": "squared vs",
+    "keywords": [
+      "versus",
+      "vs"
+    ]
+  },
+  "1F201": {
+    "tts": "squared katakana koko",
+    "keywords": [
+      "japanese"
+    ]
+  },
+  "1F202": {
+    "tts": "squared katakana sa",
+    "keywords": [
+      "japanese"
+    ]
+  },
+  "1F237": {
+    "tts": "squared moon ideograph",
+    "keywords": [
+      "japanese"
+    ]
+  },
+  "1F236": {
+    "tts": "squared exist ideograph",
+    "keywords": [
+      "japanese"
+    ]
+  },
+  "1F22F": {
+    "tts": "squared finger ideograph",
+    "keywords": [
+      "japanese"
+    ]
+  },
+  "1F250": {
+    "tts": "circled advantage ideograph",
+    "keywords": [
+      "japanese"
+    ]
+  },
+  "1F239": {
+    "tts": "squared divide ideograph",
+    "keywords": [
+      "japanese"
+    ]
+  },
+  "1F21A": {
+    "tts": "squared negation ideograph",
+    "keywords": [
+      "japanese"
+    ]
+  },
+  "1F232": {
+    "tts": "squared prohibit ideograph",
+    "keywords": [
+      "japanese"
+    ]
+  },
+  "1F251": {
+    "tts": "circled accept ideograph",
+    "keywords": [
+      "chinese"
+    ]
+  },
+  "1F238": {
+    "tts": "squared apply ideograph",
+    "keywords": [
+      "chinese"
+    ]
+  },
+  "1F234": {
+    "tts": "squared together ideograph",
+    "keywords": [
+      "chinese"
+    ]
+  },
+  "1F233": {
+    "tts": "squared empty ideograph",
+    "keywords": [
+      "chinese"
+    ]
+  },
+  "1F23A": {
+    "tts": "squared operating ideograph",
+    "keywords": [
+      "chinese"
+    ]
+  },
+  "1F235": {
+    "tts": "squared fullness ideograph",
+    "keywords": [
+      "chinese"
+    ]
+  },
+  "25AA": {
+    "tts": "black small square",
+    "keywords": [
+      "geometric",
+      "square"
+    ]
+  },
+  "25AB": {
+    "tts": "white small square",
+    "keywords": [
+      "geometric",
+      "square"
+    ]
+  },
+  "25FB": {
+    "tts": "white medium square",
+    "keywords": [
+      "geometric",
+      "square"
+    ]
+  },
+  "25FC": {
+    "tts": "black medium square",
+    "keywords": [
+      "geometric",
+      "square"
+    ]
+  },
+  "25FD": {
+    "tts": "white medium-small square",
+    "keywords": [
+      "geometric",
+      "square"
+    ]
+  },
+  "25FE": {
+    "tts": "black medium-small square",
+    "keywords": [
+      "geometric",
+      "square"
+    ]
+  },
+  "2B1B": {
+    "tts": "black large square",
+    "keywords": [
+      "geometric",
+      "square"
+    ]
+  },
+  "2B1C": {
+    "tts": "white large square",
+    "keywords": [
+      "geometric",
+      "square"
+    ]
+  },
+  "1F536": {
+    "tts": "large orange diamond",
+    "keywords": [
+      "diamond",
+      "geometric",
+      "orange"
+    ]
+  },
+  "1F537": {
+    "tts": "large blue diamond",
+    "keywords": [
+      "blue",
+      "diamond",
+      "geometric"
+    ]
+  },
+  "1F538": {
+    "tts": "small orange diamond",
+    "keywords": [
+      "diamond",
+      "geometric",
+      "orange"
+    ]
+  },
+  "1F539": {
+    "tts": "small blue diamond",
+    "keywords": [
+      "blue",
+      "diamond",
+      "geometric"
+    ]
+  },
+  "1F53A": {
+    "tts": "red triangle pointed up",
+    "keywords": [
+      "geometric",
+      "red"
+    ]
+  },
+  "1F53B": {
+    "tts": "red triangle pointed down",
+    "keywords": [
+      "down",
+      "geometric",
+      "red"
+    ]
+  },
+  "1F4A0": {
+    "tts": "diamond with a dot",
+    "keywords": [
+      "comic",
+      "diamond",
+      "geometric",
+      "inside"
+    ]
+  },
+  "1F518": {
+    "tts": "radio button",
+    "keywords": [
+      "button",
+      "geometric",
+      "radio"
+    ]
+  },
+  "1F532": {
+    "tts": "black square button",
+    "keywords": [
+      "button",
+      "geometric",
+      "square"
+    ]
+  },
+  "1F533": {
+    "tts": "white square button",
+    "keywords": [
+      "button",
+      "geometric",
+      "outlined",
+      "square"
+    ]
+  },
+  "26AA": {
+    "tts": "white circle",
+    "keywords": [
+      "circle",
+      "geometric"
+    ]
+  },
+  "26AB": {
+    "tts": "black circle",
+    "keywords": [
+      "circle",
+      "geometric"
+    ]
+  },
+  "1F534": {
+    "tts": "red circle",
+    "keywords": [
+      "circle",
+      "geometric",
+      "red"
+    ]
+  },
+  "1F535": {
+    "tts": "blue circle",
+    "keywords": [
+      "blue",
+      "circle",
+      "geometric"
+    ]
+  }
+}

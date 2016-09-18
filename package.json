@@ -18,10 +18,13 @@
     "babel-register": "^6.14.0",
     "cheerio": "^0.20.0",
     "co": "^4.6.0",
+    "es6-promisify": "^4.1.0",
     "eslint": "^3.5.0",
     "eslint-config-airbnb-base": "^7.1.0",
     "eslint-plugin-import": "^1.14.0",
     "left-pad": "^1.1.1",
-    "node-fetch": "^1.5.3"
+    "node-fetch": "^1.5.3",
+    "punycode": "^2.0.0",
+    "xml2js": "^0.4.17"
   }
 }

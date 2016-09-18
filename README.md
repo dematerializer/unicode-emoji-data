@@ -6,6 +6,7 @@ Your single source of truth for unicode compliant emoji data.
 - fully tested
 - lightweight, precompiled, easily parseable JSON format
 - comprehensible for humans by means of [Unicode® Technical Report #51 - UNICODE EMOJI](http://www.unicode.org/reports/tr51)
+- includes internationalized annotations (keywords and text-to-speech) provided by [CLDR](http://cldr.unicode.org/)
 
 ## Install
 

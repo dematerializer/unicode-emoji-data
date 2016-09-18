@@ -3,10 +3,11 @@ import fs from 'fs';
 
 import buildUnicodeData from './specs/unicode-data';
 import buildEmojiSources from './specs/emoji-sources';
-import buildEmojiSequences from './specs/emoji-sequences';
 import buildStandardizedVariants from './specs/standardized-variants';
-import buildEmojiZwjSequences from './specs/emoji-zwj-sequences';
+import buildEmojiSequences from './specs/emoji-sequences';
 import buildEmojiData from './specs/emoji-data';
+import buildEmojiZwjSequences from './specs/emoji-zwj-sequences';
+import buildCldrAnnotations from './specs/cldr-annotations';
 import { codepointSequenceToString } from './utils/convert';
 
 process.on('uncaughtException', (err) => { throw err; });
@@ -51,7 +52,7 @@ co(function* main() {
 		...emojiZwjSequences.zwjEmoji,
 	];
 
-	fs.writeFileSync('lib/emoji.json', JSON.stringify(combined));
+	fs.writeFileSync('lib/emoji.json', JSON.stringify(combined, null, 2));
 
 	const makeDatumReadable = (node) => {
 		Object.keys(node).forEach((key) => {
@@ -71,4 +72,14 @@ co(function* main() {
 	const readable = combined.map(datum => makeDatumReadable(datum));
 
 	fs.writeFileSync('lib/emoji.readable.json', JSON.stringify(readable, null, 2));
+
+	const annotations = yield buildCldrAnnotations({
+		baseUrl: 'http://unicode.org/repos/cldr/tags/latest/common/annotations',
+		languages: ['en', 'de'],
+	});
+
+	Object.keys(annotations.annotationForSequenceForLanguage).forEach(language => {
+		const data = annotations.annotationForSequenceForLanguage[language];
+		fs.writeFileSync(`lib/annotations/${language}.json`, JSON.stringify(data, null, 2));
+	});
 });
