@@ -31,14 +31,13 @@ TODO
 MIT [http://www.opensource.org/licenses/mit-license.php](http://www.opensource.org/licenses/mit-license.php)
 
 # TODO
-
-1) testing
-2) emoji.expanded.json -> render each variation, combination, modification as a separate entry
-3) categorize
-4) sort
-5) merge in short names
-6) merge in emoticon equivalents
-7) merge in tags
-8) internationalization (categories, short names, tags)
+"community-defined" means not only files that are maintained manually in this repo but also data from existing third party projects
+1) testing (proves the "fully tested" statement)
+2) check generated data against tr51 tables to verify data (proves the "correct & complete" statement)
+3) emoji.expanded.json -> render each variation, combination, modification as a separate entry
+4) categorize based on CLDR and merged-in community-defined internationalized categorizations
+5) sort (where to find data?)
+6) merge in community-defined internationalized short names
+7) merge in community-defined emoticon equivalents
+8) merge in community-defined internationalized tags
 9) write documentation (readme)
-10) run tests against tr51 tables
