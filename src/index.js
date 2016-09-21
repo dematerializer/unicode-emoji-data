@@ -1,6 +1,7 @@
 import co from 'co';
 import fs from 'fs';
 import punycode from 'punycode';
+import logUpdate from 'log-update';
 
 import buildUnicodeData from './specs/unicode-data';
 import buildEmojiSources from './specs/emoji-sources';

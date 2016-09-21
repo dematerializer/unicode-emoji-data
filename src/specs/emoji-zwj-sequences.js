@@ -1,3 +1,4 @@
+import logUpdate from 'log-update';
 import fetch from 'node-fetch';
 import parse from '../utils/parse';
 
@@ -116,9 +117,12 @@ export const internals = {
 };
 
 export default function* EmojiZwjSequences({ url = defaultUrl, getNameForCodepoint, getMetaForModifierName }) {
+	logUpdate('⇣ emoji-zwj-sequences');
 	const content = yield fetch(url).then(res => res.text());
 	const data = parse(content, ['sequence', 'type', 'description']);
 	const zwjEmoji = buildZwjEmoji(data, getNameForCodepoint, getMetaForModifierName);
+	logUpdate('✓ emoji-zwj-sequences');
+	logUpdate.done();
 	return { // API
 		zeroWidthJoiner,
 		zwjEmoji,

@@ -1,3 +1,4 @@
+import logUpdate from 'log-update';
 import fetch from 'node-fetch';
 import parse from '../utils/parse';
 
@@ -74,9 +75,12 @@ export const internals = {
 };
 
 export default function* StandardizedVariants({ url = defaultUrl }) {
+	logUpdate('⇣ standardized-variants');
 	const content = yield fetch(url).then(res => res.text());
 	const data = parse(content, ['sequence', 'description']);
 	const variationSequencesForCodepoint = buildVariationSequencesForCodepoint(data);
+	logUpdate('✓ standardized-variants');
+	logUpdate.done();
 	return { // API
 		getVariationSequencesForCodepoint: codepoint => variationSequencesForCodepoint[codepoint],
 	};

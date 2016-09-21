@@ -1,3 +1,4 @@
+import logUpdate from 'log-update';
 import fetch from 'node-fetch';
 import promisify from 'es6-promisify';
 import xm2js from 'xml2js';
@@ -33,10 +34,15 @@ export default function* CldrAnnotations({ baseUrl = defaultBaseUrl, languages =
 	const annotationForSequenceForLanguage = {};
 	for (let i = 0; i < languages.length; i += 1) {
 		const language = languages[i];
+		logUpdate(`⇣ cldr-annotations ${language}`);
 		const content = yield fetch(`${baseUrl}/${language}.xml`).then(res => res.text());
 		const data = yield parseXml(content);
 		annotationForSequenceForLanguage[language] = buildAnnotationForSequence(data);
+		logUpdate(`✓ cldr-annotations ${language}`);
+		logUpdate.done();
 	}
+	logUpdate(`✓ cldr-annotations: ${languages.length} languages processed`);
+	logUpdate.done();
 	return { // API
 		annotationForSequenceForLanguage,
 		getAnnotationForSequenceForLanguage: (sequence, language) => annotationForSequenceForLanguage[language][sequence],

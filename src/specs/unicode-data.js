@@ -1,3 +1,4 @@
+import logUpdate from 'log-update';
 import fetch from 'node-fetch';
 import parse from '../utils/parse';
 
@@ -25,9 +26,12 @@ export const internals = {
 };
 
 export default function* UnicodeData({ url = defaultUrl }) {
+	logUpdate('⇣ unicode-data');
 	const content = yield fetch(url).then(res => res.text());
 	const data = parse(content, ['codepoint', 'name']);
 	const nameForCodepoint = buildNameForCodepoint(data);
+	logUpdate('✓ unicode-data');
+	logUpdate.done();
 	return { // API
 		getNameForCodepoint: codepoint => nameForCodepoint[codepoint],
 	};

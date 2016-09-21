@@ -1,3 +1,4 @@
+import logUpdate from 'log-update';
 import fetch from 'node-fetch';
 import leftPad from 'left-pad'; // FTW!
 import parse from '../utils/parse';
@@ -194,6 +195,7 @@ export const internals = {
 };
 
 export default function* EmojiData({ url = defaultUrl, getNameForCodepoint, getVariationSequencesForCodepoint, getCombinationsForCodepoint, getShiftJisCodesForCodepoint }) {
+	logUpdate('⇣ emoji-data');
 	const content = yield fetch(url).then(res => res.text());
 	const data = parse(content, ['codepoints', 'property']);
 	const expandedEmojiData = expandEmojiData(data, getNameForCodepoint);
@@ -202,6 +204,8 @@ export default function* EmojiData({ url = defaultUrl, getNameForCodepoint, getV
 	const emojiModifierCodepoints = getEmojiModifierCodepoints(expandedEmojiData);
 	const emojiModifierBaseCodepoints = getEmojiModifierBaseCodepoints(expandedEmojiData);
 	const modifierSequencesForModifiableCodepoint = buildModifierSequencesForModifiableCodepoint(emojiModifierBaseCodepoints, emojiModifierCodepoints, getNameForCodepoint);
+	logUpdate('✓ emoji-data');
+	logUpdate.done();
 	return { // API
 		getMetaForModifierName,
 		// Assemble enhanced emoji data:
