@@ -13,7 +13,7 @@ function buildAnnotationForSequence(data) {
 	return data.ldml.annotations[0].annotation.reduce((annotationForSeq, annotation) => {
 		const extAnnotationForSeq = annotationForSeq;
 		const emoji = annotation.$.cp.replace(matchBrackets, '');
-		const seq = punycode.ucs2.decode(emoji)
+		const seq = punycode.ucs2.decode(emoji);
 		const seqHex = seq.map(cp => leftPad(cp.toString(16), 4, 0).toUpperCase()).join(' ');
 		extAnnotationForSeq[seqHex] = {
 			tts: annotation.$.tts == null ? undefined : annotation.$.tts,
@@ -30,7 +30,7 @@ export const internals = {
 };
 
 export default function* CldrAnnotations({ baseUrl = defaultBaseUrl, languages = defaultLanguages }) {
-	let annotationForSequenceForLanguage = {};
+	const annotationForSequenceForLanguage = {};
 	for (let i = 0; i < languages.length; i += 1) {
 		const language = languages[i];
 		const content = yield fetch(`${baseUrl}/${language}.xml`).then(res => res.text());
