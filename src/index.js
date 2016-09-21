@@ -1,5 +1,6 @@
 import co from 'co';
 import fs from 'fs';
+import punycode from 'punycode';
 
 import buildUnicodeData from './specs/unicode-data';
 import buildEmojiSources from './specs/emoji-sources';
@@ -8,7 +9,6 @@ import buildEmojiSequences from './specs/emoji-sequences';
 import buildEmojiData from './specs/emoji-data';
 import buildEmojiZwjSequences from './specs/emoji-zwj-sequences';
 import buildCldrAnnotations from './specs/cldr-annotations';
-import { codepointSequenceToString } from './utils/convert';
 
 process.on('uncaughtException', (err) => { throw err; });
 process.on('unhandledRejection', (err) => { throw err; });
@@ -56,14 +56,14 @@ co(function* main() {
 
 	const makeDatumReadable = (node) => {
 		Object.keys(node).forEach((key) => {
-			const prop = node[key];
+			const propValue = node[key];
 			if (['default', 'text', 'emoji'].includes(key)) {
 				node[key] = { // eslint-disable-line no-param-reassign
-					sequence: prop,
-					output: codepointSequenceToString(prop),
+					sequence: propValue,
+					output: punycode.ucs2.encode(propValue.split(' ').map(cp => parseInt(cp, 16))),
 				};
-			} else if (prop === Object(prop) && Object.prototype.toString.call(prop) !== '[object Array]' && typeof prop !== 'string') {
-				makeDatumReadable(prop);
+			} else if (propValue === Object(propValue) && Object.prototype.toString.call(propValue) !== '[object Array]' && typeof propValue !== 'string') {
+				makeDatumReadable(propValue);
 			}
 		});
 		return node;
@@ -78,7 +78,7 @@ co(function* main() {
 		languages: ['en', 'de'],
 	});
 
-	Object.keys(annotations.annotationForSequenceForLanguage).forEach(language => {
+	Object.keys(annotations.annotationForSequenceForLanguage).forEach((language) => {
 		const data = annotations.annotationForSequenceForLanguage[language];
 		fs.writeFileSync(`lib/annotations/cldr/${language}.json`, JSON.stringify(data, null, 2));
 	});
