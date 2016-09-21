@@ -80,6 +80,6 @@ co(function* main() {
 
 	Object.keys(annotations.annotationForSequenceForLanguage).forEach(language => {
 		const data = annotations.annotationForSequenceForLanguage[language];
-		fs.writeFileSync(`lib/annotations/${language}.json`, JSON.stringify(data, null, 2));
+		fs.writeFileSync(`lib/annotations/cldr/${language}.json`, JSON.stringify(data, null, 2));
 	});
 });
