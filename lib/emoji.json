@@ -6256,46 +6256,6 @@
     }
   },
   {
-    "name": "EMOJI MODIFIER FITZPATRICK TYPE-1-2",
-    "codepoint": "1F3FB",
-    "defaultPresentation": "emoji",
-    "presentation": {
-      "default": "1F3FB"
-    }
-  },
-  {
-    "name": "EMOJI MODIFIER FITZPATRICK TYPE-3",
-    "codepoint": "1F3FC",
-    "defaultPresentation": "emoji",
-    "presentation": {
-      "default": "1F3FC"
-    }
-  },
-  {
-    "name": "EMOJI MODIFIER FITZPATRICK TYPE-4",
-    "codepoint": "1F3FD",
-    "defaultPresentation": "emoji",
-    "presentation": {
-      "default": "1F3FD"
-    }
-  },
-  {
-    "name": "EMOJI MODIFIER FITZPATRICK TYPE-5",
-    "codepoint": "1F3FE",
-    "defaultPresentation": "emoji",
-    "presentation": {
-      "default": "1F3FE"
-    }
-  },
-  {
-    "name": "EMOJI MODIFIER FITZPATRICK TYPE-6",
-    "codepoint": "1F3FF",
-    "defaultPresentation": "emoji",
-    "presentation": {
-      "default": "1F3FF"
-    }
-  },
-  {
     "name": "RAT",
     "codepoint": "1F400",
     "defaultPresentation": "emoji",

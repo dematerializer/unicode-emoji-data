@@ -14,8 +14,7 @@ import parse from '../utils/parse';
 // property="Emoji_Modifier_Base" means A character whose appearance can be modified by a subsequent emoji modifier in an emoji modifier sequence
 const defaultUrl = 'http://www.unicode.org/Public/emoji/3.0/emoji-data.txt';
 
-// Expand code point ranges (e.g. '1F601..1F610') into separate objects and filter
-// tr51: single regional indicators ("incomplete singletons") are not used as emoji by themselves
+// Expand code point ranges (e.g. '1F601..1F610') into separate objects
 // [
 // 	...
 // 	{
@@ -46,14 +45,12 @@ function expandEmojiData(data, getNameForCodepoint) {
 			const [lowCodepoint, highCodepoint] = codepointRange;
 			for (let cp = lowCodepoint; cp <= highCodepoint; cp += 1) {
 				const cpHex = leftPad(cp.toString(16), 4, 0).toUpperCase();
-				if (!getNameForCodepoint(cpHex).includes('REGIONAL INDICATOR SYMBOL LETTER')) {
-					expanded.push({
-						codepoint: cpHex,
-						property: datum.property,
-					});
-				}
+				expanded.push({
+					codepoint: cpHex,
+					property: datum.property,
+				});
 			}
-		} else if (!getNameForCodepoint(datum.codepoints).includes('REGIONAL INDICATOR SYMBOL LETTER')) {
+		} else {
 			expanded.push({
 				codepoint: datum.codepoints,
 				property: datum.property,
@@ -231,6 +228,11 @@ export default function* EmojiData({ url = defaultUrl, getNameForCodepoint, getV
 				combination: Object.keys(combinations).length > 0 ? combinations : undefined,
 				modification: modifications,
 			};
-		}),
+		// tr51: "incomplete singletons" like single regional indicators
+		// and fitzpatrick modifiers are not used as emoji by themselves:
+		}).filter(datum =>
+			!datum.name.includes('REGIONAL INDICATOR SYMBOL LETTER') &&
+			!datum.name.includes('EMOJI MODIFIER FITZPATRICK TYPE-')
+		),
 	};
 }
