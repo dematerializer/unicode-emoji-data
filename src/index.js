@@ -47,33 +47,6 @@ co(function* main() {
 		getMetaForModifierName: emojiData.getMetaForModifierName,
 	});
 
-	const combined = [
-		...emojiData.emoji,
-		...emojiSequences.flagEmoji,
-		...emojiZwjSequences.zwjEmoji,
-	];
-
-	fs.writeFileSync('lib/emoji.json', JSON.stringify(combined, null, 2));
-
-	const makeDatumReadable = (node) => {
-		Object.keys(node).forEach((key) => {
-			const propValue = node[key];
-			if (['default', 'text', 'emoji'].includes(key)) {
-				node[key] = { // eslint-disable-line no-param-reassign
-					sequence: propValue,
-					output: punycode.ucs2.encode(propValue.split(' ').map(cp => parseInt(cp, 16))),
-				};
-			} else if (propValue === Object(propValue) && Object.prototype.toString.call(propValue) !== '[object Array]' && typeof propValue !== 'string') {
-				makeDatumReadable(propValue);
-			}
-		});
-		return node;
-	};
-
-	const readable = combined.map(datum => makeDatumReadable(datum));
-
-	fs.writeFileSync('lib/emoji.readable.json', JSON.stringify(readable, null, 2));
-
 	const annotations = yield buildCldrAnnotations({
 		baseUrl: 'http://unicode.org/repos/cldr/tags/latest/common/annotations',
 		languages: ['en', 'de'],
@@ -83,4 +56,64 @@ co(function* main() {
 		const data = annotations.annotationForSequenceForLanguage[language];
 		fs.writeFileSync(`lib/annotations/cldr/${language}.json`, JSON.stringify(data, null, 2));
 	});
+
+	logUpdate('⇣ writing files');
+
+	// Render main emoji data file (emoji.json) containing compact, nested emoji data:
+
+	const combined = [
+		...emojiData.emoji,
+		...emojiSequences.flagEmoji,
+		...emojiZwjSequences.zwjEmoji,
+	];
+	fs.writeFileSync('lib/emoji.json', JSON.stringify(combined, null, 2));
+
+	// Render human-readable variant of main emoji data file (emoji.readable.json):
+
+	const makeDatumReadable = (node) => {
+		const readableNode = { ...node };
+		Object.keys(readableNode).forEach((key) => {
+			const propValue = readableNode[key];
+			if (['default', 'text', 'emoji'].includes(key)) {
+				readableNode[key] = { // eslint-disable-line no-param-reassign
+					sequence: propValue,
+					output: punycode.ucs2.encode(propValue.split(' ').map(cp => parseInt(cp, 16))),
+				};
+			} else if (propValue === Object(propValue) && Object.prototype.toString.call(propValue) !== '[object Array]' && typeof propValue !== 'string') {
+				readableNode[key] = makeDatumReadable(propValue);
+			}
+		});
+		return readableNode;
+	};
+
+	const readable = combined.map(datum => makeDatumReadable(datum));
+	fs.writeFileSync('lib/emoji.readable.json', JSON.stringify(readable, null, 2));
+
+	// Render expanded, human readable emoji data file (emoji.expanded.json)
+	// containing flattened emoji-presentation-only data:
+
+	const expandedEmojiOnly = [];
+	const extractEmojiInfoFromDatum = (datum) => {
+		const sequence = datum.defaultPresentation === 'text' ? datum.presentation.variation.emoji : datum.presentation.default;
+		return {
+			name: datum.name,
+			sequence,
+			output: punycode.ucs2.encode(sequence.split(' ').map(cp => parseInt(cp, 16))),
+		};
+	};
+	combined.forEach((datum) => {
+		expandedEmojiOnly.push(extractEmojiInfoFromDatum(datum));
+		if (datum.combination && datum.combination.keycap) {
+			expandedEmojiOnly.push(extractEmojiInfoFromDatum(datum.combination.keycap));
+		}
+		if (datum.modification && datum.modification.skin) {
+			Object.keys(datum.modification.skin).forEach(type =>
+				expandedEmojiOnly.push(extractEmojiInfoFromDatum(datum.modification.skin[type]))
+			);
+		}
+	});
+	fs.writeFileSync('lib/emoji.expanded.json', JSON.stringify(expandedEmojiOnly, null, 2));
+	logUpdate('✓ writing files');
+	logUpdate(expandedEmojiOnly.length);
+	logUpdate.done();
 });
