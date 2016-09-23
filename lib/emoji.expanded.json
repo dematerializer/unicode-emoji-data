@@ -455,6 +455,16 @@
     "output": "☺️"
   },
   {
+    "name": "FEMALE SIGN",
+    "sequence": "2640 FE0F",
+    "output": "♀️"
+  },
+  {
+    "name": "MALE SIGN",
+    "sequence": "2642 FE0F",
+    "output": "♂️"
+  },
+  {
     "name": "ARIES",
     "sequence": "2648",
     "output": "♈"
@@ -563,6 +573,11 @@
     "name": "CROSSED SWORDS",
     "sequence": "2694 FE0F",
     "output": "⚔️"
+  },
+  {
+    "name": "STAFF OF AESCULAPIUS",
+    "sequence": "2695 FE0F",
+    "output": "⚕️"
   },
   {
     "name": "SCALES",
@@ -2215,6 +2230,31 @@
     "output": "🏂"
   },
   {
+    "name": "SNOWBOARDER; TYPE-1-2",
+    "sequence": "1F3C2 1F3FB",
+    "output": "🏂🏻"
+  },
+  {
+    "name": "SNOWBOARDER; TYPE-3",
+    "sequence": "1F3C2 1F3FC",
+    "output": "🏂🏼"
+  },
+  {
+    "name": "SNOWBOARDER; TYPE-4",
+    "sequence": "1F3C2 1F3FD",
+    "output": "🏂🏽"
+  },
+  {
+    "name": "SNOWBOARDER; TYPE-5",
+    "sequence": "1F3C2 1F3FE",
+    "output": "🏂🏾"
+  },
+  {
+    "name": "SNOWBOARDER; TYPE-6",
+    "sequence": "1F3C2 1F3FF",
+    "output": "🏂🏿"
+  },
+  {
     "name": "RUNNER",
     "sequence": "1F3C3",
     "output": "🏃"
@@ -2290,6 +2330,31 @@
     "output": "🏇"
   },
   {
+    "name": "HORSE RACING; TYPE-1-2",
+    "sequence": "1F3C7 1F3FB",
+    "output": "🏇🏻"
+  },
+  {
+    "name": "HORSE RACING; TYPE-3",
+    "sequence": "1F3C7 1F3FC",
+    "output": "🏇🏼"
+  },
+  {
+    "name": "HORSE RACING; TYPE-4",
+    "sequence": "1F3C7 1F3FD",
+    "output": "🏇🏽"
+  },
+  {
+    "name": "HORSE RACING; TYPE-5",
+    "sequence": "1F3C7 1F3FE",
+    "output": "🏇🏾"
+  },
+  {
+    "name": "HORSE RACING; TYPE-6",
+    "sequence": "1F3C7 1F3FF",
+    "output": "🏇🏿"
+  },
+  {
     "name": "AMERICAN FOOTBALL",
     "sequence": "1F3C8",
     "output": "🏈"
@@ -2363,6 +2428,31 @@
     "name": "GOLFER",
     "sequence": "1F3CC FE0F",
     "output": "🏌️"
+  },
+  {
+    "name": "GOLFER; TYPE-1-2",
+    "sequence": "1F3CC 1F3FB",
+    "output": "🏌🏻"
+  },
+  {
+    "name": "GOLFER; TYPE-3",
+    "sequence": "1F3CC 1F3FC",
+    "output": "🏌🏼"
+  },
+  {
+    "name": "GOLFER; TYPE-4",
+    "sequence": "1F3CC 1F3FD",
+    "output": "🏌🏽"
+  },
+  {
+    "name": "GOLFER; TYPE-5",
+    "sequence": "1F3CC 1F3FE",
+    "output": "🏌🏾"
+  },
+  {
+    "name": "GOLFER; TYPE-6",
+    "sequence": "1F3CC 1F3FF",
+    "output": "🏌🏿"
   },
   {
     "name": "RACING MOTORCYCLE",
@@ -3540,9 +3630,59 @@
     "output": "👪"
   },
   {
+    "name": "FAMILY; TYPE-1-2",
+    "sequence": "1F46A 1F3FB",
+    "output": "👪🏻"
+  },
+  {
+    "name": "FAMILY; TYPE-3",
+    "sequence": "1F46A 1F3FC",
+    "output": "👪🏼"
+  },
+  {
+    "name": "FAMILY; TYPE-4",
+    "sequence": "1F46A 1F3FD",
+    "output": "👪🏽"
+  },
+  {
+    "name": "FAMILY; TYPE-5",
+    "sequence": "1F46A 1F3FE",
+    "output": "👪🏾"
+  },
+  {
+    "name": "FAMILY; TYPE-6",
+    "sequence": "1F46A 1F3FF",
+    "output": "👪🏿"
+  },
+  {
     "name": "MAN AND WOMAN HOLDING HANDS",
     "sequence": "1F46B",
     "output": "👫"
+  },
+  {
+    "name": "MAN AND WOMAN HOLDING HANDS; TYPE-1-2",
+    "sequence": "1F46B 1F3FB",
+    "output": "👫🏻"
+  },
+  {
+    "name": "MAN AND WOMAN HOLDING HANDS; TYPE-3",
+    "sequence": "1F46B 1F3FC",
+    "output": "👫🏼"
+  },
+  {
+    "name": "MAN AND WOMAN HOLDING HANDS; TYPE-4",
+    "sequence": "1F46B 1F3FD",
+    "output": "👫🏽"
+  },
+  {
+    "name": "MAN AND WOMAN HOLDING HANDS; TYPE-5",
+    "sequence": "1F46B 1F3FE",
+    "output": "👫🏾"
+  },
+  {
+    "name": "MAN AND WOMAN HOLDING HANDS; TYPE-6",
+    "sequence": "1F46B 1F3FF",
+    "output": "👫🏿"
   },
   {
     "name": "TWO MEN HOLDING HANDS",
@@ -3550,9 +3690,59 @@
     "output": "👬"
   },
   {
+    "name": "TWO MEN HOLDING HANDS; TYPE-1-2",
+    "sequence": "1F46C 1F3FB",
+    "output": "👬🏻"
+  },
+  {
+    "name": "TWO MEN HOLDING HANDS; TYPE-3",
+    "sequence": "1F46C 1F3FC",
+    "output": "👬🏼"
+  },
+  {
+    "name": "TWO MEN HOLDING HANDS; TYPE-4",
+    "sequence": "1F46C 1F3FD",
+    "output": "👬🏽"
+  },
+  {
+    "name": "TWO MEN HOLDING HANDS; TYPE-5",
+    "sequence": "1F46C 1F3FE",
+    "output": "👬🏾"
+  },
+  {
+    "name": "TWO MEN HOLDING HANDS; TYPE-6",
+    "sequence": "1F46C 1F3FF",
+    "output": "👬🏿"
+  },
+  {
     "name": "TWO WOMEN HOLDING HANDS",
     "sequence": "1F46D",
     "output": "👭"
+  },
+  {
+    "name": "TWO WOMEN HOLDING HANDS; TYPE-1-2",
+    "sequence": "1F46D 1F3FB",
+    "output": "👭🏻"
+  },
+  {
+    "name": "TWO WOMEN HOLDING HANDS; TYPE-3",
+    "sequence": "1F46D 1F3FC",
+    "output": "👭🏼"
+  },
+  {
+    "name": "TWO WOMEN HOLDING HANDS; TYPE-4",
+    "sequence": "1F46D 1F3FD",
+    "output": "👭🏽"
+  },
+  {
+    "name": "TWO WOMEN HOLDING HANDS; TYPE-5",
+    "sequence": "1F46D 1F3FE",
+    "output": "👭🏾"
+  },
+  {
+    "name": "TWO WOMEN HOLDING HANDS; TYPE-6",
+    "sequence": "1F46D 1F3FF",
+    "output": "👭🏿"
   },
   {
     "name": "POLICE OFFICER",
@@ -3588,6 +3778,31 @@
     "name": "WOMAN WITH BUNNY EARS",
     "sequence": "1F46F",
     "output": "👯"
+  },
+  {
+    "name": "WOMAN WITH BUNNY EARS; TYPE-1-2",
+    "sequence": "1F46F 1F3FB",
+    "output": "👯🏻"
+  },
+  {
+    "name": "WOMAN WITH BUNNY EARS; TYPE-3",
+    "sequence": "1F46F 1F3FC",
+    "output": "👯🏼"
+  },
+  {
+    "name": "WOMAN WITH BUNNY EARS; TYPE-4",
+    "sequence": "1F46F 1F3FD",
+    "output": "👯🏽"
+  },
+  {
+    "name": "WOMAN WITH BUNNY EARS; TYPE-5",
+    "sequence": "1F46F 1F3FE",
+    "output": "👯🏾"
+  },
+  {
+    "name": "WOMAN WITH BUNNY EARS; TYPE-6",
+    "sequence": "1F46F 1F3FF",
+    "output": "👯🏿"
   },
   {
     "name": "BRIDE WITH VEIL",
@@ -5210,6 +5425,31 @@
     "output": "🕴️"
   },
   {
+    "name": "MAN IN BUSINESS SUIT LEVITATING; TYPE-1-2",
+    "sequence": "1F574 1F3FB",
+    "output": "🕴🏻"
+  },
+  {
+    "name": "MAN IN BUSINESS SUIT LEVITATING; TYPE-3",
+    "sequence": "1F574 1F3FC",
+    "output": "🕴🏼"
+  },
+  {
+    "name": "MAN IN BUSINESS SUIT LEVITATING; TYPE-4",
+    "sequence": "1F574 1F3FD",
+    "output": "🕴🏽"
+  },
+  {
+    "name": "MAN IN BUSINESS SUIT LEVITATING; TYPE-5",
+    "sequence": "1F574 1F3FE",
+    "output": "🕴🏾"
+  },
+  {
+    "name": "MAN IN BUSINESS SUIT LEVITATING; TYPE-6",
+    "sequence": "1F574 1F3FF",
+    "output": "🕴🏿"
+  },
+  {
     "name": "SLEUTH OR SPY",
     "sequence": "1F575 FE0F",
     "output": "🕵️"
@@ -6618,6 +6858,31 @@
     "name": "SLEEPING ACCOMMODATION",
     "sequence": "1F6CC",
     "output": "🛌"
+  },
+  {
+    "name": "SLEEPING ACCOMMODATION; TYPE-1-2",
+    "sequence": "1F6CC 1F3FB",
+    "output": "🛌🏻"
+  },
+  {
+    "name": "SLEEPING ACCOMMODATION; TYPE-3",
+    "sequence": "1F6CC 1F3FC",
+    "output": "🛌🏼"
+  },
+  {
+    "name": "SLEEPING ACCOMMODATION; TYPE-4",
+    "sequence": "1F6CC 1F3FD",
+    "output": "🛌🏽"
+  },
+  {
+    "name": "SLEEPING ACCOMMODATION; TYPE-5",
+    "sequence": "1F6CC 1F3FE",
+    "output": "🛌🏾"
+  },
+  {
+    "name": "SLEEPING ACCOMMODATION; TYPE-6",
+    "sequence": "1F6CC 1F3FF",
+    "output": "🛌🏿"
   },
   {
     "name": "SHOPPING BAGS",
@@ -8788,6 +9053,11 @@
     "name": "REGIONAL INDICATOR SYMBOL LETTER U, REGIONAL INDICATOR SYMBOL LETTER M",
     "sequence": "1F1FA 1F1F2",
     "output": "🇺🇲"
+  },
+  {
+    "name": "REGIONAL INDICATOR SYMBOL LETTER U, REGIONAL INDICATOR SYMBOL LETTER N",
+    "sequence": "1F1FA 1F1F3",
+    "output": "🇺🇳"
   },
   {
     "name": "REGIONAL INDICATOR SYMBOL LETTER U, REGIONAL INDICATOR SYMBOL LETTER S",

@@ -33,7 +33,7 @@ MIT [http://www.opensource.org/licenses/mit-license.php](http://www.opensource.o
 
 # TODO
 1) testing (proves the "fully tested" statement)
-2) check generated data against tr51 tables to verify data (proves the "correct & complete" statement)
+2) check generated data against tr51 tables (http://www.unicode.org/emoji/charts-beta/emoji-list.html) to verify data (proves the "correct & complete" statement)
 3) emoji.expanded.json -> render each variation, combination, modification as a separate entry, possibly with internationalized tts and keywords
 4) write documentation (readme)
 bonus: merge in community-defined internationalized short names

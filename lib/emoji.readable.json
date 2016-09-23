@@ -1967,6 +1967,48 @@
     }
   },
   {
+    "name": "FEMALE SIGN",
+    "codepoint": "2640",
+    "defaultPresentation": "text",
+    "presentation": {
+      "default": {
+        "sequence": "2640",
+        "output": "♀"
+      },
+      "variation": {
+        "text": {
+          "sequence": "2640 FE0E",
+          "output": "♀︎"
+        },
+        "emoji": {
+          "sequence": "2640 FE0F",
+          "output": "♀️"
+        }
+      }
+    }
+  },
+  {
+    "name": "MALE SIGN",
+    "codepoint": "2642",
+    "defaultPresentation": "text",
+    "presentation": {
+      "default": {
+        "sequence": "2642",
+        "output": "♂"
+      },
+      "variation": {
+        "text": {
+          "sequence": "2642 FE0E",
+          "output": "♂︎"
+        },
+        "emoji": {
+          "sequence": "2642 FE0F",
+          "output": "♂️"
+        }
+      }
+    }
+  },
+  {
     "name": "ARIES",
     "codepoint": "2648",
     "shiftJis": {
@@ -2521,6 +2563,27 @@
         "emoji": {
           "sequence": "2694 FE0F",
           "output": "⚔️"
+        }
+      }
+    }
+  },
+  {
+    "name": "STAFF OF AESCULAPIUS",
+    "codepoint": "2695",
+    "defaultPresentation": "text",
+    "presentation": {
+      "default": {
+        "sequence": "2695",
+        "output": "⚕"
+      },
+      "variation": {
+        "text": {
+          "sequence": "2695 FE0E",
+          "output": "⚕︎"
+        },
+        "emoji": {
+          "sequence": "2695 FE0F",
+          "output": "⚕️"
         }
       }
     }
@@ -8004,6 +8067,60 @@
         "sequence": "1F3C2",
         "output": "🏂"
       }
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "SNOWBOARDER; TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F3C2 1F3FB",
+              "output": "🏂🏻"
+            }
+          }
+        },
+        "type-3": {
+          "name": "SNOWBOARDER; TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F3C2 1F3FC",
+              "output": "🏂🏼"
+            }
+          }
+        },
+        "type-4": {
+          "name": "SNOWBOARDER; TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F3C2 1F3FD",
+              "output": "🏂🏽"
+            }
+          }
+        },
+        "type-5": {
+          "name": "SNOWBOARDER; TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F3C2 1F3FE",
+              "output": "🏂🏾"
+            }
+          }
+        },
+        "type-6": {
+          "name": "SNOWBOARDER; TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F3C2 1F3FF",
+              "output": "🏂🏿"
+            }
+          }
+        }
+      }
     }
   },
   {
@@ -8179,6 +8296,60 @@
       "default": {
         "sequence": "1F3C7",
         "output": "🏇"
+      }
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "HORSE RACING; TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F3C7 1F3FB",
+              "output": "🏇🏻"
+            }
+          }
+        },
+        "type-3": {
+          "name": "HORSE RACING; TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F3C7 1F3FC",
+              "output": "🏇🏼"
+            }
+          }
+        },
+        "type-4": {
+          "name": "HORSE RACING; TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F3C7 1F3FD",
+              "output": "🏇🏽"
+            }
+          }
+        },
+        "type-5": {
+          "name": "HORSE RACING; TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F3C7 1F3FE",
+              "output": "🏇🏾"
+            }
+          }
+        },
+        "type-6": {
+          "name": "HORSE RACING; TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F3C7 1F3FF",
+              "output": "🏇🏿"
+            }
+          }
+        }
       }
     }
   },
@@ -8369,6 +8540,60 @@
         "emoji": {
           "sequence": "1F3CC FE0F",
           "output": "🏌️"
+        }
+      }
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "GOLFER; TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F3CC 1F3FB",
+              "output": "🏌🏻"
+            }
+          }
+        },
+        "type-3": {
+          "name": "GOLFER; TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F3CC 1F3FC",
+              "output": "🏌🏼"
+            }
+          }
+        },
+        "type-4": {
+          "name": "GOLFER; TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F3CC 1F3FD",
+              "output": "🏌🏽"
+            }
+          }
+        },
+        "type-5": {
+          "name": "GOLFER; TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F3CC 1F3FE",
+              "output": "🏌🏾"
+            }
+          }
+        },
+        "type-6": {
+          "name": "GOLFER; TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F3CC 1F3FF",
+              "output": "🏌🏿"
+            }
+          }
         }
       }
     }
@@ -11532,6 +11757,60 @@
         "sequence": "1F46A",
         "output": "👪"
       }
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "FAMILY; TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F46A 1F3FB",
+              "output": "👪🏻"
+            }
+          }
+        },
+        "type-3": {
+          "name": "FAMILY; TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F46A 1F3FC",
+              "output": "👪🏼"
+            }
+          }
+        },
+        "type-4": {
+          "name": "FAMILY; TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F46A 1F3FD",
+              "output": "👪🏽"
+            }
+          }
+        },
+        "type-5": {
+          "name": "FAMILY; TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F46A 1F3FE",
+              "output": "👪🏾"
+            }
+          }
+        },
+        "type-6": {
+          "name": "FAMILY; TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F46A 1F3FF",
+              "output": "👪🏿"
+            }
+          }
+        }
+      }
     }
   },
   {
@@ -11546,6 +11825,60 @@
         "sequence": "1F46B",
         "output": "👫"
       }
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "MAN AND WOMAN HOLDING HANDS; TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F46B 1F3FB",
+              "output": "👫🏻"
+            }
+          }
+        },
+        "type-3": {
+          "name": "MAN AND WOMAN HOLDING HANDS; TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F46B 1F3FC",
+              "output": "👫🏼"
+            }
+          }
+        },
+        "type-4": {
+          "name": "MAN AND WOMAN HOLDING HANDS; TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F46B 1F3FD",
+              "output": "👫🏽"
+            }
+          }
+        },
+        "type-5": {
+          "name": "MAN AND WOMAN HOLDING HANDS; TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F46B 1F3FE",
+              "output": "👫🏾"
+            }
+          }
+        },
+        "type-6": {
+          "name": "MAN AND WOMAN HOLDING HANDS; TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F46B 1F3FF",
+              "output": "👫🏿"
+            }
+          }
+        }
+      }
     }
   },
   {
@@ -11557,6 +11890,60 @@
         "sequence": "1F46C",
         "output": "👬"
       }
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "TWO MEN HOLDING HANDS; TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F46C 1F3FB",
+              "output": "👬🏻"
+            }
+          }
+        },
+        "type-3": {
+          "name": "TWO MEN HOLDING HANDS; TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F46C 1F3FC",
+              "output": "👬🏼"
+            }
+          }
+        },
+        "type-4": {
+          "name": "TWO MEN HOLDING HANDS; TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F46C 1F3FD",
+              "output": "👬🏽"
+            }
+          }
+        },
+        "type-5": {
+          "name": "TWO MEN HOLDING HANDS; TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F46C 1F3FE",
+              "output": "👬🏾"
+            }
+          }
+        },
+        "type-6": {
+          "name": "TWO MEN HOLDING HANDS; TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F46C 1F3FF",
+              "output": "👬🏿"
+            }
+          }
+        }
+      }
     }
   },
   {
@@ -11567,6 +11954,60 @@
       "default": {
         "sequence": "1F46D",
         "output": "👭"
+      }
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "TWO WOMEN HOLDING HANDS; TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F46D 1F3FB",
+              "output": "👭🏻"
+            }
+          }
+        },
+        "type-3": {
+          "name": "TWO WOMEN HOLDING HANDS; TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F46D 1F3FC",
+              "output": "👭🏼"
+            }
+          }
+        },
+        "type-4": {
+          "name": "TWO WOMEN HOLDING HANDS; TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F46D 1F3FD",
+              "output": "👭🏽"
+            }
+          }
+        },
+        "type-5": {
+          "name": "TWO WOMEN HOLDING HANDS; TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F46D 1F3FE",
+              "output": "👭🏾"
+            }
+          }
+        },
+        "type-6": {
+          "name": "TWO WOMEN HOLDING HANDS; TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F46D 1F3FF",
+              "output": "👭🏿"
+            }
+          }
+        }
       }
     }
   },
@@ -11651,6 +12092,60 @@
       "default": {
         "sequence": "1F46F",
         "output": "👯"
+      }
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "WOMAN WITH BUNNY EARS; TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F46F 1F3FB",
+              "output": "👯🏻"
+            }
+          }
+        },
+        "type-3": {
+          "name": "WOMAN WITH BUNNY EARS; TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F46F 1F3FC",
+              "output": "👯🏼"
+            }
+          }
+        },
+        "type-4": {
+          "name": "WOMAN WITH BUNNY EARS; TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F46F 1F3FD",
+              "output": "👯🏽"
+            }
+          }
+        },
+        "type-5": {
+          "name": "WOMAN WITH BUNNY EARS; TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F46F 1F3FE",
+              "output": "👯🏾"
+            }
+          }
+        },
+        "type-6": {
+          "name": "WOMAN WITH BUNNY EARS; TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F46F 1F3FF",
+              "output": "👯🏿"
+            }
+          }
+        }
       }
     }
   },
@@ -15963,6 +16458,60 @@
           "output": "🕴️"
         }
       }
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "MAN IN BUSINESS SUIT LEVITATING; TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F574 1F3FB",
+              "output": "🕴🏻"
+            }
+          }
+        },
+        "type-3": {
+          "name": "MAN IN BUSINESS SUIT LEVITATING; TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F574 1F3FC",
+              "output": "🕴🏼"
+            }
+          }
+        },
+        "type-4": {
+          "name": "MAN IN BUSINESS SUIT LEVITATING; TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F574 1F3FD",
+              "output": "🕴🏽"
+            }
+          }
+        },
+        "type-5": {
+          "name": "MAN IN BUSINESS SUIT LEVITATING; TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F574 1F3FE",
+              "output": "🕴🏾"
+            }
+          }
+        },
+        "type-6": {
+          "name": "MAN IN BUSINESS SUIT LEVITATING; TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F574 1F3FF",
+              "output": "🕴🏿"
+            }
+          }
+        }
+      }
     }
   },
   {
@@ -19744,6 +20293,60 @@
       "default": {
         "sequence": "1F6CC",
         "output": "🛌"
+      }
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "SLEEPING ACCOMMODATION; TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F6CC 1F3FB",
+              "output": "🛌🏻"
+            }
+          }
+        },
+        "type-3": {
+          "name": "SLEEPING ACCOMMODATION; TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F6CC 1F3FC",
+              "output": "🛌🏼"
+            }
+          }
+        },
+        "type-4": {
+          "name": "SLEEPING ACCOMMODATION; TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F6CC 1F3FD",
+              "output": "🛌🏽"
+            }
+          }
+        },
+        "type-5": {
+          "name": "SLEEPING ACCOMMODATION; TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F6CC 1F3FE",
+              "output": "🛌🏾"
+            }
+          }
+        },
+        "type-6": {
+          "name": "SLEEPING ACCOMMODATION; TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": {
+              "sequence": "1F6CC 1F3FF",
+              "output": "🛌🏿"
+            }
+          }
+        }
       }
     }
   },
@@ -24380,6 +24983,16 @@
       "default": {
         "sequence": "1F1FA 1F1F2",
         "output": "🇺🇲"
+      }
+    }
+  },
+  {
+    "name": "REGIONAL INDICATOR SYMBOL LETTER U, REGIONAL INDICATOR SYMBOL LETTER N",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": {
+        "sequence": "1F1FA 1F1F3",
+        "output": "🇺🇳"
       }
     }
   },

@@ -28,13 +28,13 @@ co(function* main() {
 	});
 
 	const emojiSequences = yield buildEmojiSequences({
-		url: 'http://www.unicode.org/Public/emoji/3.0/emoji-sequences.txt',
+		url: 'http://www.unicode.org/Public/emoji/4.0/emoji-sequences.txt',
 		getNameForCodepoint: unicodeData.getNameForCodepoint,
 		getVariationSequencesForCodepoint: standardizedVariants.getVariationSequencesForCodepoint,
 	});
 
 	const emojiData = yield buildEmojiData({
-		url: 'http://www.unicode.org/Public/emoji/3.0/emoji-data.txt',
+		url: 'http://www.unicode.org/Public/emoji/4.0/emoji-data.txt',
 		getNameForCodepoint: unicodeData.getNameForCodepoint,
 		getVariationSequencesForCodepoint: standardizedVariants.getVariationSequencesForCodepoint,
 		getCombinationsForCodepoint: emojiSequences.getCombinationsForCodepoint,
@@ -113,6 +113,7 @@ co(function* main() {
 		}
 	});
 	fs.writeFileSync('lib/emoji.expanded.json', JSON.stringify(expandedEmojiOnly, null, 2));
+
 	logUpdate('✓ writing files');
 	logUpdate(expandedEmojiOnly.length);
 	logUpdate.done();
