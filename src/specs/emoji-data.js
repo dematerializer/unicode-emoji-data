@@ -230,9 +230,6 @@ export default function* EmojiData({ url = defaultUrl, getNameForCodepoint, getV
 			};
 		// tr51: "incomplete singletons" like single regional indicators
 		// and fitzpatrick modifiers are not used as emoji by themselves:
-		}).filter(datum =>
-			!datum.name.includes('REGIONAL INDICATOR SYMBOL LETTER') &&
-			!datum.name.includes('EMOJI MODIFIER FITZPATRICK TYPE-')
-		),
+		}).filter(datum => !datum.name.includes('REGIONAL INDICATOR SYMBOL LETTER')),
 	};
 }

@@ -2610,6 +2610,31 @@
     "output": "🏺"
   },
   {
+    "name": "EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+    "sequence": "1F3FB",
+    "output": "🏻"
+  },
+  {
+    "name": "EMOJI MODIFIER FITZPATRICK TYPE-3",
+    "sequence": "1F3FC",
+    "output": "🏼"
+  },
+  {
+    "name": "EMOJI MODIFIER FITZPATRICK TYPE-4",
+    "sequence": "1F3FD",
+    "output": "🏽"
+  },
+  {
+    "name": "EMOJI MODIFIER FITZPATRICK TYPE-5",
+    "sequence": "1F3FE",
+    "output": "🏾"
+  },
+  {
+    "name": "EMOJI MODIFIER FITZPATRICK TYPE-6",
+    "sequence": "1F3FF",
+    "output": "🏿"
+  },
+  {
     "name": "RAT",
     "sequence": "1F400",
     "output": "🐀"
