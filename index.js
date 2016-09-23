@@ -1,5 +1,4 @@
-const logUpdate = require('log-update');
-logUpdate(`⌛︎ initializing`);
+require('log-update')('⌛︎ initializing');
 require('babel-register');
 require('babel-polyfill');
 require('./src');
