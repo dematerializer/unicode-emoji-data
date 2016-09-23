@@ -102,9 +102,10 @@ co(function* main() {
 		};
 	};
 	combined.forEach((datum) => {
-		expandedEmojiOnly.push(extractEmojiInfoFromDatum(datum));
 		if (datum.combination && datum.combination.keycap) {
 			expandedEmojiOnly.push(extractEmojiInfoFromDatum(datum.combination.keycap));
+		} else {
+			expandedEmojiOnly.push(extractEmojiInfoFromDatum(datum));
 		}
 		if (datum.modification && datum.modification.skin) {
 			Object.keys(datum.modification.skin).forEach(type =>
