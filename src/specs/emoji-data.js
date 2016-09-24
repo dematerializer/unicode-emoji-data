@@ -38,7 +38,7 @@ const defaultUrl = 'http://www.unicode.org/Public/emoji/3.0/emoji-data.txt';
 // 	}
 // 	...
 // ]
-function expandEmojiData(data, getNameForCodepoint) {
+function expandEmojiData(data) {
 	return data.reduce((expanded, datum) => {
 		if (datum.codepoints.indexOf('..') > -1) {
 			const codepointRange = datum.codepoints.split('..').map(cp => parseInt(cp, 16));
@@ -195,7 +195,7 @@ export default function* EmojiData({ url = defaultUrl, getNameForCodepoint, getV
 	logUpdate('⇣ emoji-data');
 	const content = yield fetch(url).then(res => res.text());
 	const data = parse(content, ['codepoints', 'property']);
-	const expandedEmojiData = expandEmojiData(data, getNameForCodepoint);
+	const expandedEmojiData = expandEmojiData(data);
 	const emojiCodepoints = getEmojiCodepoints(expandedEmojiData);
 	const emojiPresentationCodepoints = getEmojiPresentationCodepoints(expandedEmojiData);
 	const emojiModifierCodepoints = getEmojiModifierCodepoints(expandedEmojiData);

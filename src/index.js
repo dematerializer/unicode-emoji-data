@@ -10,7 +10,7 @@ import buildEmojiSequences from './specs/emoji-sequences';
 import buildEmojiData from './specs/emoji-data';
 import buildEmojiZwjSequences from './specs/emoji-zwj-sequences';
 import buildCldrAnnotations from './specs/cldr-annotations';
-import scrapeEmojiList from './utils/emoji-list'
+import scrapeEmojiList from './utils/emoji-list';
 
 process.on('uncaughtException', (err) => { throw err; });
 process.on('unhandledRejection', (err) => { throw err; });
@@ -131,7 +131,7 @@ co(function* main() {
 
 	const matchesAnyTrailingVariationSelector = /\s(FE0E|FE0F)$/g;
 	if (expandedEmojiOnly.length === emojiList.sequences.length) {
-		const diff = expandedEmojiOnly.map(datum => {
+		const diff = expandedEmojiOnly.map((datum) => {
 			// Compare insentitive to any trailing variation selector
 			// because I believe the use of trailing variation selectors
 			// in emoji-list.html does not represent current vendor support.
@@ -143,7 +143,7 @@ co(function* main() {
 			}
 			return !!contains;
 		});
-		const numDiff = diff.filter(diff => diff === false).length;
+		const numDiff = diff.filter(d => d === false).length;
 		if (numDiff === 0) {
 			logUpdate(`✓ verify: ${expandedEmojiOnly.length} entries verified`);
 		} else {
