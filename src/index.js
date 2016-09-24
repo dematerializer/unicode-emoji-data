@@ -94,7 +94,7 @@ co(function* main() {
 
 	const expandedEmojiOnly = [];
 	const extractEmojiInfoFromDatum = (datum) => {
-		const sequence = datum.defaultPresentation === 'text' ? datum.presentation.variation.emoji : datum.presentation.default;
+		const sequence = datum.presentation.variation ? datum.presentation.variation.emoji : datum.presentation.default;
 		return {
 			name: datum.name,
 			sequence,

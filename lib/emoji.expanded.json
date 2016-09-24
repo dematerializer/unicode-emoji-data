@@ -1,63 +1,63 @@
 [
   {
     "name": "KEYCAP NUMBER SIGN",
-    "sequence": "0023 20E3",
-    "output": "#⃣"
+    "sequence": "0023 FE0F 20E3",
+    "output": "#️⃣"
   },
   {
     "name": "KEYCAP ASTERISK",
-    "sequence": "002A 20E3",
-    "output": "*⃣"
+    "sequence": "002A FE0F 20E3",
+    "output": "*️⃣"
   },
   {
     "name": "KEYCAP ZERO",
-    "sequence": "0030 20E3",
-    "output": "0⃣"
+    "sequence": "0030 FE0F 20E3",
+    "output": "0️⃣"
   },
   {
     "name": "KEYCAP ONE",
-    "sequence": "0031 20E3",
-    "output": "1⃣"
+    "sequence": "0031 FE0F 20E3",
+    "output": "1️⃣"
   },
   {
     "name": "KEYCAP TWO",
-    "sequence": "0032 20E3",
-    "output": "2⃣"
+    "sequence": "0032 FE0F 20E3",
+    "output": "2️⃣"
   },
   {
     "name": "KEYCAP THREE",
-    "sequence": "0033 20E3",
-    "output": "3⃣"
+    "sequence": "0033 FE0F 20E3",
+    "output": "3️⃣"
   },
   {
     "name": "KEYCAP FOUR",
-    "sequence": "0034 20E3",
-    "output": "4⃣"
+    "sequence": "0034 FE0F 20E3",
+    "output": "4️⃣"
   },
   {
     "name": "KEYCAP FIVE",
-    "sequence": "0035 20E3",
-    "output": "5⃣"
+    "sequence": "0035 FE0F 20E3",
+    "output": "5️⃣"
   },
   {
     "name": "KEYCAP SIX",
-    "sequence": "0036 20E3",
-    "output": "6⃣"
+    "sequence": "0036 FE0F 20E3",
+    "output": "6️⃣"
   },
   {
     "name": "KEYCAP SEVEN",
-    "sequence": "0037 20E3",
-    "output": "7⃣"
+    "sequence": "0037 FE0F 20E3",
+    "output": "7️⃣"
   },
   {
     "name": "KEYCAP EIGHT",
-    "sequence": "0038 20E3",
-    "output": "8⃣"
+    "sequence": "0038 FE0F 20E3",
+    "output": "8️⃣"
   },
   {
     "name": "KEYCAP NINE",
-    "sequence": "0039 20E3",
-    "output": "9⃣"
+    "sequence": "0039 FE0F 20E3",
+    "output": "9️⃣"
   },
   {
     "name": "COPYRIGHT SIGN",
@@ -131,13 +131,13 @@
   },
   {
     "name": "WATCH",
-    "sequence": "231A",
-    "output": "⌚"
+    "sequence": "231A FE0F",
+    "output": "⌚️"
   },
   {
     "name": "HOURGLASS",
-    "sequence": "231B",
-    "output": "⌛"
+    "sequence": "231B FE0F",
+    "output": "⌛️"
   },
   {
     "name": "KEYBOARD",
@@ -256,13 +256,13 @@
   },
   {
     "name": "WHITE MEDIUM SMALL SQUARE",
-    "sequence": "25FD",
-    "output": "◽"
+    "sequence": "25FD FE0F",
+    "output": "◽️"
   },
   {
     "name": "BLACK MEDIUM SMALL SQUARE",
-    "sequence": "25FE",
-    "output": "◾"
+    "sequence": "25FE FE0F",
+    "output": "◾️"
   },
   {
     "name": "BLACK SUN WITH RAYS",
@@ -301,13 +301,13 @@
   },
   {
     "name": "UMBRELLA WITH RAIN DROPS",
-    "sequence": "2614",
-    "output": "☔"
+    "sequence": "2614 FE0F",
+    "output": "☔️"
   },
   {
     "name": "HOT BEVERAGE",
-    "sequence": "2615",
-    "output": "☕"
+    "sequence": "2615 FE0F",
+    "output": "☕️"
   },
   {
     "name": "SHAMROCK",
@@ -406,63 +406,63 @@
   },
   {
     "name": "ARIES",
-    "sequence": "2648",
-    "output": "♈"
+    "sequence": "2648 FE0F",
+    "output": "♈️"
   },
   {
     "name": "TAURUS",
-    "sequence": "2649",
-    "output": "♉"
+    "sequence": "2649 FE0F",
+    "output": "♉️"
   },
   {
     "name": "GEMINI",
-    "sequence": "264A",
-    "output": "♊"
+    "sequence": "264A FE0F",
+    "output": "♊️"
   },
   {
     "name": "CANCER",
-    "sequence": "264B",
-    "output": "♋"
+    "sequence": "264B FE0F",
+    "output": "♋️"
   },
   {
     "name": "LEO",
-    "sequence": "264C",
-    "output": "♌"
+    "sequence": "264C FE0F",
+    "output": "♌️"
   },
   {
     "name": "VIRGO",
-    "sequence": "264D",
-    "output": "♍"
+    "sequence": "264D FE0F",
+    "output": "♍️"
   },
   {
     "name": "LIBRA",
-    "sequence": "264E",
-    "output": "♎"
+    "sequence": "264E FE0F",
+    "output": "♎️"
   },
   {
     "name": "SCORPIUS",
-    "sequence": "264F",
-    "output": "♏"
+    "sequence": "264F FE0F",
+    "output": "♏️"
   },
   {
     "name": "SAGITTARIUS",
-    "sequence": "2650",
-    "output": "♐"
+    "sequence": "2650 FE0F",
+    "output": "♐️"
   },
   {
     "name": "CAPRICORN",
-    "sequence": "2651",
-    "output": "♑"
+    "sequence": "2651 FE0F",
+    "output": "♑️"
   },
   {
     "name": "AQUARIUS",
-    "sequence": "2652",
-    "output": "♒"
+    "sequence": "2652 FE0F",
+    "output": "♒️"
   },
   {
     "name": "PISCES",
-    "sequence": "2653",
-    "output": "♓"
+    "sequence": "2653 FE0F",
+    "output": "♓️"
   },
   {
     "name": "BLACK SPADE SUIT",
@@ -496,8 +496,8 @@
   },
   {
     "name": "WHEELCHAIR SYMBOL",
-    "sequence": "267F",
-    "output": "♿"
+    "sequence": "267F FE0F",
+    "output": "♿️"
   },
   {
     "name": "HAMMER AND PICK",
@@ -506,8 +506,8 @@
   },
   {
     "name": "ANCHOR",
-    "sequence": "2693",
-    "output": "⚓"
+    "sequence": "2693 FE0F",
+    "output": "⚓️"
   },
   {
     "name": "CROSSED SWORDS",
@@ -551,18 +551,18 @@
   },
   {
     "name": "HIGH VOLTAGE SIGN",
-    "sequence": "26A1",
-    "output": "⚡"
+    "sequence": "26A1 FE0F",
+    "output": "⚡️"
   },
   {
     "name": "MEDIUM WHITE CIRCLE",
-    "sequence": "26AA",
-    "output": "⚪"
+    "sequence": "26AA FE0F",
+    "output": "⚪️"
   },
   {
     "name": "MEDIUM BLACK CIRCLE",
-    "sequence": "26AB",
-    "output": "⚫"
+    "sequence": "26AB FE0F",
+    "output": "⚫️"
   },
   {
     "name": "COFFIN",
@@ -576,23 +576,23 @@
   },
   {
     "name": "SOCCER BALL",
-    "sequence": "26BD",
-    "output": "⚽"
+    "sequence": "26BD FE0F",
+    "output": "⚽️"
   },
   {
     "name": "BASEBALL",
-    "sequence": "26BE",
-    "output": "⚾"
+    "sequence": "26BE FE0F",
+    "output": "⚾️"
   },
   {
     "name": "SNOWMAN WITHOUT SNOW",
-    "sequence": "26C4",
-    "output": "⛄"
+    "sequence": "26C4 FE0F",
+    "output": "⛄️"
   },
   {
     "name": "SUN BEHIND CLOUD",
-    "sequence": "26C5",
-    "output": "⛅"
+    "sequence": "26C5 FE0F",
+    "output": "⛅️"
   },
   {
     "name": "THUNDER CLOUD AND RAIN",
@@ -621,8 +621,8 @@
   },
   {
     "name": "NO ENTRY",
-    "sequence": "26D4",
-    "output": "⛔"
+    "sequence": "26D4 FE0F",
+    "output": "⛔️"
   },
   {
     "name": "SHINTO SHRINE",
@@ -631,8 +631,8 @@
   },
   {
     "name": "CHURCH",
-    "sequence": "26EA",
-    "output": "⛪"
+    "sequence": "26EA FE0F",
+    "output": "⛪️"
   },
   {
     "name": "MOUNTAIN",
@@ -646,13 +646,13 @@
   },
   {
     "name": "FOUNTAIN",
-    "sequence": "26F2",
-    "output": "⛲"
+    "sequence": "26F2 FE0F",
+    "output": "⛲️"
   },
   {
     "name": "FLAG IN HOLE",
-    "sequence": "26F3",
-    "output": "⛳"
+    "sequence": "26F3 FE0F",
+    "output": "⛳️"
   },
   {
     "name": "FERRY",
@@ -661,8 +661,8 @@
   },
   {
     "name": "SAILBOAT",
-    "sequence": "26F5",
-    "output": "⛵"
+    "sequence": "26F5 FE0F",
+    "output": "⛵️"
   },
   {
     "name": "SKIER",
@@ -706,13 +706,13 @@
   },
   {
     "name": "TENT",
-    "sequence": "26FA",
-    "output": "⛺"
+    "sequence": "26FA FE0F",
+    "output": "⛺️"
   },
   {
     "name": "FUEL PUMP",
-    "sequence": "26FD",
-    "output": "⛽"
+    "sequence": "26FD FE0F",
+    "output": "⛽️"
   },
   {
     "name": "BLACK SCISSORS",
@@ -936,8 +936,8 @@
   },
   {
     "name": "HEAVY EXCLAMATION MARK SYMBOL",
-    "sequence": "2757",
-    "output": "❗"
+    "sequence": "2757 FE0F",
+    "output": "❗️"
   },
   {
     "name": "HEAVY HEART EXCLAMATION MARK ORNAMENT",
@@ -1006,23 +1006,23 @@
   },
   {
     "name": "BLACK LARGE SQUARE",
-    "sequence": "2B1B",
-    "output": "⬛"
+    "sequence": "2B1B FE0F",
+    "output": "⬛️"
   },
   {
     "name": "WHITE LARGE SQUARE",
-    "sequence": "2B1C",
-    "output": "⬜"
+    "sequence": "2B1C FE0F",
+    "output": "⬜️"
   },
   {
     "name": "WHITE MEDIUM STAR",
-    "sequence": "2B50",
-    "output": "⭐"
+    "sequence": "2B50 FE0F",
+    "output": "⭐️"
   },
   {
     "name": "HEAVY LARGE CIRCLE",
-    "sequence": "2B55",
-    "output": "⭕"
+    "sequence": "2B55 FE0F",
+    "output": "⭕️"
   },
   {
     "name": "WAVY DASH",
@@ -1046,8 +1046,8 @@
   },
   {
     "name": "MAHJONG TILE RED DRAGON",
-    "sequence": "1F004",
-    "output": "🀄"
+    "sequence": "1F004 FE0F",
+    "output": "🀄️"
   },
   {
     "name": "PLAYING CARD BLACK JOKER",
@@ -1141,13 +1141,13 @@
   },
   {
     "name": "SQUARED CJK UNIFIED IDEOGRAPH-7121",
-    "sequence": "1F21A",
-    "output": "🈚"
+    "sequence": "1F21A FE0F",
+    "output": "🈚️"
   },
   {
     "name": "SQUARED CJK UNIFIED IDEOGRAPH-6307",
-    "sequence": "1F22F",
-    "output": "🈯"
+    "sequence": "1F22F FE0F",
+    "output": "🈯️"
   },
   {
     "name": "SQUARED CJK UNIFIED IDEOGRAPH-7981",
