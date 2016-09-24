@@ -10,6 +10,7 @@ import buildEmojiSequences from './specs/emoji-sequences';
 import buildEmojiData from './specs/emoji-data';
 import buildEmojiZwjSequences from './specs/emoji-zwj-sequences';
 import buildCldrAnnotations from './specs/cldr-annotations';
+import scrapeEmojiList from './utils/emoji-list'
 
 process.on('uncaughtException', (err) => { throw err; });
 process.on('unhandledRejection', (err) => { throw err; });
@@ -116,6 +117,38 @@ co(function* main() {
 	fs.writeFileSync('lib/emoji.expanded.json', JSON.stringify(expandedEmojiOnly, null, 2));
 
 	logUpdate('✓ writing files');
-	logUpdate(expandedEmojiOnly.length);
+	logUpdate.done();
+
+	// Check generated data files against unicode emoji list for completeness:
+
+	const emojiList = yield scrapeEmojiList({
+		url: 'http://unicode.org/emoji/charts-beta/emoji-list.html',
+	});
+
+	logUpdate('✓ verify');
+
+	const matchesAnyTrailingVariationSelector = /\s(FE0E|FE0F)$/g;
+	if (expandedEmojiOnly.length === emojiList.sequences.length) {
+		const diff = expandedEmojiOnly.map(datum => {
+			// Compare insentitive to any trailing variation selector
+			// because I believe the use of trailing variation selectors
+			// in emoji-list.html does not represent current vendor support.
+			const sequenceWithoutVariation = datum.sequence.replace(matchesAnyTrailingVariationSelector, '');
+			const contains = emojiList.sequences.find(seq => seq.includes(sequenceWithoutVariation));
+			if (!contains) {
+				logUpdate(`not expected: ${datum.sequence}`);
+				logUpdate.done();
+			}
+			return !!contains;
+		});
+		const numDiff = diff.filter(diff => diff === false).length;
+		if (numDiff === 0) {
+			logUpdate(`✓ verify: ${expandedEmojiOnly.length} entries verified`);
+		} else {
+			logUpdate(`x verify: ${numDiff} sequences not expected (see above)`);
+		}
+	} else {
+		logUpdate(`x verify: numbers of entries don't match (expected ${emojiList.sequences.length} but got ${expandedEmojiOnly.length})`);
+	}
 	logUpdate.done();
 });

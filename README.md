@@ -35,8 +35,7 @@ MIT [http://www.opensource.org/licenses/mit-license.php](http://www.opensource.o
 # TODO
 WTF I need to check this: http://unicode.org/cldr/utility/list-unicodeset.jsp?a=%5B%3Aemoji%3A%5D&g=emoji
 1) testing (proves the "fully tested" statement)
-2) check generated data against tr51 tables (http://www.unicode.org/emoji/charts-beta/emoji-list.html) to verify data (proves the "correct & complete" statement)
-3) write documentation (readme)
+2) write documentation (readme)
 bonus: merge in community-defined internationalized short names
 bonus: categorize & sort based on CLDR and merged-in community-defined internationalized categorizations
 
