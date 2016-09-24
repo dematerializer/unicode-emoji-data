@@ -5,7 +5,7 @@
 // 	# this is a comment
 // 	1F600         ; Emoji                # 6.1  [1] (😀)       GRINNING FACE
 // 	1F601..1F610  ; Emoji                # 6.0 [16] (😁..😐)    GRINNING FACE WITH SMILING EYES..NEUTRAL FACE
-// ';
+// '
 //
 // Returns a data structure like this:
 // [
