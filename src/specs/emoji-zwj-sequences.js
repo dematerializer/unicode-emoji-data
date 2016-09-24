@@ -83,7 +83,7 @@ function buildZwjEmoji(data, getNameForCodepoint, getMetaForModifierName) {
 		};
 	});
 	data.filter(datum =>
-		datum.sequence.match(anyModifier) != null
+		datum.sequence.match(anyModifier)
 	)
 	.forEach((datum) => {
 		const [cp, mod, ...rest] = datum.sequence.replace(anyVariationSelector, '').trim().split(' ');
