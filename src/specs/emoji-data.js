@@ -228,8 +228,8 @@ export default function* EmojiData({ url = defaultUrl, getNameForCodepoint, getV
 				combination: Object.keys(combinations).length > 0 ? combinations : undefined,
 				modification: modifications,
 			};
-		// tr51: "incomplete singletons" like single regional indicators
-		// and fitzpatrick modifiers are not used as emoji by themselves:
+		// tr51: "incomplete singletons" like single regional
+		// indicators are not used as emoji by themselves:
 		}).filter(datum => !datum.name.includes('REGIONAL INDICATOR SYMBOL LETTER')),
 	};
 }
