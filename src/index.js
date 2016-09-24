@@ -53,12 +53,14 @@ co(function* main() {
 		languages: ['en', 'de'],
 	});
 
+	logUpdate('⇣ writing files');
+
+	// Write CLDR annotation files:
+
 	Object.keys(annotations.annotationForSequenceForLanguage).forEach((language) => {
 		const data = annotations.annotationForSequenceForLanguage[language];
 		fs.writeFileSync(`lib/annotations/cldr/${language}.json`, JSON.stringify(data, null, 2));
 	});
-
-	logUpdate('⇣ writing files');
 
 	// Render main emoji data file (emoji.json) containing compact, nested emoji data:
 
@@ -119,7 +121,7 @@ co(function* main() {
 	logUpdate('✓ writing files');
 	logUpdate.done();
 
-	// Check generated data files against unicode emoji list for completeness:
+	// Verify: check generated data files against unicode emoji list for completeness:
 
 	const emojiList = yield scrapeEmojiList({
 		url: 'http://unicode.org/emoji/charts-beta/emoji-list.html',

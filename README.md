@@ -33,6 +33,9 @@ TODO
 MIT [http://www.opensource.org/licenses/mit-license.php](http://www.opensource.org/licenses/mit-license.php)
 
 # TODO
+- report obsolete SCALES variation selectors in emoj zwj-sequences (http://www.unicode.org/reporting.html)
+
+
 1. allow for switching between different emoji version presets (3.0, 4.0, "latest")
 2. testing (proves the "fully tested" statement)
 3. write documentation (readme)
