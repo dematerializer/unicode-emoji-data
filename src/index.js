@@ -55,14 +55,14 @@ co(function* main() {
 
 	logUpdate('⇣ writing files');
 
-	// Write CLDR annotation files:
+	// Render CLDR annotation files:
 
 	Object.keys(annotations.annotationForSequenceForLanguage).forEach((language) => {
 		const data = annotations.annotationForSequenceForLanguage[language];
 		fs.writeFileSync(`lib/annotations/cldr/${language}.json`, JSON.stringify(data, null, 2));
 	});
 
-	// Render main emoji data file (emoji.json) containing compact, nested emoji data:
+	// Render base emoji data file (emoji.json) containing compact, nested emoji data:
 
 	const combined = [
 		...emojiData.emoji,
@@ -70,27 +70,6 @@ co(function* main() {
 		...emojiZwjSequences.zwjEmoji,
 	];
 	fs.writeFileSync('lib/emoji.json', JSON.stringify(combined, null, 2));
-
-	// Render human-readable variant of main emoji data file (emoji.readable.json):
-
-	const makeDatumReadable = (node) => {
-		const readableNode = { ...node };
-		Object.keys(readableNode).forEach((key) => {
-			const propValue = readableNode[key];
-			if (['default', 'text', 'emoji'].includes(key)) {
-				readableNode[key] = { // eslint-disable-line no-param-reassign
-					sequence: propValue,
-					output: punycode.ucs2.encode(propValue.split(' ').map(cp => parseInt(cp, 16))),
-				};
-			} else if (propValue === Object(propValue) && Object.prototype.toString.call(propValue) !== '[object Array]' && typeof propValue !== 'string') {
-				readableNode[key] = makeDatumReadable(propValue);
-			}
-		});
-		return readableNode;
-	};
-
-	const readable = combined.map(datum => makeDatumReadable(datum));
-	fs.writeFileSync('lib/emoji.readable.json', JSON.stringify(readable, null, 2));
 
 	// Render expanded, human readable emoji data file (emoji.expanded.json)
 	// containing flattened emoji-presentation-only data:
