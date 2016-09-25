@@ -12,7 +12,7 @@ import buildEmojiZwjSequences from './specs/emoji-zwj-sequences';
 import buildCldrAnnotations from './specs/cldr-annotations';
 import scrapeEmojiList from './utils/emoji-list';
 
-import preset from './presets/unicode-9-emoji-4';
+import preset from './presets/unicode-9-emoji-4-cldr-30';
 
 process.on('uncaughtException', (err) => { throw err; });
 process.on('unhandledRejection', (err) => { throw err; });
@@ -51,6 +51,7 @@ co(function* main() {
 
 	const annotations = yield buildCldrAnnotations({
 		baseUrl: preset.cldrAnnotationsUrl,
+		version: preset.cldrVersion,
 		languages: ['en', 'de'],
 	});
 

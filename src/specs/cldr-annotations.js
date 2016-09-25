@@ -9,7 +9,7 @@ const parseXml = promisify(xm2js.parseString);
 const defaultBaseUrl = 'http://unicode.org/repos/cldr/tags/latest/common/annotations';
 const defaultLanguages = ['af', 'am', 'ar', 'as', 'az', 'bg', 'bn', 'ca', 'cs', 'da', 'de', 'el', 'en', 'en_GB', 'es', 'es_419', 'et', 'fa', 'fi', 'fil', 'fr', 'ga', 'gu', 'he', 'hi', 'hr', 'hu', 'hy', 'id', 'is', 'it', 'ja', 'ka', 'kk', 'km', 'kn', 'ko', 'ky', 'lo', 'lt', 'lv', 'mk', 'ml', 'mn', 'mr', 'ms', 'my', 'nb', 'ne', 'nl', 'or', 'pa', 'pl', 'pt', 'pt_PT', 'ro', 'ru', 'si', 'sk', 'sl', 'sq', 'sr', 'sv', 'sw', 'ta', 'te', 'th', 'tr', 'uk', 'ur', 'uz', 'vi', 'zh', 'zh_Hant'];
 
-function buildAnnotationForSequence(data) {
+function buildAnnotationForSequenceV29(data) {
 	const matchBrackets = /[\[\]\{\}]/g;
 	return data.ldml.annotations[0].annotation.reduce((annotationForSeq, annotation) => {
 		const extAnnotationForSeq = annotationForSeq;
@@ -24,20 +24,54 @@ function buildAnnotationForSequence(data) {
 	}, {});
 }
 
+// From the CLDR 30 Release Notes (http://cldr.unicode.org/index/downloads/cldr-30):
+// "The structure for annotations has changed to make processing simpler"
+function buildAnnotationForSequenceV30(data) {
+	return data.ldml.annotations[0].annotation.reduce((annotationForSeq, annotation) => {
+		const extAnnotationForSeq = annotationForSeq;
+		const emoji = annotation.$.cp;
+		const seq = punycode.ucs2.decode(emoji);
+		const seqHex = seq.map(cp => leftPad(cp.toString(16), 4, 0).toUpperCase()).join(' ');
+		if (extAnnotationForSeq[seqHex] == null) {
+			extAnnotationForSeq[seqHex] = {};
+		}
+		if (annotation.$.type) {
+			extAnnotationForSeq[seqHex].tts = annotation._;
+		} else {
+			extAnnotationForSeq[seqHex].keywords = annotation._.split('|').map(kw => kw.trim());
+		}
+		if (extAnnotationForSeq[seqHex].tts && extAnnotationForSeq[seqHex].keywords) {
+			extAnnotationForSeq[seqHex] = {
+				tts: extAnnotationForSeq[seqHex].tts,
+				keywords: extAnnotationForSeq[seqHex].keywords,
+			}
+		}
+		return extAnnotationForSeq;
+	}, {});
+}
+
 export const internals = {
 	defaultBaseUrl,
 	defaultLanguages,
-	buildAnnotationForSequence,
+	buildAnnotationForSequenceV29,
+	buildAnnotationForSequenceV30,
 };
 
-export default function* CldrAnnotations({ baseUrl = defaultBaseUrl, languages = defaultLanguages }) {
+export default function* CldrAnnotations({ baseUrl = defaultBaseUrl, version = 29, languages = defaultLanguages }) {
 	const annotationForSequenceForLanguage = {};
 	for (let i = 0; i < languages.length; i += 1) {
 		const language = languages[i];
 		logUpdate(`⇣ cldr-annotations ${language}`);
 		const content = yield fetch(`${baseUrl}/${language}.xml`).then(res => res.text());
 		const data = yield parseXml(content);
-		annotationForSequenceForLanguage[language] = buildAnnotationForSequence(data);
+		if (version === 29) {
+			annotationForSequenceForLanguage[language] = buildAnnotationForSequenceV29(data);
+		} else if (version === 30) {
+			annotationForSequenceForLanguage[language] = buildAnnotationForSequenceV30(data);
+		} else {
+			logUpdate(`x cldr-annotations: unsupported cldr version ${version}`);
+			logUpdate.done();
+		}
 		logUpdate(`✓ cldr-annotations ${language}`);
 		logUpdate.done();
 	}

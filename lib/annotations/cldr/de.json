@@ -88,11 +88,27 @@
       "wolkig"
     ]
   },
+  "2602": {
+    "tts": "Regenschirm",
+    "keywords": [
+      "Regenschirm",
+      "Wetter",
+      "Bekleidung",
+      "Regen"
+    ]
+  },
   "2603": {
     "tts": "Schneemann im Schnee",
     "keywords": [
       "Schneemann",
       "Schnee"
+    ]
+  },
+  "2604": {
+    "tts": "Komet",
+    "keywords": [
+      "Komet",
+      "Weltall"
     ]
   },
   "2611": {
@@ -143,6 +159,13 @@
       "radioaktiv"
     ]
   },
+  "2623": {
+    "tts": "Biogefährdung",
+    "keywords": [
+      "Biogefährdung",
+      "Zeichen"
+    ]
+  },
   "2626": {
     "tts": "Orthodoxes Kreuz",
     "keywords": [
@@ -164,6 +187,22 @@
     "keywords": [
       "Gesicht",
       "traurig"
+    ]
+  },
+  "2640": {
+    "tts": "Frauensymbol",
+    "keywords": [
+      "Frau",
+      "weiblich",
+      "Zeichen"
+    ]
+  },
+  "2642": {
+    "tts": "Männersymbol",
+    "keywords": [
+      "Mann",
+      "Zeichen",
+      "Symbol"
     ]
   },
   "2648": {
@@ -264,6 +303,13 @@
       "gekreuzt"
     ]
   },
+  "2695": {
+    "tts": "Asklepiosstab",
+    "keywords": [
+      "Medizin",
+      "Apotheke"
+    ]
+  },
   "2696": {
     "tts": "Waage",
     "keywords": [
@@ -279,11 +325,31 @@
       "Werkzeug"
     ]
   },
+  "2699": {
+    "tts": "Zahnrad",
+    "keywords": [
+      "Zahnrad",
+      "Werkzeug"
+    ]
+  },
+  "2702": {
+    "tts": "Schere",
+    "keywords": [
+      "Schere"
+    ]
+  },
   "2705": {
     "tts": "Weißes Häkchen",
     "keywords": [
       "abgehakt",
       "erledigt"
+    ]
+  },
+  "2708": {
+    "tts": "Flugzeug",
+    "keywords": [
+      "Flugzeug",
+      "Flieger"
     ]
   },
   "2709": {
@@ -300,6 +366,14 @@
       "Füller",
       "Federhalter",
       "schwarz"
+    ]
+  },
+  "2714": {
+    "tts": "kräftiges Häkchen",
+    "keywords": [
+      "abhaken",
+      "erledigt",
+      "Häkchen"
     ]
   },
   "2716": {
@@ -454,6 +528,634 @@
     "keywords": [
       "chinesisches Schriftzeichen",
       "Geheimnis"
+    ]
+  },
+  "1F57A": {
+    "tts": "tanzender Mann",
+    "keywords": [
+      "tanzen",
+      "Mann"
+    ]
+  },
+  "1F5A4": {
+    "tts": "schwarzes Herz",
+    "keywords": [
+      "schwarz",
+      "Herz",
+      "böse"
+    ]
+  },
+  "1F919": {
+    "tts": "Ruf mich an",
+    "keywords": [
+      "Hand",
+      "anrufen"
+    ]
+  },
+  "1F91A": {
+    "tts": "erhobener Handrücken",
+    "keywords": [
+      "Hand",
+      "erhoben"
+    ]
+  },
+  "1F91B": {
+    "tts": "Faust nach links",
+    "keywords": [
+      "Faust",
+      "nach links"
+    ]
+  },
+  "1F91C": {
+    "tts": "Faust nach rechts",
+    "keywords": [
+      "Faust",
+      "nach rechts"
+    ]
+  },
+  "1F91D": {
+    "tts": "Handschlag",
+    "keywords": [
+      "Handschlag",
+      "Händeschütteln",
+      "Hände",
+      "Vereinbarung"
+    ]
+  },
+  "1F91E": {
+    "tts": "Hand mit gekreuzten Fingern",
+    "keywords": [
+      "Hand",
+      "Finger",
+      "gekreuzt"
+    ]
+  },
+  "1F920": {
+    "tts": "Smiley mit Cowboyhut",
+    "keywords": [
+      "Cowboy",
+      "Gesicht",
+      "Hut"
+    ]
+  },
+  "1F921": {
+    "tts": "Clown-Gesicht",
+    "keywords": [
+      "Clown",
+      "Gesicht"
+    ]
+  },
+  "1F922": {
+    "tts": "an Übelkeit leiden",
+    "keywords": [
+      "Gesicht",
+      "Übelkeit",
+      "Erbrechen"
+    ]
+  },
+  "1F923": {
+    "tts": "sich vor Lachen auf dem Boden wälzen",
+    "keywords": [
+      "lachen",
+      "Gesicht",
+      "wälzen"
+    ]
+  },
+  "1F924": {
+    "tts": "sabberndes Gesicht",
+    "keywords": [
+      "sabbern",
+      "Gesicht"
+    ]
+  },
+  "1F925": {
+    "tts": "lügendes Gesicht",
+    "keywords": [
+      "Gesicht",
+      "Lüge",
+      "Pinocchio-Nase"
+    ]
+  },
+  "1F926": {
+    "tts": "sich an den Kopf fassen",
+    "keywords": [
+      "Gesicht",
+      "frustriert",
+      "genervt"
+    ]
+  },
+  "1F926 200D 2640": {
+    "tts": "sich an den Kopf fassende Frau",
+    "keywords": [
+      "Frau",
+      "genervt",
+      "frustriert"
+    ]
+  },
+  "1F926 200D 2642": {
+    "tts": "sich an den Kopf fassender Mann",
+    "keywords": [
+      "Mann",
+      "genervt",
+      "frustriert"
+    ]
+  },
+  "1F927": {
+    "tts": "niesendes Gesicht",
+    "keywords": [
+      "niesen",
+      "Gesicht"
+    ]
+  },
+  "1F930": {
+    "tts": "schwangere Frau",
+    "keywords": [
+      "schwanger",
+      "Frau"
+    ]
+  },
+  "1F933": {
+    "tts": "Selfie",
+    "keywords": [
+      "Selfie",
+      "Smartphone"
+    ]
+  },
+  "1F934": {
+    "tts": "Prinz",
+    "keywords": [
+      "Prinz"
+    ]
+  },
+  "1F935": {
+    "tts": "Mann im Smoking",
+    "keywords": [
+      "Bräutigam",
+      "Mann",
+      "Smoking"
+    ]
+  },
+  "1F936": {
+    "tts": "Weihnachtsfrau",
+    "keywords": [
+      "Weihnachtsfrau",
+      "Weihnachten"
+    ]
+  },
+  "1F937": {
+    "tts": "keine Ahnung",
+    "keywords": [
+      "Zweifel",
+      "keine Ahnung",
+      "gleichgültig",
+      "egal"
+    ]
+  },
+  "1F937 200D 2640": {
+    "tts": "schulterzuckende Frau",
+    "keywords": [
+      "Frau",
+      "keine Ahnung",
+      "gleichgültig",
+      "Zweifel"
+    ]
+  },
+  "1F937 200D 2642": {
+    "tts": "schulterzuckender Mann",
+    "keywords": [
+      "Mann",
+      "keine Ahnung",
+      "gleichgültig",
+      "Zweifel"
+    ]
+  },
+  "1F938": {
+    "tts": "Radschlagende Person",
+    "keywords": [
+      "Radschlag",
+      "Bodenturnen",
+      "Person"
+    ]
+  },
+  "1F938 200D 2640": {
+    "tts": "Rad schlagende Frau",
+    "keywords": [
+      "Frau",
+      "Radschlag",
+      "Bodenturnen"
+    ]
+  },
+  "1F938 200D 2642": {
+    "tts": "Rad schlagender Mann",
+    "keywords": [
+      "Mann",
+      "Radschlag",
+      "Bodenturnen"
+    ]
+  },
+  "1F939": {
+    "tts": "Jongleur(in)",
+    "keywords": [
+      "jonglieren",
+      "Multitasking",
+      "geschickt"
+    ]
+  },
+  "1F939 200D 2640": {
+    "tts": "Jongleurin",
+    "keywords": [
+      "jonglieren",
+      "geschickt",
+      "Multitasking",
+      "Frau"
+    ]
+  },
+  "1F939 200D 2642": {
+    "tts": "Jongleur",
+    "keywords": [
+      "jonglieren",
+      "geschickt",
+      "Multitasking",
+      "Mann"
+    ]
+  },
+  "1F93A": {
+    "tts": "Fechter(in)",
+    "keywords": [
+      "Fechter",
+      "fechten",
+      "Schwert",
+      "Sport"
+    ]
+  },
+  "1F93C": {
+    "tts": "Ringer(in)",
+    "keywords": [
+      "Ringer",
+      "Wrestling",
+      "Ringkampf"
+    ]
+  },
+  "1F93C 200D 2640": {
+    "tts": "ringende Frauen",
+    "keywords": [
+      "Ringer",
+      "Ringkampf",
+      "Wrestling"
+    ]
+  },
+  "1F93C 200D 2642": {
+    "tts": "ringende Männer",
+    "keywords": [
+      "Ringer",
+      "Ringkampf",
+      "Wrestling"
+    ]
+  },
+  "1F93D": {
+    "tts": "Wasserballspieler(in)",
+    "keywords": [
+      "Wasserball",
+      "Wasser",
+      "Sport"
+    ]
+  },
+  "1F93D 200D 2640": {
+    "tts": "Wasserballspielerin",
+    "keywords": [
+      "Wassersport",
+      "Wasser",
+      "Wasserball"
+    ]
+  },
+  "1F93D 200D 2642": {
+    "tts": "Wasserballspieler",
+    "keywords": [
+      "Wassersport",
+      "Wasser",
+      "Wasserball"
+    ]
+  },
+  "1F93E": {
+    "tts": "Handballspieler(in)",
+    "keywords": [
+      "Handball",
+      "Sport"
+    ]
+  },
+  "1F93E 200D 2640": {
+    "tts": "Handballspielerin",
+    "keywords": [
+      "Frau",
+      "Handball"
+    ]
+  },
+  "1F93E 200D 2642": {
+    "tts": "Handballspieler",
+    "keywords": [
+      "Mann",
+      "Handball"
+    ]
+  },
+  "1F940": {
+    "tts": "welkende Blume",
+    "keywords": [
+      "Blume",
+      "verwelkt"
+    ]
+  },
+  "1F941": {
+    "tts": "Trommel",
+    "keywords": [
+      "Trommel",
+      "Trommelstöcke"
+    ]
+  },
+  "1F942": {
+    "tts": "Sektgläser",
+    "keywords": [
+      "Sekt",
+      "anstoßen",
+      "feiern",
+      "Getränk"
+    ]
+  },
+  "1F943": {
+    "tts": "Trinkglas",
+    "keywords": [
+      "Trinkglas",
+      "Whiskey",
+      "Bar"
+    ]
+  },
+  "1F944": {
+    "tts": "Löffel",
+    "keywords": [
+      "Löffel",
+      "Besteck"
+    ]
+  },
+  "1F945": {
+    "tts": "Tor",
+    "keywords": [
+      "Tor",
+      "Sport"
+    ]
+  },
+  "1F947": {
+    "tts": "Medaille 1. Platz",
+    "keywords": [
+      "Erster",
+      "Goldmedaille"
+    ]
+  },
+  "1F948": {
+    "tts": "Medaille 2. Platz",
+    "keywords": [
+      "Zweiter",
+      "Silbermedaille"
+    ]
+  },
+  "1F949": {
+    "tts": "Medaille 3. Platz",
+    "keywords": [
+      "Dritter",
+      "Bronzemedaille"
+    ]
+  },
+  "1F94A": {
+    "tts": "Boxhandschuh",
+    "keywords": [
+      "Boxen",
+      "Handschuh",
+      "Sport"
+    ]
+  },
+  "1F94B": {
+    "tts": "Kampfsportanzug",
+    "keywords": [
+      "Judo",
+      "Karate",
+      "Taekwondo",
+      "Kampfsport",
+      "Kampfkunst"
+    ]
+  },
+  "1F950": {
+    "tts": "Croissant",
+    "keywords": [
+      "Corissant",
+      "Frühstück",
+      "französisch"
+    ]
+  },
+  "1F951": {
+    "tts": "Avocado",
+    "keywords": [
+      "Avocado",
+      "Frucht"
+    ]
+  },
+  "1F952": {
+    "tts": "Gurke",
+    "keywords": [
+      "Gurke",
+      "Gemüse",
+      "Essen"
+    ]
+  },
+  "1F953": {
+    "tts": "Speckstreifen",
+    "keywords": [
+      "Speck",
+      "Frühstücksspeck",
+      "Essen"
+    ]
+  },
+  "1F954": {
+    "tts": "Kartoffel",
+    "keywords": [
+      "Kartoffel",
+      "Essen"
+    ]
+  },
+  "1F955": {
+    "tts": "Mohrrübe",
+    "keywords": [
+      "Mohrrübe",
+      "Möhre",
+      "Karotte",
+      "Gemüse"
+    ]
+  },
+  "1F956": {
+    "tts": "Baguette",
+    "keywords": [
+      "Baguette",
+      "Frühstück",
+      "französisch"
+    ]
+  },
+  "1F957": {
+    "tts": "Salat",
+    "keywords": [
+      "Salat",
+      "Essen"
+    ]
+  },
+  "1F958": {
+    "tts": "Pfannengericht",
+    "keywords": [
+      "Paella",
+      "Reispfanne",
+      "Essen"
+    ]
+  },
+  "1F959": {
+    "tts": "Döner",
+    "keywords": [
+      "Döner",
+      "Döner Kebab",
+      "Falafel",
+      "Wrap"
+    ]
+  },
+  "1F95A": {
+    "tts": "Ei",
+    "keywords": [
+      "Ei",
+      "Frühstücksei",
+      "Frühstück"
+    ]
+  },
+  "1F95B": {
+    "tts": "Glas Milch",
+    "keywords": [
+      "Glas",
+      "Milch",
+      "Getränk"
+    ]
+  },
+  "1F95C": {
+    "tts": "Erdnuss",
+    "keywords": [
+      "Erdnuss",
+      "Essen"
+    ]
+  },
+  "1F95D": {
+    "tts": "Kiwi",
+    "keywords": [
+      "Kiwi",
+      "Frucht",
+      "Obst"
+    ]
+  },
+  "1F95E": {
+    "tts": "Pfannkuchen",
+    "keywords": [
+      "Pfannkuchen",
+      "Eierpfannkuchen",
+      "Essen"
+    ]
+  },
+  "1F985": {
+    "tts": "Adler",
+    "keywords": [
+      "Adler",
+      "Vogel"
+    ]
+  },
+  "1F986": {
+    "tts": "Ente",
+    "keywords": [
+      "Ente",
+      "Vogel"
+    ]
+  },
+  "1F987": {
+    "tts": "Fledermaus",
+    "keywords": [
+      "Fledermaus",
+      "Vampir",
+      "Tier"
+    ]
+  },
+  "1F988": {
+    "tts": "Haifisch",
+    "keywords": [
+      "Hai",
+      "Haifisch"
+    ]
+  },
+  "1F989": {
+    "tts": "Eule",
+    "keywords": [
+      "Eule",
+      "Vogel",
+      "weise"
+    ]
+  },
+  "1F98A": {
+    "tts": "Fuchs",
+    "keywords": [
+      "Fuchs",
+      "Gesicht",
+      "Tier"
+    ]
+  },
+  "1F98B": {
+    "tts": "Schmetterling",
+    "keywords": [
+      "Schmetterling",
+      "schön"
+    ]
+  },
+  "1F98C": {
+    "tts": "Hirsch",
+    "keywords": [
+      "Hirsch",
+      "Gesicht",
+      "Tier"
+    ]
+  },
+  "1F98D": {
+    "tts": "Gorilla",
+    "keywords": [
+      "Gorilla",
+      "Affe",
+      "Gesicht",
+      "Tier"
+    ]
+  },
+  "1F98E": {
+    "tts": "Eidechse",
+    "keywords": [
+      "Eidechse",
+      "Reptil"
+    ]
+  },
+  "1F98F": {
+    "tts": "Nashorn",
+    "keywords": [
+      "Nashorn",
+      "Rhinozeros",
+      "Tier"
+    ]
+  },
+  "1F990": {
+    "tts": "Garnele",
+    "keywords": [
+      "Garnele",
+      "Krustentier",
+      "Gourmet"
+    ]
+  },
+  "1F991": {
+    "tts": "Tintenfisch",
+    "keywords": [
+      "Tintenfisch",
+      "Kalmar"
     ]
   },
   "1F600": {
@@ -1172,10 +1874,269 @@
       "Gesicht"
     ]
   },
+  "1F468 200D 2695": {
+    "tts": "Arzt",
+    "keywords": [
+      "Arzt",
+      "Doktor",
+      "Arztkittel"
+    ]
+  },
+  "1F468 200D 1F393": {
+    "tts": "Student",
+    "keywords": [
+      "Student",
+      "Absolvent",
+      "Doktorhut",
+      "Uni"
+    ]
+  },
+  "1F468 200D 1F33E": {
+    "tts": "Bauer",
+    "keywords": [
+      "Bauer",
+      "Landwirt",
+      "Ähre"
+    ]
+  },
+  "1F468 200D 1F373": {
+    "tts": "Koch",
+    "keywords": [
+      "Koch",
+      "Kochen"
+    ]
+  },
+  "1F468 200D 1F3EB": {
+    "tts": "Lehrer",
+    "keywords": [
+      "Lehrer",
+      "Dozent",
+      "Professor"
+    ]
+  },
+  "1F468 200D 1F3ED": {
+    "tts": "Fabrikarbeiter",
+    "keywords": [
+      "Fabrikarbeiter",
+      "Fabrik"
+    ]
+  },
+  "1F468 200D 1F3A8": {
+    "tts": "Künstler",
+    "keywords": [
+      "Maler",
+      "Künstler",
+      "Farbpalette",
+      "Mann"
+    ]
+  },
+  "1F468 200D 1F692": {
+    "tts": "Feuerwehrmann",
+    "keywords": [
+      "Feuerwehrmann",
+      "Feuerwehrhelm",
+      "Mann"
+    ]
+  },
+  "1F468 200D 2708": {
+    "tts": "Pilot",
+    "keywords": [
+      "Pilot",
+      "Flugzeug",
+      "Mann"
+    ]
+  },
+  "1F468 200D 1F680": {
+    "tts": "Astronaut",
+    "keywords": [
+      "Astronaut",
+      "Raumfahrt",
+      "Weltraum",
+      "Mann"
+    ]
+  },
+  "1F468 200D 1F3A4": {
+    "tts": "Sänger",
+    "keywords": [
+      "Sänger",
+      "Mikrofon",
+      "Popstar",
+      "Mann"
+    ]
+  },
+  "1F468 200D 1F4BB": {
+    "tts": "IT-Experte",
+    "keywords": [
+      "Entwickler",
+      "Computer",
+      "Bildschirm"
+    ]
+  },
+  "1F468 200D 1F52C": {
+    "tts": "Forscher",
+    "keywords": [
+      "Forscher",
+      "Wissenschaftler",
+      "Labor"
+    ]
+  },
+  "1F468 200D 1F4BC": {
+    "tts": "Büroangestellter",
+    "keywords": [
+      "Büro",
+      "Manager",
+      "Angestellter"
+    ]
+  },
+  "1F468 200D 1F527": {
+    "tts": "Handwerker",
+    "keywords": [
+      "Handwerker",
+      "Elektriker",
+      "Klempner"
+    ]
+  },
+  "1F468 200D 2696": {
+    "tts": "Richter",
+    "keywords": [
+      "Richter",
+      "Gerchtigkeit",
+      "Recht"
+    ]
+  },
   "1F469": {
     "tts": "Frau",
     "keywords": [
       "Gesicht"
+    ]
+  },
+  "1F469 200D 2695": {
+    "tts": "Ärztin",
+    "keywords": [
+      "Ärztin",
+      "Arztkittel"
+    ]
+  },
+  "1F469 200D 1F393": {
+    "tts": "Studentin",
+    "keywords": [
+      "Studentin",
+      "Absolventin",
+      "Doktorhut",
+      "Uni"
+    ]
+  },
+  "1F469 200D 1F33E": {
+    "tts": "Bäuerin",
+    "keywords": [
+      "Bäuerin",
+      "Landwirtin",
+      "Ähre"
+    ]
+  },
+  "1F469 200D 1F373": {
+    "tts": "Köchin",
+    "keywords": [
+      "Köchin",
+      "kochen"
+    ]
+  },
+  "1F469 200D 1F3EB": {
+    "tts": "Lehrerin",
+    "keywords": [
+      "Lehrerin",
+      "Dozentin",
+      "Professorin"
+    ]
+  },
+  "1F469 200D 1F3ED": {
+    "tts": "Fabrikarbeiterin",
+    "keywords": [
+      "Fabrikarbeiterin",
+      "Fabrik"
+    ]
+  },
+  "1F469 200D 1F3A8": {
+    "tts": "Künstlerin",
+    "keywords": [
+      "Malerin",
+      "Künstlerin",
+      "Farbpalette",
+      "Frau"
+    ]
+  },
+  "1F469 200D 1F692": {
+    "tts": "Feuerwehrfrau",
+    "keywords": [
+      "Feuerwehrfrau",
+      "Feuerwehrhelm",
+      "Frau"
+    ]
+  },
+  "1F469 200D 2708": {
+    "tts": "Pilotin",
+    "keywords": [
+      "Pilotin",
+      "Flugzeug",
+      "Frau"
+    ]
+  },
+  "1F469 200D 1F680": {
+    "tts": "Astronautin",
+    "keywords": [
+      "Astronautin",
+      "Raumfahrt",
+      "Weltraum",
+      "Frau"
+    ]
+  },
+  "1F469 200D 1F3A4": {
+    "tts": "Sängerin",
+    "keywords": [
+      "Sängerin",
+      "Mikrofon",
+      "Popstar",
+      "Frau"
+    ]
+  },
+  "1F469 200D 1F4BB": {
+    "tts": "IT-Expertin",
+    "keywords": [
+      "Entwickler",
+      "Computer",
+      "Bildschirm"
+    ]
+  },
+  "1F469 200D 1F52C": {
+    "tts": "Forscherin",
+    "keywords": [
+      "Forscherin",
+      "Wissenschaftlerin",
+      "Labor"
+    ]
+  },
+  "1F469 200D 1F4BC": {
+    "tts": "Büroangestellte",
+    "keywords": [
+      "Büro",
+      "Managerin",
+      "Angestellte"
+    ]
+  },
+  "1F469 200D 1F527": {
+    "tts": "Handwerkerin",
+    "keywords": [
+      "Handwerkerin",
+      "Elektrikerin",
+      "Klempnerin"
+    ]
+  },
+  "1F469 200D 2696": {
+    "tts": "Richterin",
+    "keywords": [
+      "Richterin",
+      "Gerechtigkeit",
+      "Recht"
     ]
   },
   "1F474": {
@@ -1208,11 +2169,45 @@
       "Gesicht"
     ]
   },
+  "1F471 200D 2640": {
+    "tts": "blonde Frau",
+    "keywords": [
+      "Frau",
+      "Gesicht",
+      "blond",
+      "Haar"
+    ]
+  },
+  "1F471 200D 2642": {
+    "tts": "blonder Mann",
+    "keywords": [
+      "Mann",
+      "Gesicht",
+      "blond",
+      "Haar"
+    ]
+  },
   "1F46E": {
-    "tts": "Polizist",
+    "tts": "Polizist(in)",
     "keywords": [
       "Polizei",
       "Gesicht"
+    ]
+  },
+  "1F46E 200D 2640": {
+    "tts": "Polizistin",
+    "keywords": [
+      "Polizistin",
+      "Polizei",
+      "Frau"
+    ]
+  },
+  "1F46E 200D 2642": {
+    "tts": "Polizist",
+    "keywords": [
+      "Polizist",
+      "Polizei",
+      "Mann"
     ]
   },
   "1F472": {
@@ -1225,18 +2220,51 @@
     ]
   },
   "1F473": {
-    "tts": "Mann mit Turban",
+    "tts": "Mensch mit Turban",
     "keywords": [
       "Turban",
       "Gesicht"
     ]
   },
+  "1F473 200D 2640": {
+    "tts": "Frau mit Turban",
+    "keywords": [
+      "Frau",
+      "Gesicht",
+      "Turban"
+    ]
+  },
+  "1F473 200D 2642": {
+    "tts": "Mann mit Turban",
+    "keywords": [
+      "Mann",
+      "Gesicht",
+      "Turban"
+    ]
+  },
   "1F477": {
-    "tts": "Bauarbeiter mit Helm",
+    "tts": "Bauarbeiter(in) mit Helm",
     "keywords": [
       "Helm",
       "Bauarbeiter",
       "Gesicht"
+    ]
+  },
+  "1F477 200D 2640": {
+    "tts": "Bauarbeiterin",
+    "keywords": [
+      "Bauarbeiterin",
+      "Helm",
+      "Baustelle",
+      "Mann"
+    ]
+  },
+  "1F477 200D 2642": {
+    "tts": "Bauarbeiter",
+    "keywords": [
+      "Bauarbeiter",
+      "Helm",
+      "Baustelle"
     ]
   },
   "26D1": {
@@ -1256,17 +2284,51 @@
     ]
   },
   "1F482": {
-    "tts": "Englischer Wachmann",
+    "tts": "Wächter(in)",
     "keywords": [
       "Bärenfellmütze",
       "Buckingham Palace",
       "Gesicht"
     ]
   },
+  "1F482 200D 2640": {
+    "tts": "Wächterin",
+    "keywords": [
+      "Wächterin",
+      "Fellmütze",
+      "Buckingham Palace",
+      "Frau"
+    ]
+  },
+  "1F482 200D 2642": {
+    "tts": "Wächter",
+    "keywords": [
+      "Wächter",
+      "Fellmütze",
+      "Buckingham Palace",
+      "Mann"
+    ]
+  },
   "1F575": {
-    "tts": "Detektiv",
+    "tts": "Detektiv(in)",
     "keywords": [
       "Spion"
+    ]
+  },
+  "1F575 200D 2640": {
+    "tts": "Detektivin",
+    "keywords": [
+      "Detektivin",
+      "Spionin",
+      "Frau"
+    ]
+  },
+  "1F575 200D 2642": {
+    "tts": "Detektiv",
+    "keywords": [
+      "Detektiv",
+      "Spion",
+      "Mann"
     ]
   },
   "1F385": {
@@ -1283,6 +2345,32 @@
       "Gesicht"
     ]
   },
+  "1F46F": {
+    "tts": "Leute mit Hasenohren",
+    "keywords": [
+      "Bunnys",
+      "Hasenohren",
+      "Leute"
+    ]
+  },
+  "1F46F 200D 2640": {
+    "tts": "Frauen mit Hasenohren",
+    "keywords": [
+      "Bunnys",
+      "Frauen",
+      "Hasenohren",
+      "Party"
+    ]
+  },
+  "1F46F 200D 2642": {
+    "tts": "Männer mit Hasenohren",
+    "keywords": [
+      "Bunnys",
+      "Männer",
+      "Hasenohren",
+      "Party"
+    ]
+  },
   "1F486": {
     "tts": "Kopfmassage",
     "keywords": [
@@ -1290,11 +2378,43 @@
       "Salon"
     ]
   },
+  "1F486 200D 2640": {
+    "tts": "Frau, die eine Kopfmassage bekommt",
+    "keywords": [
+      "Frau",
+      "Kopfmassage"
+    ]
+  },
+  "1F486 200D 2642": {
+    "tts": "Mann, der eine Kopfmassage bekommt",
+    "keywords": [
+      "Mann",
+      "Kopfmassage"
+    ]
+  },
   "1F487": {
-    "tts": "Haare schneiden",
+    "tts": "Mensch beim Haareschneiden",
     "keywords": [
       "Frisur",
       "Friseur"
+    ]
+  },
+  "1F487 200D 2640": {
+    "tts": "Frau, der die Haare geschnitten werden",
+    "keywords": [
+      "Frau",
+      "Haarschnitt",
+      "Friseur",
+      "Schere"
+    ]
+  },
+  "1F487 200D 2642": {
+    "tts": "Mann, dem die Haare geschnitten werden",
+    "keywords": [
+      "Mann",
+      "Haarschnitt",
+      "Friseur",
+      "Schere"
     ]
   },
   "1F470": {
@@ -1307,42 +2427,138 @@
     ]
   },
   "1F64D": {
-    "tts": "Stirnrunzelndes Frauengesicht",
+    "tts": "Stirnrunzelndes Gesicht",
     "keywords": [
+      "Gesicht"
+    ]
+  },
+  "1F64D 200D 2640": {
+    "tts": "stirnrunzelnde Frau",
+    "keywords": [
+      "Frau",
+      "Stirn runzeln",
+      "Gesicht"
+    ]
+  },
+  "1F64D 200D 2642": {
+    "tts": "stirnrunzelnder Mann",
+    "keywords": [
+      "Mann",
+      "Stirn runzeln",
       "Gesicht"
     ]
   },
   "1F64E": {
-    "tts": "Schmollendes Frauengesicht",
+    "tts": "Schmollendes Gesicht",
     "keywords": [
       "Gesicht"
     ]
   },
+  "1F64E 200D 2640": {
+    "tts": "schmollende Frau",
+    "keywords": [
+      "Frau",
+      "schmollen",
+      "Gesicht"
+    ]
+  },
+  "1F64E 200D 2642": {
+    "tts": "schmollender Mann",
+    "keywords": [
+      "Mann",
+      "schmollen",
+      "Gesicht"
+    ]
+  },
   "1F645": {
-    "tts": "Frau mit gekreuzten Armen",
+    "tts": "Mensch mit gekreuzten Armen",
     "keywords": [
       "verboten",
       "x"
     ]
   },
+  "1F645 200D 2640": {
+    "tts": "Frau mit überkreuzten Armen",
+    "keywords": [
+      "Frau",
+      "Gesicht",
+      "Arme"
+    ]
+  },
+  "1F645 200D 2642": {
+    "tts": "Mann mit überkreuzten Armen",
+    "keywords": [
+      "Mann",
+      "Gesicht",
+      "Arme"
+    ]
+  },
   "1F646": {
-    "tts": "Frau mit Händen auf dem Kopf",
+    "tts": "Mensch mit Händen über dem Kopf",
     "keywords": [
       "alles in Ordnung",
       "o"
     ]
   },
+  "1F646 200D 2640": {
+    "tts": "Frau mit Händen auf dem Kopf",
+    "keywords": [
+      "Frau",
+      "Gesicht",
+      "Arme"
+    ]
+  },
+  "1F646 200D 2642": {
+    "tts": "Mann mit Händen auf dem Kopf",
+    "keywords": [
+      "Mann",
+      "Gesicht",
+      "Arme"
+    ]
+  },
   "1F481": {
-    "tts": "Infoschalter-Mitarbeiterin",
+    "tts": "Infoschalter-Mitarbeiter(in)",
     "keywords": [
       "Hilfe",
       "Informationen",
       "Gesicht"
     ]
   },
-  "1F64B": {
-    "tts": "Lachende Frau mit erhobenem Arm",
+  "1F481 200D 2640": {
+    "tts": "Infoschalter-Mitarbeiterin",
     "keywords": [
+      "Frau",
+      "Auskunft",
+      "Informationen"
+    ]
+  },
+  "1F481 200D 2642": {
+    "tts": "Infoschalter-Mitarbeiter",
+    "keywords": [
+      "Mann",
+      "Auskunft",
+      "Informationen"
+    ]
+  },
+  "1F64B": {
+    "tts": "Mensch mit erhobenem Arm",
+    "keywords": [
+      "Siegerpose"
+    ]
+  },
+  "1F64B 200D 2640": {
+    "tts": "Frau mit erhobenem Arm",
+    "keywords": [
+      "Frau",
+      "Geste",
+      "Siegerpose"
+    ]
+  },
+  "1F64B 200D 2642": {
+    "tts": "Mann mit erhobenem Arm",
+    "keywords": [
+      "Mann",
+      "Geste",
       "Siegerpose"
     ]
   },
@@ -1352,6 +2568,22 @@
       "Entschuldigung",
       "verbeugen",
       "Geste"
+    ]
+  },
+  "1F647 200D 2640": {
+    "tts": "sich verbeugende Frau",
+    "keywords": [
+      "Frau",
+      "verbeugen",
+      "Demut"
+    ]
+  },
+  "1F647 200D 2642": {
+    "tts": "sich verbeugender Mann",
+    "keywords": [
+      "Mann",
+      "verbeugen",
+      "Demut"
     ]
   },
   "1F64C": {
@@ -1392,27 +2624,55 @@
     ]
   },
   "1F6B6": {
-    "tts": "Fußgänger",
+    "tts": "Fußgänger(in)",
     "keywords": [
       "wandern",
       "gehen",
       "gehend"
     ]
   },
+  "1F6B6 200D 2640": {
+    "tts": "Fußgängerin",
+    "keywords": [
+      "Frau",
+      "Spaziergang",
+      "Fußgängerin",
+      "gehen"
+    ]
+  },
+  "1F6B6 200D 2642": {
+    "tts": "Fußgänger",
+    "keywords": [
+      "Mann",
+      "Spaziergang",
+      "Fußgänger",
+      "gehen"
+    ]
+  },
   "1F3C3": {
-    "tts": "Läufer",
+    "tts": "Läufer(in)",
     "keywords": [
       "Laufen",
       "Marathon",
       "Sport"
     ]
   },
-  "1F46F": {
-    "tts": "Frauen mit Hasenohren",
+  "1F3C3 200D 2640": {
+    "tts": "Joggerin",
     "keywords": [
-      "Bunnys",
-      "Hasenohren",
-      "Frauen"
+      "Joggerin",
+      "joggen",
+      "Marathon",
+      "laufen"
+    ]
+  },
+  "1F3C3 200D 2642": {
+    "tts": "Jogger",
+    "keywords": [
+      "Jogger",
+      "joggen",
+      "Marathon",
+      "laufen"
     ]
   },
   "1F483": {
@@ -1481,7 +2741,7 @@
     ]
   },
   "1F3FB": {
-    "tts": "Hauttyp 1-2",
+    "tts": "Hauttyp 1–2",
     "keywords": [
       "Hautfarbe"
     ]
@@ -1581,7 +2841,7 @@
       "Hand",
       "Spock",
       "vulkanisch",
-      "Vulkanier"
+      "Vulkanier(in)"
     ]
   },
   "1F918": {
@@ -1602,9 +2862,22 @@
       "gespreizt"
     ]
   },
+  "270A": {
+    "tts": "Erhobene Faust",
+    "keywords": [
+      "Faust"
+    ]
+  },
   "270B": {
     "tts": "Erhobene Hand",
     "keywords": [
+      "Hand"
+    ]
+  },
+  "1F44A": {
+    "tts": "Geballte Faust",
+    "keywords": [
+      "Faust",
       "Hand"
     ]
   },
@@ -1631,19 +2904,6 @@
       "Hand",
       "Daumen",
       "nach unten"
-    ]
-  },
-  "270A": {
-    "tts": "Erhobene Faust",
-    "keywords": [
-      "Faust"
-    ]
-  },
-  "1F44A": {
-    "tts": "Geballte Faust",
-    "keywords": [
-      "Faust",
-      "Hand"
     ]
   },
   "1F44B": {
@@ -1714,6 +2974,15 @@
     "tts": "Auge",
     "keywords": [
       "Körperteil"
+    ]
+  },
+  "1F441 200D 1F5E8": {
+    "tts": "Auge in Sprechblase",
+    "keywords": [
+      "Dialog",
+      "reden",
+      "sprechen",
+      "Auge"
     ]
   },
   "1F445": {
@@ -1917,6 +3186,13 @@
     "keywords": [
       "Nachdenken",
       "Comic"
+    ]
+  },
+  "1F573": {
+    "tts": "Loch",
+    "keywords": [
+      "Loch",
+      "schwarz"
     ]
   },
   "1F453": {
@@ -2413,6 +3689,13 @@
       "Tatzen",
       "Abdruck",
       "Tier"
+    ]
+  },
+  "1F983": {
+    "tts": "Truthahn",
+    "keywords": [
+      "Truthahn",
+      "Geflügel"
     ]
   },
   "1F414": {
@@ -3007,6 +4290,13 @@
       "mexikanisch"
     ]
   },
+  "1F37F": {
+    "tts": "Popcorn",
+    "keywords": [
+      "Popcorn",
+      "Snack"
+    ]
+  },
   "1F372": {
     "tts": "Topf mit Essen",
     "keywords": [
@@ -3348,6 +4638,13 @@
       "Schnee"
     ]
   },
+  "26F0": {
+    "tts": "Berg",
+    "keywords": [
+      "Berg",
+      "Gebirge"
+    ]
+  },
   "1F30B": {
     "tts": "Vulkanausbruch",
     "keywords": [
@@ -3378,6 +4675,12 @@
       "Meer"
     ]
   },
+  "1F3DC": {
+    "tts": "Wüste",
+    "keywords": [
+      "Wüste"
+    ]
+  },
   "1F3DD": {
     "tts": "Einsame Insel",
     "keywords": [
@@ -3392,6 +4695,13 @@
     "tts": "Nationalpark",
     "keywords": [
       "Park"
+    ]
+  },
+  "1F3DF": {
+    "tts": "Stadion",
+    "keywords": [
+      "Stadion",
+      "Arena"
     ]
   },
   "1F3DB": {
@@ -3950,6 +5260,13 @@
       "Automobil"
     ]
   },
+  "1F699": {
+    "tts": "Wohnmobil",
+    "keywords": [
+      "Wohnmobil",
+      "verreisen"
+    ]
+  },
   "1F69A": {
     "tts": "Lieferwagen",
     "keywords": [
@@ -3964,12 +5281,34 @@
       "LKW"
     ]
   },
+  "1F69C": {
+    "tts": "Traktor",
+    "keywords": [
+      "Traktor",
+      "Trecker",
+      "Landwirtschaft"
+    ]
+  },
+  "1F6B2": {
+    "tts": "Fahrrad",
+    "keywords": [
+      "Fahrrad",
+      "Rad"
+    ]
+  },
   "26FD": {
     "tts": "Tanksäule",
     "keywords": [
       "Tankstelle",
       "tanken",
       "Benzin"
+    ]
+  },
+  "1F6E3": {
+    "tts": "Autobahn",
+    "keywords": [
+      "Autobahn",
+      "Schnellstraße"
     ]
   },
   "1F6E4": {
@@ -4019,10 +5358,48 @@
       "Boot"
     ]
   },
+  "1F6A3 200D 2640": {
+    "tts": "Frau im Ruderboot",
+    "keywords": [
+      "rudern",
+      "Boot",
+      "Frau"
+    ]
+  },
+  "1F6A3 200D 2642": {
+    "tts": "Mann im Ruderboot",
+    "keywords": [
+      "rudern",
+      "Boot",
+      "Mann"
+    ]
+  },
   "1F6A4": {
     "tts": "Schnellboot",
     "keywords": [
       "Boot"
+    ]
+  },
+  "1F6F3": {
+    "tts": "Passagierschiff",
+    "keywords": [
+      "Passagierschiff",
+      "Schiff",
+      "Seereise"
+    ]
+  },
+  "26F4": {
+    "tts": "Fähre",
+    "keywords": [
+      "Fähre",
+      "Schiff"
+    ]
+  },
+  "1F6E5": {
+    "tts": "Motorboot",
+    "keywords": [
+      "Boot",
+      "Schiff"
     ]
   },
   "1F6A2": {
@@ -4059,6 +5436,20 @@
       "Sitz",
       "Flugzeug",
       "Zug"
+    ]
+  },
+  "1F681": {
+    "tts": "Hubschrauber",
+    "keywords": [
+      "Hubschrauber",
+      "Helikopter"
+    ]
+  },
+  "1F69F": {
+    "tts": "Schwebebahn",
+    "keywords": [
+      "Schwebebahn",
+      "Hängebahn"
     ]
   },
   "1F6A0": {
@@ -4104,6 +5495,15 @@
     "keywords": [
       "Bett",
       "schlafen"
+    ]
+  },
+  "1F6CF": {
+    "tts": "Bett",
+    "keywords": [
+      "Bett",
+      "Hotel",
+      "schlafen",
+      "Übernachtung"
     ]
   },
   "1F6CB": {
@@ -4436,6 +5836,14 @@
       "Gesicht"
     ]
   },
+  "1F321": {
+    "tts": "Thermometer",
+    "keywords": [
+      "Thermometer",
+      "Wetter",
+      "Temperatur"
+    ]
+  },
   "1F31D": {
     "tts": "Vollmond mit Gesicht",
     "keywords": [
@@ -4450,10 +5858,23 @@
       "Gesicht"
     ]
   },
+  "2B50": {
+    "tts": "gelber Stern",
+    "keywords": [
+      "Stern"
+    ]
+  },
   "1F31F": {
     "tts": "Funkelnder Stern",
     "keywords": [
       "Stern"
+    ]
+  },
+  "1F320": {
+    "tts": "Sternschnuppe",
+    "keywords": [
+      "Sternschnuppe",
+      "Himmel"
     ]
   },
   "26C5": {
@@ -4581,6 +6002,15 @@
       "Gefahr",
       "Blitz",
       "Hochspannung"
+    ]
+  },
+  "26C4": {
+    "tts": "Schneemann ohne Schneeflocken",
+    "keywords": [
+      "Schneemann",
+      "kalt",
+      "Winter",
+      "Schnee"
     ]
   },
   "1F525": {
@@ -4753,6 +6183,14 @@
       "Unterhaltung"
     ]
   },
+  "1F3F7": {
+    "tts": "Etikett",
+    "keywords": [
+      "Etikett",
+      "Label",
+      "Marke"
+    ]
+  },
   "26BD": {
     "tts": "Fußball",
     "keywords": [
@@ -4820,9 +6258,29 @@
     ]
   },
   "1F3CC": {
-    "tts": "Golfspieler",
+    "tts": "Golfspieler(in)",
     "keywords": [
       "Golf"
+    ]
+  },
+  "1F3CC 200D 2640": {
+    "tts": "Golferin",
+    "keywords": [
+      "Golferin",
+      "Golf",
+      "golfen",
+      "Golfspielerin",
+      "Frau"
+    ]
+  },
+  "1F3CC 200D 2642": {
+    "tts": "Golfer",
+    "keywords": [
+      "Golfer",
+      "Golf",
+      "golfen",
+      "Golfspieler",
+      "Mann"
     ]
   },
   "26F8": {
@@ -4854,7 +6312,7 @@
     ]
   },
   "26F7": {
-    "tts": "Skifahrer",
+    "tts": "Skifahrer(in)",
     "keywords": [
       "Ski",
       "Schnee",
@@ -4862,7 +6320,7 @@
     ]
   },
   "1F3C2": {
-    "tts": "Snowboarder",
+    "tts": "Snowboarder(in)",
     "keywords": [
       "Snowboarden",
       "Snowboard",
@@ -4870,11 +6328,27 @@
     ]
   },
   "1F3C4": {
-    "tts": "Surfer",
+    "tts": "Surfer(in)",
     "keywords": [
       "Surfen",
       "Sport",
       "Meer"
+    ]
+  },
+  "1F3C4 200D 2640": {
+    "tts": "Surferin",
+    "keywords": [
+      "Surferin",
+      "Wellenreiten",
+      "Frau"
+    ]
+  },
+  "1F3C4 200D 2642": {
+    "tts": "Surfer",
+    "keywords": [
+      "Surfer",
+      "Wellenreiten",
+      "Man"
     ]
   },
   "1F3C7": {
@@ -4885,12 +6359,30 @@
     ]
   },
   "1F3CA": {
-    "tts": "Schwimmer",
+    "tts": "Schwimmer(in)",
     "keywords": [
       "Kraulen",
       "Schwimmen",
       "Sport",
       "Wasser"
+    ]
+  },
+  "1F3CA 200D 2640": {
+    "tts": "Schwimmerin",
+    "keywords": [
+      "kraulen",
+      "schwimmen",
+      "Schwimmbad",
+      "Pool"
+    ]
+  },
+  "1F3CA 200D 2642": {
+    "tts": "Schwimmer",
+    "keywords": [
+      "kraulen",
+      "schwimmen",
+      "Schwimmbad",
+      "Pool"
     ]
   },
   "26F9": {
@@ -4901,29 +6393,100 @@
       "Basketball"
     ]
   },
+  "26F9 200D 2640": {
+    "tts": "Frau mit Ball",
+    "keywords": [
+      "Frau",
+      "Ballsport",
+      "Handball"
+    ]
+  },
+  "26F9 200D 2642": {
+    "tts": "Mann mit Ball",
+    "keywords": [
+      "Mann",
+      "Ballsport",
+      "Handball"
+    ]
+  },
   "1F3CB": {
-    "tts": "Gewichtheber",
+    "tts": "Gewichtheber(in)",
     "keywords": [
       "Gewicht"
     ]
   },
+  "1F3CB 200D 2640": {
+    "tts": "Gewichtheberin",
+    "keywords": [
+      "Frau",
+      "Gewicht heben"
+    ]
+  },
+  "1F3CB 200D 2642": {
+    "tts": "Gewichtheber",
+    "keywords": [
+      "Mann",
+      "Gewicht heben"
+    ]
+  },
   "1F6B4": {
-    "tts": "Fahrradfahrer",
+    "tts": "Fahrradfahrer(in)",
     "keywords": [
       "Radfahrer",
       "Radfahren"
     ]
   },
+  "1F6B4 200D 2640": {
+    "tts": "Fahradfahrerin",
+    "keywords": [
+      "Fahrrad",
+      "Rad",
+      "Frau"
+    ]
+  },
+  "1F6B4 200D 2642": {
+    "tts": "Fahrradfaher",
+    "keywords": [
+      "Fahrrad",
+      "Rad",
+      "Mann"
+    ]
+  },
   "1F6B5": {
-    "tts": "Mountainbiker",
+    "tts": "Mountainbiker(in)",
     "keywords": [
       "Radfahren"
+    ]
+  },
+  "1F6B5 200D 2640": {
+    "tts": "Frau mit Mountainbike",
+    "keywords": [
+      "Frau",
+      "Rad",
+      "Mountainbike",
+      "Fahrrad"
+    ]
+  },
+  "1F6B5 200D 2642": {
+    "tts": "Mann mit Mountainbike",
+    "keywords": [
+      "Mann",
+      "Rad",
+      "Mountainbike",
+      "Fahrrad"
     ]
   },
   "1F3CE": {
     "tts": "Rennauto",
     "keywords": [
       "Autorennen"
+    ]
+  },
+  "1F3CD": {
+    "tts": "Motorrad",
+    "keywords": [
+      "Motorrad",
+      "Motorrennen"
     ]
   },
   "1F3C5": {
@@ -5127,6 +6690,13 @@
       "Musik"
     ]
   },
+  "1F39B": {
+    "tts": "Drehregler",
+    "keywords": [
+      "Bedienknöpfe",
+      "Stellknöpfe"
+    ]
+  },
   "1F3A4": {
     "tts": "Mikrofon",
     "keywords": [
@@ -5206,12 +6776,25 @@
       "Mobiltelefon"
     ]
   },
+  "260E": {
+    "tts": "Telefon",
+    "keywords": [
+      "Telefon",
+      "Festnetz"
+    ]
+  },
   "1F4DE": {
     "tts": "Telefonhörer",
     "keywords": [
       "Telefon",
       "Hörer",
       "anrufen"
+    ]
+  },
+  "1F4DF": {
+    "tts": "Pager",
+    "keywords": [
+      "Pager"
     ]
   },
   "1F4E0": {
@@ -5362,6 +6945,19 @@
       "Suche"
     ]
   },
+  "1F52C": {
+    "tts": "Mikroskop",
+    "keywords": [
+      "Mikroskop",
+      "Labor"
+    ]
+  },
+  "1F52D": {
+    "tts": "Teleskop",
+    "keywords": [
+      "Teleskop"
+    ]
+  },
   "1F4E1": {
     "tts": "Satellitenschüssel",
     "keywords": [
@@ -5496,6 +7092,13 @@
     "tts": "Pagemarker",
     "keywords": [
       "Notizen"
+    ]
+  },
+  "1F516": {
+    "tts": "Lesezeichen",
+    "keywords": [
+      "Lesezeichen",
+      "Lesen"
     ]
   },
   "1F4B0": {
@@ -5648,10 +7251,32 @@
       "Wahlzettel"
     ]
   },
+  "270F": {
+    "tts": "Bleistift",
+    "keywords": [
+      "Bleistift"
+    ]
+  },
+  "1F58B": {
+    "tts": "Füllhalter",
+    "keywords": [
+      "Füllhalter",
+      "Füller",
+      "Füllfedehalter"
+    ]
+  },
   "1F58A": {
     "tts": "Kugelschreiber",
     "keywords": [
       "Stift"
+    ]
+  },
+  "1F58C": {
+    "tts": "Pinsel",
+    "keywords": [
+      "Pinsel",
+      "malen",
+      "Kunst"
     ]
   },
   "1F58D": {
@@ -5688,6 +7313,13 @@
       "offen",
       "Dokument",
       "Ordner"
+    ]
+  },
+  "1F5C2": {
+    "tts": "Karteibahnen",
+    "keywords": [
+      "Büroausstattung",
+      "Karteikarten"
     ]
   },
   "1F4C5": {
@@ -5743,6 +7375,35 @@
       "Balken"
     ]
   },
+  "1F4CB": {
+    "tts": "Zwischenablage",
+    "keywords": [
+      "Zwischenablage",
+      "Klemmbrett",
+      "Clpboard"
+    ]
+  },
+  "1F4CC": {
+    "tts": "Reißzwecke",
+    "keywords": [
+      "Reißzwecke",
+      "anpinnen"
+    ]
+  },
+  "1F4CD": {
+    "tts": "runde Reißzwecke",
+    "keywords": [
+      "Reißzwecke",
+      "anpinnen",
+      "rund"
+    ]
+  },
+  "1F4CE": {
+    "tts": "Büroklammer",
+    "keywords": [
+      "Büroklammer"
+    ]
+  },
   "1F587": {
     "tts": "Verhakte Büroklammern",
     "keywords": [
@@ -5751,11 +7412,38 @@
       "verhakt"
     ]
   },
+  "1F4CF": {
+    "tts": "Lineal",
+    "keywords": [
+      "Lineal"
+    ]
+  },
   "1F4D0": {
     "tts": "Dreieckiges Lineal",
     "keywords": [
       "Geodreieck",
       "Lineal"
+    ]
+  },
+  "1F5C3": {
+    "tts": "Karteikasten",
+    "keywords": [
+      "Karteikasten",
+      "Büroausstattung"
+    ]
+  },
+  "1F5C4": {
+    "tts": "Aktenschrank",
+    "keywords": [
+      "Aktenschrank",
+      "Ablage",
+      "Archiv"
+    ]
+  },
+  "1F5D1": {
+    "tts": "Papierkorb",
+    "keywords": [
+      "Papierkorb"
     ]
   },
   "1F512": {
@@ -5848,6 +7536,13 @@
       "zwei Ringe"
     ]
   },
+  "26D3": {
+    "tts": "Ketten",
+    "keywords": [
+      "Kette",
+      "Eisen"
+    ]
+  },
   "1F489": {
     "tts": "Spritze",
     "keywords": [
@@ -5910,6 +7605,14 @@
       "wehen",
       "Fahne",
       "weiße Fahne"
+    ]
+  },
+  "1F3F3 200D 1F308": {
+    "tts": "Regenbogenfahne",
+    "keywords": [
+      "Fahne",
+      "bunt",
+      "Regenbogen"
     ]
   },
   "1F3F4": {
@@ -6256,6 +7959,14 @@
       "Islam"
     ]
   },
+  "262E": {
+    "tts": "Friedenszeichen",
+    "keywords": [
+      "Friedenszeichen",
+      "Friedenssymbol",
+      "Friedensbewegung"
+    ]
+  },
   "1F54E": {
     "tts": "Menora",
     "keywords": [
@@ -6325,12 +8036,25 @@
       "X"
     ]
   },
+  "27B0": {
+    "tts": "Schleife",
+    "keywords": [
+      "Schleife"
+    ]
+  },
   "27BF": {
     "tts": "Doppelschleife",
     "keywords": [
       "Schleife",
       "blau",
       "Rechteck"
+    ]
+  },
+  "303D": {
+    "tts": "Teilalternationszeichen",
+    "keywords": [
+      "Zeichensetzung",
+      "japanisch"
     ]
   },
   "1F4B1": {
@@ -6641,96 +8365,6 @@
     "tts": "Sternchen in blauem Quadrat",
     "keywords": [
       "Sternchen",
-      "blau",
-      "Quadrat"
-    ]
-  },
-  "0030 20E3": {
-    "tts": "Zahl 0 in blauem Quadrat",
-    "keywords": [
-      "0",
-      "Zahl",
-      "blau",
-      "Quadrat"
-    ]
-  },
-  "0031 20E3": {
-    "tts": "Zahl 1 in blauem Quadrat",
-    "keywords": [
-      "1",
-      "Zahl",
-      "blau",
-      "Quadrat"
-    ]
-  },
-  "0032 20E3": {
-    "tts": "Zahl 2 in blauem Quadrat",
-    "keywords": [
-      "2",
-      "Zahl",
-      "blau",
-      "Quadrat"
-    ]
-  },
-  "0033 20E3": {
-    "tts": "Zahl 3 in blauem Quadrat",
-    "keywords": [
-      "3",
-      "Zahl",
-      "blau",
-      "Quadrat"
-    ]
-  },
-  "0034 20E3": {
-    "tts": "Zahl 4 in blauem Quadrat",
-    "keywords": [
-      "4",
-      "Zahl",
-      "blau",
-      "Quadrat"
-    ]
-  },
-  "0035 20E3": {
-    "tts": "Zahl 5 in blauem Quadrat",
-    "keywords": [
-      "5",
-      "Zahl",
-      "blau",
-      "Quadrat"
-    ]
-  },
-  "0036 20E3": {
-    "tts": "Zahl 6 in blauem Quadrat",
-    "keywords": [
-      "6",
-      "Zahl",
-      "blau",
-      "Quadrat"
-    ]
-  },
-  "0037 20E3": {
-    "tts": "Zahl 7 in blauem Quadrat",
-    "keywords": [
-      "7",
-      "Zahl",
-      "blau",
-      "Quadrat"
-    ]
-  },
-  "0038 20E3": {
-    "tts": "Zahl 8 in blauem Quadrat",
-    "keywords": [
-      "8",
-      "Zahl",
-      "blau",
-      "Quadrat"
-    ]
-  },
-  "0039 20E3": {
-    "tts": "Zahl 9 in blauem Quadrat",
-    "keywords": [
-      "9",
-      "Zahl",
       "blau",
       "Quadrat"
     ]
@@ -7178,6 +8812,133 @@
       "blau",
       "Kreis",
       "Ball"
+    ]
+  },
+  "1F6D1": {
+    "tts": "Stoppschild",
+    "keywords": [
+      "Stopp",
+      "achteckig",
+      "Schild"
+    ]
+  },
+  "1F6D2": {
+    "tts": "Einkaufswagen",
+    "keywords": [
+      "Einkaufswagen",
+      "einkaufen"
+    ]
+  },
+  "1F6F4": {
+    "tts": "Tretroller",
+    "keywords": [
+      "Tretroller"
+    ]
+  },
+  "1F6F5": {
+    "tts": "Motorroller",
+    "keywords": [
+      "Motorroller",
+      "Roller",
+      "Vespa"
+    ]
+  },
+  "1F6F6": {
+    "tts": "Kanu",
+    "keywords": [
+      "Kanu",
+      "Boot",
+      "Wassersport"
+    ]
+  },
+  "0030 20E3": {
+    "tts": "Zahl 0 in blauem Quadrat",
+    "keywords": [
+      "0",
+      "Zahl",
+      "blau",
+      "Quadrat"
+    ]
+  },
+  "0031 20E3": {
+    "tts": "Zahl 1 in blauem Quadrat",
+    "keywords": [
+      "1",
+      "Zahl",
+      "blau",
+      "Quadrat"
+    ]
+  },
+  "0032 20E3": {
+    "tts": "Zahl 2 in blauem Quadrat",
+    "keywords": [
+      "2",
+      "Zahl",
+      "blau",
+      "Quadrat"
+    ]
+  },
+  "0033 20E3": {
+    "tts": "Zahl 3 in blauem Quadrat",
+    "keywords": [
+      "3",
+      "Zahl",
+      "blau",
+      "Quadrat"
+    ]
+  },
+  "0034 20E3": {
+    "tts": "Zahl 4 in blauem Quadrat",
+    "keywords": [
+      "4",
+      "Zahl",
+      "blau",
+      "Quadrat"
+    ]
+  },
+  "0035 20E3": {
+    "tts": "Zahl 5 in blauem Quadrat",
+    "keywords": [
+      "5",
+      "Zahl",
+      "blau",
+      "Quadrat"
+    ]
+  },
+  "0036 20E3": {
+    "tts": "Zahl 6 in blauem Quadrat",
+    "keywords": [
+      "6",
+      "Zahl",
+      "blau",
+      "Quadrat"
+    ]
+  },
+  "0037 20E3": {
+    "tts": "Zahl 7 in blauem Quadrat",
+    "keywords": [
+      "7",
+      "Zahl",
+      "blau",
+      "Quadrat"
+    ]
+  },
+  "0038 20E3": {
+    "tts": "Zahl 8 in blauem Quadrat",
+    "keywords": [
+      "8",
+      "Zahl",
+      "blau",
+      "Quadrat"
+    ]
+  },
+  "0039 20E3": {
+    "tts": "Zahl 9 in blauem Quadrat",
+    "keywords": [
+      "9",
+      "Zahl",
+      "blau",
+      "Quadrat"
     ]
   }
 }
