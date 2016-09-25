@@ -12,30 +12,31 @@ import buildEmojiZwjSequences from './specs/emoji-zwj-sequences';
 import buildCldrAnnotations from './specs/cldr-annotations';
 import scrapeEmojiList from './utils/emoji-list';
 
+import preset from './presets/unicode-9-emoji-4';
+
 process.on('uncaughtException', (err) => { throw err; });
 process.on('unhandledRejection', (err) => { throw err; });
 
 co(function* main() {
 	const unicodeData = yield buildUnicodeData({
-		url: 'http://www.unicode.org/Public/9.0.0/ucd/UnicodeData.txt',
+		url: preset.unicodeDataUrl,
 	});
 
 	const emojiSources = yield buildEmojiSources({
-		url: 'http://unicode.org/Public/9.0.0/ucd/EmojiSources.txt',
+		url: preset.emojiSourcesUrl,
 	});
 
 	const standardizedVariants = yield buildStandardizedVariants({
-		url: 'http://unicode.org/Public/9.0.0/ucd/StandardizedVariants.txt',
+		url: preset.standardizedVariantsUrl,
 	});
 
 	const emojiSequences = yield buildEmojiSequences({
-		url: 'http://www.unicode.org/Public/emoji/4.0/emoji-sequences.txt',
+		url: preset.emojiSequencesUrl,
 		getNameForCodepoint: unicodeData.getNameForCodepoint,
 		getVariationSequencesForCodepoint: standardizedVariants.getVariationSequencesForCodepoint,
 	});
-
 	const emojiData = yield buildEmojiData({
-		url: 'http://www.unicode.org/Public/emoji/4.0/emoji-data.txt',
+		url: preset.emojiDataUrl,
 		getNameForCodepoint: unicodeData.getNameForCodepoint,
 		getVariationSequencesForCodepoint: standardizedVariants.getVariationSequencesForCodepoint,
 		getCombinationsForCodepoint: emojiSequences.getCombinationsForCodepoint,
@@ -43,13 +44,13 @@ co(function* main() {
 	});
 
 	const emojiZwjSequences = yield buildEmojiZwjSequences({
-		url: 'http://www.unicode.org/Public/emoji/4.0/emoji-zwj-sequences.txt',
+		url: preset.emojiZwjSequencesUrl,
 		getNameForCodepoint: unicodeData.getNameForCodepoint,
 		getMetaForModifierName: emojiData.getMetaForModifierName,
 	});
 
 	const annotations = yield buildCldrAnnotations({
-		baseUrl: 'http://unicode.org/repos/cldr/tags/latest/common/annotations',
+		baseUrl: preset.cldrAnnotationsUrl,
 		languages: ['en', 'de'],
 	});
 
@@ -103,7 +104,7 @@ co(function* main() {
 	// Verify: check generated data files against unicode emoji list for completeness:
 
 	const emojiList = yield scrapeEmojiList({
-		url: 'http://unicode.org/emoji/charts-beta/emoji-list.html',
+		url: preset.emojiListUrl,
 	});
 
 	logUpdate('✓ verify');
