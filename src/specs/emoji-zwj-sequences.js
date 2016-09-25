@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 import parse from '../utils/parse';
 
 // emoji-zwj-sequences.txt provides Zero-Width-Joiner sequences.
-const defaultUrl = 'http://www.unicode.org/Public/emoji/4.0/emoji-zwj-sequences.txt';
+const defaultUrl = 'http://unicode.org/Public/emoji/4.0/emoji-zwj-sequences.txt';
 
 const zeroWidthJoiner = '200D';
 const anyVariationSelector = /FE0E|FE0F/g;

@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 import parse from '../utils/parse';
 
 // UnicodeData.txt provides code point names.
-const defaultUrl = 'http://www.unicode.org/Public/9.0.0/ucd/UnicodeData.txt';
+const defaultUrl = 'http://unicode.org/Public/9.0.0/ucd/UnicodeData.txt';
 
 // Transforms data to map each code point to a name, e.g.
 // {

@@ -4,7 +4,7 @@ import parse from '../utils/parse';
 
 // emoji-sequences.txt provides combining, flag and modifier sequences.
 // We use this only to get combining and flag sequences.
-const defaultUrl = 'http://www.unicode.org/Public/emoji/3.0/emoji-sequences.txt';
+const defaultUrl = 'http://unicode.org/Public/emoji/3.0/emoji-sequences.txt';
 
 // Combining marks can modify the appearance of a preceding
 // emoji variation sequence when used in a combining sequence.
