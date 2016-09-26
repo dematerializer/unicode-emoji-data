@@ -1,8 +1,10 @@
 import { internals } from '../unicode-data';
 
+const { defaultUrl, buildNameForCodepoint } = internals;
+
 describe('unicode-data', () => {
 	it('should use a reasonable default url', () => {
-		expect(internals.defaultUrl).to.equal('http://unicode.org/Public/9.0.0/ucd/UnicodeData.txt');
+		expect(defaultUrl).to.equal('http://unicode.org/Public/9.0.0/ucd/UnicodeData.txt');
 	});
 	it('should transform data to map each code point to a name', () => {
 		const data = [
@@ -13,7 +15,7 @@ describe('unicode-data', () => {
 			'1F600': 'GRINNING FACE',
 			'1F601': 'GRINNING FACE WITH SMILING EYES',
 		};
-		const nameForCodepoint = internals.buildNameForCodepoint(data);
+		const nameForCodepoint = buildNameForCodepoint(data);
 		expect(nameForCodepoint).to.deep.equal(expected);
 	});
 });
