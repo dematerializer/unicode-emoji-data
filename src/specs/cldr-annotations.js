@@ -44,7 +44,7 @@ function buildAnnotationForSequenceV30(data) {
 			extAnnotationForSeq[seqHex] = {
 				tts: extAnnotationForSeq[seqHex].tts,
 				keywords: extAnnotationForSeq[seqHex].keywords,
-			}
+			};
 		}
 		return extAnnotationForSeq;
 	}, {});
