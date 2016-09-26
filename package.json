@@ -8,7 +8,8 @@
   "scripts": {
     "start": "npm run build",
     "build": "node index.js",
-    "lint": "eslint --ignore-path .gitignore ."
+    "lint": "eslint --ignore-path .gitignore .",
+    "test": "mocha --compilers js:babel-core/register src/**/*.test.js"
   },
   "devDependencies": {
     "babel-eslint": "^6.1.2",
@@ -16,6 +17,7 @@
     "babel-preset-es2015": "^6.14.0",
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.14.0",
+    "chai": "^3.5.0",
     "cheerio": "^0.20.0",
     "co": "^4.6.0",
     "es6-promisify": "^4.1.0",
@@ -24,6 +26,7 @@
     "eslint-plugin-import": "^1.14.0",
     "left-pad": "^1.1.1",
     "log-update": "^1.0.2",
+    "mocha": "^3.0.2",
     "node-fetch": "^1.5.3",
     "punycode": "^2.0.0",
     "xml2js": "^0.4.17"
