@@ -9,7 +9,7 @@
     "start": "npm run build",
     "build": "node index.js",
     "lint": "eslint --ignore-path .gitignore .",
-    "test": "mocha --compilers js:babel-core/register src/**/*.test.js"
+    "test": "mocha --require ./test-env --compilers js:babel-core/register src/**/*.test.js"
   },
   "devDependencies": {
     "babel-eslint": "^6.1.2",

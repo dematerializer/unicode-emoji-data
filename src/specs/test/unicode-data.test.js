@@ -1,5 +1,3 @@
-import 'babel-polyfill';
-import { expect } from 'chai';
 import { internals } from '../unicode-data';
 
 describe('unicode-data', () => {
