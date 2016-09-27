@@ -7,13 +7,18 @@
   "main": "lib/emoji.json",
   "scripts": {
     "start": "npm run build",
-    "build": "node index.js",
-    "lint": "eslint --ignore-path .gitignore .",
-    "test": "mocha --require ./test-env --compilers js:babel-core/register src/**/*.test.js",
-    "posttest": "npm run lint"
+    "build": "NODE_ENV=production node index.js",
+    "test": "NODE_ENV=test nyc --reporter=lcov --reporter=text mocha --require ./test-env --compilers js:babel-core/register src/**/*.test.js",
+    "posttest": "NODE_ENV=test npm run lint",
+    "lint": "NODE_ENV=test eslint --ignore-path .gitignore ."
+  },
+  "nyc": {
+    "sourceMap": false,
+    "instrument": false
   },
   "devDependencies": {
     "babel-eslint": "^6.1.2",
+    "babel-plugin-istanbul": "^2.0.1",
     "babel-polyfill": "^6.13.0",
     "babel-preset-es2015": "^6.14.0",
     "babel-preset-stage-0": "^6.5.0",
@@ -29,6 +34,7 @@
     "log-update": "^1.0.2",
     "mocha": "^3.0.2",
     "node-fetch": "^1.5.3",
+    "nyc": "^8.3.0",
     "punycode": "^2.0.0",
     "xml2js": "^0.4.17"
   }
