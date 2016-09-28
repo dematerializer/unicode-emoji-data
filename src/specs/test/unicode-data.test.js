@@ -1,6 +1,11 @@
+/* eslint-disable no-unused-vars */
+
 import { internals } from '../unicode-data';
 
-const { defaultUrl, buildNameForCodepoint } = internals;
+const {
+	defaultUrl,
+	buildNameForCodepoint,
+} = internals;
 
 describe('unicode-data', () => {
 	it('should use a reasonable default url', () => {
