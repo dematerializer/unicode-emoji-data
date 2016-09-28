@@ -1,6 +1,6 @@
 import logUpdate from 'log-update';
 import fetch from 'node-fetch';
-import parse from '../utils/parse';
+import parse from './parse';
 
 // emoji-zwj-sequences.txt provides Zero-Width-Joiner sequences.
 const defaultUrl = 'http://unicode.org/Public/emoji/4.0/emoji-zwj-sequences.txt';

@@ -1,6 +1,6 @@
 import logUpdate from 'log-update';
 import fetch from 'node-fetch';
-import parse from '../utils/parse';
+import parse from './parse';
 
 // EmojiSources.txt provides mappings between unicode code points and sequences
 // on one hand and Shift-JIS codes for cell phone carrier symbols on the other hand.

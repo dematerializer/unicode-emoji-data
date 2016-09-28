@@ -1,7 +1,7 @@
 import logUpdate from 'log-update';
 import fetch from 'node-fetch';
 import leftPad from 'left-pad'; // FTW!
-import parse from '../utils/parse';
+import parse from './parse';
 
 // emoji-data.txt provides emoji code points.
 // Property "Emoji=Yes" means "emoji character", a character that is recommended for use as emoji

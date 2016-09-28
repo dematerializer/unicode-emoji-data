@@ -1,6 +1,6 @@
 import logUpdate from 'log-update';
 import fetch from 'node-fetch';
-import parse from '../utils/parse';
+import parse from './parse';
 
 // StandardizedVariants.txt provides variation sequences.
 // Some Unicode characters are normally displayed as emoji; some are normally

@@ -1,6 +1,6 @@
 import logUpdate from 'log-update';
 import fetch from 'node-fetch';
-import parse from '../utils/parse';
+import parse from './parse';
 
 // UnicodeData.txt provides code point names.
 const defaultUrl = 'http://unicode.org/Public/9.0.0/ucd/UnicodeData.txt';

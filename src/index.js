@@ -3,14 +3,14 @@ import fs from 'fs';
 import punycode from 'punycode';
 import logUpdate from 'log-update';
 
-import buildUnicodeData from './specs/unicode-data';
-import buildEmojiSources from './specs/emoji-sources';
-import buildStandardizedVariants from './specs/standardized-variants';
-import buildEmojiSequences from './specs/emoji-sequences';
-import buildEmojiData from './specs/emoji-data';
-import buildEmojiZwjSequences from './specs/emoji-zwj-sequences';
-import buildCldrAnnotations from './specs/cldr-annotations';
-import scrapeEmojiList from './utils/emoji-list';
+import buildUnicodeData from './unicode-data';
+import buildEmojiSources from './emoji-sources';
+import buildStandardizedVariants from './standardized-variants';
+import buildEmojiSequences from './emoji-sequences';
+import buildEmojiData from './emoji-data';
+import buildEmojiZwjSequences from './emoji-zwj-sequences';
+import buildCldrAnnotations from './cldr-annotations';
+import scrapeEmojiList from './emoji-list';
 
 import preset from './presets/unicode-9-emoji-4-cldr-30';
 

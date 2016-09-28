@@ -1,6 +1,6 @@
 import logUpdate from 'log-update';
 import fetch from 'node-fetch';
-import parse from '../utils/parse';
+import parse from './parse';
 
 // emoji-sequences.txt provides combining, flag and modifier sequences.
 // We use this only to get combining and flag sequences.
