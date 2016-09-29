@@ -47,8 +47,8 @@ export default function parse(text, fieldNames) {
 		}))
 		// Map fields to props while only keeping fields that we're interested in via fieldNames:
 		.map(line => fieldNames.reduce(((datum, field, i) => {
-			const extDatum = { ...datum };
-			if (field != null) extDatum[field] = line.fields[i];
+			const extDatum = datum;
+			extDatum[field] = line.fields[i];
 			return extDatum;
 		}), { comment: line.comment }));
 }

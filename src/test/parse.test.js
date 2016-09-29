@@ -101,5 +101,6 @@ describe('parse', () => {
 		];
 		const data = parse(text, fieldNames);
 		expect(data).to.deep.equal(expected);
+		expect(parse(text, undefined)).to.equal(null);
 	});
 });
