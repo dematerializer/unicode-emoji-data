@@ -1,5 +1,5 @@
 import logUpdate from 'log-update';
-import fetch from 'node-fetch';
+import 'isomorphic-fetch';
 import cheerio from 'cheerio';
 import punycode from 'punycode';
 import leftPad from 'left-pad';

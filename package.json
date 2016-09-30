@@ -30,10 +30,11 @@
     "eslint": "^3.5.0",
     "eslint-config-airbnb-base": "^7.1.0",
     "eslint-plugin-import": "^1.14.0",
+    "fetch-mock": "^5.1.5",
+    "isomorphic-fetch": "^2.2.1",
     "left-pad": "^1.1.1",
     "log-update": "^1.0.2",
     "mocha": "^3.0.2",
-    "node-fetch": "^1.5.3",
     "nyc": "^8.3.0",
     "punycode": "^2.0.0",
     "xml2js": "^0.4.17"

@@ -1,5 +1,5 @@
 import logUpdate from 'log-update';
-import fetch from 'node-fetch';
+import 'isomorphic-fetch';
 import leftPad from 'left-pad'; // FTW!
 import parse from './parse';
 

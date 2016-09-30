@@ -6,6 +6,7 @@
     "mocha": true,
   },
   "globals": {
+    "fetch": true,
     "expect": true,
   },
   "rules": {

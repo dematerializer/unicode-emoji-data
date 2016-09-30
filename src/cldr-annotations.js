@@ -1,5 +1,5 @@
 import logUpdate from 'log-update';
-import fetch from 'node-fetch';
+import 'isomorphic-fetch';
 import promisify from 'es6-promisify';
 import xm2js from 'xml2js';
 import punycode from 'punycode';

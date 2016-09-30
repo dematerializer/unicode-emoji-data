@@ -1,5 +1,5 @@
 import logUpdate from 'log-update';
-import fetch from 'node-fetch';
+import 'isomorphic-fetch';
 import parse from './parse';
 
 // EmojiSources.txt provides mappings between unicode code points and sequences

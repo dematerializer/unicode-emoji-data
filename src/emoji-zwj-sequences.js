@@ -1,5 +1,5 @@
 import logUpdate from 'log-update';
-import fetch from 'node-fetch';
+import 'isomorphic-fetch';
 import parse from './parse';
 
 // emoji-zwj-sequences.txt provides Zero-Width-Joiner sequences.
