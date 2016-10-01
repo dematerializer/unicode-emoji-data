@@ -90,6 +90,7 @@ function buildZwjEmoji(data, getNameForCodepoint, getMetaForModifierName) {
 		const parentDatum = zwjEmoji.find(d =>
 			d.presentation.default.includes(cp) && d.presentation.default.includes(rest[rest.length - 1])
 		);
+		/* istanbul ignore else */
 		if (parentDatum) {
 			if (parentDatum.modification == null) {
 				parentDatum.modification = { skin: {} };
@@ -104,7 +105,8 @@ function buildZwjEmoji(data, getNameForCodepoint, getMetaForModifierName) {
 				},
 			};
 		} else {
-			console.warn('No parent datum found for', datum);
+			logUpdate(`No parent datum found for ${datum.sequence}`);
+			logUpdate.done();
 		}
 	});
 	return zwjEmoji;
