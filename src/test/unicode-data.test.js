@@ -25,8 +25,8 @@ describe('unicode-data', () => {
 	it('should generate an API', (done) => {
 		fetchMock.get('*', '1F4A9;PILE OF POO;So;0;ON;;;;;N;;;;;');
 		const step = buildUnicodeData({});
-		step.next().value.then((text) => { // wait until first yield's promise (fetch) resolves
-			const api = step.next(text).value; // manually hand text over to the left side of yield
+		step.next().value.then((content) => { // wait until first yield's promise (mocked fetch) resolves
+			const api = step.next(content).value; // manually hand over mocked content to the left side of yield
 			expect(api).to.have.all.keys('getNameForCodepoint');
 			expect(api.getNameForCodepoint).to.be.a('function');
 			expect(api.getNameForCodepoint('1F4A9')).to.equal('PILE OF POO');

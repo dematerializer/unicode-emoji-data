@@ -20,8 +20,8 @@ const variationSelectors = {
 	emoji: 'FE0F', // VARIATION SELECTOR-16 (VS16) for an emoji presentation
 };
 
-// Extract variation sequences grouped by style
-// for each code point that supports both:
+// Maps variation sequences grouped by style to each
+// code point that supports both text and emoji styles:
 // {
 // 	"0023": { // NUMBER SIGN
 // 		"text": "0023 FE0E",
