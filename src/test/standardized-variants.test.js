@@ -3,12 +3,17 @@ import buildStandardizedVariants, { internals } from '../standardized-variants';
 
 const {
 	defaultUrl,
+	variationSelectors,
 	buildVariationSequencesForCodepoint,
 } = internals;
 
 describe('standardized-variants', () => {
 	it('should use a reasonable default url', () => {
 		expect(defaultUrl).to.equal('http://unicode.org/Public/9.0.0/ucd/StandardizedVariants.txt');
+	});
+	it('should use correct variation selectors', () => {
+		expect(variationSelectors.text).to.equal('FE0E');
+		expect(variationSelectors.emoji).to.equal('FE0F');
 	});
 	it('should map variation sequences grouped by style to each code point that supports both text and emoji styles', () => {
 		const data = [

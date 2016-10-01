@@ -71,6 +71,7 @@ function buildVariationSequencesForCodepoint(data) {
 
 export const internals = {
 	defaultUrl,
+	variationSelectors,
 	buildVariationSequencesForCodepoint,
 };
 
