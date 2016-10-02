@@ -101,7 +101,7 @@ describe('emoji-zwj-sequences', () => {
 	it('should use correct zero width joiner', () => {
 		expect(zeroWidthJoiner).to.equal('200D');
 	});
-	it('should transform data to map each code point to a name', () => {
+	it('should build additional emoji entries from Zero-Width-Joiner sequences', () => {
 		const data = [
 			{ sequence: '1F468 200D 1F680', type: 'Emoji_ZWJ_Sequence', description: 'man astronaut' },
 			{ sequence: '1F468 1F3FB 200D 1F680', type: 'Emoji_ZWJ_Sequence', description: 'man astronaut: light skin tone' },
