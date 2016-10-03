@@ -31,7 +31,6 @@ const combiningMarks = {
 // 	...
 // 	"20E3": { // COMBINING ENCLOSING KEYCAP
 // 		...
-// 		"002A": "KEYCAP ASTERISK", // ASTERISK
 // 		"0030": "KEYCAP ZERO", // DIGIT ZERO
 // 		...
 // 	},
@@ -55,7 +54,7 @@ function buildCompatibleCodepointsForCombiningMark(data, getNameForCodepoint) {
 	}, {});
 }
 
-// Assemble combination data for a codepoint:
+// Assemble a data structure describing combinations for a given codepoint:
 // {
 // 	"keycap": {
 // 		"name": "KEYCAP ZERO",
@@ -64,10 +63,11 @@ function buildCompatibleCodepointsForCombiningMark(data, getNameForCodepoint) {
 // 			"default": "0030 20E3",
 // 			"variation": {
 // 				"text": "0030 FE0E 20E3",
-// 				"emoji": "0030 FE0F 20E3",
+// 				"emoji": "0030 FE0F 20E3"
 // 			}
 // 		}
 // 	}
+// 	...
 // }
 function combinationsForCodepoint(codepoint, compatibleCodepointsForCombiningMark, getVariationSequencesForCodepoint) {
 	return Object.keys(compatibleCodepointsForCombiningMark).reduce((combForMarkProp, mark) => {
@@ -89,7 +89,7 @@ function combinationsForCodepoint(codepoint, compatibleCodepointsForCombiningMar
 		const defaultPresentation = `${codepoint} ${mark}`;
 		const textPresentation = `${codepoint} FE0E ${mark}`;
 		const emojiPresentation = `${codepoint} FE0F ${mark}`;
-		extCombForMarkProp[markPropKey] = compatibleCodepoints[codepoint] == null ? undefined : {
+		extCombForMarkProp[markPropKey] = {
 			name: compatibleCodepoints[codepoint],
 			defaultPresentation: 'emoji', // combination should take on an emoji presentation
 			presentation: {
@@ -110,7 +110,9 @@ function combinationsForCodepoint(codepoint, compatibleCodepointsForCombiningMar
 // 	{
 // 		"name": "REGIONAL INDICATOR SYMBOL LETTER D, REGIONAL INDICATOR SYMBOL LETTER E",
 // 		"defaultPresentation": "emoji",
-// 		"presentation": "1F1E9 1F1EA",
+// 		"presentation": {
+// 			"default": "1F1E9 1F1EA"
+// 		}
 // 	}
 // 	...
 // ]
