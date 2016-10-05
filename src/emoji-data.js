@@ -200,35 +200,35 @@ export default function* EmojiData({ url = defaultUrl, getNameForCodepoint, getV
 	const emojiModifierCodepoints = getEmojiModifierCodepoints(expandedEmojiData);
 	const emojiModifierBaseCodepoints = getEmojiModifierBaseCodepoints(expandedEmojiData);
 	const modifierSequencesForModifiableCodepoint = buildModifierSequencesForModifiableCodepoint(emojiModifierBaseCodepoints, emojiModifierCodepoints, getNameForCodepoint);
+	const enhancedEmojiData = emojiCodepoints.map((cp) => {
+		const isDefaultEmojiPresentation = emojiPresentationCodepoints.some(pCp => pCp === cp);
+		const variationSequences = getVariationSequencesForCodepoint(cp);
+		const combinations = getCombinationsForCodepoint(cp);
+		const modifications = modifierSequencesForModifiableCodepoint[cp] == null ? undefined : {
+			skin: modifierSequencesForModifiableCodepoint[cp],
+		};
+		return {
+			name: getNameForCodepoint(cp),
+			codepoint: cp,
+			shiftJis: getShiftJisCodesForCodepoint(cp),
+			defaultPresentation: isDefaultEmojiPresentation ? 'emoji' : 'text',
+			presentation: {
+				default: cp, // only the base without explicit variation
+				variation: !variationSequences ? undefined : {
+					text: variationSequences.text,
+					emoji: variationSequences.emoji,
+				},
+			},
+			combination: Object.keys(combinations).length > 0 ? combinations : undefined,
+			modification: modifications,
+		};
+		// tr51: "incomplete singletons" like single regional
+		// indicators are not used as emoji by themselves:
+	}).filter(datum => !datum.name.includes('REGIONAL INDICATOR SYMBOL LETTER'));
 	logUpdate('✓ emoji-data');
 	logUpdate.done();
 	return { // API
 		getMetaForModifierName,
-		// Assemble enhanced emoji data:
-		emoji: emojiCodepoints.map((cp) => {
-			const isDefaultEmojiPresentation = emojiPresentationCodepoints.some(pCp => pCp === cp);
-			const variationSequences = getVariationSequencesForCodepoint(cp);
-			const combinations = getCombinationsForCodepoint(cp);
-			const modifications = modifierSequencesForModifiableCodepoint[cp] == null ? undefined : {
-				skin: modifierSequencesForModifiableCodepoint[cp],
-			};
-			return {
-				name: getNameForCodepoint(cp),
-				codepoint: cp,
-				shiftJis: getShiftJisCodesForCodepoint(cp),
-				defaultPresentation: isDefaultEmojiPresentation ? 'emoji' : 'text',
-				presentation: {
-					default: cp, // only the base without explicit variation
-					variation: !variationSequences ? undefined : {
-						text: variationSequences.text,
-						emoji: variationSequences.emoji,
-					},
-				},
-				combination: Object.keys(combinations).length > 0 ? combinations : undefined,
-				modification: modifications,
-			};
-		// tr51: "incomplete singletons" like single regional
-		// indicators are not used as emoji by themselves:
-		}).filter(datum => !datum.name.includes('REGIONAL INDICATOR SYMBOL LETTER')),
+		emoji: enhancedEmojiData,
 	};
 }
