@@ -162,20 +162,19 @@ function buildModifierSequencesForModifiableCodepoint(emojiModifierBase, emojiMo
 	return emojiModifierBase.reduce((seqForModBaseCp, modBaseCodepoint) => {
 		const extSeqForModBaseCp = seqForModBaseCp;
 		const modBaseCpName = getNameForCodepoint(modBaseCodepoint);
-		extSeqForModBaseCp[modBaseCodepoint] = emojiModifier
-			.reduce((seqForModName, modifierCodepoint) => {
-				const extSeqForModName = seqForModName;
-				const modName = getNameForCodepoint(modifierCodepoint);
-				const nameMeta = getMetaForModifierName(modName);
-				extSeqForModName[nameMeta.propKey] = {
-					name: `${modBaseCpName}; ${nameMeta.nameExt}`,
-					defaultPresentation: 'emoji',
-					presentation: {
-						default: `${modBaseCodepoint} ${modifierCodepoint}`,
-					},
-				};
-				return extSeqForModName;
-			}, {});
+		extSeqForModBaseCp[modBaseCodepoint] = emojiModifier.reduce((seqForModName, modifierCodepoint) => {
+			const extSeqForModName = seqForModName;
+			const modName = getNameForCodepoint(modifierCodepoint);
+			const nameMeta = getMetaForModifierName(modName);
+			extSeqForModName[nameMeta.propKey] = {
+				name: `${modBaseCpName}; ${nameMeta.nameExt}`,
+				defaultPresentation: 'emoji',
+				presentation: {
+					default: `${modBaseCodepoint} ${modifierCodepoint}`,
+				},
+			};
+			return extSeqForModName;
+		}, {});
 		return extSeqForModBaseCp;
 	}, {});
 }
