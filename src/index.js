@@ -14,6 +14,9 @@ import scrapeEmojiList from './emoji-list';
 
 import preset from './presets/unicode-9-emoji-4-cldr-30';
 
+logUpdate(`using unicode v${preset.unicodeVersion}, emoji v${preset.emojiVersion}, CLDR v${preset.cldrVersion}`);
+logUpdate.done();
+
 process.on('uncaughtException', (err) => { throw err; });
 process.on('unhandledRejection', (err) => { throw err; });
 
