@@ -11,24 +11,22 @@ const defaultLanguages = ['af', 'am', 'ar', 'as', 'az', 'bg', 'bn', 'ca', 'cs', 
 
 function buildAnnotationsV29(data) {
 	const matchBrackets = /[\[\]\{\}]/g;
-	return data.ldml.annotations[0].annotation.reduce((annotations, annotation) => {
-		const extAnnotations = annotations;
+	return data.ldml.annotations[0].annotation.map((annotation) => {
 		const emoji = annotation.$.cp.replace(matchBrackets, '');
 		const seq = punycode.ucs2.decode(emoji);
 		const seqHex = seq.map(cp => leftPad(cp.toString(16), 4, 0).toUpperCase()).join(' ');
-		extAnnotations.push({
+		return {
 			sequence: seqHex,
 			tts: annotation.$.tts == null ? undefined : annotation.$.tts,
 			keywords: annotation._ == null ? undefined : annotation._.split(';').map(kw => kw.trim()),
-		});
-		return extAnnotations;
+		};
 	}, []);
 }
 
 // From the CLDR 30 Release Notes (http://cldr.unicode.org/index/downloads/cldr-30):
 // "The structure for annotations has changed to make processing simpler"
 function buildAnnotationsV30(data) {
-	const annotationsForSequence = data.ldml.annotations[0].annotation.reduce((annotationForSeq, annotation) => {
+	const annotationForSequence = data.ldml.annotations[0].annotation.reduce((annotationForSeq, annotation) => {
 		const extAnnotationForSeq = annotationForSeq;
 		const emoji = annotation.$.cp;
 		const seq = punycode.ucs2.decode(emoji);
@@ -51,9 +49,9 @@ function buildAnnotationsV30(data) {
 		return extAnnotationForSeq;
 	}, {});
 	// convert to array:
-	return Object.keys(annotationsForSequence).map(sequence => ({
+	return Object.keys(annotationForSequence).map(sequence => ({
 		sequence,
-		...annotationsForSequence[sequence],
+		...annotationForSequence[sequence],
 	}));
 }
 

@@ -115,13 +115,13 @@ co(function* main() {
 
 	logUpdate('✓ verify');
 
-	const matchesAnyTrailingVariationSelector = /\s(FE0E|FE0F)$/g;
+	const matchAnyTrailingVariationSelector = /\s(FE0E|FE0F)$/g;
 	if (expandedEmojiOnly.length === emojiList.sequences.length) {
 		const diff = expandedEmojiOnly.map((datum) => {
 			// Compare insentitive to any trailing variation selector
 			// because I believe the use of trailing variation selectors
 			// in emoji-list.html does not represent current vendor support.
-			const sequenceWithoutVariation = datum.sequence.replace(matchesAnyTrailingVariationSelector, '');
+			const sequenceWithoutVariation = datum.sequence.replace(matchAnyTrailingVariationSelector, '');
 			const contains = emojiList.sequences.find(seq => seq.includes(sequenceWithoutVariation));
 			if (!contains) {
 				logUpdate(`not expected: ${datum.sequence}`);
