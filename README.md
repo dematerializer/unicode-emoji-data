@@ -34,6 +34,7 @@ MIT [http://www.opensource.org/licenses/mit-license.php](http://www.opensource.o
 
 # TODO
 - report obsolete SCALES variation selectors in emoj zwj-sequences (http://www.unicode.org/reporting.html)
+- unfortunately annotation support varies with language, e.g. 'de' supports keycaps but 'en' doesn't
 
 1. testing (proves the "fully tested" statement)
 2. write documentation (readme)
