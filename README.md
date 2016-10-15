@@ -33,13 +33,17 @@ TODO
 MIT [http://www.opensource.org/licenses/mit-license.php](http://www.opensource.org/licenses/mit-license.php)
 
 # TODO
-- report obsolete SCALES variation selectors in emoj zwj-sequences (http://www.unicode.org/reporting.html)
+- test annotations
 - unfortunately annotation support varies with language, e.g. 'de' supports keycaps but 'en' doesn't
+- make sure english annotations are complete via community annotations
+- report obsolete SCALES variation selectors in emoj zwj-sequences (http://www.unicode.org/reporting.html)
 
 1. testing (proves the "fully tested" statement)
 2. write documentation (readme)
 3. bonus: merge in community-defined internationalized short names
 4. bonus: categorize & sort based on CLDR and merged-in community-defined internationalized categorizations
+
+# Notes
 
 Sort Order & Categorization
 - incomplete: http://www.unicode.org/repos/cldr/tags/release-30-d02/common/collation/root.xml
