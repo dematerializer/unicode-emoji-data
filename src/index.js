@@ -17,6 +17,7 @@ import checkAnnotations from './check-annotations';
 import preset from './presets/unicode-9-emoji-4-cldr-30';
 
 const languages = ['en', 'de'];
+// const languages = ['af', 'am', 'ar', 'as', 'az', 'bg', 'bn', 'ca', 'cs', 'da', 'de', 'el', 'en', 'es', 'et', 'fa', 'fi', 'fil', 'fr', 'ga', 'gu', 'he', 'hi', 'hr', 'hu', 'hy', 'id', 'is', 'it', 'ja', 'ka', 'kk', 'km', 'kn', 'ko', 'ky', 'lo', 'lt', 'lv', 'mk', 'ml', 'mn', 'mr', 'ms', 'my', 'nb', 'ne', 'nl', 'or', 'pa', 'pl', 'pt', 'ro', 'ru', 'si', 'sk', 'sl', 'sq', 'sr', 'sv', 'sw', 'ta', 'te', 'th', 'tr', 'uk', 'ur', 'uz', 'vi', 'zh'];
 
 logUpdate(`using unicode v${preset.unicodeVersion}, emoji v${preset.emojiVersion}, CLDR v${preset.cldrVersion}`);
 logUpdate.done();
