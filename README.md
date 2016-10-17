@@ -33,9 +33,11 @@ TODO
 MIT [http://www.opensource.org/licenses/mit-license.php](http://www.opensource.org/licenses/mit-license.php)
 
 # TODO
-- test annotations
-- unfortunately annotation support varies with language, e.g. 'de' supports keycaps but 'en' doesn't
+- check-annotations: read json files with fs, not with require
+- check-annotations: tts/keywords: n fixed by community
 - make sure english annotations are complete via community annotations
+- externalize/outsource annotation stuff because of accumulated file size
+- test annotations, check-annotations, check-data and emoji-list
 - report obsolete SCALES variation selectors in emoj zwj-sequences (http://www.unicode.org/reporting.html)
 
 1. testing (proves the "fully tested" statement)
