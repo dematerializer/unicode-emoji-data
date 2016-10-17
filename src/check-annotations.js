@@ -50,6 +50,8 @@ export default function checkData({ languages, data }) {
 			}
 			return false;
 		}
+		logUpdate(`✓ check-annotations ${result.language}`);
+		logUpdate.done();
 		return prevSuccess;
 	}, true);
 	logUpdate(`${success ? '✓' : 'x'} check-annotations`);
