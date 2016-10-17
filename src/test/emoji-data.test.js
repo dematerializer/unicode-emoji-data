@@ -125,7 +125,7 @@ describe('emoji-data', () => {
 		const emojiModifierCodepoints = getEmojiModifierCodepoints(expandedEmojiDataMock);
 		expect(emojiModifierCodepoints).to.deep.equal(expected);
 	});
-	it('should Extracts code points whose appearance can be modified by a subsequent emoji modifier', () => {
+	it('should extract code points whose appearance can be modified by a subsequent emoji modifier', () => {
 		const expected = [expandedEmojiDataMock[5].codepoint];
 		const emojiModifierBaseCodepoints = getEmojiModifierBaseCodepoints(expandedEmojiDataMock);
 		expect(emojiModifierBaseCodepoints).to.deep.equal(expected);
@@ -195,7 +195,6 @@ describe('emoji-data', () => {
 				propKey: 'type-3',
 				nameExt: 'TYPE-3',
 			});
-			console.dir(api.emoji, { depth: null });
 			expect(api.emoji).to.deep.equal([
 				{
 					name: 'NUMBER SIGN',
