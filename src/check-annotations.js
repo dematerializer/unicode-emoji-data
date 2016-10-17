@@ -8,7 +8,7 @@ export default function checkData({ languages, data }) {
 		datum.sequence.replace(matchAnyVariationSelectorOrModifier, '')
 	);
 	const results = languages.map((language) => {
-		const annotations = require(`../lib/annotations/cldr/${language}.json`);
+		const annotations = require(`../lib/annotations/cldr/${language}.json`); // eslint-disable-line global-require
 		const annotationForSequence = annotations.reduce((prevAnnotationForSequence, annotation) => {
 			const nextAnnotationForSequence = prevAnnotationForSequence;
 			nextAnnotationForSequence[annotation.sequence] = annotation;
