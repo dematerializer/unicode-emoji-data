@@ -9,10 +9,14 @@ import buildStandardizedVariants from './standardized-variants';
 import buildEmojiSequences from './emoji-sequences';
 import buildEmojiData from './emoji-data';
 import buildEmojiZwjSequences from './emoji-zwj-sequences';
-import buildCldrAnnotations from './cldr-annotations';
 import scrapeEmojiList from './emoji-list';
+import checkData from './check-data';
+import buildCldrAnnotations from './cldr-annotations';
+import checkAnnotations from './check-annotations';
 
 import preset from './presets/unicode-9-emoji-4-cldr-30';
+
+const languages = ['en', 'de'];
 
 logUpdate(`using unicode v${preset.unicodeVersion}, emoji v${preset.emojiVersion}, CLDR v${preset.cldrVersion}`);
 logUpdate.done();
@@ -52,20 +56,7 @@ co(function* main() {
 		getMetaForModifierName: emojiData.getMetaForModifierName,
 	});
 
-	const annotations = yield buildCldrAnnotations({
-		baseUrl: preset.cldrAnnotationsUrl,
-		version: preset.cldrVersion,
-		languages: ['en', 'de'],
-	});
-
-	logUpdate('⇣ writing files');
-
-	// Render CLDR annotation files:
-
-	Object.keys(annotations.annotationForSequenceForLanguage).forEach((language) => {
-		const data = annotations.annotationForSequenceForLanguage[language];
-		fs.writeFileSync(`lib/annotations/cldr/${language}.json`, JSON.stringify(data, null, 2));
-	});
+	logUpdate('⇣ write data files');
 
 	// Render base emoji data file (emoji.json) containing compact, nested emoji data:
 
@@ -104,7 +95,7 @@ co(function* main() {
 	});
 	fs.writeFileSync('lib/emoji.expanded.json', JSON.stringify(expandedEmojiOnly, null, 2));
 
-	logUpdate('✓ writing files');
+	logUpdate('✓ write data files');
 	logUpdate.done();
 
 	// Verify: check generated data files against unicode emoji list for completeness:
@@ -113,30 +104,32 @@ co(function* main() {
 		url: preset.emojiListUrl,
 	});
 
-	logUpdate('✓ verify');
+	checkData({
+		data: expandedEmojiOnly,
+		emojiList,
+	});
 
-	const matchAnyTrailingVariationSelector = /\s(FE0E|FE0F)$/g;
-	if (expandedEmojiOnly.length === emojiList.sequences.length) {
-		const diff = expandedEmojiOnly.map((datum) => {
-			// Compare insentitive to any trailing variation selector
-			// because I believe the use of trailing variation selectors
-			// in emoji-list.html does not represent current vendor support.
-			const sequenceWithoutVariation = datum.sequence.replace(matchAnyTrailingVariationSelector, '');
-			const contains = emojiList.sequences.find(seq => seq.includes(sequenceWithoutVariation));
-			if (!contains) {
-				logUpdate(`not expected: ${datum.sequence}`);
-				logUpdate.done();
-			}
-			return !!contains;
-		});
-		const numDiff = diff.filter(d => d === false).length;
-		if (numDiff === 0) {
-			logUpdate(`✓ verify: ${expandedEmojiOnly.length} entries verified`);
-		} else {
-			logUpdate(`x verify: ${numDiff} sequences not expected (see above)`);
-		}
-	} else {
-		logUpdate(`x verify: numbers of entries don't match (expected ${emojiList.sequences.length} but got ${expandedEmojiOnly.length})`);
-	}
-	logUpdate.done();
+	// Render CLDR annotation files:
+
+	const annotations = yield buildCldrAnnotations({
+		baseUrl: preset.cldrAnnotationsUrl,
+		version: preset.cldrVersion,
+		languages,
+	});
+
+	logUpdate('⇣ write annotation files');
+
+	Object.keys(annotations.annotationForSequenceForLanguage).forEach((language) => {
+		const data = annotations.annotationForSequenceForLanguage[language];
+		fs.writeFileSync(`lib/annotations/cldr/${language}.json`, JSON.stringify(data, null, 2));
+	});
+
+	logUpdate('✓ write annotation files');
+
+	// Check annotation coverage:
+
+	checkAnnotations({
+		languages,
+		data: expandedEmojiOnly,
+	});
 });
