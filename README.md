@@ -39,7 +39,7 @@ MIT [http://www.opensource.org/licenses/mit-license.php](http://www.opensource.o
 - report obsolete SCALES variation selectors in emoj zwj-sequences (http://www.unicode.org/reporting.html)
 
 1. testing (proves the "fully tested" statement)
-2. write documentation (readme)
+2. write documentation (https://github.com/noffle/art-of-readme)
 3. bonus: merge in community-defined internationalized short names
 4. bonus: categorize & sort based on CLDR and merged-in community-defined internationalized categorizations
 
