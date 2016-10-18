@@ -1,4 +1,6 @@
 import logUpdate from 'log-update';
+import fs from 'fs';
+import punycode from 'punycode';
 
 const matchAnyVariationSelectorOrModifier = /\s(FE0E|FE0F|1F3FB|1F3FC|1F3FD|1F3FE|1F3FF)/g;
 
@@ -8,46 +10,93 @@ export default function checkData({ languages, data }) {
 		datum.sequence.replace(matchAnyVariationSelectorOrModifier, '')
 	);
 	const results = languages.map((language) => {
-		const annotations = require(`../lib/annotations/cldr/${language}.json`); // eslint-disable-line global-require
-		const annotationForSequence = annotations.reduce((prevAnnotationForSequence, annotation) => {
+		const cldrAnnotations = JSON.parse(fs.readFileSync(`./lib/annotations/cldr/${language}.json`));
+		let communityAnnotations = [];
+		try {
+			communityAnnotations = JSON.parse(fs.readFileSync(`./lib/annotations/community/${language}.json`))
+		} catch (e) {
+			if (e.code !== 'ENOENT') { // ignore if file not found
+				throw(e);
+			}
+		}
+		const cldrAnnotationForSequence = cldrAnnotations.reduce((prevAnnotationForSequence, annotation) => {
 			const nextAnnotationForSequence = prevAnnotationForSequence;
 			nextAnnotationForSequence[annotation.sequence] = annotation;
 			return nextAnnotationForSequence;
-		}, {});
-		const result = normalizedDataSequences.reduce((prevResult, sequence) => {
+		}, {}); // make the lookup O(1)
+		const communityAnnotationForSequence = communityAnnotations.reduce((prevAnnotationForSequence, annotation) => {
+			const nextAnnotationForSequence = prevAnnotationForSequence;
+			nextAnnotationForSequence[annotation.sequence] = annotation;
+			return nextAnnotationForSequence;
+		}, {}); // make the lookup O(1)
+		return normalizedDataSequences.reduce((prevResult, sequence) => {
 			const nextResult = prevResult;
-			const annotationForNormalizedDataSequence = annotationForSequence[sequence];
-			if (annotationForNormalizedDataSequence == null) {
-				nextResult.numEmojiMissingTts += 1;
-				nextResult.numEmojiMissingKeywords += 1;
-			} else {
-				if (annotationForNormalizedDataSequence.tts == null) {
-					nextResult.numEmojiMissingTts += 1;
+			let cldrAnnotationForNormalizedDataSequence = cldrAnnotationForSequence[sequence];
+			let communityAnnotationForNormalizedDataSequence = communityAnnotationForSequence[sequence];
+			if (cldrAnnotationForNormalizedDataSequence == null) {
+				cldrAnnotationForNormalizedDataSequence = {
+					tts: null,
+				 	keywords: null,
+				};
+			}
+			if (communityAnnotationForNormalizedDataSequence == null) {
+				communityAnnotationForNormalizedDataSequence = {
+					tts: null,
+				 	keywords: null,
+				};
+			}
+			let datumMissingAnnotations = {
+				sequence,
+				output: punycode.ucs2.encode(sequence.split(' ').map(cp => parseInt(cp, 16))),
+			};
+			if (cldrAnnotationForNormalizedDataSequence.tts == null) {
+				datumMissingAnnotations = {
+					...datumMissingAnnotations,
+					tts: 'missing',
+				};
+				// See if community fixes it:
+				if (communityAnnotationForNormalizedDataSequence.tts != null) {
+					datumMissingAnnotations.tts = 'covered';
 				}
-				if (annotationForNormalizedDataSequence.keywords == null) {
-					nextResult.numEmojiMissingKeywords += 1;
+			}
+			if (cldrAnnotationForNormalizedDataSequence.keywords == null) {
+				datumMissingAnnotations = {
+					...datumMissingAnnotations,
+					keywords: 'missing',
+				};
+				// See if community fixes it:
+				if (communityAnnotationForNormalizedDataSequence.keywords != null) {
+					datumMissingAnnotations.keywords = 'covered';
 				}
+			}
+			if (Object.keys(datumMissingAnnotations).length > 2) {
+				nextResult.sequencesMissingAnnotations.push(datumMissingAnnotations);
 			}
 			return nextResult;
 		}, {
 			language,
-			numEmojiMissingTts: 0,
-			numEmojiMissingKeywords: 0,
+			sequencesMissingAnnotations: [],
 		});
-		return result;
 	});
 	const success = results.reduce((prevSuccess, result) => {
-		if (result.numEmojiMissingTts > 0 || result.numEmojiMissingKeywords > 0) {
+		const numSequencesMissingTts = result.sequencesMissingAnnotations.filter(datum => datum.tts != null).length;
+		const numSequencesMissingKeywords = result.sequencesMissingAnnotations.filter(datum => datum.keywords != null).length;
+		const numSequencesMissingTtsCoveredByCommunity = result.sequencesMissingAnnotations.filter(datum => datum.tts === 'covered').length;
+		const numSequencesMissingKeywordsCoveredByCommunity = result.sequencesMissingAnnotations.filter(datum => datum.keywords === 'covered').length;
+		if (numSequencesMissingTts > 0 || numSequencesMissingKeywords > 0) {
 			logUpdate(`x check-annotations ${result.language}:`);
 			logUpdate.done();
-			if (result.numEmojiMissingTts > 0) {
-				logUpdate(`  ${result.numEmojiMissingTts} sequences missing tts`);
+			if (numSequencesMissingTts > 0) {
+				logUpdate(`  ${numSequencesMissingTts} sequences missing tts (${numSequencesMissingTtsCoveredByCommunity} covered by community)`);
 				logUpdate.done();
 			}
-			if (result.numEmojiMissingKeywords > 0) {
-				logUpdate(`  ${result.numEmojiMissingKeywords} sequences missing keywords`);
+			if (numSequencesMissingKeywords > 0) {
+				logUpdate(`  ${numSequencesMissingKeywords} sequences missing keywords (${numSequencesMissingKeywordsCoveredByCommunity} covered by community)`);
 				logUpdate.done();
 			}
+			fs.writeFileSync(`./lib/annotations/coverage/${result.language}.json`, JSON.stringify(result.sequencesMissingAnnotations, null, 2));
+			logUpdate(`  coverage report saved`);
+			logUpdate.done();
 			return false;
 		}
 		logUpdate(`✓ check-annotations ${result.language}`);
