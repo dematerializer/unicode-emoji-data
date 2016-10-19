@@ -33,10 +33,9 @@ TODO
 MIT [http://www.opensource.org/licenses/mit-license.php](http://www.opensource.org/licenses/mit-license.php)
 
 # TODO
-- check-annotations: read json files with fs, not with require
-- check-annotations: tts/keywords: n fixed by community
 - make sure english annotations are complete via community annotations
 - externalize/outsource annotation stuff because of accumulated file size
+- generated json for emoji 3 and 4 in lib?
 - test annotations, check-annotations, check-data and emoji-list
 - report obsolete SCALES variation selectors in emoj zwj-sequences (http://www.unicode.org/reporting.html)
 
