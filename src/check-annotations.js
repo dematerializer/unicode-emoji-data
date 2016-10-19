@@ -94,7 +94,7 @@ export default function checkData({ languages, data }) {
 				logUpdate(`  ${numSequencesMissingKeywords} sequences missing keywords (${numSequencesMissingKeywordsCoveredByCommunity} covered by community)`);
 				logUpdate.done();
 			}
-			fs.writeFileSync(`./lib/annotations/coverage/${result.language}.json`, JSON.stringify(result.sequencesMissingAnnotations, null, 2));
+			fs.writeFileSync(`./coverage/annotations/${result.language}.json`, JSON.stringify(result.sequencesMissingAnnotations, null, 2));
 			logUpdate(`  coverage report saved`);
 			logUpdate.done();
 			return false;

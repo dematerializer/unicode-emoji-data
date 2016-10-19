@@ -10,4 +10,6 @@ module.exports = {
 	emojiZwjSequencesUrl: 'http://unicode.org/Public/emoji/3.0/emoji-zwj-sequences.txt',
 	cldrAnnotationsUrl: 'http://unicode.org/repos/cldr/tags/release-29/common/annotations',
 	emojiListUrl: 'http://unicode.org/emoji/charts/emoji-list.html',
+	cldrAnnotationsLanguages: ['en', 'de'],
+	communityAnnotationsLanguages: ['global', 'en', 'de'],
 };

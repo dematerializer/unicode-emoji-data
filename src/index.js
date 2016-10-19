@@ -12,12 +12,9 @@ import buildEmojiZwjSequences from './emoji-zwj-sequences';
 import scrapeEmojiList from './emoji-list';
 import checkData from './check-data';
 import buildCldrAnnotations from './cldr-annotations';
-import checkAnnotations from './check-annotations';
+import combineAnnotations from './combine-annotations';
 
 import preset from './presets/unicode-9-emoji-4-cldr-30';
-
-const languages = ['en', 'de'];
-// const languages = ['af', 'am', 'ar', 'as', 'az', 'bg', 'bn', 'ca', 'cs', 'da', 'de', 'el', 'en', 'es', 'et', 'fa', 'fi', 'fil', 'fr', 'ga', 'gu', 'he', 'hi', 'hr', 'hu', 'hy', 'id', 'is', 'it', 'ja', 'ka', 'kk', 'km', 'kn', 'ko', 'ky', 'lo', 'lt', 'lv', 'mk', 'ml', 'mn', 'mr', 'ms', 'my', 'nb', 'ne', 'nl', 'or', 'pa', 'pl', 'pt', 'ro', 'ru', 'si', 'sk', 'sl', 'sq', 'sr', 'sv', 'sw', 'ta', 'te', 'th', 'tr', 'uk', 'ur', 'uz', 'vi', 'zh'];
 
 logUpdate(`using unicode v${preset.unicodeVersion}, emoji v${preset.emojiVersion}, CLDR v${preset.cldrVersion}`);
 logUpdate.done();
@@ -99,7 +96,7 @@ co(function* main() {
 	logUpdate('✓ write data files');
 	logUpdate.done();
 
-	// Verify: check generated data files against unicode emoji list for completeness:
+	// Verify: check expanded data against unicode emoji list for completeness:
 
 	const emojiList = yield scrapeEmojiList({
 		url: preset.emojiListUrl,
@@ -112,25 +109,30 @@ co(function* main() {
 
 	// Render CLDR annotation files:
 
-	const annotations = yield buildCldrAnnotations({
+	const cldrAnnotations = yield buildCldrAnnotations({
 		baseUrl: preset.cldrAnnotationsUrl,
 		version: preset.cldrVersion,
-		languages,
+		languages: preset.cldrAnnotationsLanguages,
+	});
+
+	// Augment cldr annotations with community annotations:
+
+	const combinedAnnotations = combineAnnotations({
+		cldrAnnotationsForLanguage: cldrAnnotations.annotationsForLanguage,
+		communityAnnotationsForLanguage: preset.communityAnnotationsLanguages.reduce((prevAnnotations, language) => {
+			const nextAnnotations = prevAnnotations;
+			nextAnnotations[language] = require(`../community-annotations/${language}.json`);
+			return nextAnnotations;
+		}, {}),
 	});
 
 	logUpdate('⇣ write annotation files');
 
-	Object.keys(annotations.annotationForSequenceForLanguage).forEach((language) => {
-		const data = annotations.annotationForSequenceForLanguage[language];
-		fs.writeFileSync(`lib/annotations/cldr/${language}.json`, JSON.stringify(data, null, 2));
+	Object.keys(combinedAnnotations).forEach((language) => {
+		const data = combinedAnnotations[language];
+		fs.writeFileSync(`lib/annotations/${language}.json`, JSON.stringify(data, null, 2));
 	});
 
 	logUpdate('✓ write annotation files');
-
-	// Check annotation coverage:
-
-	checkAnnotations({
-		languages,
-		data: expandedEmojiOnly,
-	});
+	logUpdate.done();
 });

@@ -63,16 +63,16 @@ export const internals = {
 };
 
 export default function* CldrAnnotations({ baseUrl = defaultBaseUrl, version = 29, languages = defaultLanguages }) {
-	const annotationForSequenceForLanguage = {};
+	const annotationsForLanguage = {};
 	for (let i = 0; i < languages.length; i += 1) {
 		const language = languages[i];
 		logUpdate(`⇣ cldr-annotations ${language}`);
 		const content = yield fetch(`${baseUrl}/${language}.xml`).then(res => res.text());
 		const data = yield parseXml(content);
 		if (version === 29) {
-			annotationForSequenceForLanguage[language] = buildAnnotationsV29(data);
+			annotationsForLanguage[language] = buildAnnotationsV29(data);
 		} else if (version === 30) {
-			annotationForSequenceForLanguage[language] = buildAnnotationsV30(data);
+			annotationsForLanguage[language] = buildAnnotationsV30(data);
 		} else {
 			logUpdate(`x cldr-annotations: unsupported cldr version ${version}`);
 			logUpdate.done();
@@ -83,7 +83,6 @@ export default function* CldrAnnotations({ baseUrl = defaultBaseUrl, version = 2
 	logUpdate(`✓ cldr-annotations: ${languages.length} languages processed`);
 	logUpdate.done();
 	return { // API
-		annotationForSequenceForLanguage,
-		getAnnotationForSequenceForLanguage: (sequence, language) => annotationForSequenceForLanguage[language][sequence],
+		annotationsForLanguage,
 	};
 }
