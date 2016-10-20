@@ -33,10 +33,13 @@ TODO
 MIT [http://www.opensource.org/licenses/mit-license.php](http://www.opensource.org/licenses/mit-license.php)
 
 # TODO
+- put generation of expandedEmojiOnly data into it's own module
+- use npm-check to manage versions of dependencies
+- parallelize build where possible (do I even need yield?)
 - make sure english annotations are complete via community annotations
 - externalize/outsource annotation stuff because of accumulated file size
 - generated json for emoji 3 and 4 in lib?
-- test annotations, check-annotations, check-data and emoji-list
+- test annotations, combine-annotations, check-data and emoji-list
 - report obsolete SCALES variation selectors in emoj zwj-sequences (http://www.unicode.org/reporting.html)
 
 1. testing (proves the "fully tested" statement)

@@ -31,6 +31,7 @@
     "eslint-config-airbnb-base": "^7.1.0",
     "eslint-plugin-import": "^1.14.0",
     "fetch-mock": "^5.1.5",
+    "i18n-iso-countries": "^1.6.0",
     "isomorphic-fetch": "^2.2.1",
     "left-pad": "^1.1.1",
     "log-update": "^1.0.2",

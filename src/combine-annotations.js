@@ -1,23 +1,22 @@
-const groupArrayOfObjectsByKey = (array, key) => {
-	return array.reduce((curr, obj) => {
-		const next = curr;
-		next[obj[key]] = obj;
-		return next;
-	}, {});
-};
+import { groupArrayOfObjectsByKey } from './utils';
 
 export default function combineAnnotations({ cldrAnnotationsForLanguage, communityAnnotationsForLanguage }) {
 	const globalCommunityAnnotations = communityAnnotationsForLanguage['global'];
 	const globalCommunityAnnotationForSequence = groupArrayOfObjectsByKey(globalCommunityAnnotations, 'sequence');
-	return Object.keys(cldrAnnotationsForLanguage).reduce((prevCldrAnnotationsForLanguage, language) => {
-		const nextCldrAnnotationsForLanguage = prevCldrAnnotationsForLanguage;
+	return Object.keys(cldrAnnotationsForLanguage).reduce((prevCombinedAnnotationsForLanguage, language) => {
+		const nextCombinedAnnotationsForLanguage = prevCombinedAnnotationsForLanguage;
 		const cldrAnnotations = cldrAnnotationsForLanguage[language];
 		const communityAnnotations = communityAnnotationsForLanguage[language];
 		if (communityAnnotations == null) {
-			nextCldrAnnotationsForLanguage[language] = cldrAnnotations;
+			nextCombinedAnnotationsForLanguage[language] = cldrAnnotations;
 		} else {
 			const communityAnnotationForSequence = groupArrayOfObjectsByKey(communityAnnotations, 'sequence');
-			nextCldrAnnotationsForLanguage[language] = cldrAnnotations.map((cldrAnnotation) => {
+			const cldrAnnotationForSequence = groupArrayOfObjectsByKey(cldrAnnotations, 'sequence');
+			const newAnnotations = Object.keys(communityAnnotationForSequence)
+			.filter(communitySequence => cldrAnnotationForSequence[communitySequence] == null)
+			.map(communitySequence => communityAnnotationForSequence[communitySequence]);
+			nextCombinedAnnotationsForLanguage[language] = cldrAnnotations
+			.map((cldrAnnotation) => {
 				const globalCommunityAnnotation = globalCommunityAnnotationForSequence[cldrAnnotation.sequence] || {};
 				const communityAnnotation = communityAnnotationForSequence[cldrAnnotation.sequence] || {};
 				// Override tts, extend keywords:
@@ -29,8 +28,9 @@ export default function combineAnnotations({ cldrAnnotationsForLanguage, communi
 						globalCommunityAnnotation.keywords || []
 					),
 				};
-			});
+			})
+			.concat(newAnnotations);
 		}
-		return nextCldrAnnotationsForLanguage;
+		return nextCombinedAnnotationsForLanguage;
 	}, {});
 }
