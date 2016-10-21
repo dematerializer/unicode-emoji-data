@@ -2,7 +2,7 @@ import logUpdate from 'log-update';
 import 'isomorphic-fetch';
 import cheerio from 'cheerio';
 import punycode from 'punycode';
-import leftPad from 'left-pad';
+import leftPad from 'left-pad'; // FTW!
 
 // emoji-list.html provides a compiled list of emoji data directly from unicode;
 // we use this list to check our generated data files against for completeness:

@@ -11,12 +11,10 @@ import buildEmojiData from './emoji-data';
 import buildEmojiZwjSequences from './emoji-zwj-sequences';
 import scrapeEmojiList from './emoji-list';
 import checkData from './check-data';
-import buildCldrAnnotations from './cldr-annotations';
-import combineAnnotations from './combine-annotations';
 
-import preset from './presets/unicode-9-emoji-4-cldr-30';
+import preset from './presets/unicode-9-emoji-4';
 
-logUpdate(`using unicode v${preset.unicodeVersion}, emoji v${preset.emojiVersion}, CLDR v${preset.cldrVersion}`);
+logUpdate(`using unicode v${preset.unicodeVersion}, emoji v${preset.emojiVersion}`);
 logUpdate.done();
 
 process.on('uncaughtException', (err) => { throw err; });
@@ -106,33 +104,4 @@ co(function* main() {
 		data: expandedEmojiOnly,
 		emojiList,
 	});
-
-	// Render CLDR annotation files:
-
-	const cldrAnnotations = yield buildCldrAnnotations({
-		baseUrl: preset.cldrAnnotationsUrl,
-		version: preset.cldrVersion,
-		languages: preset.cldrAnnotationsLanguages,
-	});
-
-	// Augment cldr annotations with community annotations:
-
-	const combinedAnnotations = combineAnnotations({
-		cldrAnnotationsForLanguage: cldrAnnotations.annotationsForLanguage,
-		communityAnnotationsForLanguage: preset.communityAnnotationsLanguages.reduce((prevAnnotations, language) => {
-			const nextAnnotations = prevAnnotations;
-			nextAnnotations[language] = require(`../community-annotations/${language}.json`);
-			return nextAnnotations;
-		}, {}),
-	});
-
-	logUpdate('⇣ write annotation files');
-
-	Object.keys(combinedAnnotations).forEach((language) => {
-		const data = combinedAnnotations[language];
-		fs.writeFileSync(`lib/annotations/${language}.json`, JSON.stringify(data, null, 2));
-	});
-
-	logUpdate('✓ write annotation files');
-	logUpdate.done();
 });
