@@ -33,10 +33,10 @@ MIT [http://www.opensource.org/licenses/mit-license.php](http://www.opensource.o
 
 # TODO
 - put generation of expandedEmojiOnly data into it's own module
-- use npm-check to manage versions of dependencies
+- test check-data and emoji-list
 - parallelize build where possible (do I even need yield?)
 - generated json for emoji 3 and 4 in lib?
-- test check-data and emoji-list
+- maybe use yarn?
 - report obsolete SCALES variation selectors in emoj zwj-sequences (http://www.unicode.org/reporting.html)
 
 1. testing (proves the "fully tested" statement)
