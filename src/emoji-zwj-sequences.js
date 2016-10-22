@@ -8,7 +8,7 @@ const zeroWidthJoiner = '200D';
 const anyVariationSelector = /FE0E|FE0F/g;
 const anyModifier = /1F3FB|1F3FC|1F3FD|1F3FE|1F3FF/g;
 
-// Build additional emoji entries from Zero-Width-Joiner sequences:
+// Build additional emoji entries from zero width joiner sequences:
 // [
 // 	...
 // 	{
