@@ -9,6 +9,10 @@ function extractEmojiInfoFromDatum(datum) {
 	};
 }
 
+export const internals = {
+	extractEmojiInfoFromDatum,
+};
+
 export default function expandEmojiData(data) {
 	const expandedEmojiOnly = [];
 	data.forEach((datum) => {
