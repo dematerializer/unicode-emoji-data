@@ -1,6 +1,11 @@
 /* eslint-disable no-unused-vars */
 
-import expandEmojiData, { internals } from '../expand-emoji-data';
+import expandEmojiDataModule from '../expand-emoji-data';
+
+const {
+	expandEmojiData,
+	internals,
+} = expandEmojiDataModule;
 
 const {
 	extractEmojiInfoFromDatum,

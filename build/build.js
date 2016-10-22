@@ -97,7 +97,7 @@ function* buildForPreset(preset) {
 	logUpdate.done();
 
 	checkData({
-		data: expandEmojiData(combined),
+		data: expandEmojiData.default(combined),
 		emojiList,
 	});
 }
