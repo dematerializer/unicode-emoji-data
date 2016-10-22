@@ -1,4 +1,6 @@
-import punycode from 'punycode';
+// NOTE: need to use ES2015 here because this file will be included in the package!
+
+const punycode = require('punycode');
 
 function extractEmojiInfoFromDatum(datum) {
 	const sequence = datum.presentation.variation ? datum.presentation.variation.emoji : datum.presentation.default;
@@ -9,11 +11,11 @@ function extractEmojiInfoFromDatum(datum) {
 	};
 }
 
-export const internals = {
+module.exports.internals = {
 	extractEmojiInfoFromDatum,
 };
 
-export default function expandEmojiData(data) {
+module.exports.default = function expandEmojiData(data) {
 	const expandedEmojiOnly = [];
 	data.forEach((datum) => {
 		if (datum.combination) {
@@ -30,4 +32,4 @@ export default function expandEmojiData(data) {
 		}
 	});
 	return expandedEmojiOnly;
-}
+};
