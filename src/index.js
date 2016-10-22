@@ -12,15 +12,16 @@ import expandEmojiData from './expand-emoji-data';
 import scrapeEmojiList from './emoji-list';
 import checkData from './check-data';
 
-import preset from './presets/unicode-9-emoji-4';
-
-logUpdate(`using unicode v${preset.unicodeVersion}, emoji v${preset.emojiVersion}`);
-logUpdate.done();
+import presetUnicode9Emoji3 from './preset-unicode-9-emoji-3';
+import presetUnicode9Emoji4 from './preset-unicode-9-emoji-4';
 
 process.on('uncaughtException', (err) => { throw err; });
 process.on('unhandledRejection', (err) => { throw err; });
 
-co(function* main() {
+function* buildForPreset(preset) {
+	logUpdate(`using unicode v${preset.unicodeVersion}, emoji v${preset.emojiVersion}`);
+	logUpdate.done();
+
 	logUpdate('⇣ unicode-data');
 	const unicodeData = yield buildUnicodeData({
 		url: preset.unicodeDataUrl,
@@ -71,27 +72,22 @@ co(function* main() {
 	logUpdate('✓ emoji-zwj-sequences');
 	logUpdate.done();
 
-	logUpdate('⇣ write data files');
+	// Render emoji data file containing compact, nested emoji data:
 
-	// Render base emoji data file (emoji.json) containing compact, nested emoji data:
+	logUpdate('⇣ write data file');
 
 	const combined = [
 		...emojiData.emoji,
 		...emojiSequences.flagEmoji,
 		...emojiZwjSequences.zwjEmoji,
 	];
-	fs.writeFileSync('lib/emoji.json', JSON.stringify(combined, null, 2));
+	fs.writeFileSync(`lib/emoji-data-unicode-${preset.unicodeVersion}-emoji-${preset.emojiVersion}.json`, JSON.stringify(combined, null, 2));
 
-	// Render expanded, human readable emoji data file (emoji.expanded.json)
-	// containing flattened emoji-presentation-only data:
-
-	const expandedEmojiOnly = expandEmojiData(combined);
-	fs.writeFileSync('lib/emoji.expanded.json', JSON.stringify(expandedEmojiOnly, null, 2));
-
-	logUpdate('✓ write data files');
+	logUpdate('✓ write data file');
 	logUpdate.done();
 
-	// Verify: check expanded data against unicode emoji list for completeness:
+	// Create temporary expanded human readable emoji data containing flattened
+	// emoji-presentation-only data and check against unicode emoji list for completeness
 
 	logUpdate('⇣ emoji-list');
 	const emojiList = yield scrapeEmojiList({
@@ -101,7 +97,12 @@ co(function* main() {
 	logUpdate.done();
 
 	checkData({
-		data: expandedEmojiOnly,
+		data: expandEmojiData(combined),
 		emojiList,
 	});
+}
+
+co(function* main() {
+	yield buildForPreset(presetUnicode9Emoji3);
+	yield buildForPreset(presetUnicode9Emoji4);
 });

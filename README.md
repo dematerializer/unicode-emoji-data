@@ -33,12 +33,7 @@ TODO
 MIT [http://www.opensource.org/licenses/mit-license.php](http://www.opensource.org/licenses/mit-license.php)
 
 # TODO
-- put generation of expandedEmojiOnly data into it's own module
-- test check-data and emoji-list
-- parallelize build where possible (do I even need yield?)
-- generated json for emoji 3 and 4 in lib?
-- maybe use yarn?
-
+- test check-data, emoji-list and expand-emoji-data
 
 1. testing (proves the "fully tested" statement)
 2. write documentation (https://github.com/noffle/art-of-readme)
