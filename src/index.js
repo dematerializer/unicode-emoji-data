@@ -1,6 +1,5 @@
 import co from 'co';
 import fs from 'fs';
-import punycode from 'punycode';
 import logUpdate from 'log-update';
 
 import buildUnicodeData from './unicode-data';
@@ -9,6 +8,7 @@ import buildStandardizedVariants from './standardized-variants';
 import buildEmojiSequences from './emoji-sequences';
 import buildEmojiData from './emoji-data';
 import buildEmojiZwjSequences from './emoji-zwj-sequences';
+import expandEmojiData from './expand-emoji-data';
 import scrapeEmojiList from './emoji-list';
 import checkData from './check-data';
 
@@ -66,29 +66,7 @@ co(function* main() {
 	// Render expanded, human readable emoji data file (emoji.expanded.json)
 	// containing flattened emoji-presentation-only data:
 
-	const expandedEmojiOnly = [];
-	const extractEmojiInfoFromDatum = (datum) => {
-		const sequence = datum.presentation.variation ? datum.presentation.variation.emoji : datum.presentation.default;
-		return {
-			name: datum.name,
-			sequence,
-			output: punycode.ucs2.encode(sequence.split(' ').map(cp => parseInt(cp, 16))),
-		};
-	};
-	combined.forEach((datum) => {
-		if (datum.combination) {
-			Object.keys(datum.combination).forEach(combiningMark =>
-				expandedEmojiOnly.push(extractEmojiInfoFromDatum(datum.combination[combiningMark]))
-			);
-		} else {
-			expandedEmojiOnly.push(extractEmojiInfoFromDatum(datum));
-		}
-		if (datum.modification && datum.modification.skin) {
-			Object.keys(datum.modification.skin).forEach(type =>
-				expandedEmojiOnly.push(extractEmojiInfoFromDatum(datum.modification.skin[type]))
-			);
-		}
-	});
+	const expandedEmojiOnly = expandEmojiData(combined);
 	fs.writeFileSync('lib/emoji.expanded.json', JSON.stringify(expandedEmojiOnly, null, 2));
 
 	logUpdate('✓ write data files');
