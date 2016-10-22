@@ -1,4 +1,3 @@
-import logUpdate from 'log-update';
 import 'isomorphic-fetch';
 import leftPad from 'left-pad'; // FTW!
 import parse from './parse';
@@ -191,7 +190,6 @@ export const internals = {
 };
 
 export default function* EmojiData({ url = defaultUrl, getNameForCodepoint, getVariationSequencesForCodepoint, getCombinationsForCodepoint, getShiftJisCodesForCodepoint }) {
-	logUpdate('⇣ emoji-data');
 	const content = yield fetch(url).then(res => res.text());
 	const data = parse(content, ['codepoints', 'property']);
 	const expandedEmojiData = expandEmojiData(data);
@@ -225,8 +223,6 @@ export default function* EmojiData({ url = defaultUrl, getNameForCodepoint, getV
 		// tr51: "incomplete singletons" like single regional
 		// indicators are not used as emoji by themselves:
 	}).filter(datum => !datum.name.includes('REGIONAL INDICATOR SYMBOL LETTER'));
-	logUpdate('✓ emoji-data');
-	logUpdate.done();
 	return { // API
 		getMetaForModifierName,
 		emoji: enhancedEmojiData,

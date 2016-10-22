@@ -21,23 +21,37 @@ process.on('uncaughtException', (err) => { throw err; });
 process.on('unhandledRejection', (err) => { throw err; });
 
 co(function* main() {
+	logUpdate('⇣ unicode-data');
 	const unicodeData = yield buildUnicodeData({
 		url: preset.unicodeDataUrl,
 	});
+	logUpdate('✓ unicode-data');
+	logUpdate.done();
 
+	logUpdate('⇣ emoji-sources');
 	const emojiSources = yield buildEmojiSources({
 		url: preset.emojiSourcesUrl,
 	});
+	logUpdate('✓ emoji-sources');
+	logUpdate.done();
 
+	logUpdate('⇣ standardized-variants');
 	const standardizedVariants = yield buildStandardizedVariants({
 		url: preset.standardizedVariantsUrl,
 	});
+	logUpdate('✓ standardized-variants');
+	logUpdate.done();
 
+	logUpdate('⇣ emoji-sequences');
 	const emojiSequences = yield buildEmojiSequences({
 		url: preset.emojiSequencesUrl,
 		getNameForCodepoint: unicodeData.getNameForCodepoint,
 		getVariationSequencesForCodepoint: standardizedVariants.getVariationSequencesForCodepoint,
 	});
+	logUpdate('✓ emoji-sequences');
+	logUpdate.done();
+
+	logUpdate('⇣ emoji-data');
 	const emojiData = yield buildEmojiData({
 		url: preset.emojiDataUrl,
 		getNameForCodepoint: unicodeData.getNameForCodepoint,
@@ -45,12 +59,17 @@ co(function* main() {
 		getCombinationsForCodepoint: emojiSequences.getCombinationsForCodepoint,
 		getShiftJisCodesForCodepoint: emojiSources.getShiftJisCodesForCodepoint,
 	});
+	logUpdate('✓ emoji-data');
+	logUpdate.done();
 
+	logUpdate('⇣ emoji-zwj-sequences');
 	const emojiZwjSequences = yield buildEmojiZwjSequences({
 		url: preset.emojiZwjSequencesUrl,
 		getNameForCodepoint: unicodeData.getNameForCodepoint,
 		getMetaForModifierName: emojiData.getMetaForModifierName,
 	});
+	logUpdate('✓ emoji-zwj-sequences');
+	logUpdate.done();
 
 	logUpdate('⇣ write data files');
 
@@ -74,9 +93,12 @@ co(function* main() {
 
 	// Verify: check expanded data against unicode emoji list for completeness:
 
+	logUpdate('⇣ emoji-list');
 	const emojiList = yield scrapeEmojiList({
 		url: preset.emojiListUrl,
 	});
+	logUpdate('✓ emoji-list');
+	logUpdate.done();
 
 	checkData({
 		data: expandedEmojiOnly,

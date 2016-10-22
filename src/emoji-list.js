@@ -1,4 +1,3 @@
-import logUpdate from 'log-update';
 import 'isomorphic-fetch';
 import cheerio from 'cheerio';
 import punycode from 'punycode';
@@ -31,11 +30,8 @@ export const internals = {
 };
 
 export default function* EmojiList({ url = defaultUrl }) {
-	logUpdate('⇣ emoji-list');
 	const content = yield fetch(url).then(res => res.text());
 	const sequences = scrapeSequencesFromEmojiList(content);
-	logUpdate('✓ emoji-list');
-	logUpdate.done();
 	return { // API
 		sequences,
 	};

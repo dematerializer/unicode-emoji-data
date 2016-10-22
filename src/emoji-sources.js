@@ -1,4 +1,3 @@
-import logUpdate from 'log-update';
 import 'isomorphic-fetch';
 import parse from './parse';
 
@@ -37,12 +36,9 @@ export const internals = {
 };
 
 export default function* EmojiSources({ url = defaultUrl }) {
-	logUpdate('⇣ emoji-sources');
 	const content = yield fetch(url).then(res => res.text());
 	const data = parse(content, ['unicode', 'docomo', 'kddi', 'softbank']);
 	const shiftJisCodesForCodepoint = buildShiftJisCodesForCodepoint(data);
-	logUpdate('✓ emoji-sources');
-	logUpdate.done();
 	return { // API
 		getShiftJisCodesForCodepoint: codepoint => shiftJisCodesForCodepoint[codepoint],
 	};

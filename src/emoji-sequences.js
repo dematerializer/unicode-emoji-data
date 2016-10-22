@@ -1,4 +1,3 @@
-import logUpdate from 'log-update';
 import 'isomorphic-fetch';
 import parse from './parse';
 
@@ -140,14 +139,11 @@ export const internals = {
 };
 
 export default function* EmojiSequences({ url = defaultUrl, getNameForCodepoint, getVariationSequencesForCodepoint }) {
-	logUpdate('⇣ emoji-sequences');
 	const content = yield fetch(url).then(res => res.text());
 	const data = parse(content, ['sequence', 'type', 'description']);
 	const compatibleCodepointsForCombiningMark = buildCompatibleCodepointsForCombiningMark(data, getNameForCodepoint);
 	const getCombinationsForCodepoint = codepoint => combinationsForCodepoint(codepoint, compatibleCodepointsForCombiningMark, getVariationSequencesForCodepoint);
 	const flagEmoji = buildFlagEmoji(data, getNameForCodepoint);
-	logUpdate('✓ emoji-sequences');
-	logUpdate.done();
 	return { // API
 		getCombinationsForCodepoint,
 		flagEmoji,

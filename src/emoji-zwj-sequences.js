@@ -1,4 +1,3 @@
-import logUpdate from 'log-update';
 import 'isomorphic-fetch';
 import parse from './parse';
 
@@ -104,10 +103,7 @@ function buildZwjEmoji(data, getNameForCodepoint, getMetaForModifierName) {
 					default: datum.sequence,
 				},
 			};
-		} else {
-			logUpdate(`No parent datum found for ${datum.sequence}`);
-			logUpdate.done();
-		}
+		} // else no parent datum found for datum.sequence
 	});
 	return zwjEmoji;
 }
@@ -119,12 +115,9 @@ export const internals = {
 };
 
 export default function* EmojiZwjSequences({ url = defaultUrl, getNameForCodepoint, getMetaForModifierName }) {
-	logUpdate('⇣ emoji-zwj-sequences');
 	const content = yield fetch(url).then(res => res.text());
 	const data = parse(content, ['sequence', 'type', 'description']);
 	const zwjEmoji = buildZwjEmoji(data, getNameForCodepoint, getMetaForModifierName);
-	logUpdate('✓ emoji-zwj-sequences');
-	logUpdate.done();
 	return { // API
 		zeroWidthJoiner,
 		zwjEmoji,
