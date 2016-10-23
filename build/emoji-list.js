@@ -7,7 +7,7 @@ import leftPad from 'left-pad'; // FTW!
 // we use this list to check our generated data files against for completeness:
 const defaultUrl = 'http://unicode.org/emoji/charts-beta/emoji-list.html';
 
-// Build a list of sequences:
+// Build a list of sequences from the unicode emoji list HTML table:
 // [
 // 	...
 // 	"1F609",
