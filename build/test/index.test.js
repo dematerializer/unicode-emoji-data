@@ -1,3 +1,3 @@
-// NOTE: This is the mocha root suite, it's NOT testing the src/index.js module!
+// NOTE: this is the mocha root suite
 
 afterEach(fetchMock.restore);

@@ -1,4 +1,4 @@
-// NOTE: need to use ES2015 here because this file will be included in the package!
+// NOTE: need to use ES2015 here because this file will be included in the npm package!
 
 const punycode = require('punycode');
 

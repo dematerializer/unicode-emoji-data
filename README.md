@@ -7,8 +7,9 @@ Your single source of truth for unicode compliant emoji data.
 - up-to-date, choose between different emoji versions (3 and 4)
 - 100% tested, see [test coverage](TODO)
 - lightweight, precompiled, easy to parse JSON format
+- minimalistic API
 - no heavy weight annotations, [image files or spritesheets](https://github.com/iamcal/emoji-data) included
-- [internationalized annotations](TODO) (text-to-speech and keywords) and extensions provided by the community are available provided by the [CLDR](http://cldr.unicode.org/) compliant [unicode-emoji-annotations](TODO) module
+- [internationalized annotations](TODO) (text-to-speech and keywords) with extensions provided by the community are available provided by the [CLDR](http://cldr.unicode.org/) compliant [unicode-emoji-annotations](TODO) module
 
 ## Install
 
@@ -33,7 +34,7 @@ TODO
 MIT [http://www.opensource.org/licenses/mit-license.php](http://www.opensource.org/licenses/mit-license.php)
 
 # TODO
-- test check-data, emoji-list and expand-emoji-data
+- test check-data
 
 1. testing (proves the "fully tested" statement)
 2. write documentation (https://github.com/noffle/art-of-readme)

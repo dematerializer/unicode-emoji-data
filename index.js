@@ -1,3 +1,5 @@
+// NOTE: need to use ES2015 here because this file will be included in the npm package!
+
 const expandEmojiData = require('./build/expand-emoji-data.js').default;
 
 const emojiData = {
