@@ -2,7 +2,9 @@
 
 const punycode = require('punycode');
 
+// Extracts a simplified, human readable representation from an emoji datum:
 function extractEmojiInfoFromDatum(datum) {
+	// prefer explicit emoji presentation variation sequence
 	const sequence = datum.presentation.variation ? datum.presentation.variation.emoji : datum.presentation.default;
 	return {
 		name: datum.name,
@@ -15,6 +17,8 @@ module.exports.internals = {
 	extractEmojiInfoFromDatum,
 };
 
+// Expands all emoji data entries such that each combination and each
+// modification of one entry results in a separate, simplified entry:
 module.exports.default = function expandEmojiData(data) {
 	const expandedEmojiOnly = [];
 	data.forEach((datum) => {
