@@ -96,10 +96,23 @@ function* buildForPreset(preset) {
 	logUpdate('✓ emoji-list');
 	logUpdate.done();
 
-	checkData({
+	logUpdate('⌛︎ check-data');
+	const report = checkData({
 		data: expandEmojiData.default(combined),
-		emojiList,
+		reference: emojiList.sequences,
 	});
+	if (report.unmatchedSequences.length > 0) {
+		report.unmatchedSequences.forEach((unmatchedSequence) => {
+			logUpdate(`⌛︎ check-data: did not expect sequence ${unmatchedSequence}`);
+			logUpdate.done();
+		});
+		logUpdate(`x check-data: ${report.numDiff} sequences not expected (see above)`);
+	} else if (report.numDiff > 0) {
+		logUpdate(`x check-data: numbers of entries don't match (expected ${report.numExpected} but got ${report.numGot})`);
+	} else {
+		logUpdate(`✓ check-data: ${emojiList.sequences.length} entries verified`);
+	}
+	logUpdate.done();
 }
 
 co(function* main() {
