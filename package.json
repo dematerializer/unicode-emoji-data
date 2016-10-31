@@ -31,7 +31,7 @@
     "chai": "^3.5.0",
     "cheerio": "^0.22.0",
     "co": "^4.6.0",
-    "eslint": "^3.8.1",
+    "eslint": "^3.9.1",
     "eslint-config-airbnb-base": "^9.0.0",
     "eslint-plugin-import": "^2.0.1",
     "fetch-mock": "^5.5.0",
