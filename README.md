@@ -9,7 +9,7 @@ Your single source of truth for unicode compliant emoji data.
 - lightweight, precompiled, easy to parse JSON format
 - minimalistic API
 - no heavy weight annotations, [image files or spritesheets](https://github.com/iamcal/emoji-data) included
-- [internationalized annotations](TODO) (text-to-speech and keywords) with extensions provided by the community are available provided by the [CLDR](http://cldr.unicode.org/) compliant [unicode-emoji-annotations](TODO) module
+- [internationalized annotations](TODO) (text-to-speech descriptions and keywords) with extensions provided by the community are available provided by the [CLDR](http://cldr.unicode.org/) compliant [unicode-emoji-annotations](TODO) module
 
 ## Install
 
@@ -19,11 +19,11 @@ Your single source of truth for unicode compliant emoji data.
 
 ### CommonJS
 
-`const emoji = require('unicode-emoji-data');`
+`const emojiData = require('unicode-emoji-data');`
 
 ### ES6/babel
 
-`import emoji from 'unicode-emoji-data';`
+`import emojiData from 'unicode-emoji-data';`
 
 ## Structure
 
