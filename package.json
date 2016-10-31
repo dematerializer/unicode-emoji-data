@@ -5,11 +5,11 @@
   "description": "unicode compliant emoji data",
   "author": "Andreas Tietz https://github.com/dematerializer",
   "main": "index.js",
-	"files": [
-		"index.js",
-		"lib",
-		"build/expand-emoji-data.js"
-	],
+  "files": [
+    "index.js",
+    "lib",
+    "build/expand-emoji-data.js"
+  ],
   "scripts": {
     "start": "npm run build",
     "build": "NODE_ENV=production node build.js",
@@ -41,5 +41,8 @@
     "mocha": "^3.1.2",
     "nyc": "^8.3.2",
     "punycode": "^2.0.0"
+  },
+  "dependencies": {
+    "punycode": "^2.0.1"
   }
 }
