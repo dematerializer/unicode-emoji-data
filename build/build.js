@@ -81,7 +81,7 @@ function* buildForPreset(preset) {
 		...emojiSequences.flagEmoji,
 		...emojiZwjSequences.zwjEmoji,
 	];
-	fs.writeFileSync(`lib/emoji-data-unicode-${preset.unicodeVersion}-emoji-${preset.emojiVersion}.json`, JSON.stringify(combined, null, 2));
+	fs.writeFileSync(`lib/v${preset.emojiVersion}.json`, JSON.stringify(combined, null, 2));
 
 	logUpdate('✓ write data file');
 	logUpdate.done();
