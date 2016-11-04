@@ -34,4 +34,5 @@ TODO
 MIT [http://www.opensource.org/licenses/mit-license.php](http://www.opensource.org/licenses/mit-license.php)
 
 # TODO
+- do not use default URLs! solely rely on presets!
 - write documentation (https://github.com/noffle/art-of-readme)
