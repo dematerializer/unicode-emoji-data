@@ -9,7 +9,7 @@ Your single source of truth for unicode compliant emoji data.
 - lightweight, precompiled, easy to parse JSON format
 - minimalistic API
 - no heavy weight annotations, [image files or spritesheets](https://github.com/iamcal/emoji-data) included
-- internationalized annotations (text-to-speech descriptions and keywords) with extensions provided by the community are available provided by the [CLDR](http://cldr.unicode.org/) compliant [unicode-emoji-annotations](TODO) module
+- internationalized annotations (text-to-speech descriptions and keywords) with extensions provided by the community are available via the [CLDR](http://cldr.unicode.org/) compliant [unicode-emoji-annotations](TODO) module
 
 ## Install
 
@@ -34,5 +34,4 @@ TODO
 MIT [http://www.opensource.org/licenses/mit-license.php](http://www.opensource.org/licenses/mit-license.php)
 
 # TODO
-- do not use default URLs! solely rely on presets!
 - write documentation (https://github.com/noffle/art-of-readme)

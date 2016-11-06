@@ -13,7 +13,7 @@ import parse from './parse';
 // property="Emoji_Modifier_Base" means A character whose appearance can be modified by a subsequent emoji modifier in an emoji modifier sequence
 const defaultUrl = 'http://unicode.org/Public/emoji/3.0/emoji-data.txt';
 
-// Expand code point ranges (e.g. '1F601..1F610') into separate objects
+// Expands code point ranges (e.g. '1F601..1F610') into separate objects
 // [
 // 	...
 // 	{
@@ -112,7 +112,7 @@ function getMetaForModifierName(modName) {
 	return null;
 }
 
-// Build map of emoji that can be modified, excluding zwj emoji (maps
+// Builds a map of emoji that can be modified, excluding zwj emoji (maps
 // each modifiable code point to a precompiled modifier sequence).
 // Those are basically (almost) all emoji that have skin variations:
 // {
