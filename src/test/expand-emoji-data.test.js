@@ -1,9 +1,4 @@
-import expandEmojiDataModule from '../expand-emoji-data';
-
-const {
-	default: expandEmojiData,
-	internals,
-} = expandEmojiDataModule;
+import expandEmojiData, { internals } from '../expand-emoji-data';
 
 const {
 	extractEmojiInfoFromDatum,

@@ -81,7 +81,7 @@ function* buildForPreset(preset) {
 		...emojiSequences.flagEmoji,
 		...emojiZwjSequences.zwjEmoji,
 	];
-	fs.writeFileSync(`lib/v${preset.emojiVersion}.json`, JSON.stringify(combined, null, 2));
+	fs.writeFileSync(`src/emoji-data-v${preset.emojiVersion}.json`, JSON.stringify(combined, null, 2));
 
 	logUpdate('✓ write data file');
 	logUpdate.done();
@@ -98,7 +98,7 @@ function* buildForPreset(preset) {
 
 	logUpdate('⌛︎ check-data');
 	const report = checkData({
-		data: expandEmojiData.default(combined),
+		data: expandEmojiData(combined),
 		reference: emojiList.sequences,
 	});
 	if (report.unmatchedSequences.length > 0) {
