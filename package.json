@@ -5,9 +5,7 @@
   "description": "unicode compliant emoji data",
   "author": "Andreas Tietz https://github.com/dematerializer",
   "main": "dist/index.js",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "start": "npm run build:emoji",
     "build:emoji": "NODE_ENV=dev node build-emoji-data.js",
