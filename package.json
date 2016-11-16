@@ -13,7 +13,7 @@
     "posttest": "NODE_ENV=test npm run lint",
     "lint": "NODE_ENV=test eslint --ignore-path .gitignore .",
     "prepublish": "npm run test && npm run build:sources && npm run copy:json",
-    "build:sources": "mkdir -p dist; babel src/index.js -o dist/index.js; babel src/expand-emoji-data.js -o dist/expand-emoji-data.js",
+    "build:sources": "rm -rf dist; mkdir dist; babel src/index.js -o dist/index.js; babel src/expand-emoji-data.js -o dist/expand-emoji-data.js",
     "copy:json": "mkdir -p dist; cp src/emoji-data-*.json dist"
   },
   "nyc": {
