@@ -165,7 +165,7 @@ describe('emoji-data', () => {
 		const modifierSequencesForModifiableCodepoint = buildModifierSequencesForModifiableCodepoint(
 			emojiModifierBaseCodepointsMock,
 			emojiModifierCodepointsMock,
-			getNameForCodepointMock
+			getNameForCodepointMock,
 		);
 		expect(modifierSequencesForModifiableCodepoint).to.deep.equal(expected);
 	});

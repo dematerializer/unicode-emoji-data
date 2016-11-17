@@ -117,7 +117,7 @@ function combinationsForCodepoint(codepoint, compatibleCodepointsForCombiningMar
 // ]
 function buildFlagEmoji(data, getNameForCodepoint) {
 	return data.filter(datum =>
-		datum.type === 'Emoji_Flag_Sequence'
+		datum.type === 'Emoji_Flag_Sequence',
 	)
 	.map(datum => ({
 		// No codepoint prop here because it's technically not a codepoint

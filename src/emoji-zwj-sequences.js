@@ -61,7 +61,7 @@ const anyModifier = /1F3FB|1F3FC|1F3FD|1F3FE|1F3FF/g;
 // ]
 function buildZwjEmoji(data, getNameForCodepoint, getMetaForModifierName) {
 	const zwjEmoji = data.filter(datum =>
-		datum.sequence.match(anyModifier) == null
+		datum.sequence.match(anyModifier) == null,
 	)
 	.map((datum) => {
 		const joinedName = datum.sequence
@@ -82,12 +82,12 @@ function buildZwjEmoji(data, getNameForCodepoint, getMetaForModifierName) {
 		};
 	});
 	data.filter(datum =>
-		datum.sequence.match(anyModifier)
+		datum.sequence.match(anyModifier),
 	)
 	.forEach((datum) => {
 		const [cp, mod, ...rest] = datum.sequence.replace(anyVariationSelector, '').trim().split(' ');
 		const parentDatum = zwjEmoji.find(d =>
-			d.presentation.default.includes(cp) && d.presentation.default.includes(rest[rest.length - 1])
+			d.presentation.default.includes(cp) && d.presentation.default.includes(rest[rest.length - 1]),
 		);
 		/* istanbul ignore else */
 		if (parentDatum) {

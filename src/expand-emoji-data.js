@@ -22,14 +22,14 @@ export default function expandEmojiData(data) {
 	data.forEach((datum) => {
 		if (datum.combination) {
 			Object.keys(datum.combination).forEach(combiningMark =>
-				expandedEmojiOnly.push(extractEmojiInfoFromDatum(datum.combination[combiningMark]))
+				expandedEmojiOnly.push(extractEmojiInfoFromDatum(datum.combination[combiningMark])),
 			);
 		} else {
 			expandedEmojiOnly.push(extractEmojiInfoFromDatum(datum));
 		}
 		if (datum.modification && datum.modification.skin) {
 			Object.keys(datum.modification.skin).forEach(type =>
-				expandedEmojiOnly.push(extractEmojiInfoFromDatum(datum.modification.skin[type]))
+				expandedEmojiOnly.push(extractEmojiInfoFromDatum(datum.modification.skin[type])),
 			);
 		}
 	});

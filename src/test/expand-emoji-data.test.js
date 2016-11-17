@@ -107,21 +107,21 @@ const datumWithSkinModificationAndWithoutVariation = {
 describe('expand-emoji-data', () => {
 	it('should extract a simplified, human readable representation from an emoji datum', () => {
 		expect(extractEmojiInfoFromDatum(
-			datumWithVariation
+			datumWithVariation,
 		)).to.deep.equal({
 			name: 'UMBRELLA WITH RAIN DROPS',
 			sequence: '2614 FE0F',
 			output: '☔️',
 		});
 		expect(extractEmojiInfoFromDatum(
-			datumWithCombinationAndVariation.combination.keycap
+			datumWithCombinationAndVariation.combination.keycap,
 		)).to.deep.equal({
 			name: 'KEYCAP NUMBER SIGN',
 			sequence: '0023 FE0F 20E3',
 			output: '#️⃣',
 		});
 		expect(extractEmojiInfoFromDatum(
-			datumWithSkinModificationAndWithoutVariation.modification.skin['type-4']
+			datumWithSkinModificationAndWithoutVariation.modification.skin['type-4'],
 		)).to.deep.equal({
 			name: 'WHITE UP POINTING INDEX; TYPE-4',
 			sequence: '261D 1F3FD',
