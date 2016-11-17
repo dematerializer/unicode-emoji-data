@@ -4,17 +4,16 @@
   "private": true,
   "description": "unicode compliant emoji data",
   "author": "Andreas Tietz https://github.com/dematerializer",
-  "main": "dist/index.js",
-  "files": ["dist"],
+  "main": "lib/index.js",
+  "files": ["lib", "res"],
   "scripts": {
     "start": "npm run build:emoji",
     "build:emoji": "NODE_ENV=dev node build-emoji-data.js",
     "test": "NODE_ENV=test nyc --reporter=lcov --reporter=text mocha --require ./test-env --compilers js:babel-core/register src/**/*.test.js",
     "posttest": "NODE_ENV=test npm run lint",
     "lint": "NODE_ENV=test eslint --ignore-path .gitignore .",
-    "prepublish": "npm run test && npm run build:sources && npm run copy:json",
-    "build:sources": "rm -rf dist; mkdir dist; babel src/index.js -o dist/index.js; babel src/expand-emoji-data.js -o dist/expand-emoji-data.js",
-    "copy:json": "mkdir -p dist; cp src/emoji-data-*.json dist"
+    "prepublish": "npm run test && npm run build:sources",
+    "build:sources": "rm -rf lib; mkdir lib; babel src/index.js -o lib/index.js; babel src/expand-emoji-data.js -o lib/expand-emoji-data.js"
   },
   "nyc": {
     "sourceMap": false,
