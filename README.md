@@ -34,4 +34,5 @@ TODO
 MIT [http://www.opensource.org/licenses/mit-license.php](http://www.opensource.org/licenses/mit-license.php)
 
 # TODO
+- align with latest tr51 revision: http://www.unicode.org/reports/tr51/tr51-8.html#Emoji_Variation_Selector_Notes
 - write documentation (https://github.com/noffle/art-of-readme)
