@@ -13,9 +13,9 @@ const defaultUrl = 'http://unicode.org/Public/9.0.0/ucd/UnicodeData.txt';
 // }
 function buildNameForCodepoint(data) {
 	return data.reduce((nameForCp, datum) => {
-		const extNameForCp = nameForCp;
-		extNameForCp[datum.codepoint] = datum.name;
-		return extNameForCp;
+		const nextNameForCp = nameForCp;
+		nextNameForCp[datum.codepoint] = datum.name;
+		return nextNameForCp;
 	}, {});
 }
 

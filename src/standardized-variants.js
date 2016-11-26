@@ -36,16 +36,16 @@ function buildVariationSequencesForCodepoint(data) {
 	})
 	.reduce((varSeqForCp, datum) => {
 		const [cp, vs] = datum.sequence.split(' ');
-		const newVarSeqForCp = { ...varSeqForCp };
-		if (newVarSeqForCp[cp] == null) {
-			newVarSeqForCp[cp] = {};
+		const nextVarSeqForCp = varSeqForCp;
+		if (nextVarSeqForCp[cp] == null) {
+			nextVarSeqForCp[cp] = {};
 		}
 		Object.keys(variationSelectors).forEach((style) => {
 			if (vs === variationSelectors[style]) {
-				newVarSeqForCp[cp][style] = datum.sequence;
+				nextVarSeqForCp[cp][style] = datum.sequence;
 			}
 		});
-		return newVarSeqForCp;
+		return nextVarSeqForCp;
 	}, { // initial map
 		// emoji-zwj-sequences.txt v4.0 mentions: "three characters used in emoji zwj sequences
 		// with the emoji variation selector do not yet appear in StandardizedVariants.txt"

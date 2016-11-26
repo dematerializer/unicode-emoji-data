@@ -18,15 +18,15 @@ const defaultUrl = 'http://unicode.org/Public/9.0.0/ucd/EmojiSources.txt';
 // }
 function buildShiftJisCodesForCodepoint(data) {
 	return data.reduce((sjisForCp, datum) => {
-		const extSjisForCp = sjisForCp;
+		const nextSjisForCp = sjisForCp;
 		if (datum.docomo.length > 0 || datum.kddi.length > 0 || datum.softbank.length > 0) {
-			extSjisForCp[datum.unicode] = {
+			nextSjisForCp[datum.unicode] = {
 				docomo: datum.docomo.length > 0 ? datum.docomo : undefined,
 				kddi: datum.kddi.length > 0 ? datum.kddi : undefined,
 				softbank: datum.softbank.length > 0 ? datum.softbank : undefined,
 			};
 		}
-		return extSjisForCp;
+		return nextSjisForCp;
 	}, {});
 }
 

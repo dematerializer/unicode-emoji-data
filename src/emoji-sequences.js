@@ -39,17 +39,17 @@ function buildCompatibleCodepointsForCombiningMark(data, getNameForCodepoint) {
 	return data
 	.filter(datum => datum.type === 'Emoji_Combining_Sequence')
 	.reduce((cpsForMark, datum) => {
-		const extCpsForMark = cpsForMark;
+		const nextCpsForMark = cpsForMark;
 		const codepoints = datum.sequence.split(' ');
 		const compatibleCodepoint = codepoints[0]; // ignore the variation selector
 		const combiningMark = codepoints[codepoints.length - 1];
-		if (extCpsForMark[combiningMark] == null) {
-			extCpsForMark[combiningMark] = {};
+		if (nextCpsForMark[combiningMark] == null) {
+			nextCpsForMark[combiningMark] = {};
 		}
 		const compatibleCodepointName = getNameForCodepoint(compatibleCodepoint);
 		const combinedName = combiningMarks[combiningMark].getCombinedName(compatibleCodepointName);
-		extCpsForMark[combiningMark][compatibleCodepoint] = combinedName;
-		return extCpsForMark;
+		nextCpsForMark[combiningMark][compatibleCodepoint] = combinedName;
+		return nextCpsForMark;
 	}, {});
 }
 
@@ -70,11 +70,11 @@ function buildCompatibleCodepointsForCombiningMark(data, getNameForCodepoint) {
 // }
 function combinationsForCodepoint(codepoint, compatibleCodepointsForCombiningMark, getVariationSequencesForCodepoint) {
 	return Object.keys(compatibleCodepointsForCombiningMark).reduce((combForMarkProp, mark) => {
-		const extCombForMarkProp = combForMarkProp;
+		const nextCombForMarkProp = combForMarkProp;
 		const markPropKey = combiningMarks[mark].propKey;
 		const compatibleCodepoints = compatibleCodepointsForCombiningMark[mark];
 		if (compatibleCodepoints[codepoint] == null) {
-			return extCombForMarkProp; // return early
+			return nextCombForMarkProp; // return early
 		}
 		const variationSequences = getVariationSequencesForCodepoint(codepoint);
 		// tr51: Combining marks may be applied to emoji, just like they can
@@ -88,9 +88,9 @@ function combinationsForCodepoint(codepoint, compatibleCodepointsForCombiningMar
 		const defaultPresentation = `${codepoint} ${mark}`;
 		const textPresentation = `${codepoint} FE0E ${mark}`;
 		const emojiPresentation = `${codepoint} FE0F ${mark}`;
-		extCombForMarkProp[markPropKey] = {
+		nextCombForMarkProp[markPropKey] = {
 			name: compatibleCodepoints[codepoint],
-			defaultPresentation: 'emoji', // combination should take on an emoji presentation
+			defaultPresentation: 'emoji', // combination should take on an emoji presentation per default
 			presentation: {
 				default: defaultPresentation,
 				variation: !variationSequences ? undefined : {
@@ -99,7 +99,7 @@ function combinationsForCodepoint(codepoint, compatibleCodepointsForCombiningMar
 				},
 			},
 		};
-		return extCombForMarkProp;
+		return nextCombForMarkProp;
 	}, {});
 }
 
