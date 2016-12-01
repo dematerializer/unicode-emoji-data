@@ -32,7 +32,7 @@ const buildForPreset = (preset) => {
 		</html>
 	`;
 
-	fs.writeFileSync(`res/emoji-data-v${preset.emojiVersion}.html`, html);
+	fs.writeFileSync(`docs/emoji-data-v${preset.emojiVersion}.html`, html);
 };
 
 buildForPreset(presetUnicode9Emoji3);
