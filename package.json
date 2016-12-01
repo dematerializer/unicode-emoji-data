@@ -13,6 +13,7 @@
   "scripts": {
     "start": "npm run build:emoji",
     "build:emoji": "node build-emoji-data.js",
+    "build:html": "node build-html.js",
     "test": "NODE_ENV=test nyc --reporter=lcov --reporter=text mocha --require ./test-env --compilers js:babel-core/register src/**/*.test.js",
     "posttest": "npm run lint",
     "lint": "eslint --ignore-path .gitignore .",
