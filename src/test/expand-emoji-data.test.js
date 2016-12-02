@@ -114,6 +114,27 @@ describe('expand-emoji-data', () => {
 			output: '☔️',
 		});
 		expect(extractEmojiInfoFromDatum(
+			datumWithVariation, 'default',
+		)).to.deep.equal({
+			name: 'UMBRELLA WITH RAIN DROPS',
+			sequence: '2614',
+			output: '☔',
+		});
+		expect(extractEmojiInfoFromDatum(
+			datumWithVariation, 'text',
+		)).to.deep.equal({
+			name: 'UMBRELLA WITH RAIN DROPS',
+			sequence: '2614 FE0E',
+			output: '☔︎',
+		});
+		expect(extractEmojiInfoFromDatum(
+			datumWithVariation, 'emoji',
+		)).to.deep.equal({
+			name: 'UMBRELLA WITH RAIN DROPS',
+			sequence: '2614 FE0F',
+			output: '☔️',
+		});
+		expect(extractEmojiInfoFromDatum(
 			datumWithCombinationAndVariation.combination.keycap,
 		)).to.deep.equal({
 			name: 'KEYCAP NUMBER SIGN',
@@ -143,8 +164,8 @@ describe('expand-emoji-data', () => {
 			},
 			{
 				name: 'KEYCAP NUMBER SIGN',
-				sequence: '0023 FE0F 20E3',
-				output: '#️⃣',
+				sequence: '0023 20E3',
+				output: '#⃣',
 			},
 			{
 				name: 'WHITE UP POINTING INDEX',

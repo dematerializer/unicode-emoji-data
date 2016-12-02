@@ -1,9 +1,20 @@
 const punycode = require('punycode');
 
 // Extracts a simplified, human readable representation from an emoji datum:
-const extractEmojiInfoFromDatum = (datum) => {
-	// prefer explicit emoji presentation variation sequence
-	const sequence = datum.presentation.variation ? datum.presentation.variation.emoji : datum.presentation.default;
+const extractEmojiInfoFromDatum = (datum, presentation) => {
+	let sequence;
+	switch (presentation) {
+		case 'default':
+			sequence = datum.presentation.default;
+			break;
+		case 'text':
+		case 'emoji':
+			sequence = datum.presentation.variation[presentation];
+			break;
+		default:
+			// Prefer emoji presentation variation sequence if not specified otherwise explicitly:
+			sequence = datum.presentation.variation ? datum.presentation.variation.emoji : datum.presentation.default;
+	}
 	return {
 		name: datum.name,
 		sequence,
@@ -22,7 +33,9 @@ export default function expandEmojiData(data) {
 	data.forEach((datum) => {
 		if (datum.combination) {
 			Object.keys(datum.combination).forEach(combiningMark =>
-				expandedEmojiOnly.push(extractEmojiInfoFromDatum(datum.combination[combiningMark])),
+				// Combinations should take on an emoji presentation by default,
+				// no explicit emoji presentation variation selector needed:
+				expandedEmojiOnly.push(extractEmojiInfoFromDatum(datum.combination[combiningMark], 'default')),
 			);
 		} else {
 			expandedEmojiOnly.push(extractEmojiInfoFromDatum(datum));
