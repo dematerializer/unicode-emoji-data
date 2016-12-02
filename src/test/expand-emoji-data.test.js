@@ -66,35 +66,35 @@ const datumWithSkinModificationAndWithoutVariation = {
 	modification: {
 		skin: {
 			'type-1-2': {
-				name: 'WHITE UP POINTING INDEX; TYPE-1-2',
+				name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-1-2',
 				defaultPresentation: 'emoji',
 				presentation: {
 					default: '261D 1F3FB',
 				},
 			},
 			'type-3': {
-				name: 'WHITE UP POINTING INDEX; TYPE-3',
+				name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-3',
 				defaultPresentation: 'emoji',
 				presentation: {
 					default: '261D 1F3FC',
 				},
 			},
 			'type-4': {
-				name: 'WHITE UP POINTING INDEX; TYPE-4',
+				name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-4',
 				defaultPresentation: 'emoji',
 				presentation: {
 					default: '261D 1F3FD',
 				},
 			},
 			'type-5': {
-				name: 'WHITE UP POINTING INDEX; TYPE-5',
+				name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-5',
 				defaultPresentation: 'emoji',
 				presentation: {
 					default: '261D 1F3FE',
 				},
 			},
 			'type-6': {
-				name: 'WHITE UP POINTING INDEX; TYPE-6',
+				name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-6',
 				defaultPresentation: 'emoji',
 				presentation: {
 					default: '261D 1F3FF',
@@ -123,7 +123,7 @@ describe('expand-emoji-data', () => {
 		expect(extractEmojiInfoFromDatum(
 			datumWithSkinModificationAndWithoutVariation.modification.skin['type-4'],
 		)).to.deep.equal({
-			name: 'WHITE UP POINTING INDEX; TYPE-4',
+			name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-4',
 			sequence: '261D 1F3FD',
 			output: '☝🏽',
 		});
@@ -152,27 +152,27 @@ describe('expand-emoji-data', () => {
 				output: '☝️',
 			},
 			{
-				name: 'WHITE UP POINTING INDEX; TYPE-1-2',
+				name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-1-2',
 				sequence: '261D 1F3FB',
 				output: '☝🏻',
 			},
 			{
-				name: 'WHITE UP POINTING INDEX; TYPE-3',
+				name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-3',
 				sequence: '261D 1F3FC',
 				output: '☝🏼',
 			},
 			{
-				name: 'WHITE UP POINTING INDEX; TYPE-4',
+				name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-4',
 				sequence: '261D 1F3FD',
 				output: '☝🏽',
 			},
 			{
-				name: 'WHITE UP POINTING INDEX; TYPE-5',
+				name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-5',
 				sequence: '261D 1F3FE',
 				output: '☝🏾',
 			},
 			{
-				name: 'WHITE UP POINTING INDEX; TYPE-6',
+				name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-6',
 				sequence: '261D 1F3FF',
 				output: '☝🏿',
 			},

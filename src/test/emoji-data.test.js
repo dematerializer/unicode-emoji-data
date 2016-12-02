@@ -134,11 +134,11 @@ describe('emoji-data', () => {
 		expect(getMetaForModifierName('NOT A MODIFIER')).to.equal(null);
 		expect(getMetaForModifierName('EMOJI MODIFIER FITZPATRICK TYPE-1-2')).to.deep.equal({
 			propKey: 'type-1-2',
-			nameExt: 'TYPE-1-2',
+			nameExt: 'EMOJI MODIFIER FITZPATRICK TYPE-1-2',
 		});
 		expect(getMetaForModifierName('EMOJI MODIFIER FITZPATRICK TYPE-3')).to.deep.equal({
 			propKey: 'type-3',
-			nameExt: 'TYPE-3',
+			nameExt: 'EMOJI MODIFIER FITZPATRICK TYPE-3',
 		});
 	});
 	it('should map each modifiable (base) code point to a precompiled modifier sequence', () => {
@@ -147,14 +147,14 @@ describe('emoji-data', () => {
 		const expected = {
 			'261D': {
 				'type-1-2': {
-					name: 'WHITE UP POINTING INDEX; TYPE-1-2',
+					name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-1-2',
 					defaultPresentation: 'emoji',
 					presentation: {
 						default: '261D 1F3FB',
 					},
 				},
 				'type-3': {
-					name: 'WHITE UP POINTING INDEX; TYPE-3',
+					name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-3',
 					defaultPresentation: 'emoji',
 					presentation: {
 						default: '261D 1F3FC',
@@ -193,7 +193,7 @@ describe('emoji-data', () => {
 			expect(api.getMetaForModifierName).to.be.a('function');
 			expect(api.getMetaForModifierName('EMOJI MODIFIER FITZPATRICK TYPE-3')).to.deep.equal({
 				propKey: 'type-3',
-				nameExt: 'TYPE-3',
+				nameExt: 'EMOJI MODIFIER FITZPATRICK TYPE-3',
 			});
 			expect(api.emoji).to.deep.equal([
 				{
@@ -294,14 +294,14 @@ describe('emoji-data', () => {
 					modification: {
 						skin: {
 							'type-1-2': {
-								name: 'WHITE UP POINTING INDEX; TYPE-1-2',
+								name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-1-2',
 								defaultPresentation: 'emoji',
 								presentation: {
 									default: '261D 1F3FB',
 								},
 							},
 							'type-3': {
-								name: 'WHITE UP POINTING INDEX; TYPE-3',
+								name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-3',
 								defaultPresentation: 'emoji',
 								presentation: {
 									default: '261D 1F3FC',

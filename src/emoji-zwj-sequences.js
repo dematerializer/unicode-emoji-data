@@ -20,35 +20,35 @@ const anyModifier = /1F3FB|1F3FC|1F3FD|1F3FE|1F3FF/g;
 // 		"modification": {
 // 			"skin": {
 // 				"type-1-2": { // modifier = EMOJI MODIFIER FITZPATRICK TYPE-1-2
-// 					"name": "MAN, ROCKET; TYPE-1-2",
+// 					"name": "MAN, ROCKET; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
 // 					"defaultPresentation": "emoji",
 // 					"presentation": {
 // 						"default": "1F468 1F3FB 200D 1F680",
 // 					}
 // 				},
 // 				"type-3": { // modifier = EMOJI MODIFIER FITZPATRICK TYPE-3
-// 					"name": "MAN, ROCKET; TYPE-3",
+// 					"name": "MAN, ROCKET; EMOJI MODIFIER FITZPATRICK TYPE-3",
 // 					"defaultPresentation": "emoji",
 // 					"presentation": {
 // 						"default": "1F468 1F3FC 200D 1F680",
 // 					}
 // 				},
 // 				"type-4": { // modifier = EMOJI MODIFIER FITZPATRICK TYPE-4
-// 					"name": "MAN, ROCKET; TYPE-4",
+// 					"name": "MAN, ROCKET; EMOJI MODIFIER FITZPATRICK TYPE-4",
 // 					"defaultPresentation": "emoji",
 // 					"presentation": {
 // 						"default": "1F468 1F3FD 200D 1F680",
 // 					}
 // 				},
 // 				"type-5": { // modifier = EMOJI MODIFIER FITZPATRICK TYPE-5
-// 					"name": "MAN, ROCKET; TYPE-5",
+// 					"name": "MAN, ROCKET; EMOJI MODIFIER FITZPATRICK TYPE-5",
 // 					"defaultPresentation": "emoji",
 // 					"presentation": {
 // 						"default": "1F468 1F3FE 200D 1F680",
 // 					}
 // 				},
 // 				"type-6": { // modifier = EMOJI MODIFIER FITZPATRICK TYPE-6
-// 					"name": "MAN, ROCKET; TYPE-6",
+// 					"name": "MAN, ROCKET; EMOJI MODIFIER FITZPATRICK TYPE-6",
 // 					"defaultPresentation": "emoji",
 // 					"presentation": {
 // 						"default": "1F468 1F3FF 200D 1F680",

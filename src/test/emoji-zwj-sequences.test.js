@@ -23,23 +23,23 @@ const getMetaForModifierNameMock = (modifierName) => {
 	const metaForModifierName = {
 		'EMOJI MODIFIER FITZPATRICK TYPE-1-2': {
 			propKey: 'type-1-2',
-			nameExt: 'TYPE-1-2',
+			nameExt: 'EMOJI MODIFIER FITZPATRICK TYPE-1-2',
 		},
 		'EMOJI MODIFIER FITZPATRICK TYPE-3': {
 			propKey: 'type-3',
-			nameExt: 'TYPE-3',
+			nameExt: 'EMOJI MODIFIER FITZPATRICK TYPE-3',
 		},
 		'EMOJI MODIFIER FITZPATRICK TYPE-4': {
 			propKey: 'type-4',
-			nameExt: 'TYPE-4',
+			nameExt: 'EMOJI MODIFIER FITZPATRICK TYPE-4',
 		},
 		'EMOJI MODIFIER FITZPATRICK TYPE-5': {
 			propKey: 'type-5',
-			nameExt: 'TYPE-5',
+			nameExt: 'EMOJI MODIFIER FITZPATRICK TYPE-5',
 		},
 		'EMOJI MODIFIER FITZPATRICK TYPE-6': {
 			propKey: 'type-6',
-			nameExt: 'TYPE-6',
+			nameExt: 'EMOJI MODIFIER FITZPATRICK TYPE-6',
 		},
 	};
 	return metaForModifierName[modifierName];
@@ -55,35 +55,35 @@ const expectedZwjEmoji = [
 		modification: {
 			skin: {
 				'type-1-2': { // modifier = EMOJI MODIFIER FITZPATRICK TYPE-1-2
-					name: 'MAN, ROCKET; TYPE-1-2',
+					name: 'MAN, ROCKET; EMOJI MODIFIER FITZPATRICK TYPE-1-2',
 					defaultPresentation: 'emoji',
 					presentation: {
 						default: '1F468 1F3FB 200D 1F680',
 					},
 				},
 				'type-3': { // modifier = EMOJI MODIFIER FITZPATRICK TYPE-3
-					name: 'MAN, ROCKET; TYPE-3',
+					name: 'MAN, ROCKET; EMOJI MODIFIER FITZPATRICK TYPE-3',
 					defaultPresentation: 'emoji',
 					presentation: {
 						default: '1F468 1F3FC 200D 1F680',
 					},
 				},
 				'type-4': { // modifier = EMOJI MODIFIER FITZPATRICK TYPE-4
-					name: 'MAN, ROCKET; TYPE-4',
+					name: 'MAN, ROCKET; EMOJI MODIFIER FITZPATRICK TYPE-4',
 					defaultPresentation: 'emoji',
 					presentation: {
 						default: '1F468 1F3FD 200D 1F680',
 					},
 				},
 				'type-5': { // modifier = EMOJI MODIFIER FITZPATRICK TYPE-5
-					name: 'MAN, ROCKET; TYPE-5',
+					name: 'MAN, ROCKET; EMOJI MODIFIER FITZPATRICK TYPE-5',
 					defaultPresentation: 'emoji',
 					presentation: {
 						default: '1F468 1F3FE 200D 1F680',
 					},
 				},
 				'type-6': { // modifier = EMOJI MODIFIER FITZPATRICK TYPE-6
-					name: 'MAN, ROCKET; TYPE-6',
+					name: 'MAN, ROCKET; EMOJI MODIFIER FITZPATRICK TYPE-6',
 					defaultPresentation: 'emoji',
 					presentation: {
 						default: '1F468 1F3FF 200D 1F680',

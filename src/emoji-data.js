@@ -106,7 +106,7 @@ function getMetaForModifierName(modName) {
 		const type = parts[parts.length - 1]; // 'TYPE-1-2'
 		return {
 			propKey: type.toLowerCase(), // 'type-1-2'
-			nameExt: type, // 'TYPE-1-2'
+			nameExt: modName, // 'EMOJI MODIFIER FITZPATRICK TYPE-1-2'
 		};
 	}
 	return null;
@@ -119,35 +119,35 @@ function getMetaForModifierName(modName) {
 // 	...
 // 	"261D": {
 // 		"type-1-2": { // modifier = EMOJI MODIFIER FITZPATRICK TYPE-1-2
-// 			"name": "RAISED HAND; TYPE-1-2",
+// 			"name": "RAISED HAND; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
 // 			"defaultPresentation": "emoji",
 // 			"presentation": {
 // 				"default": "270B 1F3FB",
 // 			}
 // 		},
 // 		"type-3": { // modifier = EMOJI MODIFIER FITZPATRICK TYPE-3
-// 			"name": "RAISED HAND; TYPE-3",
+// 			"name": "RAISED HAND; EMOJI MODIFIER FITZPATRICK TYPE-3",
 // 			"defaultPresentation": "emoji",
 // 			"presentation": {
 // 				"default": "270B 1F3FC",
 // 			}
 // 		},
 // 		"type-4": { // modifier = EMOJI MODIFIER FITZPATRICK TYPE-4
-// 			"name": "RAISED HAND; TYPE-4",
+// 			"name": "RAISED HAND; EMOJI MODIFIER FITZPATRICK TYPE-4",
 // 			"defaultPresentation": "emoji",
 // 			"presentation": {
 // 				"default": "270B 1F3FD",
 // 			}
 // 		},
 // 		"type-5": { // modifier = EMOJI MODIFIER FITZPATRICK TYPE-5
-// 			"name": "RAISED HAND; TYPE-5",
+// 			"name": "RAISED HAND; EMOJI MODIFIER FITZPATRICK TYPE-5",
 // 			"defaultPresentation": "emoji",
 // 			"presentation": {
 // 				"default": "270B 1F3FE",
 // 			}
 // 		},
 // 		"type-6": { // modifier = EMOJI MODIFIER FITZPATRICK TYPE-6
-// 			"name": "RAISED HAND; TYPE-6",
+// 			"name": "RAISED HAND; EMOJI MODIFIER FITZPATRICK TYPE-6",
 // 			"defaultPresentation": "emoji",
 // 			"presentation": {
 // 				"default": "270B 1F3FF",
