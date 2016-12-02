@@ -11,7 +11,7 @@
     "res"
   ],
   "scripts": {
-    "start": "npm run build:emoji",
+    "start": "npm run build:emoji && npm run build:html",
     "build:emoji": "node build-emoji-data.js",
     "build:html": "node build-html.js",
     "test": "NODE_ENV=test nyc --reporter=lcov --reporter=text mocha --require ./test-env --compilers js:babel-core/register src/**/*.test.js",
