@@ -3,4 +3,5 @@ npm-debug.log
 .nyc_output
 coverage
 lib
-docs
+docs/*
+!docs/.gitkeep

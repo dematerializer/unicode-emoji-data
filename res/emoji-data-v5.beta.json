@@ -1214,6 +1214,30 @@
     }
   },
   {
+    "name": "FEMALE SIGN",
+    "codepoint": "2640",
+    "defaultPresentation": "text",
+    "presentation": {
+      "default": "2640",
+      "variation": {
+        "text": "2640 FE0E",
+        "emoji": "2640 FE0F"
+      }
+    }
+  },
+  {
+    "name": "MALE SIGN",
+    "codepoint": "2642",
+    "defaultPresentation": "text",
+    "presentation": {
+      "default": "2642",
+      "variation": {
+        "text": "2642 FE0E",
+        "emoji": "2642 FE0F"
+      }
+    }
+  },
+  {
     "name": "ARIES",
     "codepoint": "2648",
     "shiftJis": {
@@ -1571,6 +1595,18 @@
       "variation": {
         "text": "2694 FE0E",
         "emoji": "2694 FE0F"
+      }
+    }
+  },
+  {
+    "name": "STAFF OF AESCULAPIUS",
+    "codepoint": "2695",
+    "defaultPresentation": "text",
+    "presentation": {
+      "default": "2695",
+      "variation": {
+        "text": "2695 FE0E",
+        "emoji": "2695 FE0F"
       }
     }
   },
@@ -5505,6 +5541,45 @@
     "defaultPresentation": "emoji",
     "presentation": {
       "default": "1F3C2"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "SNOWBOARDER; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C2 1F3FB"
+          }
+        },
+        "type-3": {
+          "name": "SNOWBOARDER; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C2 1F3FC"
+          }
+        },
+        "type-4": {
+          "name": "SNOWBOARDER; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C2 1F3FD"
+          }
+        },
+        "type-5": {
+          "name": "SNOWBOARDER; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C2 1F3FE"
+          }
+        },
+        "type-6": {
+          "name": "SNOWBOARDER; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C2 1F3FF"
+          }
+        }
+      }
     }
   },
   {
@@ -5636,6 +5711,45 @@
     "defaultPresentation": "emoji",
     "presentation": {
       "default": "1F3C7"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "HORSE RACING; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C7 1F3FB"
+          }
+        },
+        "type-3": {
+          "name": "HORSE RACING; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C7 1F3FC"
+          }
+        },
+        "type-4": {
+          "name": "HORSE RACING; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C7 1F3FD"
+          }
+        },
+        "type-5": {
+          "name": "HORSE RACING; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C7 1F3FE"
+          }
+        },
+        "type-6": {
+          "name": "HORSE RACING; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C7 1F3FF"
+          }
+        }
+      }
     }
   },
   {
@@ -5769,6 +5883,45 @@
       "variation": {
         "text": "1F3CC FE0E",
         "emoji": "1F3CC FE0F"
+      }
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "GOLFER; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CC 1F3FB"
+          }
+        },
+        "type-3": {
+          "name": "GOLFER; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CC 1F3FC"
+          }
+        },
+        "type-4": {
+          "name": "GOLFER; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CC 1F3FD"
+          }
+        },
+        "type-5": {
+          "name": "GOLFER; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CC 1F3FE"
+          }
+        },
+        "type-6": {
+          "name": "GOLFER; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CC 1F3FF"
+          }
+        }
       }
     }
   },
@@ -11539,6 +11692,45 @@
         "text": "1F574 FE0E",
         "emoji": "1F574 FE0F"
       }
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "MAN IN BUSINESS SUIT LEVITATING; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F574 1F3FB"
+          }
+        },
+        "type-3": {
+          "name": "MAN IN BUSINESS SUIT LEVITATING; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F574 1F3FC"
+          }
+        },
+        "type-4": {
+          "name": "MAN IN BUSINESS SUIT LEVITATING; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F574 1F3FD"
+          }
+        },
+        "type-5": {
+          "name": "MAN IN BUSINESS SUIT LEVITATING; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F574 1F3FE"
+          }
+        },
+        "type-6": {
+          "name": "MAN IN BUSINESS SUIT LEVITATING; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F574 1F3FF"
+          }
+        }
+      }
     }
   },
   {
@@ -14283,6 +14475,45 @@
     "defaultPresentation": "emoji",
     "presentation": {
       "default": "1F6CC"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "SLEEPING ACCOMMODATION; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6CC 1F3FB"
+          }
+        },
+        "type-3": {
+          "name": "SLEEPING ACCOMMODATION; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6CC 1F3FC"
+          }
+        },
+        "type-4": {
+          "name": "SLEEPING ACCOMMODATION; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6CC 1F3FD"
+          }
+        },
+        "type-5": {
+          "name": "SLEEPING ACCOMMODATION; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6CC 1F3FE"
+          }
+        },
+        "type-6": {
+          "name": "SLEEPING ACCOMMODATION; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6CC 1F3FF"
+          }
+        }
+      }
     }
   },
   {
@@ -14798,45 +15029,6 @@
     "defaultPresentation": "emoji",
     "presentation": {
       "default": "1F91D"
-    },
-    "modification": {
-      "skin": {
-        "type-1-2": {
-          "name": "HANDSHAKE; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
-          "defaultPresentation": "emoji",
-          "presentation": {
-            "default": "1F91D 1F3FB"
-          }
-        },
-        "type-3": {
-          "name": "HANDSHAKE; EMOJI MODIFIER FITZPATRICK TYPE-3",
-          "defaultPresentation": "emoji",
-          "presentation": {
-            "default": "1F91D 1F3FC"
-          }
-        },
-        "type-4": {
-          "name": "HANDSHAKE; EMOJI MODIFIER FITZPATRICK TYPE-4",
-          "defaultPresentation": "emoji",
-          "presentation": {
-            "default": "1F91D 1F3FD"
-          }
-        },
-        "type-5": {
-          "name": "HANDSHAKE; EMOJI MODIFIER FITZPATRICK TYPE-5",
-          "defaultPresentation": "emoji",
-          "presentation": {
-            "default": "1F91D 1F3FE"
-          }
-        },
-        "type-6": {
-          "name": "HANDSHAKE; EMOJI MODIFIER FITZPATRICK TYPE-6",
-          "defaultPresentation": "emoji",
-          "presentation": {
-            "default": "1F91D 1F3FF"
-          }
-        }
-      }
     }
   },
   {
@@ -15379,45 +15571,6 @@
     "defaultPresentation": "emoji",
     "presentation": {
       "default": "1F93C"
-    },
-    "modification": {
-      "skin": {
-        "type-1-2": {
-          "name": "WRESTLERS; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
-          "defaultPresentation": "emoji",
-          "presentation": {
-            "default": "1F93C 1F3FB"
-          }
-        },
-        "type-3": {
-          "name": "WRESTLERS; EMOJI MODIFIER FITZPATRICK TYPE-3",
-          "defaultPresentation": "emoji",
-          "presentation": {
-            "default": "1F93C 1F3FC"
-          }
-        },
-        "type-4": {
-          "name": "WRESTLERS; EMOJI MODIFIER FITZPATRICK TYPE-4",
-          "defaultPresentation": "emoji",
-          "presentation": {
-            "default": "1F93C 1F3FD"
-          }
-        },
-        "type-5": {
-          "name": "WRESTLERS; EMOJI MODIFIER FITZPATRICK TYPE-5",
-          "defaultPresentation": "emoji",
-          "presentation": {
-            "default": "1F93C 1F3FE"
-          }
-        },
-        "type-6": {
-          "name": "WRESTLERS; EMOJI MODIFIER FITZPATRICK TYPE-6",
-          "defaultPresentation": "emoji",
-          "presentation": {
-            "default": "1F93C 1F3FF"
-          }
-        }
-      }
     }
   },
   {
@@ -17548,6 +17701,13 @@
     }
   },
   {
+    "name": "REGIONAL INDICATOR SYMBOL LETTER U, REGIONAL INDICATOR SYMBOL LETTER N",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F1FA 1F1F3"
+    }
+  },
+  {
     "name": "REGIONAL INDICATOR SYMBOL LETTER U, REGIONAL INDICATOR SYMBOL LETTER S",
     "defaultPresentation": "emoji",
     "presentation": {
@@ -17674,13 +17834,6 @@
     }
   },
   {
-    "name": "EYE, LEFT SPEECH BUBBLE",
-    "defaultPresentation": "emoji",
-    "presentation": {
-      "default": "1F441 200D 1F5E8"
-    }
-  },
-  {
     "name": "MAN, HEAVY BLACK HEART, MAN",
     "defaultPresentation": "emoji",
     "presentation": {
@@ -17692,6 +17845,41 @@
     "defaultPresentation": "emoji",
     "presentation": {
       "default": "1F468 200D 2764 FE0F 200D 1F48B 200D 1F468"
+    }
+  },
+  {
+    "name": "MAN, BOY",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F468 200D 1F466"
+    }
+  },
+  {
+    "name": "MAN, BOY, BOY",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F468 200D 1F466 200D 1F466"
+    }
+  },
+  {
+    "name": "MAN, GIRL",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F468 200D 1F467"
+    }
+  },
+  {
+    "name": "MAN, GIRL, BOY",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F468 200D 1F467 200D 1F466"
+    }
+  },
+  {
+    "name": "MAN, GIRL, GIRL",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F468 200D 1F467 200D 1F467"
     }
   },
   {
@@ -17793,6 +17981,41 @@
     }
   },
   {
+    "name": "WOMAN, BOY",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F469 200D 1F466"
+    }
+  },
+  {
+    "name": "WOMAN, BOY, BOY",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F469 200D 1F466 200D 1F466"
+    }
+  },
+  {
+    "name": "WOMAN, GIRL",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F469 200D 1F467"
+    }
+  },
+  {
+    "name": "WOMAN, GIRL, BOY",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F469 200D 1F467 200D 1F466"
+    }
+  },
+  {
+    "name": "WOMAN, GIRL, GIRL",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F469 200D 1F467 200D 1F467"
+    }
+  },
+  {
     "name": "WOMAN, WOMAN, BOY",
     "defaultPresentation": "emoji",
     "presentation": {
@@ -17825,6 +18048,4372 @@
     "defaultPresentation": "emoji",
     "presentation": {
       "default": "1F469 200D 1F469 200D 1F467 200D 1F467"
+    }
+  },
+  {
+    "name": "MAN, STAFF OF AESCULAPIUS",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F468 200D 2695 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "MAN, STAFF OF AESCULAPIUS; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FB 200D 2695 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "MAN, STAFF OF AESCULAPIUS; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FC 200D 2695 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "MAN, STAFF OF AESCULAPIUS; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FD 200D 2695 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "MAN, STAFF OF AESCULAPIUS; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FE 200D 2695 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "MAN, STAFF OF AESCULAPIUS; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FF 200D 2695 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "MAN, SCALES",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F468 200D 2696 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "MAN, SCALES; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FB 200D 2696 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "MAN, SCALES; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FC 200D 2696 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "MAN, SCALES; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FD 200D 2696 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "MAN, SCALES; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FE 200D 2696 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "MAN, SCALES; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FF 200D 2696 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "MAN, AIRPLANE",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F468 200D 2708 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "MAN, AIRPLANE; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FB 200D 2708 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "MAN, AIRPLANE; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FC 200D 2708 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "MAN, AIRPLANE; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FD 200D 2708 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "MAN, AIRPLANE; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FE 200D 2708 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "MAN, AIRPLANE; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FF 200D 2708 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "MAN, EAR OF RICE",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F468 200D 1F33E"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "MAN, EAR OF RICE; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FB 200D 1F33E"
+          }
+        },
+        "type-3": {
+          "name": "MAN, EAR OF RICE; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FC 200D 1F33E"
+          }
+        },
+        "type-4": {
+          "name": "MAN, EAR OF RICE; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FD 200D 1F33E"
+          }
+        },
+        "type-5": {
+          "name": "MAN, EAR OF RICE; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FE 200D 1F33E"
+          }
+        },
+        "type-6": {
+          "name": "MAN, EAR OF RICE; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FF 200D 1F33E"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "MAN, COOKING",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F468 200D 1F373"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "MAN, COOKING; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FB 200D 1F373"
+          }
+        },
+        "type-3": {
+          "name": "MAN, COOKING; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FC 200D 1F373"
+          }
+        },
+        "type-4": {
+          "name": "MAN, COOKING; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FD 200D 1F373"
+          }
+        },
+        "type-5": {
+          "name": "MAN, COOKING; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FE 200D 1F373"
+          }
+        },
+        "type-6": {
+          "name": "MAN, COOKING; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FF 200D 1F373"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "MAN, GRADUATION CAP",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F468 200D 1F393"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "MAN, GRADUATION CAP; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FB 200D 1F393"
+          }
+        },
+        "type-3": {
+          "name": "MAN, GRADUATION CAP; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FC 200D 1F393"
+          }
+        },
+        "type-4": {
+          "name": "MAN, GRADUATION CAP; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FD 200D 1F393"
+          }
+        },
+        "type-5": {
+          "name": "MAN, GRADUATION CAP; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FE 200D 1F393"
+          }
+        },
+        "type-6": {
+          "name": "MAN, GRADUATION CAP; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FF 200D 1F393"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "MAN, MICROPHONE",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F468 200D 1F3A4"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "MAN, MICROPHONE; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FB 200D 1F3A4"
+          }
+        },
+        "type-3": {
+          "name": "MAN, MICROPHONE; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FC 200D 1F3A4"
+          }
+        },
+        "type-4": {
+          "name": "MAN, MICROPHONE; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FD 200D 1F3A4"
+          }
+        },
+        "type-5": {
+          "name": "MAN, MICROPHONE; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FE 200D 1F3A4"
+          }
+        },
+        "type-6": {
+          "name": "MAN, MICROPHONE; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FF 200D 1F3A4"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "MAN, ARTIST PALETTE",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F468 200D 1F3A8"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "MAN, ARTIST PALETTE; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FB 200D 1F3A8"
+          }
+        },
+        "type-3": {
+          "name": "MAN, ARTIST PALETTE; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FC 200D 1F3A8"
+          }
+        },
+        "type-4": {
+          "name": "MAN, ARTIST PALETTE; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FD 200D 1F3A8"
+          }
+        },
+        "type-5": {
+          "name": "MAN, ARTIST PALETTE; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FE 200D 1F3A8"
+          }
+        },
+        "type-6": {
+          "name": "MAN, ARTIST PALETTE; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FF 200D 1F3A8"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "MAN, SCHOOL",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F468 200D 1F3EB"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "MAN, SCHOOL; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FB 200D 1F3EB"
+          }
+        },
+        "type-3": {
+          "name": "MAN, SCHOOL; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FC 200D 1F3EB"
+          }
+        },
+        "type-4": {
+          "name": "MAN, SCHOOL; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FD 200D 1F3EB"
+          }
+        },
+        "type-5": {
+          "name": "MAN, SCHOOL; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FE 200D 1F3EB"
+          }
+        },
+        "type-6": {
+          "name": "MAN, SCHOOL; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FF 200D 1F3EB"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "MAN, FACTORY",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F468 200D 1F3ED"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "MAN, FACTORY; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FB 200D 1F3ED"
+          }
+        },
+        "type-3": {
+          "name": "MAN, FACTORY; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FC 200D 1F3ED"
+          }
+        },
+        "type-4": {
+          "name": "MAN, FACTORY; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FD 200D 1F3ED"
+          }
+        },
+        "type-5": {
+          "name": "MAN, FACTORY; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FE 200D 1F3ED"
+          }
+        },
+        "type-6": {
+          "name": "MAN, FACTORY; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FF 200D 1F3ED"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "MAN, PERSONAL COMPUTER",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F468 200D 1F4BB"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "MAN, PERSONAL COMPUTER; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FB 200D 1F4BB"
+          }
+        },
+        "type-3": {
+          "name": "MAN, PERSONAL COMPUTER; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FC 200D 1F4BB"
+          }
+        },
+        "type-4": {
+          "name": "MAN, PERSONAL COMPUTER; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FD 200D 1F4BB"
+          }
+        },
+        "type-5": {
+          "name": "MAN, PERSONAL COMPUTER; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FE 200D 1F4BB"
+          }
+        },
+        "type-6": {
+          "name": "MAN, PERSONAL COMPUTER; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FF 200D 1F4BB"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "MAN, BRIEFCASE",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F468 200D 1F4BC"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "MAN, BRIEFCASE; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FB 200D 1F4BC"
+          }
+        },
+        "type-3": {
+          "name": "MAN, BRIEFCASE; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FC 200D 1F4BC"
+          }
+        },
+        "type-4": {
+          "name": "MAN, BRIEFCASE; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FD 200D 1F4BC"
+          }
+        },
+        "type-5": {
+          "name": "MAN, BRIEFCASE; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FE 200D 1F4BC"
+          }
+        },
+        "type-6": {
+          "name": "MAN, BRIEFCASE; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FF 200D 1F4BC"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "MAN, WRENCH",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F468 200D 1F527"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "MAN, WRENCH; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FB 200D 1F527"
+          }
+        },
+        "type-3": {
+          "name": "MAN, WRENCH; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FC 200D 1F527"
+          }
+        },
+        "type-4": {
+          "name": "MAN, WRENCH; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FD 200D 1F527"
+          }
+        },
+        "type-5": {
+          "name": "MAN, WRENCH; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FE 200D 1F527"
+          }
+        },
+        "type-6": {
+          "name": "MAN, WRENCH; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FF 200D 1F527"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "MAN, MICROSCOPE",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F468 200D 1F52C"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "MAN, MICROSCOPE; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FB 200D 1F52C"
+          }
+        },
+        "type-3": {
+          "name": "MAN, MICROSCOPE; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FC 200D 1F52C"
+          }
+        },
+        "type-4": {
+          "name": "MAN, MICROSCOPE; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FD 200D 1F52C"
+          }
+        },
+        "type-5": {
+          "name": "MAN, MICROSCOPE; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FE 200D 1F52C"
+          }
+        },
+        "type-6": {
+          "name": "MAN, MICROSCOPE; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FF 200D 1F52C"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "MAN, ROCKET",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F468 200D 1F680"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "MAN, ROCKET; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FB 200D 1F680"
+          }
+        },
+        "type-3": {
+          "name": "MAN, ROCKET; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FC 200D 1F680"
+          }
+        },
+        "type-4": {
+          "name": "MAN, ROCKET; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FD 200D 1F680"
+          }
+        },
+        "type-5": {
+          "name": "MAN, ROCKET; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FE 200D 1F680"
+          }
+        },
+        "type-6": {
+          "name": "MAN, ROCKET; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FF 200D 1F680"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "MAN, FIRE ENGINE",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F468 200D 1F692"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "MAN, FIRE ENGINE; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FB 200D 1F692"
+          }
+        },
+        "type-3": {
+          "name": "MAN, FIRE ENGINE; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FC 200D 1F692"
+          }
+        },
+        "type-4": {
+          "name": "MAN, FIRE ENGINE; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FD 200D 1F692"
+          }
+        },
+        "type-5": {
+          "name": "MAN, FIRE ENGINE; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FE 200D 1F692"
+          }
+        },
+        "type-6": {
+          "name": "MAN, FIRE ENGINE; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F468 1F3FF 200D 1F692"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "WOMAN, STAFF OF AESCULAPIUS",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F469 200D 2695 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "WOMAN, STAFF OF AESCULAPIUS; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FB 200D 2695 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "WOMAN, STAFF OF AESCULAPIUS; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FC 200D 2695 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "WOMAN, STAFF OF AESCULAPIUS; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FD 200D 2695 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "WOMAN, STAFF OF AESCULAPIUS; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FE 200D 2695 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "WOMAN, STAFF OF AESCULAPIUS; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FF 200D 2695 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "WOMAN, SCALES",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F469 200D 2696 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "WOMAN, SCALES; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FB 200D 2696 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "WOMAN, SCALES; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FC 200D 2696 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "WOMAN, SCALES; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FD 200D 2696 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "WOMAN, SCALES; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FE 200D 2696 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "WOMAN, SCALES; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FF 200D 2696 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "WOMAN, AIRPLANE",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F469 200D 2708 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "WOMAN, AIRPLANE; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FB 200D 2708 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "WOMAN, AIRPLANE; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FC 200D 2708 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "WOMAN, AIRPLANE; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FD 200D 2708 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "WOMAN, AIRPLANE; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FE 200D 2708 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "WOMAN, AIRPLANE; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FF 200D 2708 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "WOMAN, EAR OF RICE",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F469 200D 1F33E"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "WOMAN, EAR OF RICE; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FB 200D 1F33E"
+          }
+        },
+        "type-3": {
+          "name": "WOMAN, EAR OF RICE; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FC 200D 1F33E"
+          }
+        },
+        "type-4": {
+          "name": "WOMAN, EAR OF RICE; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FD 200D 1F33E"
+          }
+        },
+        "type-5": {
+          "name": "WOMAN, EAR OF RICE; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FE 200D 1F33E"
+          }
+        },
+        "type-6": {
+          "name": "WOMAN, EAR OF RICE; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FF 200D 1F33E"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "WOMAN, COOKING",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F469 200D 1F373"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "WOMAN, COOKING; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FB 200D 1F373"
+          }
+        },
+        "type-3": {
+          "name": "WOMAN, COOKING; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FC 200D 1F373"
+          }
+        },
+        "type-4": {
+          "name": "WOMAN, COOKING; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FD 200D 1F373"
+          }
+        },
+        "type-5": {
+          "name": "WOMAN, COOKING; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FE 200D 1F373"
+          }
+        },
+        "type-6": {
+          "name": "WOMAN, COOKING; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FF 200D 1F373"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "WOMAN, GRADUATION CAP",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F469 200D 1F393"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "WOMAN, GRADUATION CAP; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FB 200D 1F393"
+          }
+        },
+        "type-3": {
+          "name": "WOMAN, GRADUATION CAP; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FC 200D 1F393"
+          }
+        },
+        "type-4": {
+          "name": "WOMAN, GRADUATION CAP; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FD 200D 1F393"
+          }
+        },
+        "type-5": {
+          "name": "WOMAN, GRADUATION CAP; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FE 200D 1F393"
+          }
+        },
+        "type-6": {
+          "name": "WOMAN, GRADUATION CAP; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FF 200D 1F393"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "WOMAN, MICROPHONE",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F469 200D 1F3A4"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "WOMAN, MICROPHONE; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FB 200D 1F3A4"
+          }
+        },
+        "type-3": {
+          "name": "WOMAN, MICROPHONE; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FC 200D 1F3A4"
+          }
+        },
+        "type-4": {
+          "name": "WOMAN, MICROPHONE; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FD 200D 1F3A4"
+          }
+        },
+        "type-5": {
+          "name": "WOMAN, MICROPHONE; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FE 200D 1F3A4"
+          }
+        },
+        "type-6": {
+          "name": "WOMAN, MICROPHONE; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FF 200D 1F3A4"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "WOMAN, ARTIST PALETTE",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F469 200D 1F3A8"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "WOMAN, ARTIST PALETTE; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FB 200D 1F3A8"
+          }
+        },
+        "type-3": {
+          "name": "WOMAN, ARTIST PALETTE; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FC 200D 1F3A8"
+          }
+        },
+        "type-4": {
+          "name": "WOMAN, ARTIST PALETTE; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FD 200D 1F3A8"
+          }
+        },
+        "type-5": {
+          "name": "WOMAN, ARTIST PALETTE; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FE 200D 1F3A8"
+          }
+        },
+        "type-6": {
+          "name": "WOMAN, ARTIST PALETTE; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FF 200D 1F3A8"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "WOMAN, SCHOOL",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F469 200D 1F3EB"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "WOMAN, SCHOOL; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FB 200D 1F3EB"
+          }
+        },
+        "type-3": {
+          "name": "WOMAN, SCHOOL; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FC 200D 1F3EB"
+          }
+        },
+        "type-4": {
+          "name": "WOMAN, SCHOOL; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FD 200D 1F3EB"
+          }
+        },
+        "type-5": {
+          "name": "WOMAN, SCHOOL; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FE 200D 1F3EB"
+          }
+        },
+        "type-6": {
+          "name": "WOMAN, SCHOOL; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FF 200D 1F3EB"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "WOMAN, FACTORY",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F469 200D 1F3ED"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "WOMAN, FACTORY; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FB 200D 1F3ED"
+          }
+        },
+        "type-3": {
+          "name": "WOMAN, FACTORY; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FC 200D 1F3ED"
+          }
+        },
+        "type-4": {
+          "name": "WOMAN, FACTORY; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FD 200D 1F3ED"
+          }
+        },
+        "type-5": {
+          "name": "WOMAN, FACTORY; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FE 200D 1F3ED"
+          }
+        },
+        "type-6": {
+          "name": "WOMAN, FACTORY; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FF 200D 1F3ED"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "WOMAN, PERSONAL COMPUTER",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F469 200D 1F4BB"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "WOMAN, PERSONAL COMPUTER; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FB 200D 1F4BB"
+          }
+        },
+        "type-3": {
+          "name": "WOMAN, PERSONAL COMPUTER; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FC 200D 1F4BB"
+          }
+        },
+        "type-4": {
+          "name": "WOMAN, PERSONAL COMPUTER; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FD 200D 1F4BB"
+          }
+        },
+        "type-5": {
+          "name": "WOMAN, PERSONAL COMPUTER; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FE 200D 1F4BB"
+          }
+        },
+        "type-6": {
+          "name": "WOMAN, PERSONAL COMPUTER; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FF 200D 1F4BB"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "WOMAN, BRIEFCASE",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F469 200D 1F4BC"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "WOMAN, BRIEFCASE; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FB 200D 1F4BC"
+          }
+        },
+        "type-3": {
+          "name": "WOMAN, BRIEFCASE; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FC 200D 1F4BC"
+          }
+        },
+        "type-4": {
+          "name": "WOMAN, BRIEFCASE; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FD 200D 1F4BC"
+          }
+        },
+        "type-5": {
+          "name": "WOMAN, BRIEFCASE; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FE 200D 1F4BC"
+          }
+        },
+        "type-6": {
+          "name": "WOMAN, BRIEFCASE; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FF 200D 1F4BC"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "WOMAN, WRENCH",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F469 200D 1F527"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "WOMAN, WRENCH; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FB 200D 1F527"
+          }
+        },
+        "type-3": {
+          "name": "WOMAN, WRENCH; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FC 200D 1F527"
+          }
+        },
+        "type-4": {
+          "name": "WOMAN, WRENCH; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FD 200D 1F527"
+          }
+        },
+        "type-5": {
+          "name": "WOMAN, WRENCH; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FE 200D 1F527"
+          }
+        },
+        "type-6": {
+          "name": "WOMAN, WRENCH; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FF 200D 1F527"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "WOMAN, MICROSCOPE",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F469 200D 1F52C"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "WOMAN, MICROSCOPE; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FB 200D 1F52C"
+          }
+        },
+        "type-3": {
+          "name": "WOMAN, MICROSCOPE; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FC 200D 1F52C"
+          }
+        },
+        "type-4": {
+          "name": "WOMAN, MICROSCOPE; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FD 200D 1F52C"
+          }
+        },
+        "type-5": {
+          "name": "WOMAN, MICROSCOPE; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FE 200D 1F52C"
+          }
+        },
+        "type-6": {
+          "name": "WOMAN, MICROSCOPE; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FF 200D 1F52C"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "WOMAN, ROCKET",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F469 200D 1F680"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "WOMAN, ROCKET; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FB 200D 1F680"
+          }
+        },
+        "type-3": {
+          "name": "WOMAN, ROCKET; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FC 200D 1F680"
+          }
+        },
+        "type-4": {
+          "name": "WOMAN, ROCKET; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FD 200D 1F680"
+          }
+        },
+        "type-5": {
+          "name": "WOMAN, ROCKET; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FE 200D 1F680"
+          }
+        },
+        "type-6": {
+          "name": "WOMAN, ROCKET; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FF 200D 1F680"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "WOMAN, FIRE ENGINE",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F469 200D 1F692"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "WOMAN, FIRE ENGINE; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FB 200D 1F692"
+          }
+        },
+        "type-3": {
+          "name": "WOMAN, FIRE ENGINE; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FC 200D 1F692"
+          }
+        },
+        "type-4": {
+          "name": "WOMAN, FIRE ENGINE; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FD 200D 1F692"
+          }
+        },
+        "type-5": {
+          "name": "WOMAN, FIRE ENGINE; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FE 200D 1F692"
+          }
+        },
+        "type-6": {
+          "name": "WOMAN, FIRE ENGINE; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F469 1F3FF 200D 1F692"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "POLICE OFFICER, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F46E 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "POLICE OFFICER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F46E 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "POLICE OFFICER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F46E 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "POLICE OFFICER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F46E 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "POLICE OFFICER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F46E 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "POLICE OFFICER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F46E 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "POLICE OFFICER, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F46E 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "POLICE OFFICER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F46E 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "POLICE OFFICER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F46E 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "POLICE OFFICER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F46E 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "POLICE OFFICER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F46E 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "POLICE OFFICER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F46E 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "PERSON WITH BLOND HAIR, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F471 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "PERSON WITH BLOND HAIR, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F471 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "PERSON WITH BLOND HAIR, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F471 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "PERSON WITH BLOND HAIR, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F471 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "PERSON WITH BLOND HAIR, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F471 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "PERSON WITH BLOND HAIR, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F471 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "PERSON WITH BLOND HAIR, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F471 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "PERSON WITH BLOND HAIR, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F471 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "PERSON WITH BLOND HAIR, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F471 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "PERSON WITH BLOND HAIR, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F471 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "PERSON WITH BLOND HAIR, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F471 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "PERSON WITH BLOND HAIR, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F471 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "MAN WITH TURBAN, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F473 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "MAN WITH TURBAN, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F473 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "MAN WITH TURBAN, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F473 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "MAN WITH TURBAN, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F473 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "MAN WITH TURBAN, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F473 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "MAN WITH TURBAN, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F473 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "MAN WITH TURBAN, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F473 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "MAN WITH TURBAN, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F473 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "MAN WITH TURBAN, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F473 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "MAN WITH TURBAN, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F473 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "MAN WITH TURBAN, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F473 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "MAN WITH TURBAN, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F473 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "CONSTRUCTION WORKER, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F477 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "CONSTRUCTION WORKER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F477 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "CONSTRUCTION WORKER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F477 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "CONSTRUCTION WORKER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F477 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "CONSTRUCTION WORKER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F477 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "CONSTRUCTION WORKER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F477 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "CONSTRUCTION WORKER, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F477 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "CONSTRUCTION WORKER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F477 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "CONSTRUCTION WORKER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F477 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "CONSTRUCTION WORKER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F477 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "CONSTRUCTION WORKER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F477 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "CONSTRUCTION WORKER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F477 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "GUARDSMAN, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F482 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "GUARDSMAN, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F482 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "GUARDSMAN, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F482 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "GUARDSMAN, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F482 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "GUARDSMAN, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F482 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "GUARDSMAN, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F482 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "GUARDSMAN, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F482 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "GUARDSMAN, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F482 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "GUARDSMAN, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F482 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "GUARDSMAN, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F482 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "GUARDSMAN, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F482 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "GUARDSMAN, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F482 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "SLEUTH OR SPY, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F575 FE0F 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "SLEUTH OR SPY, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F575 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "SLEUTH OR SPY, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F575 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "SLEUTH OR SPY, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F575 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "SLEUTH OR SPY, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F575 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "SLEUTH OR SPY, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F575 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "SLEUTH OR SPY, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F575 FE0F 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "SLEUTH OR SPY, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F575 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "SLEUTH OR SPY, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F575 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "SLEUTH OR SPY, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F575 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "SLEUTH OR SPY, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F575 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "SLEUTH OR SPY, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F575 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "PERSON WITH BALL, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "26F9 FE0F 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "PERSON WITH BALL, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "26F9 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "PERSON WITH BALL, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "26F9 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "PERSON WITH BALL, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "26F9 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "PERSON WITH BALL, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "26F9 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "PERSON WITH BALL, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "26F9 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "PERSON WITH BALL, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "26F9 FE0F 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "PERSON WITH BALL, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "26F9 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "PERSON WITH BALL, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "26F9 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "PERSON WITH BALL, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "26F9 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "PERSON WITH BALL, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "26F9 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "PERSON WITH BALL, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "26F9 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "RUNNER, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F3C3 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "RUNNER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C3 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "RUNNER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C3 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "RUNNER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C3 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "RUNNER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C3 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "RUNNER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C3 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "RUNNER, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F3C3 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "RUNNER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C3 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "RUNNER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C3 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "RUNNER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C3 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "RUNNER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C3 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "RUNNER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C3 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "SURFER, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F3C4 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "SURFER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C4 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "SURFER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C4 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "SURFER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C4 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "SURFER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C4 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "SURFER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C4 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "SURFER, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F3C4 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "SURFER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C4 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "SURFER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C4 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "SURFER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C4 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "SURFER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C4 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "SURFER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3C4 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "SWIMMER, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F3CA 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "SWIMMER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CA 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "SWIMMER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CA 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "SWIMMER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CA 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "SWIMMER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CA 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "SWIMMER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CA 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "SWIMMER, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F3CA 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "SWIMMER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CA 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "SWIMMER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CA 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "SWIMMER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CA 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "SWIMMER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CA 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "SWIMMER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CA 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "WEIGHT LIFTER, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F3CB FE0F 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "WEIGHT LIFTER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CB 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "WEIGHT LIFTER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CB 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "WEIGHT LIFTER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CB 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "WEIGHT LIFTER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CB 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "WEIGHT LIFTER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CB 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "WEIGHT LIFTER, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F3CB FE0F 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "WEIGHT LIFTER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CB 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "WEIGHT LIFTER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CB 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "WEIGHT LIFTER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CB 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "WEIGHT LIFTER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CB 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "WEIGHT LIFTER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CB 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "GOLFER, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F3CC FE0F 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "GOLFER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CC 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "GOLFER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CC 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "GOLFER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CC 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "GOLFER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CC 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "GOLFER, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CC 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "GOLFER, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F3CC FE0F 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "GOLFER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CC 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "GOLFER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CC 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "GOLFER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CC 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "GOLFER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CC 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "GOLFER, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F3CC 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "WOMAN WITH BUNNY EARS, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F46F 200D 2640 FE0F"
+    }
+  },
+  {
+    "name": "WOMAN WITH BUNNY EARS, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F46F 200D 2642 FE0F"
+    }
+  },
+  {
+    "name": "FACE MASSAGE, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F486 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "FACE MASSAGE, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F486 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "FACE MASSAGE, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F486 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "FACE MASSAGE, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F486 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "FACE MASSAGE, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F486 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "FACE MASSAGE, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F486 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "FACE MASSAGE, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F486 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "FACE MASSAGE, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F486 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "FACE MASSAGE, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F486 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "FACE MASSAGE, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F486 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "FACE MASSAGE, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F486 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "FACE MASSAGE, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F486 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "HAIRCUT, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F487 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "HAIRCUT, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F487 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "HAIRCUT, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F487 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "HAIRCUT, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F487 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "HAIRCUT, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F487 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "HAIRCUT, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F487 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "HAIRCUT, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F487 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "HAIRCUT, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F487 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "HAIRCUT, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F487 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "HAIRCUT, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F487 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "HAIRCUT, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F487 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "HAIRCUT, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F487 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "ROWBOAT, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F6A3 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "ROWBOAT, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6A3 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "ROWBOAT, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6A3 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "ROWBOAT, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6A3 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "ROWBOAT, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6A3 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "ROWBOAT, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6A3 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "ROWBOAT, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F6A3 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "ROWBOAT, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6A3 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "ROWBOAT, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6A3 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "ROWBOAT, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6A3 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "ROWBOAT, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6A3 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "ROWBOAT, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6A3 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "BICYCLIST, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F6B4 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "BICYCLIST, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B4 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "BICYCLIST, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B4 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "BICYCLIST, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B4 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "BICYCLIST, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B4 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "BICYCLIST, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B4 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "BICYCLIST, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F6B4 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "BICYCLIST, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B4 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "BICYCLIST, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B4 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "BICYCLIST, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B4 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "BICYCLIST, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B4 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "BICYCLIST, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B4 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "MOUNTAIN BICYCLIST, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F6B5 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "MOUNTAIN BICYCLIST, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B5 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "MOUNTAIN BICYCLIST, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B5 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "MOUNTAIN BICYCLIST, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B5 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "MOUNTAIN BICYCLIST, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B5 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "MOUNTAIN BICYCLIST, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B5 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "MOUNTAIN BICYCLIST, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F6B5 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "MOUNTAIN BICYCLIST, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B5 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "MOUNTAIN BICYCLIST, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B5 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "MOUNTAIN BICYCLIST, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B5 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "MOUNTAIN BICYCLIST, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B5 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "MOUNTAIN BICYCLIST, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B5 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "PEDESTRIAN, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F6B6 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "PEDESTRIAN, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B6 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "PEDESTRIAN, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B6 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "PEDESTRIAN, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B6 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "PEDESTRIAN, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B6 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "PEDESTRIAN, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B6 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "PEDESTRIAN, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F6B6 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "PEDESTRIAN, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B6 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "PEDESTRIAN, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B6 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "PEDESTRIAN, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B6 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "PEDESTRIAN, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B6 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "PEDESTRIAN, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F6B6 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "PERSON DOING CARTWHEEL, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F938 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "PERSON DOING CARTWHEEL, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F938 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "PERSON DOING CARTWHEEL, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F938 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "PERSON DOING CARTWHEEL, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F938 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "PERSON DOING CARTWHEEL, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F938 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "PERSON DOING CARTWHEEL, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F938 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "PERSON DOING CARTWHEEL, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F938 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "PERSON DOING CARTWHEEL, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F938 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "PERSON DOING CARTWHEEL, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F938 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "PERSON DOING CARTWHEEL, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F938 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "PERSON DOING CARTWHEEL, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F938 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "PERSON DOING CARTWHEEL, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F938 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "JUGGLING, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F939 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "JUGGLING, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F939 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "JUGGLING, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F939 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "JUGGLING, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F939 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "JUGGLING, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F939 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "JUGGLING, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F939 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "JUGGLING, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F939 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "JUGGLING, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F939 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "JUGGLING, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F939 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "JUGGLING, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F939 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "JUGGLING, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F939 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "JUGGLING, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F939 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "WRESTLERS, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F93C 200D 2640 FE0F"
+    }
+  },
+  {
+    "name": "WRESTLERS, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F93C 200D 2642 FE0F"
+    }
+  },
+  {
+    "name": "WATER POLO, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F93D 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "WATER POLO, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F93D 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "WATER POLO, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F93D 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "WATER POLO, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F93D 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "WATER POLO, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F93D 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "WATER POLO, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F93D 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "WATER POLO, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F93D 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "WATER POLO, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F93D 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "WATER POLO, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F93D 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "WATER POLO, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F93D 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "WATER POLO, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F93D 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "WATER POLO, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F93D 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "HANDBALL, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F93E 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "HANDBALL, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F93E 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "HANDBALL, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F93E 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "HANDBALL, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F93E 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "HANDBALL, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F93E 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "HANDBALL, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F93E 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "HANDBALL, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F93E 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "HANDBALL, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F93E 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "HANDBALL, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F93E 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "HANDBALL, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F93E 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "HANDBALL, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F93E 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "HANDBALL, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F93E 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "INFORMATION DESK PERSON, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F481 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "INFORMATION DESK PERSON, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F481 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "INFORMATION DESK PERSON, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F481 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "INFORMATION DESK PERSON, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F481 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "INFORMATION DESK PERSON, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F481 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "INFORMATION DESK PERSON, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F481 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "INFORMATION DESK PERSON, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F481 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "INFORMATION DESK PERSON, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F481 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "INFORMATION DESK PERSON, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F481 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "INFORMATION DESK PERSON, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F481 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "INFORMATION DESK PERSON, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F481 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "INFORMATION DESK PERSON, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F481 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "FACE WITH NO GOOD GESTURE, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F645 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "FACE WITH NO GOOD GESTURE, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F645 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "FACE WITH NO GOOD GESTURE, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F645 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "FACE WITH NO GOOD GESTURE, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F645 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "FACE WITH NO GOOD GESTURE, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F645 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "FACE WITH NO GOOD GESTURE, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F645 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "FACE WITH NO GOOD GESTURE, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F645 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "FACE WITH NO GOOD GESTURE, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F645 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "FACE WITH NO GOOD GESTURE, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F645 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "FACE WITH NO GOOD GESTURE, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F645 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "FACE WITH NO GOOD GESTURE, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F645 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "FACE WITH NO GOOD GESTURE, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F645 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "FACE WITH OK GESTURE, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F646 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "FACE WITH OK GESTURE, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F646 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "FACE WITH OK GESTURE, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F646 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "FACE WITH OK GESTURE, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F646 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "FACE WITH OK GESTURE, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F646 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "FACE WITH OK GESTURE, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F646 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "FACE WITH OK GESTURE, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F646 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "FACE WITH OK GESTURE, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F646 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "FACE WITH OK GESTURE, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F646 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "FACE WITH OK GESTURE, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F646 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "FACE WITH OK GESTURE, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F646 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "FACE WITH OK GESTURE, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F646 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "PERSON BOWING DEEPLY, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F647 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "PERSON BOWING DEEPLY, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F647 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "PERSON BOWING DEEPLY, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F647 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "PERSON BOWING DEEPLY, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F647 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "PERSON BOWING DEEPLY, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F647 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "PERSON BOWING DEEPLY, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F647 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "PERSON BOWING DEEPLY, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F647 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "PERSON BOWING DEEPLY, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F647 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "PERSON BOWING DEEPLY, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F647 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "PERSON BOWING DEEPLY, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F647 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "PERSON BOWING DEEPLY, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F647 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "PERSON BOWING DEEPLY, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F647 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "HAPPY PERSON RAISING ONE HAND, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F64B 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "HAPPY PERSON RAISING ONE HAND, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64B 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "HAPPY PERSON RAISING ONE HAND, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64B 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "HAPPY PERSON RAISING ONE HAND, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64B 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "HAPPY PERSON RAISING ONE HAND, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64B 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "HAPPY PERSON RAISING ONE HAND, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64B 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "HAPPY PERSON RAISING ONE HAND, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F64B 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "HAPPY PERSON RAISING ONE HAND, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64B 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "HAPPY PERSON RAISING ONE HAND, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64B 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "HAPPY PERSON RAISING ONE HAND, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64B 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "HAPPY PERSON RAISING ONE HAND, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64B 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "HAPPY PERSON RAISING ONE HAND, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64B 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "PERSON FROWNING, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F64D 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "PERSON FROWNING, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64D 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "PERSON FROWNING, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64D 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "PERSON FROWNING, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64D 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "PERSON FROWNING, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64D 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "PERSON FROWNING, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64D 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "PERSON FROWNING, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F64D 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "PERSON FROWNING, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64D 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "PERSON FROWNING, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64D 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "PERSON FROWNING, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64D 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "PERSON FROWNING, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64D 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "PERSON FROWNING, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64D 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "PERSON WITH POUTING FACE, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F64E 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "PERSON WITH POUTING FACE, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64E 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "PERSON WITH POUTING FACE, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64E 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "PERSON WITH POUTING FACE, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64E 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "PERSON WITH POUTING FACE, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64E 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "PERSON WITH POUTING FACE, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64E 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "PERSON WITH POUTING FACE, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F64E 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "PERSON WITH POUTING FACE, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64E 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "PERSON WITH POUTING FACE, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64E 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "PERSON WITH POUTING FACE, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64E 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "PERSON WITH POUTING FACE, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64E 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "PERSON WITH POUTING FACE, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F64E 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "FACE PALM, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F926 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "FACE PALM, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F926 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "FACE PALM, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F926 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "FACE PALM, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F926 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "FACE PALM, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F926 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "FACE PALM, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F926 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "FACE PALM, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F926 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "FACE PALM, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F926 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "FACE PALM, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F926 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "FACE PALM, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F926 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "FACE PALM, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F926 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "FACE PALM, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F926 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "SHRUG, FEMALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F937 200D 2640 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "SHRUG, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F937 1F3FB 200D 2640 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "SHRUG, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F937 1F3FC 200D 2640 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "SHRUG, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F937 1F3FD 200D 2640 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "SHRUG, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F937 1F3FE 200D 2640 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "SHRUG, FEMALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F937 1F3FF 200D 2640 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "SHRUG, MALE SIGN",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F937 200D 2642 FE0F"
+    },
+    "modification": {
+      "skin": {
+        "type-1-2": {
+          "name": "SHRUG, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F937 1F3FB 200D 2642 FE0F"
+          }
+        },
+        "type-3": {
+          "name": "SHRUG, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-3",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F937 1F3FC 200D 2642 FE0F"
+          }
+        },
+        "type-4": {
+          "name": "SHRUG, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-4",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F937 1F3FD 200D 2642 FE0F"
+          }
+        },
+        "type-5": {
+          "name": "SHRUG, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-5",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F937 1F3FE 200D 2642 FE0F"
+          }
+        },
+        "type-6": {
+          "name": "SHRUG, MALE SIGN; EMOJI MODIFIER FITZPATRICK TYPE-6",
+          "defaultPresentation": "emoji",
+          "presentation": {
+            "default": "1F937 1F3FF 200D 2642 FE0F"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "WAVING WHITE FLAG, RAINBOW",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F3F3 FE0F 200D 1F308"
+    }
+  },
+  {
+    "name": "EYE, LEFT SPEECH BUBBLE",
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "1F441 FE0F 200D 1F5E8 FE0F"
     }
   }
 ]

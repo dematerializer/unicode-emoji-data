@@ -1,6 +1,6 @@
 {
   "name": "unicode-emoji-data",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "private": true,
   "description": "unicode standard compliant emoji data",
   "keywords": ["unicode", "standard", "emoji", "data"],
@@ -17,8 +17,8 @@
     "test": "NODE_ENV=test nyc --reporter=lcov --reporter=text mocha --require ./test-env --compilers js:babel-core/register src/**/*.test.js",
     "posttest": "npm run lint",
     "lint": "eslint --ignore-path .gitignore .",
-    "prepublish": "npm run test && npm run build:sources",
-    "build:sources": "rm -rf lib; mkdir lib; babel src/index.js -o lib/index.js; babel src/expand-emoji-data.js -o lib/expand-emoji-data.js"
+    "build:sources": "rm -rf lib; mkdir lib; babel src/index.js -o lib/index.js; babel src/expand-emoji-data.js -o lib/expand-emoji-data.js",
+    "prepublish": "npm run test && npm run build:sources"
   },
   "nyc": {
     "sourceMap": false,

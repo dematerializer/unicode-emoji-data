@@ -12,14 +12,14 @@ import expandEmojiData from './expand-emoji-data';
 import scrapeEmojiList from './emoji-list';
 import checkData from './check-data';
 
-import presetUnicode9Emoji3 from './preset-unicode-9-emoji-3';
-import presetUnicode9Emoji4 from './preset-unicode-9-emoji-4';
+import presetStable from './preset-stable';
+import presetBeta from './preset-beta';
 
 process.on('uncaughtException', (err) => { throw err; });
 process.on('unhandledRejection', (err) => { throw err; });
 
 function* buildForPreset(preset) {
-	logUpdate(`using unicode v${preset.unicodeVersion}, emoji v${preset.emojiVersion}`);
+	logUpdate(`using unicode v${preset.unicodeVersion}, emoji v${preset.emojiVersion} (${preset.tag})`);
 	logUpdate.done();
 
 	logUpdate('⇣ unicode-data');
@@ -81,7 +81,7 @@ function* buildForPreset(preset) {
 		...emojiSequences.flagEmoji,
 		...emojiZwjSequences.zwjEmoji,
 	];
-	fs.writeFileSync(`res/emoji-data-v${preset.emojiVersion}.json`, JSON.stringify(combined, null, 2));
+	fs.writeFileSync(`res/emoji-data-v${preset.emojiVersion}.${preset.tag}.json`, JSON.stringify(combined, null, 2));
 
 	logUpdate('✓ write data file');
 	logUpdate.done();
@@ -116,6 +116,6 @@ function* buildForPreset(preset) {
 }
 
 co(function* main() {
-	yield buildForPreset(presetUnicode9Emoji3);
-	yield buildForPreset(presetUnicode9Emoji4);
+	yield buildForPreset(presetStable);
+	yield buildForPreset(presetBeta);
 });

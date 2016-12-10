@@ -1,13 +1,13 @@
 import fs from 'fs';
 import unicodeEmojiData from '.';
-import presetUnicode9Emoji3 from './preset-unicode-9-emoji-3';
-import presetUnicode9Emoji4 from './preset-unicode-9-emoji-4';
+import presetStable from './preset-stable';
+import presetBeta from './preset-beta';
 
 process.on('uncaughtException', (err) => { throw err; });
 process.on('unhandledRejection', (err) => { throw err; });
 
 const buildForPreset = (preset) => {
-	const expandedData = unicodeEmojiData.expand(unicodeEmojiData[`v${preset.emojiVersion}`]);
+	const expandedData = unicodeEmojiData.expand(unicodeEmojiData[preset.tag]);
 	const tableRows = expandedData.map(datum => `
 		<tr>
 			<td>${datum.name}</td>
@@ -21,7 +21,7 @@ const buildForPreset = (preset) => {
 		<html>
 			<head>
 			<meta charset="utf-8">
-			<title>emoji data v${preset.emojiVersion}</title>
+			<title>emoji data for unicode v${preset.unicodeVersion}, emoji v${preset.emojiVersion} (${preset.tag})</title>
 			<body>
 				<table>
 					<tbody>
@@ -32,8 +32,8 @@ const buildForPreset = (preset) => {
 		</html>
 	`;
 
-	fs.writeFileSync(`docs/emoji-data-v${preset.emojiVersion}.html`, html);
+	fs.writeFileSync(`docs/emoji-data-v${preset.emojiVersion}.${preset.tag}.html`, html);
 };
 
-buildForPreset(presetUnicode9Emoji3);
-buildForPreset(presetUnicode9Emoji4);
+buildForPreset(presetStable);
+buildForPreset(presetBeta);
