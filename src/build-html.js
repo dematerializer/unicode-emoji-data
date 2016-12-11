@@ -1,5 +1,5 @@
 import fs from 'fs';
-import unicodeEmojiData from '.';
+import { expandEmojiData, emojiDataStable, emojiDataBeta } from '.';
 import presetStable from './preset-stable';
 import presetBeta from './preset-beta';
 
@@ -7,7 +7,7 @@ process.on('uncaughtException', (err) => { throw err; });
 process.on('unhandledRejection', (err) => { throw err; });
 
 const buildForPreset = (preset) => {
-	const expandedData = unicodeEmojiData.expand(unicodeEmojiData[preset.tag]);
+	const expandedData = expandEmojiData(preset.tag === 'stable' ? emojiDataStable : emojiDataBeta);
 	const tableRows = expandedData.map(datum => `
 		<tr>
 			<td>${datum.name}</td>
