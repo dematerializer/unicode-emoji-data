@@ -110,7 +110,8 @@ The `expand` function transforms raw entries so that skin modifications and comb
   {
     name: 'WHITE UP POINTING INDEX',
     sequence: '261D FE0F',
-    output: '☝️' },
+    output: '☝️'
+  },
   {
     name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-1-2',
     sequence: '261D 1F3FB',
