@@ -1,4 +1,4 @@
-const punycode = require('punycode');
+import punycode from 'punycode';
 
 // Extracts a simplified, human readable representation from an emoji datum:
 const extractEmojiInfoFromDatum = (datum) => {
