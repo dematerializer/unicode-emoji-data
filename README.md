@@ -102,7 +102,7 @@ Example of an emoji datum when directly using the raw `stable` or `beta` data:
 }
 ```
 
-The `expand` function transforms raw entries so that skin modifications and combinations (e.g. keycap) of each raw emoji entry get expanded into their own, simplified emoji entries, so the sample emoji datum representing `WHITE UP POINTING INDEX` from above would get expanded into the following simplified emoji entries:
+The `expand` function transforms all given raw entries so that each emoji datum along with each of its skin modifications and combinations (e.g. keycap) get expanded into their own, simplified emoji entries. The sample emoji datum from above representing `WHITE UP POINTING INDEX` would get expanded into the following simplified emoji entries:
 
 ```
 [
