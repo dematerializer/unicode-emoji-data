@@ -3,8 +3,21 @@
   "version": "0.0.0",
   "private": true,
   "description": "unicode standard compliant emoji data",
-  "keywords": ["unicode", "standard", "emoji", "data"],
+  "keywords": [
+    "unicode",
+    "standard",
+    "emoji",
+    "data"
+  ],
   "author": "Andreas Tietz (https://github.com/dematerializer)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dematerializer/unicode-emoji-data.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dematerializer/unicode-emoji-data/issues"
+  },
+  "homepage": "https://github.com/dematerializer/unicode-emoji-data",
   "main": "lib/index.js",
   "files": [
     "lib",
