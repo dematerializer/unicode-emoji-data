@@ -9,6 +9,7 @@
     "data"
   ],
   "author": "Andreas Tietz (https://github.com/dematerializer)",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/dematerializer/unicode-emoji-data.git"
