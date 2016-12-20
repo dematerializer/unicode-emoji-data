@@ -27,11 +27,14 @@
     "start": "npm run build:emoji && npm run build:html",
     "build:emoji": "node build-emoji-data.js",
     "build:html": "node build-html.js",
-    "test": "NODE_ENV=test nyc --reporter=lcov --reporter=text mocha --require ./test-env --compilers js:babel-core/register src/**/*.test.js",
+    "validate": "npm run cover && npm run check-coverage",
+    "cover": "nyc --reporter=lcov --reporter=text npm test",
+    "check-coverage": "nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
+    "test": "NODE_ENV=test mocha --require ./test-env --compilers js:babel-core/register src/**/*.test.js",
     "posttest": "npm run lint",
     "lint": "eslint --ignore-path .gitignore .",
     "build:sources": "rm -rf lib; mkdir lib; babel src/index.js -o lib/index.js; babel src/expand-emoji-data.js -o lib/expand-emoji-data.js",
-    "prepublish": "npm run test && npm run build:sources"
+    "prepublish": "npm run validate && npm run build:sources"
   },
   "nyc": {
     "sourceMap": false,
