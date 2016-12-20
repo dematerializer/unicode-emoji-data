@@ -9,6 +9,8 @@ node_js:
   - '6'
 before_script:
   - npm prune
+after_success:
+  - npm run report-coverage
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
