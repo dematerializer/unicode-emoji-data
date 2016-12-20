@@ -10,10 +10,6 @@
 - no heavy weight annotations, no [image files or spritesheets](https://github.com/iamcal/emoji-data) included
 - internationalized annotations (text-to-speech descriptions and keywords) with extensions provided by the community are available via the [CLDR](http://cldr.unicode.org/) compliant [unicode-emoji-annotations (coming soon)](TODO) module
 
-## Install
-
-`npm install unicode-emoji-data`
-
 ## Usage
 
 ### CommonJS
@@ -141,6 +137,15 @@ The `expand` function transforms all given raw entries so that each emoji datum 
 ]
 ```
 
+## Install
+
+`npm install unicode-emoji-data`
+
 ## License
 
-MIT
+[MIT](https://github.com/dematerializer/unicode-emoji-data/blob/master/LICENSE)
+
+## Development
+
+[![Travis](https://img.shields.io/travis/dematerializer/unicode-emoji-data.svg?style=flat-square)](https://travis-ci.org/dematerializer/unicode-emoji-data)
+[![Codecov](https://img.shields.io/codecov/c/github/dematerializer/unicode-emoji-data.svg?style=flat-square)](https://codecov.io/gh/dematerializer/unicode-emoji-data)
