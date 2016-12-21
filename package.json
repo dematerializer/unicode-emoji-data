@@ -1,12 +1,13 @@
 {
   "name": "unicode-emoji-data",
   "version": "1.0.2",
-  "description": "unicode standard compliant emoji data",
+  "description": "Unicode standard compliant emoji JSON data",
   "keywords": [
     "unicode",
     "standard",
     "emoji",
-    "data"
+    "data",
+    "JSON"
   ],
   "author": "Andreas Tietz (https://github.com/dematerializer)",
   "license": "MIT",

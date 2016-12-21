@@ -1,6 +1,6 @@
 # Unicode Emoji Data
 
-> Your single source of truth for JSON formatted, unicode standard compliant emoji data.
+> Unicode standard compliant emoji JSON data
 
 - lightweight, precompiled, easy to parse JSON format with a minimalistic API
 - comprehensible for humans by means of [Unicode® Technical Report #51 - UNICODE EMOJI](http://www.unicode.org/reports/tr51/)
