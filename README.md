@@ -1,10 +1,10 @@
 # Unicode Emoji Data
 
-> Unicode standard compliant emoji JSON data
+> Unicode standard compliant emoji data
 
 - lightweight, precompiled, easy to parse JSON format with a minimalistic API
 - comprehensible for humans by means of [Unicode® Technical Report #51 - UNICODE EMOJI](http://www.unicode.org/reports/tr51/)
-- straight from the source, compiled from [unicode repository data files](http://unicode.org/Public/emoji/4.0/)
+- straight from the source, compiled directly from [unicode repository data files](http://unicode.org/Public/emoji/4.0/)
 - correct & complete compared against the [unicode emoji list](http://unicode.org/emoji/charts/emoji-list.html)
 - up-to-date, supporting unicode emoji versions v4 (stable) and v5 (beta)
 - no heavy weight annotations, no [image files or spritesheets](https://github.com/iamcal/emoji-data) included
