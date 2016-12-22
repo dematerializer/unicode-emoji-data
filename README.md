@@ -30,16 +30,15 @@ const emojiExpanded = expandEmojiData(emojiData);
 
 ## API
 
-Requiring/importing `unicode-emoji-data` yields an object containing emoji data grouped by supported unicode emoji version (`stable` and `beta`) and a function `expand` for expanding said data:
-```
-{
-    stable: [...] // emoji data for the latest unicode emoji stable version (v4)
-    beta: [...] // emoji data for the latest unicode emoji beta version (v5)
-    expand: function (emojiData) {...} // expands emojiData
-}
-```
+Requiring/importing `unicode-emoji-data` gives you the following API to work with:
 
-Example of an emoji datum when directly using the raw `stable` or `beta` data:
+| API | Signature | Description |
+| --- | --- | --- |
+| `emojiDataStable` | `[...]` | array of emoji data for the latest stable unicode emoji version (v4) |
+| `emojiDataBeta` | `[...]` | array of emoji data for the latest unicode emoji beta version (v5) |
+| `expandEmojiData` | `function (emojiData) {...}` | expands `emojiData`, returns an array of objects |
+
+Example of an emoji datum when directly using the raw `emojiDataStable` or `emojiDataBeta` array:
 ```
 {
   "name": "WHITE UP POINTING INDEX",
@@ -98,7 +97,7 @@ Example of an emoji datum when directly using the raw `stable` or `beta` data:
 }
 ```
 
-The `expand` function transforms all given raw entries so that each emoji datum along with each of its skin modifications and combinations (e.g. keycap) get expanded into their own, simplified emoji entries. The sample emoji datum from above representing `WHITE UP POINTING INDEX` would get expanded into the following simplified emoji entries:
+The `expandEmojiData` function transforms all given raw entries so that each emoji datum along with each of its skin modifications and combinations (e.g. keycap) get expanded into their own, simplified emoji entries. The sample emoji datum from above representing `WHITE UP POINTING INDEX` would get expanded into the following simplified emoji entries:
 
 ```
 [
