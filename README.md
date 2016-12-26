@@ -97,40 +97,73 @@ Example of an emoji datum when directly using the raw `emojiDataStable` or `emoj
 }
 ```
 
-The `expandEmojiData` function transforms all given raw entries so that each emoji datum along with each of its skin modifications and combinations (e.g. keycap) get expanded into their own, simplified emoji entries. The sample emoji datum from above representing `WHITE UP POINTING INDEX` would get expanded into the following simplified emoji entries:
+The `expandEmojiData` function transforms all given raw entries so that each emoji datum along with each of its skin modifications and combinations (e.g. keycap) get expanded into their own emoji entries. The sample emoji datum from above representing `WHITE UP POINTING INDEX` would get expanded into the following:
 
 ```
 [
   ...
   {
-    name: 'WHITE UP POINTING INDEX',
-    sequence: '261D FE0F',
-    output: '☝️'
+    <original "WHITE UP POINTING INDEX" base datum>
   },
   {
-    name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-1-2',
-    sequence: '261D 1F3FB',
-    output: '☝🏻'
+    "name": "WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+    "codepoint": "261D",
+    "shiftJis": {
+      "kddi": "F6CF",
+      "softbank": "F94F"
+    },
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "261D 1F3FB"
+    }
   },
   {
-    name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-3',
-    sequence: '261D 1F3FC',
-    output: '☝🏼'
+    "name": "WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-3",
+    "codepoint": "261D",
+    "shiftJis": {
+      "kddi": "F6CF",
+      "softbank": "F94F"
+    },
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "261D 1F3FC"
+    }
   },
   {
-    name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-4',
-    sequence: '261D 1F3FD',
-    output: '☝🏽'
+    "name": "WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-4",
+    "codepoint": "261D",
+    "shiftJis": {
+      "kddi": "F6CF",
+      "softbank": "F94F"
+    },
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "261D 1F3FD"
+    }
   },
   {
-    name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-5',
-    sequence: '261D 1F3FE',
-    output: '☝🏾'
+    "name": "WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-5",
+    "codepoint": "261D",
+    "shiftJis": {
+      "kddi": "F6CF",
+      "softbank": "F94F"
+    },
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "261D 1F3FE"
+    }
   },
   {
-    name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-6',
-    sequence: '261D 1F3FF',
-    output: '☝🏿'
+    "name": "WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-6",
+    "codepoint": "261D",
+    "shiftJis": {
+      "kddi": "F6CF",
+      "softbank": "F94F"
+    },
+    "defaultPresentation": "emoji",
+    "presentation": {
+      "default": "261D 1F3FF"
+    }
   },
   ...
 ]

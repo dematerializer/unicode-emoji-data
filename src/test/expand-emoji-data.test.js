@@ -1,7 +1,7 @@
 import expandEmojiData, { internals } from '../expand-emoji-data';
 
 const {
-	extractEmojiInfoFromDatum,
+	transformEmojiDatum,
 } = internals;
 
 const datumWithVariation = {
@@ -48,7 +48,7 @@ const datumWithCombinationAndVariation = {
 	},
 };
 
-const datumWithSkinModificationAndWithoutVariation = {
+const datumWithSkinModification = {
 	name: 'WHITE UP POINTING INDEX',
 	codepoint: '261D',
 	shiftJis: {
@@ -105,76 +105,74 @@ const datumWithSkinModificationAndWithoutVariation = {
 };
 
 describe('expand-emoji-data', () => {
-	it('should extract a simplified, human readable representation from an emoji datum', () => {
-		expect(extractEmojiInfoFromDatum(
+	it('should transform a given base datum', () => {
+		expect(transformEmojiDatum(
 			datumWithVariation,
-		)).to.deep.equal({
-			name: 'UMBRELLA WITH RAIN DROPS',
-			sequence: '2614 FE0F',
-			output: '☔️',
-		});
-		expect(extractEmojiInfoFromDatum(
+		)).to.equal(datumWithVariation);
+		expect(transformEmojiDatum(
+			datumWithCombinationAndVariation,
 			datumWithCombinationAndVariation.combination.keycap,
 		)).to.deep.equal({
-			name: 'KEYCAP NUMBER SIGN',
-			sequence: '0023 FE0F 20E3',
-			output: '#️⃣',
+			...datumWithCombinationAndVariation,
+			...datumWithCombinationAndVariation.combination.keycap,
+			modification: undefined,
+			combination: undefined,
 		});
-		expect(extractEmojiInfoFromDatum(
-			datumWithSkinModificationAndWithoutVariation.modification.skin['type-4'],
+		expect(transformEmojiDatum(
+			datumWithSkinModification,
+			datumWithSkinModification.modification.skin['type-4'],
 		)).to.deep.equal({
-			name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-4',
-			sequence: '261D 1F3FD',
-			output: '☝🏽',
+			...datumWithSkinModification,
+			...datumWithSkinModification.modification.skin['type-4'],
+			modification: undefined,
+			combination: undefined,
 		});
 	});
 
-	it('should expand all emoji data entries such that each combination and each modification of one entry results in a separate, simplified entry', () => {
+	it('should expand all given emoji data entries such that each combination and each modification of one entry results in a separate entry', () => {
 		const data = [
 			datumWithVariation,
 			datumWithCombinationAndVariation,
-			datumWithSkinModificationAndWithoutVariation,
+			datumWithSkinModification,
 		];
 		expect(expandEmojiData(data)).to.deep.equal([
+			datumWithVariation,
 			{
-				name: 'UMBRELLA WITH RAIN DROPS',
-				sequence: '2614 FE0F',
-				output: '☔️',
+				...datumWithCombinationAndVariation,
+				...datumWithCombinationAndVariation.combination.keycap,
+				modification: undefined,
+				combination: undefined,
+			},
+			datumWithSkinModification,
+			{
+				...datumWithSkinModification,
+				...datumWithSkinModification.modification.skin['type-1-2'],
+				modification: undefined,
+				combination: undefined,
 			},
 			{
-				name: 'KEYCAP NUMBER SIGN',
-				sequence: '0023 FE0F 20E3',
-				output: '#️⃣',
+				...datumWithSkinModification,
+				...datumWithSkinModification.modification.skin['type-3'],
+				modification: undefined,
+				combination: undefined,
 			},
 			{
-				name: 'WHITE UP POINTING INDEX',
-				sequence: '261D FE0F',
-				output: '☝️',
+				...datumWithSkinModification,
+				...datumWithSkinModification.modification.skin['type-4'],
+				modification: undefined,
+				combination: undefined,
 			},
 			{
-				name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-1-2',
-				sequence: '261D 1F3FB',
-				output: '☝🏻',
+				...datumWithSkinModification,
+				...datumWithSkinModification.modification.skin['type-5'],
+				modification: undefined,
+				combination: undefined,
 			},
 			{
-				name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-3',
-				sequence: '261D 1F3FC',
-				output: '☝🏼',
-			},
-			{
-				name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-4',
-				sequence: '261D 1F3FD',
-				output: '☝🏽',
-			},
-			{
-				name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-5',
-				sequence: '261D 1F3FE',
-				output: '☝🏾',
-			},
-			{
-				name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-6',
-				sequence: '261D 1F3FF',
-				output: '☝🏿',
+				...datumWithSkinModification,
+				...datumWithSkinModification.modification.skin['type-6'],
+				modification: undefined,
+				combination: undefined,
 			},
 		]);
 	});
