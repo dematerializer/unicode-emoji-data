@@ -10,9 +10,9 @@
 - no heavy weight [image files or spritesheets](https://github.com/iamcal/emoji-data) or annotations included
 - internationalized emoji annotations (text-to-speech descriptions and keywords) with extensions provided by the community are available via the unicode  [CLDR](http://cldr.unicode.org/) standard compliant [unicode-emoji-annotations (coming soon)](TODO) module
 
-This project has the aim of providing emoji data preserved with respect to the original source as closely as possible, retaining concepts and naming conventions of the original specification ([Unicode® Technical Report #51 - UNICODE EMOJI](http://www.unicode.org/reports/tr51/)) while providing all information in a single carefully designed JSON structure.
+This project aims to preserve emoji data with respect to the original source as closely as possible, retaining concepts and naming conventions of the specification where possible while providing all information in a single carefully designed JSON structure.
 
-Keep in mind that this library adheres to the unicode standard **proposal**. In reality, vendors implement their support for displaying emoji characters very differently. It is not the scope of this module to dictate or encourage any specific choice of emoji presentation style (especially the use of explicit variation selectors) in order to achieve support for a specific vendor. Do not expect the output you get from using the code point sequences provided by this library when displaying emoji characters to be perfectly compatible with all platforms or systems.
+Keep in mind that this library adheres to the unicode standard **proposal**. In reality, vendors implement their support for displaying emoji characters slightly different from one another. It is not the scope of this module to encourage a specific choice of emoji presentation style (especially the use of explicit variation selectors) in order to achieve compatibility with a specific vendor. When displaying emoji characters, do not expect the output you get from using the code point sequences provided by this library  to be perfectly compatible with all platforms or systems.
 
 ## API
 
@@ -22,71 +22,74 @@ Requiring/importing `unicode-emoji-data` gives you the following API to work wit
 - `emojiDataBeta`
 - `expandEmojiData`
 
-### `emojiDataStable`/`emojiDataBeta`
+### `emojiDataStable` / `emojiDataBeta`
 
-`[..., { <emoji datum> }, ...]`
+```javascript
+[..., { /* emoji datum */ }, ...]
+```
 
-Array of emoji data for the latest stable (v4)/beta (v5) unicode emoji version.
+Array of emoji data for the latest stable (v4) / beta (v5) unicode emoji version.
 
 Example of an emoji datum when directly using the raw `emojiDataStable` or `emojiDataBeta` array:
-```
+
+```javascript
 [
   ...
   {
-    "name": "WHITE UP POINTING INDEX",
-    "codepoint": "261D",
-    "shiftJis": {
-      "kddi": "F6CF",
-      "softbank": "F94F"
+    name: 'WHITE UP POINTING INDEX',
+    codepoint: '261D',
+    shiftJis: {
+      kddi: 'F6CF',
+      softbank: 'F94F'
     },
-    "defaultPresentation": "text",
-    "presentation": {
-      "default": "261D",
-      "variation": {
-        "text": "261D FE0E",
-        "emoji": "261D FE0F"
+    defaultPresentation: 'text',
+    presentation: {
+      default: '261D',
+      variation: {
+        text: '261D FE0E',
+        emoji: '261D FE0F'
       }
     },
-    "modification": {
-      "skin": {
-        "type-1-2": {
-          "name": "WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
-          "defaultPresentation": "emoji",
-          "presentation": {
-            "default": "261D 1F3FB"
+    modification: {
+      skin: {
+        'type-1-2': {
+          name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-1-2',
+          defaultPresentation: 'emoji',
+          presentation: {
+            default: '261D 1F3FB'
           }
         },
-        "type-3": {
-          "name": "WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-3",
-          "defaultPresentation": "emoji",
-          "presentation": {
-            "default": "261D 1F3FC"
+        'type-3': {
+          name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-3',
+          defaultPresentation: 'emoji',
+          presentation: {
+            default: '261D 1F3FC'
           }
         },
-        "type-4": {
-          "name": "WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-4",
-          "defaultPresentation": "emoji",
-          "presentation": {
-            "default": "261D 1F3FD"
+        'type-4': {
+          name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-4',
+          defaultPresentation: 'emoji',
+          presentation: {
+            default: '261D 1F3FD'
           }
         },
-        "type-5": {
-          "name": "WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-5",
-          "defaultPresentation": "emoji",
-          "presentation": {
-            "default": "261D 1F3FE"
+        'type-5': {
+          name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-5',
+          defaultPresentation: 'emoji',
+          presentation: {
+            default: '261D 1F3FE'
           }
         },
-        "type-6": {
-          "name": "WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-6",
-          "defaultPresentation": "emoji",
-          "presentation": {
-            "default": "261D 1F3FF"
+        'type-6': {
+          name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-6',
+          defaultPresentation: 'emoji',
+          presentation: {
+            default: '261D 1F3FF'
           }
         }
       }
     }
-  }
+  },
   ...
 ]
 ```
@@ -109,7 +112,7 @@ Properties of an emoji datum explained:
 
 - `codepoint` (optional)
 
-  standardized unicode code point in hexadecimal notation, e.g. `261D`; does not apply to flag and ZWJ emoji
+  standardized single unicode code point in hexadecimal notation, e.g. `261D`; does not apply to flag or ZWJ emoji
 
 - `shiftJis` (optional)
 
@@ -125,23 +128,31 @@ Properties of an emoji datum explained:
 
   `default` contains a code point or (space separated) sequence of code points for displaying the emoji with the default presentation style defined by the `defaultPresentation` property;
 
-  `variation` is an optional property containing a code point (possibly sequence of code points) for each variation sequence to explicitly influence the appearance of the emoji (`text` and `emoji` style)
+  `variation` is an optional property containing a code point sequence for each variation to explicitly influence the appearance of the emoji (`text` and `emoji` style)
 
 - `modification` (optional)
 
-  holds modification possibilities for displaying the (emoji) unicode character in different ways; up to and including unicode emoji version 4 only the fitzpatrick `skin` modifier is defined, with skin types ranging from `type-1-2` and `type-3` up to `type-6`; grouped by those skin types are properties that should override the base properties of the emoji datum in case a skin variation is being applied (e.g. a unicode character should take on an emoji presentation by default when being skin-modified)
+  holds modification possibilities for displaying the (emoji) unicode character in different ways;
+
+  up to and including unicode emoji version 4 only the fitzpatrick `skin` modifier is defined, with skin types ranging from `type-1-2` and `type-3` up to `type-6`; grouped by those skin types are properties that should override the base properties of the emoji datum in case a skin variation is being applied (e.g. a unicode character should take on an emoji presentation by default when being skin-modified)
 
 - `combination` (optional)
 
-  holds combining possibilities for displaying the (emoji) unicode character in different ways; up to and including unicode emoji version 4 only the `keycap` combination is defined; its properties should override the base properties of the emoji datum in case the keycap combination is being applied (e.g. a unicode character should take on an emoji presentation by default when combined with the keycap combining mark)
+  holds combination possibilities for displaying the (emoji) unicode character in different ways;
+
+  up to and including unicode emoji version 4 only the `keycap` combination is defined; its properties should override the base properties of the emoji datum in case the keycap combination is being applied (e.g. a unicode character should take on an emoji presentation by default when combined with the keycap combining mark)
 
 ### `expandEmojiData`
 
-`function (emojiData) {}`
+```javascript
+function (emojiData) {}
+```
 
 Expands `emojiData`, returns an array of objects:
 
-`[..., { <emoji datum> }, ...]`
+```javascript
+[..., { /* emoji datum */ }, ...]
+```
 
 The `expandEmojiData` function transforms all given raw entries so that each emoji datum along with each of its skin modifications and combinations (e.g. keycap) get expanded into their own emoji entries.
 
@@ -149,70 +160,70 @@ The purpose of this function is to give you a convenient way of using all the em
 
 The sample emoji datum from above representing `WHITE UP POINTING INDEX` would get expanded into the following separate emoji entries:
 
-```
+```javascript
 [
   ...
   {
-    <original "WHITE UP POINTING INDEX" base datum>
+    <original 'WHITE UP POINTING INDEX' base datum>
   },
   {
-    "name": "WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-1-2",
-    "codepoint": "261D",
-    "shiftJis": {
-      "kddi": "F6CF",
-      "softbank": "F94F"
+    name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-1-2',
+    codepoint: '261D',
+    shiftJis: {
+      kddi: 'F6CF',
+      softbank: 'F94F'
     },
-    "defaultPresentation": "emoji",
-    "presentation": {
-      "default": "261D 1F3FB"
+    defaultPresentation: 'emoji',
+    presentation: {
+      default: '261D 1F3FB'
     }
   },
   {
-    "name": "WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-3",
-    "codepoint": "261D",
-    "shiftJis": {
-      "kddi": "F6CF",
-      "softbank": "F94F"
+    name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-3',
+    codepoint: '261D',
+    shiftJis: {
+      kddi: 'F6CF',
+      softbank: 'F94F'
     },
-    "defaultPresentation": "emoji",
-    "presentation": {
-      "default": "261D 1F3FC"
+    defaultPresentation: 'emoji',
+    presentation: {
+      default: '261D 1F3FC'
     }
   },
   {
-    "name": "WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-4",
-    "codepoint": "261D",
-    "shiftJis": {
-      "kddi": "F6CF",
-      "softbank": "F94F"
+    name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-4',
+    codepoint: '261D',
+    shiftJis: {
+      kddi: 'F6CF',
+      softbank: 'F94F'
     },
-    "defaultPresentation": "emoji",
-    "presentation": {
-      "default": "261D 1F3FD"
+    defaultPresentation: 'emoji',
+    presentation: {
+      default: '261D 1F3FD'
     }
   },
   {
-    "name": "WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-5",
-    "codepoint": "261D",
-    "shiftJis": {
-      "kddi": "F6CF",
-      "softbank": "F94F"
+    name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-5',
+    codepoint: '261D',
+    shiftJis: {
+      kddi: 'F6CF',
+      softbank: 'F94F'
     },
-    "defaultPresentation": "emoji",
-    "presentation": {
-      "default": "261D 1F3FE"
+    defaultPresentation: 'emoji',
+    presentation: {
+      default: '261D 1F3FE'
     }
   },
   {
-    "name": "WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-6",
-    "codepoint": "261D",
-    "shiftJis": {
-      "kddi": "F6CF",
-      "softbank": "F94F"
+    name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-6',
+    codepoint: '261D',
+    shiftJis: {
+      kddi: 'F6CF',
+      softbank: 'F94F'
     },
-    "defaultPresentation": "emoji",
-    "presentation": {
-      "default": "261D 1F3FF"
+    defaultPresentation: 'emoji',
+    presentation: {
+      default: '261D 1F3FF'
     }
   },
   ...
@@ -223,7 +234,7 @@ The sample emoji datum from above representing `WHITE UP POINTING INDEX` would g
 
 ### CommonJS
 
-```
+```javascript
 const unicodeEmojiData = require('unicode-emoji-data');
 const emojiData = unicodeEmojiData.emojiDataStable;
 const emojiExpanded = unicodeEmojiData.expandEmojiData(emojiData);
@@ -231,10 +242,27 @@ const emojiExpanded = unicodeEmojiData.expandEmojiData(emojiData);
 
 ### ES6/babel
 
-```
+```javascript
 import { emojiDataStable, expandEmojiData } from 'unicode-emoji-data';
 const emojiData = emojiDataStable;
 const emojiExpanded = expandEmojiData(emojiData);
+```
+
+### Example: printing out all emoji
+
+```javascript
+import { emojiDataStable, expandEmojiData } from 'unicode-emoji-data';
+import punycode from 'punycode'; // npm install punycode
+
+const emojiData = expandEmojiData(emojiDataStable);
+emojiData.forEach((datum) => {
+  const sequence = datum.presentation.default;
+  const numericCodePointSequence = sequence.split(' ').map(
+    codePoint => parseInt(codePoint, 16)
+  );
+  const output = punycode.ucs2.encode(numericCodePointSequence);
+  console.log(output);
+});
 ```
 
 ## Install
@@ -251,3 +279,7 @@ const emojiExpanded = expandEmojiData(emojiData);
 
 [![Travis](https://img.shields.io/travis/dematerializer/unicode-emoji-data.svg?style=flat-square)](https://travis-ci.org/dematerializer/unicode-emoji-data)
 [![Codecov](https://img.shields.io/codecov/c/github/dematerializer/unicode-emoji-data.svg?style=flat-square)](https://codecov.io/gh/dematerializer/unicode-emoji-data)
+
+### Contributing
+
+TODO
