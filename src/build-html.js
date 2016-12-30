@@ -61,7 +61,7 @@ const buildForPreset = (preset) => {
 		</html>
 	`;
 
-	fs.writeFileSync(`docs/emoji-data-v${preset.emojiVersion}.${preset.tag}.html`, html);
+	fs.writeFileSync(`docs/emoji-data.${preset.tag}.html`, html);
 };
 
 buildForPreset(presetStable); // for now we only care about the stable data

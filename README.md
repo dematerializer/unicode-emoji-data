@@ -7,12 +7,12 @@
 - straight from the source, compiled directly from [unicode repository data files](http://unicode.org/Public/emoji/4.0/)
 - correct & complete compared against the [unicode emoji list](http://unicode.org/emoji/charts/emoji-list.html)
 - up-to-date, supporting the latest unicode emoji versions v4 (stable) and v5 (beta)
-- no heavy weight [image files or spritesheets](https://github.com/iamcal/emoji-data) or annotations included
-- internationalized emoji annotations (text-to-speech descriptions and keywords) with extensions provided by the community are available via the unicode  [CLDR](http://cldr.unicode.org/) standard compliant [unicode-emoji-annotations (coming soon)](TODO) module
+- no heavy weight [image files or spritesheets](https://www.npmjs.com/package/emoji-datasource) or annotations included
+- internationalized emoji annotations (text-to-speech descriptions and keywords) with extensions provided by the community are available via the unicode [CLDR](http://cldr.unicode.org/) standard compliant [unicode-emoji-annotations](https://www.npmjs.com/package/unicode-emoji-annotations) module
 
 This project aims to preserve emoji data with respect to the original source as closely as possible, retaining concepts and naming conventions of the specification where possible while providing all information in a single carefully designed JSON structure.
 
-Have a look at [this table to see an example](https://dematerializer.github.io/unicode-emoji-data/emoji-data-v4.stable.html) of what data this library provides.
+*Warning: ~1MB file ahead!* Have a look at [this table to see an example](https://dematerializer.github.io/unicode-emoji-data/emoji-data.stable.html) of what data this library provides.
 
 Keep in mind that this library adheres to the unicode standard **proposal**. In reality, vendors implement their support for displaying emoji characters slightly different from one another. It is not the scope of this module to encourage a specific choice of emoji presentation style (especially the use of explicit variation selectors) in order to achieve compatibility with a specific vendor. When displaying emoji characters, do not expect the output you get from using the code point sequences provided by this library  to be perfectly compatible with all platforms or systems.
 
