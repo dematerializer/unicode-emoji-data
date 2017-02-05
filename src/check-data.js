@@ -12,10 +12,11 @@ export default function checkData({ data, reference }) {
 			// Compare insentitive to any trailing variation selector
 			// because I believe the use of trailing variation selectors
 			// in emoji-list.html does not represent current vendor support.
-			const sequenceWithoutVariation = datum.sequence.replace(matchAnyTrailingVariationSelector, '');
+			const sequence = datum.presentation.variation ? datum.presentation.variation.emoji : datum.presentation.default;
+			const sequenceWithoutVariation = sequence.replace(matchAnyTrailingVariationSelector, '');
 			const contains = reference.find(seq => seq.includes(sequenceWithoutVariation));
 			if (!contains) {
-				report.unmatchedSequences.push(datum.sequence);
+				report.unmatchedSequences.push(sequence);
 			}
 			return !!contains;
 		});
