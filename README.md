@@ -2,7 +2,7 @@
 
 > Unicode standard compliant emoji data
 
-- lightweight, precompiled, easy to parse JSON data with a minimalistic API
+- lightweight, precompiled, easy to use JSON data with a minimalistic API
 - comprehensible for humans by means of [Unicode® Technical Report #51 - UNICODE EMOJI](http://www.unicode.org/reports/tr51/)
 - straight from the source, compiled directly from [unicode repository data files](http://unicode.org/Public/emoji/4.0/)
 - correct & complete compared against the [unicode emoji list](http://unicode.org/emoji/charts/emoji-list.html)
@@ -281,7 +281,3 @@ emojiData.forEach((datum) => {
 
 [![Travis](https://img.shields.io/travis/dematerializer/unicode-emoji-data.svg?style=flat-square)](https://travis-ci.org/dematerializer/unicode-emoji-data)
 [![Codecov](https://img.shields.io/codecov/c/github/dematerializer/unicode-emoji-data.svg?style=flat-square)](https://codecov.io/gh/dematerializer/unicode-emoji-data)
-
-### Contributing
-
-TODO
