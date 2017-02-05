@@ -10,16 +10,20 @@ const html = `
 	<table>
 		<tr>
 			<td class="rchars">1</td>
-			<td class="chars">😀</td>
+			<td class="code">
+				<a name="1f600">U+1F600</a>
+			</td>
 		</tr>
 		<tr>
-			<td class="rchars">21</td>
-			<td class="chars">🤔</td>
+			<td class="rchars">157</td>
+			<td class="code">
+				<a name="1f469_1f3fe_200d_2695_fe0f">U+1F469 U+1F3FE U+200D U+2695 U+FE0F</a>
+			</td>
 		</tr>
 	</table>
 `;
 
-const expected = ['1F600', '1F914'];
+const expected = ['1F600', '1F469 1F3FE 200D 2695 FE0F'];
 
 describe('emoji-list', () => {
 	it('should use a reasonable default url', () => {

@@ -1,7 +1,5 @@
 import 'isomorphic-fetch';
 import cheerio from 'cheerio';
-import punycode from 'punycode';
-import leftPad from 'left-pad'; // FTW!
 
 // emoji-list.html provides a compiled list of emoji data directly from unicode;
 // we use this list to check our generated data files against for completeness:
@@ -17,10 +15,10 @@ function scrapeSequencesFromEmojiList(html) {
 	const $ = cheerio.load(html);
 	return $('td.rchars').map(function mapRow() {
 		const tr = $(this).parent();
-		const chars = $('.chars', tr).text();
-		const seq = punycode.ucs2.decode(chars);
-		const seqHex = seq.map(cp => leftPad(cp.toString(16), 4, 0).toUpperCase()).join(' ');
-		return seqHex;
+		const code = $('.code', tr);
+		const aName = $('a[name]', code).attr('name');
+		const sequence = aName.split('_').join(' ').toUpperCase();
+		return sequence;
 	}).get();
 }
 
