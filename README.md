@@ -14,6 +14,8 @@ This project aims to preserve emoji data with respect to the original source as 
 
 *Warning: ~1MB file ahead!* Have a look at [this table to see an example](https://dematerializer.github.io/unicode-emoji-data/emoji-data.stable.html) of what data this library provides.
 
+Check out [emoji-finder](https://www.npmjs.com/package/emoji-finder) to see an example of how this module can be applied in an application.
+
 Keep in mind that this library adheres to the unicode standard **proposal**. In reality, vendors implement their support for displaying emoji characters slightly different from one another. It is not the scope of this module to encourage a specific choice of emoji presentation style (especially the use of explicit variation selectors) in order to achieve compatibility with a specific vendor. When displaying emoji characters, do not expect the output you get from using the code point sequences provided by this library  to be perfectly compatible with all platforms or systems.
 
 ## API
