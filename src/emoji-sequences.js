@@ -35,9 +35,10 @@ const combiningMarks = {
 // 	},
 // 	...
 // }
-function buildCompatibleCodepointsForCombiningMark(data, getNameForCodepoint) {
+function buildCompatibleCodepointsForCombiningMark(emojiVersion, data, getNameForCodepoint) {
+	const versionSpecificType = emojiVersion === 4 ? 'Emoji_Combining_Sequence' : 'Emoji_Keycap_Sequence';
 	return data
-	.filter(datum => datum.type === 'Emoji_Combining_Sequence')
+	.filter(datum => datum.type === versionSpecificType)
 	.reduce((cpsForMark, datum) => {
 		const nextCpsForMark = cpsForMark;
 		const codepoints = datum.sequence.split(' ');
@@ -138,10 +139,10 @@ export const internals = {
 	buildFlagEmoji,
 };
 
-export default function* EmojiSequences({ url = defaultUrl, getNameForCodepoint, getVariationSequencesForCodepoint }) {
+export default function* EmojiSequences({ url = defaultUrl, emojiVersion, getNameForCodepoint, getVariationSequencesForCodepoint }) {
 	const content = yield fetch(url).then(res => res.text());
 	const data = parse(content, ['sequence', 'type', 'description']);
-	const compatibleCodepointsForCombiningMark = buildCompatibleCodepointsForCombiningMark(data, getNameForCodepoint);
+	const compatibleCodepointsForCombiningMark = buildCompatibleCodepointsForCombiningMark(emojiVersion, data, getNameForCodepoint);
 	const getCombinationsForCodepoint = codepoint => combinationsForCodepoint(codepoint, compatibleCodepointsForCombiningMark, getVariationSequencesForCodepoint);
 	const flagEmoji = buildFlagEmoji(data, getNameForCodepoint);
 	return { // API

@@ -98,7 +98,7 @@ describe('emoji-sequences', () => {
 		expect(combiningMarks['20E0']).to.deep.equal({});
 	});
 	it('should build a map of compatible code points for each combining mark while associating with them their transformed/combined name', () => {
-		const data = [
+		const data4 = [
 			{ sequence: '0023 FE0F 20E3', type: 'Emoji_Combining_Sequence' },
 			{ sequence: '002A FE0F 20E3', type: 'Emoji_Combining_Sequence' },
 			{ sequence: '0030 FE0F 20E3', type: 'Emoji_Combining_Sequence' },
@@ -113,8 +113,25 @@ describe('emoji-sequences', () => {
 			{ sequence: '0039 FE0F 20E3', type: 'Emoji_Combining_Sequence' },
 			{ sequence: 'compatible-but-variation-less-codepoint FE0F 20E3', type: 'Emoji_Combining_Sequence' },
 		];
-		const compatibleCodepointsForCombiningMark = buildCompatibleCodepointsForCombiningMark(data, getNameForCodepointMock);
-		expect(compatibleCodepointsForCombiningMark).to.deep.equal(compatibleCodepointsForCombiningMarkMock);
+		const compatibleCodepointsForCombiningMark4 = buildCompatibleCodepointsForCombiningMark(4, data4, getNameForCodepointMock);
+		expect(compatibleCodepointsForCombiningMark4).to.deep.equal(compatibleCodepointsForCombiningMarkMock);
+		const data5 = [
+			{ sequence: '0023 FE0F 20E3', type: 'Emoji_Keycap_Sequence' },
+			{ sequence: '002A FE0F 20E3', type: 'Emoji_Keycap_Sequence' },
+			{ sequence: '0030 FE0F 20E3', type: 'Emoji_Keycap_Sequence' },
+			{ sequence: '0031 FE0F 20E3', type: 'Emoji_Keycap_Sequence' },
+			{ sequence: '0032 FE0F 20E3', type: 'Emoji_Keycap_Sequence' },
+			{ sequence: '0033 FE0F 20E3', type: 'Emoji_Keycap_Sequence' },
+			{ sequence: '0034 FE0F 20E3', type: 'Emoji_Keycap_Sequence' },
+			{ sequence: '0035 FE0F 20E3', type: 'Emoji_Keycap_Sequence' },
+			{ sequence: '0036 FE0F 20E3', type: 'Emoji_Keycap_Sequence' },
+			{ sequence: '0037 FE0F 20E3', type: 'Emoji_Keycap_Sequence' },
+			{ sequence: '0038 FE0F 20E3', type: 'Emoji_Keycap_Sequence' },
+			{ sequence: '0039 FE0F 20E3', type: 'Emoji_Keycap_Sequence' },
+			{ sequence: 'compatible-but-variation-less-codepoint FE0F 20E3', type: 'Emoji_Keycap_Sequence' },
+		];
+		const compatibleCodepointsForCombiningMark5 = buildCompatibleCodepointsForCombiningMark(5, data5, getNameForCodepointMock);
+		expect(compatibleCodepointsForCombiningMark5).to.deep.equal(compatibleCodepointsForCombiningMarkMock);
 	});
 	it('should generate a data structure describing combinations for a given code point', () => {
 		expect(combinationsForCodepoint('0023', compatibleCodepointsForCombiningMarkMock, getVariationSequencesForCodepointMock))

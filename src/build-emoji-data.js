@@ -45,6 +45,7 @@ function* buildForPreset(preset) {
 
 	logUpdate('⇣ emoji-sequences');
 	const emojiSequences = yield buildEmojiSequences({
+		emojiVersion: preset.emojiVersion,
 		url: preset.emojiSequencesUrl,
 		getNameForCodepoint: unicodeData.getNameForCodepoint,
 		getVariationSequencesForCodepoint: standardizedVariants.getVariationSequencesForCodepoint,
