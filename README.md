@@ -6,7 +6,7 @@
 - comprehensible for humans by means of [Unicode® Technical Report #51 - UNICODE EMOJI](http://www.unicode.org/reports/tr51/)
 - straight from the source, compiled directly from [unicode repository data files](http://unicode.org/Public/emoji/4.0/)
 - correct & complete compared against the [unicode emoji list](http://unicode.org/emoji/charts/emoji-list.html)
-- up-to-date, supporting the latest unicode emoji versions v4 (stable) and v5 (beta)
+- up-to-date, supporting the latest unicode emoji versions 4 (stable) and 5 (beta)
 - no heavy weight [image files or spritesheets](https://www.npmjs.com/package/emoji-datasource) or annotations included
 - internationalized emoji annotations (text-to-speech descriptions and keywords) with extensions provided by the community are available via the unicode [CLDR](http://cldr.unicode.org/) standard compliant [unicode-emoji-annotations](https://www.npmjs.com/package/unicode-emoji-annotations) module
 
@@ -32,7 +32,7 @@ Requiring/importing `unicode-emoji-data` gives you the following API to work wit
 [..., { /* emoji datum */ }, ...]
 ```
 
-Array of emoji data for the latest stable (v4) / beta (v5) unicode emoji version.
+Array of emoji data for the latest stable (4) and beta (5) unicode emoji version.
 
 Example of an emoji datum when directly using the raw `emojiDataStable` or `emojiDataBeta` array:
 

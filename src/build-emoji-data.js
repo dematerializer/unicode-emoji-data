@@ -19,7 +19,7 @@ process.on('uncaughtException', (err) => { throw err; });
 process.on('unhandledRejection', (err) => { throw err; });
 
 function* buildForPreset(preset) {
-	logUpdate(`using unicode v${preset.unicodeVersion}, emoji v${preset.emojiVersion} (${preset.tag})`);
+	logUpdate(`using unicode ${preset.unicodeVersion}, emoji ${preset.emojiVersion} (${preset.tag})`);
 	logUpdate.done();
 
 	logUpdate('⇣ unicode-data');
@@ -82,7 +82,7 @@ function* buildForPreset(preset) {
 		...emojiSequences.flagEmoji,
 		...emojiZwjSequences.zwjEmoji,
 	];
-	fs.writeFileSync(`res/emoji-data-v${preset.emojiVersion}.${preset.tag}.json`, JSON.stringify(combined, null, 2));
+	fs.writeFileSync(`res/emoji-data-${preset.emojiVersion}.${preset.tag}.json`, JSON.stringify(combined, null, 2));
 
 	logUpdate('✓ write data file');
 	logUpdate.done();

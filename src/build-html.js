@@ -30,7 +30,7 @@ const buildForPreset = (preset) => {
 		<html>
 			<head>
 			<meta charset="utf-8">
-			<title>emoji data for unicode v${preset.unicodeVersion}, emoji v${preset.emojiVersion} (${preset.tag})</title>
+			<title>emoji data for unicode ${preset.unicodeVersion}, emoji ${preset.emojiVersion} (${preset.tag})</title>
 			<style>
 				table {
 					border-collapse: collapse;

@@ -47,7 +47,7 @@ function buildVariationSequencesForCodepoint(data) {
 		});
 		return nextVarSeqForCp;
 	}, { // initial map
-		// emoji-zwj-sequences.txt v4.0 mentions: "three characters used in emoji zwj sequences
+		// emoji-zwj-sequences.txt version 4.0 mentions: "three characters used in emoji zwj sequences
 		// with the emoji variation selector do not yet appear in StandardizedVariants.txt"
 		// - so we add them here manually:
 		'2640': { // eslint-disable-line quote-props
