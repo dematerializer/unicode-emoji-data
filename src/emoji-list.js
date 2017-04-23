@@ -3,7 +3,19 @@ import cheerio from 'cheerio';
 
 // emoji-list.html provides a compiled list of emoji data directly from unicode;
 // we use this list to check our generated data files against for completeness:
-const defaultUrl = 'http://unicode.org/emoji/charts-beta/emoji-list.html';
+const defaultUrl = 'http://unicode.org/emoji/charts/emoji-list.html';
+
+export const internals = {
+	defaultUrl,
+};
+
+const matchBase64Image = new RegExp(' src=["|\']data:image.*["|\'] ', 'g');
+
+// Fetch the list and return minified content:
+export function* fetchEmojiList({ url = defaultUrl }) {
+	const content = yield fetch(url).then(res => res.text());
+	return content.replace(matchBase64Image, ' ');
+}
 
 // Build a list of sequences from the unicode emoji list HTML table:
 // [
@@ -11,7 +23,7 @@ const defaultUrl = 'http://unicode.org/emoji/charts-beta/emoji-list.html';
 // 	"1F609",
 // 	...
 // ]
-function scrapeSequencesFromEmojiList(html) {
+export const scrapeSequencesFromEmojiList = (html) => {
 	const $ = cheerio.load(html);
 	return $('td.rchars').map(function mapRow() {
 		const tr = $(this).parent();
@@ -20,17 +32,4 @@ function scrapeSequencesFromEmojiList(html) {
 		const sequence = aName.split('_').join(' ').toUpperCase();
 		return sequence;
 	}).get();
-}
-
-export const internals = {
-	defaultUrl,
-	scrapeSequencesFromEmojiList,
 };
-
-export default function* EmojiList({ url = defaultUrl }) {
-	const content = yield fetch(url).then(res => res.text());
-	const sequences = scrapeSequencesFromEmojiList(content);
-	return { // API
-		sequences,
-	};
-}

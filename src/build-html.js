@@ -1,13 +1,13 @@
 import fs from 'fs';
 import punycode from 'punycode';
-import { expandEmojiData, emojiDataStable, emojiDataBeta } from '.';
-import presetStable from './preset-stable';
+import { expandEmojiData, emojiData } from '.';
+import mainPreset from './preset';
 
 process.on('uncaughtException', (err) => { throw err; });
 process.on('unhandledRejection', (err) => { throw err; });
 
 const buildForPreset = (preset) => {
-	const expandedData = expandEmojiData(preset.tag === 'stable' ? emojiDataStable : emojiDataBeta);
+	const expandedData = expandEmojiData(emojiData);
 	const tableRows = expandedData.map((datum, index) => {
 		// Prefer explicit emoji presentation variation sequence:
 		let exampleOutputSequence = datum.presentation.variation ? datum.presentation.variation.emoji : datum.presentation.default;
@@ -61,7 +61,7 @@ const buildForPreset = (preset) => {
 		</html>
 	`;
 
-	fs.writeFileSync(`docs/emoji-data.${preset.tag}.html`, html);
+	fs.writeFileSync('docs/emoji-data.html', html);
 };
 
-buildForPreset(presetStable); // for now we only care about the stable data
+buildForPreset(mainPreset);

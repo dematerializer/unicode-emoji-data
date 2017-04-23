@@ -1,7 +1,6 @@
 import {
 	expandEmojiData,
-	emojiDataStable,
-	emojiDataBeta,
+	emojiData,
 } from '../';
 
 describe('unicode-emoji-data', () => {
@@ -9,8 +8,7 @@ describe('unicode-emoji-data', () => {
 		const unicodeEmojiData = require('../'); // eslint-disable-line global-require
 		expect(unicodeEmojiData).to.have.all.keys(
 			'expandEmojiData',
-			'emojiDataStable',
-			'emojiDataBeta',
+			'emojiData',
 		);
 	});
 
@@ -18,11 +16,7 @@ describe('unicode-emoji-data', () => {
 		expect(expandEmojiData).to.be.a('function');
 	});
 
-	it('should export stable emoji data', () => {
-		expect(emojiDataStable).to.be.instanceof(Array);
-	});
-
-	it('should export beta emoji data', () => {
-		expect(emojiDataBeta).to.be.instanceof(Array);
+	it('should export emoji data', () => {
+		expect(emojiData).to.be.instanceof(Array);
 	});
 });

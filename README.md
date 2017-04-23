@@ -6,13 +6,13 @@
 - comprehensible for humans by means of [Unicode® Technical Report #51 - UNICODE EMOJI](http://www.unicode.org/reports/tr51/)
 - straight from the source, compiled directly from [unicode repository data files](http://unicode.org/Public/emoji/4.0/)
 - correct & complete compared against the [unicode emoji list](http://unicode.org/emoji/charts/emoji-list.html)
-- up-to-date, supporting the latest unicode emoji versions 4 (stable) and 5 (beta)
+- up-to-date, supporting the latest stable unicode emoji version 4
 - no heavy weight [image files or spritesheets](https://www.npmjs.com/package/emoji-datasource) or annotations included
 - internationalized emoji annotations (text-to-speech descriptions and keywords) with extensions provided by the community are available via the unicode [CLDR](http://cldr.unicode.org/) standard compliant [unicode-emoji-annotations](https://www.npmjs.com/package/unicode-emoji-annotations) module
 
 This project aims to preserve emoji data with respect to the original source as closely as possible, retaining concepts and naming conventions of the specification where possible while providing all information in a single carefully designed JSON structure.
 
-*Warning: ~1MB file ahead!* Have a look at [this table to see an example](https://dematerializer.github.io/unicode-emoji-data/emoji-data.stable.html) of what data this library provides.
+*Warning: ~1MB file ahead!* Have a look at [this table to see an example](https://dematerializer.github.io/unicode-emoji-data/emoji-data.html) of what data this library provides.
 
 Check out [emoji-finder](https://www.npmjs.com/package/emoji-finder) to see an example of how this module can be utilized in a real application.
 
@@ -22,19 +22,18 @@ Keep in mind that this library adheres to the unicode standard **proposal**. In 
 
 Requiring/importing `unicode-emoji-data` gives you the following API to work with:
 
-- `emojiDataStable`
-- `emojiDataBeta`
+- `emojiData`
 - `expandEmojiData`
 
-### `emojiDataStable` / `emojiDataBeta`
+### `emojiData`
 
 ```javascript
 [..., { /* emoji datum */ }, ...]
 ```
 
-Array of emoji data for the latest stable (4) and beta (5) unicode emoji version.
+Array of emoji data for the latest stable unicode emoji version 4.
 
-Example of an emoji datum when directly using the raw `emojiDataStable` or `emojiDataBeta` array:
+Example of an emoji datum when directly using the raw `emojiData` array:
 
 ```javascript
 [
@@ -240,26 +239,25 @@ The sample emoji datum from above representing `WHITE UP POINTING INDEX` would g
 
 ```javascript
 const unicodeEmojiData = require('unicode-emoji-data');
-const emojiData = unicodeEmojiData.emojiDataStable;
+const emojiData = unicodeEmojiData.emojiData;
 const emojiExpanded = unicodeEmojiData.expandEmojiData(emojiData);
 ```
 
 ### ES6/babel
 
 ```javascript
-import { emojiDataStable, expandEmojiData } from 'unicode-emoji-data';
-const emojiData = emojiDataStable;
+import { emojiData, expandEmojiData } from 'unicode-emoji-data';
 const emojiExpanded = expandEmojiData(emojiData);
 ```
 
 ### Example: printing out all emoji
 
 ```javascript
-import { emojiDataStable, expandEmojiData } from 'unicode-emoji-data';
+import { emojiData, expandEmojiData } from 'unicode-emoji-data';
 import punycode from 'punycode'; // npm install punycode
 
-const emojiData = expandEmojiData(emojiDataStable);
-emojiData.forEach((datum) => {
+const expandedEmojiData = expandEmojiData(emojiData);
+expandedEmojiData.forEach((datum) => {
   const sequence = datum.presentation.default;
   const numericCodePointSequence = sequence.split(' ').map(
     codePoint => parseInt(codePoint, 16)

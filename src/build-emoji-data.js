@@ -9,11 +9,10 @@ import buildEmojiSequences from './emoji-sequences';
 import buildEmojiData from './emoji-data';
 import buildEmojiZwjSequences from './emoji-zwj-sequences';
 import expandEmojiData from './expand-emoji-data';
-import scrapeEmojiList from './emoji-list';
+import { scrapeSequencesFromEmojiList } from './emoji-list';
 import checkData from './check-data';
 
-import presetStable from './preset-stable';
-import presetBeta from './preset-beta';
+import mainPreset from './preset';
 
 process.on('uncaughtException', (err) => { throw err; });
 process.on('unhandledRejection', (err) => { throw err; });
@@ -82,25 +81,25 @@ function* buildForPreset(preset) {
 		...emojiSequences.flagEmoji,
 		...emojiZwjSequences.zwjEmoji,
 	];
-	fs.writeFileSync(`res/emoji-data-${preset.emojiVersion}.${preset.tag}.json`, JSON.stringify(combined, null, 2));
+	fs.writeFileSync('res/emoji-data.json', JSON.stringify(combined, null, 2));
 
 	logUpdate('✓ write data file');
 	logUpdate.done();
 
 	// Create temporary expanded human readable emoji data containing flattened
-	// emoji-presentation-only data and check against unicode emoji list for completeness
+	// emoji-presentation-only data and check against the locally cached unicode
+	// emoji list for completeness:
 
 	logUpdate('⇣ emoji-list');
-	const emojiList = yield scrapeEmojiList({
-		url: preset.emojiListUrl,
-	});
+	const emojiListContent = fs.readFileSync(preset.localEmojiListUrl);
+	const emojiListSequences = scrapeSequencesFromEmojiList(emojiListContent);
 	logUpdate('✓ emoji-list');
 	logUpdate.done();
 
 	logUpdate('⌛︎ check-data');
 	const report = checkData({
 		data: expandEmojiData(combined),
-		reference: emojiList.sequences,
+		reference: emojiListSequences,
 	});
 	if (report.unmatchedSequences.length > 0) {
 		report.unmatchedSequences.forEach((unmatchedSequence) => {
@@ -111,12 +110,11 @@ function* buildForPreset(preset) {
 	} else if (report.numDiff > 0) {
 		logUpdate(`x check-data: numbers of entries don't match (expected ${report.numExpected} but got ${report.numGot})`);
 	} else {
-		logUpdate(`✓ check-data: ${emojiList.sequences.length} entries verified`);
+		logUpdate(`✓ check-data: ${emojiListSequences.length} entries verified`);
 	}
 	logUpdate.done();
 }
 
 co(function* main() {
-	yield buildForPreset(presetStable);
-	yield buildForPreset(presetBeta);
+	yield buildForPreset(mainPreset);
 });

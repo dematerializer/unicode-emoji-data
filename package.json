@@ -26,6 +26,7 @@
   ],
   "scripts": {
     "start": "npm run build:emoji && npm run build:html",
+    "fetch-emoji-list": "node fetch-emoji-list.js",
     "build:emoji": "node build-emoji-data.js",
     "build:html": "node build-html.js",
     "precommit": "npm run validate",
