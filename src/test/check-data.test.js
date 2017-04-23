@@ -10,21 +10,17 @@ describe('check-data', () => {
 		];
 		const result = checkData({ data, reference });
 		expect(result).to.deep.equal({
-			unmatchedSequences: [],
-			numDiff: 0,
-			numExpected: reference.length,
-			numGot: data.length,
+			sequencesInDataButNotInReference: [],
+			sequencesInReferenceButNotInData: [],
 		});
 	});
 
-	it('should report failure if data and reference length differ', () => {
+	it('should report failure if reference list contains at least one sequence not contained in data', () => {
 		const data = [{ presentation: { default: '1F600' } }];
 		const result = checkData({ data, reference });
 		expect(result).to.deep.equal({
-			unmatchedSequences: [],
-			numDiff: -1,
-			numExpected: reference.length,
-			numGot: data.length,
+			sequencesInDataButNotInReference: [],
+			sequencesInReferenceButNotInData: ['1F469 1F3FE 200D 2695 FE0F'],
 		});
 	});
 
@@ -32,13 +28,12 @@ describe('check-data', () => {
 		const data = [
 			{ presentation: { default: '1F600' } },
 			{ presentation: { default: 'WTF' } },
+			{ presentation: { variation: { emoji: '1F469 1F3FE 200D 2695 FE0F' } } },
 		];
 		const result = checkData({ data, reference });
 		expect(result).to.deep.equal({
-			unmatchedSequences: ['WTF'],
-			numDiff: 1,
-			numExpected: reference.length,
-			numGot: data.length,
+			sequencesInDataButNotInReference: ['WTF'],
+			sequencesInReferenceButNotInData: [],
 		});
 	});
 });

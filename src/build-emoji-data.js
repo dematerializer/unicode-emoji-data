@@ -101,15 +101,21 @@ function* buildForPreset(preset) {
 		data: expandEmojiData(combined),
 		reference: emojiListSequences,
 	});
-	if (report.unmatchedSequences.length > 0) {
-		report.unmatchedSequences.forEach((unmatchedSequence) => {
-			logUpdate(`⌛︎ check-data: did not expect sequence ${unmatchedSequence}`);
+	if (report.sequencesInDataButNotInReference.length > 0) {
+		report.sequencesInDataButNotInReference.forEach((unmatchedSequence) => {
+			logUpdate(`⌛︎ check-data: did not expect data sequence ${unmatchedSequence} in reference`);
 			logUpdate.done();
 		});
-		logUpdate(`x check-data: ${report.numDiff} sequences not expected (see above)`);
-	} else if (report.numDiff > 0) {
-		logUpdate(`x check-data: numbers of entries don't match (expected ${report.numExpected} but got ${report.numGot})`);
-	} else {
+		logUpdate(`x check-data: ${report.sequencesInDataButNotInReference.length} data sequences not expected in reference (see above)`);
+	}
+	if (report.sequencesInReferenceButNotInData.length > 0) {
+		report.sequencesInReferenceButNotInData.forEach((unmatchedSequence) => {
+			logUpdate(`⌛︎ check-data: did not expect reference sequence ${unmatchedSequence} in data`);
+			logUpdate.done();
+		});
+		logUpdate(`x check-data: ${report.sequencesInReferenceButNotInData.length} reference sequences not expected in data (see above)`);
+	}
+	if (report.sequencesInDataButNotInReference.length === 0 && report.sequencesInReferenceButNotInData.length === 0) {
 		logUpdate(`✓ check-data: ${emojiListSequences.length} entries verified`);
 	}
 	logUpdate.done();
