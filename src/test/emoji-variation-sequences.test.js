@@ -1,5 +1,5 @@
 import fetchMock from 'fetch-mock';
-import buildStandardizedVariants, { internals } from '../standardized-variants';
+import buildVariationSequences, { internals } from '../emoji-variation-sequences';
 
 const {
 	defaultUrl,
@@ -7,9 +7,9 @@ const {
 	buildVariationSequencesForCodepoint,
 } = internals;
 
-describe('standardized-variants', () => {
+describe('variation-sequences', () => {
 	it('should use a reasonable default url', () => {
-		expect(defaultUrl).to.equal('http://unicode.org/Public/9.0.0/ucd/StandardizedVariants.txt');
+		expect(defaultUrl).to.equal('http://www.unicode.org/Public/emoji/5.0/emoji-variation-sequences.txt');
 	});
 	it('should use correct variation selectors', () => {
 		expect(variationSelectors.text).to.equal('FE0E');
@@ -37,11 +37,6 @@ describe('standardized-variants', () => {
 		expect(variationSequencesForCodepoint).to.have.property('002A');
 		expect(variationSequencesForCodepoint['0023']).to.deep.equal(expected['0023']);
 		expect(variationSequencesForCodepoint['002A']).to.deep.equal(expected['002A']);
-		// tr51: should also have three characters with the emoji variation
-		// selector that do not yet appear in StandardizedVariants.txt:
-		expect(variationSequencesForCodepoint).to.have.property('2640');
-		expect(variationSequencesForCodepoint).to.have.property('2642');
-		expect(variationSequencesForCodepoint).to.have.property('2695');
 	});
 	it('should generate an API', (done) => {
 		const mockedContent = `
@@ -51,7 +46,7 @@ describe('standardized-variants', () => {
 			002A FE0F; emoji style; # ASTERISK
 		`;
 		fetchMock.get('*', mockedContent);
-		const step = buildStandardizedVariants({});
+		const step = buildVariationSequences({});
 		step.next().value.then((content) => { // wait until first yield's promise (mocked fetch) resolves
 			const api = step.next(content).value; // manually hand over mocked content to the left side of yield
 			expect(api).to.have.all.keys('getVariationSequencesForCodepoint');

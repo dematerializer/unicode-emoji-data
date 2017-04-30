@@ -4,7 +4,7 @@ import logUpdate from 'log-update';
 
 import buildUnicodeData from './unicode-data';
 import buildEmojiSources from './emoji-sources';
-import buildStandardizedVariants from './standardized-variants';
+import buildEmojiVariationSequences from './emoji-variation-sequences';
 import buildEmojiSequences from './emoji-sequences';
 import buildEmojiData from './emoji-data';
 import buildEmojiZwjSequences from './emoji-zwj-sequences';
@@ -35,11 +35,11 @@ function* buildForPreset(preset) {
 	logUpdate('✓ emoji-sources');
 	logUpdate.done();
 
-	logUpdate('⇣ standardized-variants');
-	const standardizedVariants = yield buildStandardizedVariants({
-		url: preset.standardizedVariantsUrl,
+	logUpdate('⇣ variation-sequences');
+	const variationSequences = yield buildEmojiVariationSequences({
+		url: preset.emojiVariationSequencesUrl,
 	});
-	logUpdate('✓ standardized-variants');
+	logUpdate('✓ variation-sequences');
 	logUpdate.done();
 
 	logUpdate('⇣ emoji-sequences');
@@ -47,7 +47,7 @@ function* buildForPreset(preset) {
 		emojiVersion: preset.emojiVersion,
 		url: preset.emojiSequencesUrl,
 		getNameForCodepoint: unicodeData.getNameForCodepoint,
-		getVariationSequencesForCodepoint: standardizedVariants.getVariationSequencesForCodepoint,
+		getVariationSequencesForCodepoint: variationSequences.getVariationSequencesForCodepoint,
 	});
 	logUpdate('✓ emoji-sequences');
 	logUpdate.done();
@@ -56,7 +56,7 @@ function* buildForPreset(preset) {
 	const emojiData = yield buildEmojiData({
 		url: preset.emojiDataUrl,
 		getNameForCodepoint: unicodeData.getNameForCodepoint,
-		getVariationSequencesForCodepoint: standardizedVariants.getVariationSequencesForCodepoint,
+		getVariationSequencesForCodepoint: variationSequences.getVariationSequencesForCodepoint,
 		getCombinationsForCodepoint: emojiSequences.getCombinationsForCodepoint,
 		getShiftJisCodesForCodepoint: emojiSources.getShiftJisCodesForCodepoint,
 	});
@@ -103,17 +103,17 @@ function* buildForPreset(preset) {
 	});
 	if (report.sequencesInDataButNotInReference.length > 0) {
 		report.sequencesInDataButNotInReference.forEach((unmatchedSequence) => {
-			logUpdate(`⌛︎ check-data: did not expect data sequence ${unmatchedSequence} in reference`);
+			logUpdate(`⌛︎ check-data: data sequence ${unmatchedSequence} not found in reference`);
 			logUpdate.done();
 		});
-		logUpdate(`x check-data: ${report.sequencesInDataButNotInReference.length} data sequences not expected in reference (see above)`);
+		logUpdate(`x check-data: ${report.sequencesInDataButNotInReference.length} data sequences not existing in reference (see above)`);
 	}
 	if (report.sequencesInReferenceButNotInData.length > 0) {
 		report.sequencesInReferenceButNotInData.forEach((unmatchedSequence) => {
-			logUpdate(`⌛︎ check-data: did not expect reference sequence ${unmatchedSequence} in data`);
+			logUpdate(`⌛︎ check-data: reference sequence ${unmatchedSequence} not found in data`);
 			logUpdate.done();
 		});
-		logUpdate(`x check-data: ${report.sequencesInReferenceButNotInData.length} reference sequences not expected in data (see above)`);
+		logUpdate(`x check-data: ${report.sequencesInReferenceButNotInData.length} reference sequences not existing in data (see above)`);
 	}
 	if (report.sequencesInDataButNotInReference.length === 0 && report.sequencesInReferenceButNotInData.length === 0) {
 		logUpdate(`✓ check-data: ${emojiListSequences.length} entries verified`);

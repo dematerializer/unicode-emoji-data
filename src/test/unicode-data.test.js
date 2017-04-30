@@ -8,7 +8,7 @@ const {
 
 describe('unicode-data', () => {
 	it('should use a reasonable default url', () => {
-		expect(defaultUrl).to.equal('http://unicode.org/Public/9.0.0/ucd/UnicodeData.txt');
+		expect(defaultUrl).to.equal('http://www.unicode.org/Public/10.0.0/ucd/UnicodeData-10.0.0d5.txt');
 	});
 	it('should transform data to map each code point to a name', () => {
 		const data = [

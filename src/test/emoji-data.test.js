@@ -98,7 +98,7 @@ const getShiftJisCodesForCodepointMock = (codepoint) => {
 
 describe('emoji-data', () => {
 	it('should use a reasonable default url', () => {
-		expect(defaultUrl).to.equal('http://unicode.org/Public/emoji/3.0/emoji-data.txt');
+		expect(defaultUrl).to.equal('http://www.unicode.org/Public/emoji/5.0/emoji-data.txt');
 	});
 	it('should expand emoji data', () => {
 		const data = [

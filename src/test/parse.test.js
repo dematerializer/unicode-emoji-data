@@ -11,8 +11,8 @@ const text = `
 ## EmojiSources.txt
 0023 20E3;F985;F489;F7B0
 
-## StandardizedVariants.txt
-0023 FE0E; text style;  # NUMBER SIGN
+## emoji-variation-sequences.txt
+0023 FE0E  ; text style;  # (1.1) NUMBER SIGN
 
 ## emoji-sequences.txt
 1F918 1F3FC   ; Emoji_Modifier_Sequence   # 8.0  [1] (🤘🏼)      SIGN OF THE HORNS, TYPE-3
@@ -51,7 +51,7 @@ describe('parse', () => {
 			{
 				field1: '0023 FE0E',
 				field2: 'text style',
-				comment: 'NUMBER SIGN',
+				comment: '(1.1) NUMBER SIGN',
 			},
 			{
 				field1: '1F918 1F3FC',

@@ -1,3 +1,5 @@
+/* eslint-disable quote-props */
+
 import fetchMock from 'fetch-mock';
 import buildEmojiSequences, { internals } from '../emoji-sequences';
 
@@ -7,6 +9,7 @@ const {
 	buildCompatibleCodepointsForCombiningMark,
 	combinationsForCodepoint,
 	buildFlagEmoji,
+	buildSubregionalFlagEmoji,
 } = internals;
 
 const getNameForCodepointMock = (codepoint) => {
@@ -28,6 +31,17 @@ const getNameForCodepointMock = (codepoint) => {
 		'1F1E8': 'REGIONAL INDICATOR SYMBOL LETTER C',
 		'1F1E9': 'REGIONAL INDICATOR SYMBOL LETTER D',
 		'1F1EA': 'REGIONAL INDICATOR SYMBOL LETTER E',
+		'1F3F4': 'WAVING BLACK FLAG',
+		'E007F': 'CANCEL TAG',
+		'E0062': 'TAG LATIN SMALL LETTER B',
+		'E0063': 'TAG LATIN SMALL LETTER C',
+		'E0065': 'TAG LATIN SMALL LETTER E',
+		'E0067': 'TAG LATIN SMALL LETTER G',
+		'E006C': 'TAG LATIN SMALL LETTER L',
+		'E006E': 'TAG LATIN SMALL LETTER N',
+		'E0073': 'TAG LATIN SMALL LETTER S',
+		'E0074': 'TAG LATIN SMALL LETTER T',
+		'E0077': 'TAG LATIN SMALL LETTER W',
 	};
 	return nameForCodepoint[codepoint];
 };
@@ -83,10 +97,33 @@ const expectedFlagEmoji = [
 		},
 	},
 ];
+const expectedSubregionalFlagEmoji = [
+	{
+		name: 'WAVING BLACK FLAG, TAG LATIN SMALL LETTER G, TAG LATIN SMALL LETTER B, TAG LATIN SMALL LETTER E, TAG LATIN SMALL LETTER N, TAG LATIN SMALL LETTER G, CANCEL TAG',
+		defaultPresentation: 'emoji',
+		presentation: {
+			default: '1F3F4 E0067 E0062 E0065 E006E E0067 E007F',
+		},
+	},
+	{
+		name: 'WAVING BLACK FLAG, TAG LATIN SMALL LETTER G, TAG LATIN SMALL LETTER B, TAG LATIN SMALL LETTER S, TAG LATIN SMALL LETTER C, TAG LATIN SMALL LETTER T, CANCEL TAG',
+		defaultPresentation: 'emoji',
+		presentation: {
+			default: '1F3F4 E0067 E0062 E0073 E0063 E0074 E007F',
+		},
+	},
+	{
+		name: 'WAVING BLACK FLAG, TAG LATIN SMALL LETTER G, TAG LATIN SMALL LETTER B, TAG LATIN SMALL LETTER W, TAG LATIN SMALL LETTER L, TAG LATIN SMALL LETTER S, CANCEL TAG',
+		defaultPresentation: 'emoji',
+		presentation: {
+			default: '1F3F4 E0067 E0062 E0077 E006C E0073 E007F',
+		},
+	},
+];
 
 describe('emoji-sequences', () => {
 	it('should use a reasonable default url', () => {
-		expect(defaultUrl).to.equal('http://unicode.org/Public/emoji/3.0/emoji-sequences.txt');
+		expect(defaultUrl).to.equal('http://www.unicode.org/Public/emoji/5.0/emoji-sequences.txt');
 	});
 	it('should provide proper meta data for combining marks', () => {
 		expect(combiningMarks).to.have.all.keys('20E3', '20E0');
@@ -98,24 +135,7 @@ describe('emoji-sequences', () => {
 		expect(combiningMarks['20E0']).to.deep.equal({});
 	});
 	it('should build a map of compatible code points for each combining mark while associating with them their transformed/combined name', () => {
-		const data4 = [
-			{ sequence: '0023 FE0F 20E3', type: 'Emoji_Combining_Sequence' },
-			{ sequence: '002A FE0F 20E3', type: 'Emoji_Combining_Sequence' },
-			{ sequence: '0030 FE0F 20E3', type: 'Emoji_Combining_Sequence' },
-			{ sequence: '0031 FE0F 20E3', type: 'Emoji_Combining_Sequence' },
-			{ sequence: '0032 FE0F 20E3', type: 'Emoji_Combining_Sequence' },
-			{ sequence: '0033 FE0F 20E3', type: 'Emoji_Combining_Sequence' },
-			{ sequence: '0034 FE0F 20E3', type: 'Emoji_Combining_Sequence' },
-			{ sequence: '0035 FE0F 20E3', type: 'Emoji_Combining_Sequence' },
-			{ sequence: '0036 FE0F 20E3', type: 'Emoji_Combining_Sequence' },
-			{ sequence: '0037 FE0F 20E3', type: 'Emoji_Combining_Sequence' },
-			{ sequence: '0038 FE0F 20E3', type: 'Emoji_Combining_Sequence' },
-			{ sequence: '0039 FE0F 20E3', type: 'Emoji_Combining_Sequence' },
-			{ sequence: 'compatible-but-variation-less-codepoint FE0F 20E3', type: 'Emoji_Combining_Sequence' },
-		];
-		const compatibleCodepointsForCombiningMark4 = buildCompatibleCodepointsForCombiningMark(4, data4, getNameForCodepointMock);
-		expect(compatibleCodepointsForCombiningMark4).to.deep.equal(compatibleCodepointsForCombiningMarkMock);
-		const data5 = [
+		const data = [
 			{ sequence: '0023 FE0F 20E3', type: 'Emoji_Keycap_Sequence' },
 			{ sequence: '002A FE0F 20E3', type: 'Emoji_Keycap_Sequence' },
 			{ sequence: '0030 FE0F 20E3', type: 'Emoji_Keycap_Sequence' },
@@ -130,7 +150,7 @@ describe('emoji-sequences', () => {
 			{ sequence: '0039 FE0F 20E3', type: 'Emoji_Keycap_Sequence' },
 			{ sequence: 'compatible-but-variation-less-codepoint FE0F 20E3', type: 'Emoji_Keycap_Sequence' },
 		];
-		const compatibleCodepointsForCombiningMark5 = buildCompatibleCodepointsForCombiningMark(5, data5, getNameForCodepointMock);
+		const compatibleCodepointsForCombiningMark5 = buildCompatibleCodepointsForCombiningMark(data, getNameForCodepointMock);
 		expect(compatibleCodepointsForCombiningMark5).to.deep.equal(compatibleCodepointsForCombiningMarkMock);
 	});
 	it('should generate a data structure describing combinations for a given code point', () => {
@@ -171,11 +191,23 @@ describe('emoji-sequences', () => {
 		const flagEmoji = buildFlagEmoji(data, getNameForCodepointMock);
 		expect(flagEmoji).to.deep.equal(expectedFlagEmoji);
 	});
+	it('should build additional subregional flag emoji', () => {
+		const data = [
+			{ sequence: '1F3F4 E0067 E0062 E0065 E006E E0067 E007F', type: 'Emoji_Tag_Sequence' },
+			{ sequence: '1F3F4 E0067 E0062 E0073 E0063 E0074 E007F', type: 'Emoji_Tag_Sequence' },
+			{ sequence: '1F3F4 E0067 E0062 E0077 E006C E0073 E007F', type: 'Emoji_Tag_Sequence' },
+		];
+		const tagEmoji = buildSubregionalFlagEmoji(data, getNameForCodepointMock);
+		expect(tagEmoji).to.deep.equal(expectedSubregionalFlagEmoji);
+	});
 	it('should generate an API', (done) => {
 		fetchMock.get('*', `
 			1F1E6 1F1E8   ; Emoji_Flag_Sequence       # 6.0  [1] (🇦🇨)      Flag for Ascension Island
 			1F1E6 1F1E9   ; Emoji_Flag_Sequence       # 6.0  [1] (🇦🇩)      Flag for Andorra
 			1F1E6 1F1EA   ; Emoji_Flag_Sequence       # 6.0  [1] (🇦🇪)      Flag for United Arab Emirates
+			1F3F4 E0067 E0062 E0065 E006E E0067 E007F; Emoji_Tag_Sequence; England    #  7.0  [1] (🏴󠁧󠁢󠁥󠁮󠁧󠁿)
+			1F3F4 E0067 E0062 E0073 E0063 E0074 E007F; Emoji_Tag_Sequence; Scotland   #  7.0  [1] (🏴󠁧󠁢󠁳󠁣󠁴󠁿)
+			1F3F4 E0067 E0062 E0077 E006C E0073 E007F; Emoji_Tag_Sequence; Wales      #  7.0  [1] (🏴󠁧󠁢󠁷󠁬󠁳󠁿)
 		`);
 		const step = buildEmojiSequences({
 			getNameForCodepoint: getNameForCodepointMock,
@@ -187,7 +219,7 @@ describe('emoji-sequences', () => {
 			expect(api.getCombinationsForCodepoint).to.be.a('function');
 			expect(api.getCombinationsForCodepoint('non-compatible-codepoint', compatibleCodepointsForCombiningMarkMock, getVariationSequencesForCodepointMock))
 			.to.deep.equal({});
-			expect(api.flagEmoji).to.deep.equal(expectedFlagEmoji);
+			expect(api.flagEmoji).to.deep.equal([...expectedFlagEmoji, ...expectedSubregionalFlagEmoji]);
 			done();
 		});
 	});

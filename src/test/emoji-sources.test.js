@@ -8,7 +8,7 @@ const {
 
 describe('emoji-sources', () => {
 	it('should use a reasonable default url', () => {
-		expect(defaultUrl).to.equal('http://unicode.org/Public/9.0.0/ucd/EmojiSources.txt');
+		expect(defaultUrl).to.equal('http://www.unicode.org/Public/10.0.0/ucd/EmojiSources-10.0.0d1.txt');
 	});
 	it('should map each unicode code point or sequence to one or more Shift-JIS codes for cell phone carrier symbols', () => {
 		const data = [

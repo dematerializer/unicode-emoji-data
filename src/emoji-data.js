@@ -11,7 +11,7 @@ import parse from './parse';
 //   a character that, by default, should appear with a text presentation style
 // Property "Emoji_Modifier=Yes" — A character that can be used to modify the appearance of a preceding emoji in an emoji modifier sequence
 // property="Emoji_Modifier_Base" - A character whose appearance can be modified by a subsequent emoji modifier in an emoji modifier sequence
-const defaultUrl = 'http://unicode.org/Public/emoji/3.0/emoji-data.txt';
+const defaultUrl = 'http://www.unicode.org/Public/emoji/5.0/emoji-data.txt';
 
 // Expands code point ranges (e.g. '1F601..1F610') into separate objects
 // [

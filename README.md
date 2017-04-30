@@ -2,11 +2,14 @@
 
 > Unicode standard compliant emoji data
 
+TODO: point out how to find emoji 4 data
+TODO: parse Emoji_Component entries from emoji-data.txt separately and expose in API
+
 - lightweight, precompiled, easy to use JSON data with a minimalistic API
 - comprehensible for humans by means of [Unicode® Technical Report #51 - UNICODE EMOJI](http://www.unicode.org/reports/tr51/)
-- straight from the source, compiled directly from [unicode repository data files](http://unicode.org/Public/emoji/4.0/)
+- straight from the source, compiled directly from [unicode repository data files](http://unicode.org/Public/emoji/5.0/)
 - correct & complete compared against the [unicode emoji list](http://unicode.org/emoji/charts/emoji-list.html)
-- up-to-date, supporting the latest stable unicode emoji version 4
+- up-to-date, supporting the latest stable unicode emoji version 5
 - no heavy weight [image files or spritesheets](https://www.npmjs.com/package/emoji-datasource) or annotations included
 - internationalized emoji annotations (text-to-speech descriptions and keywords) with extensions provided by the community are available via the unicode [CLDR](http://cldr.unicode.org/) standard compliant [unicode-emoji-annotations](https://www.npmjs.com/package/unicode-emoji-annotations) module
 
@@ -31,7 +34,7 @@ Requiring/importing `unicode-emoji-data` gives you the following API to work wit
 [..., { /* emoji datum */ }, ...]
 ```
 
-Array of emoji data for the latest stable unicode emoji version 4.
+Array of emoji data for the latest stable unicode emoji version 5.
 
 Example of an emoji datum when directly using the raw `emojiData` array:
 
@@ -137,13 +140,13 @@ Properties of an emoji datum explained:
 
   holds modification possibilities for displaying the (emoji) unicode character in different ways;
 
-  up to and including unicode emoji version 4 only the fitzpatrick `skin` modifier is defined, with skin types ranging from `type-1-2` and `type-3` up to `type-6`; grouped by those skin types are properties that should override the base properties of the emoji datum in case a skin variation is being applied (e.g. a unicode character should take on an emoji presentation by default when being skin-modified)
+  up to and including unicode emoji version 5 only the fitzpatrick `skin` modifier is defined, with skin types ranging from `type-1-2` and `type-3` up to `type-6`; grouped by those skin types are properties that should override the base properties of the emoji datum in case a skin variation is being applied (e.g. a unicode character should take on an emoji presentation by default when being skin-modified)
 
 - `combination` (optional)
 
   holds combination possibilities for displaying the (emoji) unicode character in different ways;
 
-  up to and including unicode emoji version 4 only the `keycap` combination is defined; its properties should override the base properties of the emoji datum in case the keycap combination is being applied (e.g. a unicode character should take on an emoji presentation by default when combined with the keycap combining mark)
+  up to and including unicode emoji version 5 only the `keycap` combination is defined; its properties should override the base properties of the emoji datum in case the keycap combination is being applied (e.g. a unicode character should take on an emoji presentation by default when combined with the keycap combining mark)
 
 ### `expandEmojiData`
 

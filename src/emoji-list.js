@@ -11,7 +11,7 @@ export const internals = {
 
 const matchBase64Image = new RegExp(' src=["|\']data:image.*["|\'] ', 'g');
 
-// Fetch the list and return minified content:
+// Fetch list and return content after inline images have been stripped away:
 export function* fetchEmojiList({ url = defaultUrl }) {
 	const content = yield fetch(url).then(res => res.text());
 	return content.replace(matchBase64Image, ' ');
@@ -25,11 +25,13 @@ export function* fetchEmojiList({ url = defaultUrl }) {
 // ]
 export const scrapeSequencesFromEmojiList = (html) => {
 	const $ = cheerio.load(html);
-	return $('td.rchars').map(function mapRow() {
-		const tr = $(this).parent();
-		const code = $('.code', tr);
-		const aName = $('a[name]', code).attr('name');
-		const sequence = aName.split('_').join(' ').toUpperCase();
-		return sequence;
-	}).get();
+	return $('table').eq(0).find('td.rchars')
+		.map(function mapRow() {
+			const tr = $(this).parent();
+			const code = $('.code', tr);
+			const aName = $('a[name]', code).attr('name');
+			return aName.split('_').join(' ').toUpperCase(); // sequence
+		})
+		.filter(row => row != null)
+		.get();
 };

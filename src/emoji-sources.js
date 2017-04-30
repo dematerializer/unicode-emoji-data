@@ -3,7 +3,7 @@ import parse from './parse';
 
 // EmojiSources.txt provides mappings between unicode code points and sequences
 // on one hand and Shift-JIS codes for cell phone carrier symbols on the other hand.
-const defaultUrl = 'http://unicode.org/Public/9.0.0/ucd/EmojiSources.txt';
+const defaultUrl = 'http://www.unicode.org/Public/10.0.0/ucd/EmojiSources-10.0.0d1.txt';
 
 // Build a structure that maps each unicode code point or sequence
 // to one or more Shift-JIS codes for cell phone carrier symbols, e.g.

@@ -96,7 +96,7 @@ const expectedZwjEmoji = [
 
 describe('emoji-zwj-sequences', () => {
 	it('should use a reasonable default url', () => {
-		expect(defaultUrl).to.equal('http://unicode.org/Public/emoji/4.0/emoji-zwj-sequences.txt');
+		expect(defaultUrl).to.equal('http://www.unicode.org/Public/emoji/5.0/emoji-zwj-sequences.txt');
 	});
 	it('should use correct zero width joiner', () => {
 		expect(zeroWidthJoiner).to.equal('200D');
