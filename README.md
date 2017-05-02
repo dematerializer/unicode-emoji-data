@@ -6,7 +6,7 @@
 - comprehensible for humans by means of [Unicode® Technical Report #51 - UNICODE EMOJI](http://www.unicode.org/reports/tr51/)
 - straight from the source, compiled directly from [unicode repository data files](http://unicode.org/Public/emoji/4.0/)
 - correct & complete compared against the [unicode emoji list](http://unicode.org/emoji/charts/emoji-list.html)
-- up-to-date, supporting the latest stable unicode emoji version 4
+- up-to-date, supporting the latest stable unicode 9 emoji version 4
 - no heavy weight [image files or spritesheets](https://www.npmjs.com/package/emoji-datasource) or annotations included
 - internationalized emoji annotations (text-to-speech descriptions and keywords) with extensions provided by the community are available via the unicode [CLDR](http://cldr.unicode.org/) standard compliant [unicode-emoji-annotations](https://www.npmjs.com/package/unicode-emoji-annotations) module
 
