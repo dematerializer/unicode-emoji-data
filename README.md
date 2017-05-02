@@ -2,14 +2,11 @@
 
 > Unicode standard compliant emoji data
 
-TODO: point out how to find emoji 4 data
-TODO: parse Emoji_Component entries from emoji-data.txt separately and expose in API
-
 - lightweight, precompiled, easy to use JSON data with a minimalistic API
 - comprehensible for humans by means of [Unicode® Technical Report #51 - UNICODE EMOJI](http://www.unicode.org/reports/tr51/)
 - straight from the source, compiled directly from [unicode repository data files](http://unicode.org/Public/emoji/5.0/)
 - correct & complete compared against the [unicode emoji list](http://unicode.org/emoji/charts/emoji-list.html)
-- up-to-date, supporting the latest stable unicode emoji version 5
+- up-to-date, supporting the latest beta unicode 10 emoji version 5
 - no heavy weight [image files or spritesheets](https://www.npmjs.com/package/emoji-datasource) or annotations included
 - internationalized emoji annotations (text-to-speech descriptions and keywords) with extensions provided by the community are available via the unicode [CLDR](http://cldr.unicode.org/) standard compliant [unicode-emoji-annotations](https://www.npmjs.com/package/unicode-emoji-annotations) module
 
@@ -34,7 +31,7 @@ Requiring/importing `unicode-emoji-data` gives you the following API to work wit
 [..., { /* emoji datum */ }, ...]
 ```
 
-Array of emoji data for the latest stable unicode emoji version 5.
+Array of emoji data for the latest beta unicode emoji version 5.
 
 Example of an emoji datum when directly using the raw `emojiData` array:
 
@@ -272,6 +269,12 @@ expandedEmojiData.forEach((datum) => {
 
 ## Install
 
+Beta unicode 10 emoji 5 data:
+<br />
+`npm install unicode-emoji-data@next`
+
+Stable unicode 9 emoji 4 data:
+<br />
 `npm install unicode-emoji-data`
 
 ## License
