@@ -269,7 +269,13 @@ expandedEmojiData.forEach((datum) => {
 
 ## Install
 
+Stable unicode 9 emoji 4 data:
+<br />
 `npm install unicode-emoji-data`
+
+Beta unicode 10 emoji 5 data:
+<br />
+`npm install unicode-emoji-data@next`
 
 ## License
 
