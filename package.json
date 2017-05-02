@@ -25,13 +25,13 @@
     "res"
   ],
   "scripts": {
-    "start": "npm run build:emoji && npm run build:html",
-    "fetch-emoji-list": "node fetch-emoji-list.js",
-    "build:emoji": "node build-emoji-data.js",
-    "build:html": "node build-html.js",
+    "start": "npm run build-emoji && npm run build-html",
+    "fetch-emoji-list": "node scripts/fetch-emoji-list.js",
+    "build-emoji": "node scripts/build-emoji-data.js",
+    "build-html": "node scripts/build-html.js",
     "precommit": "npm run validate",
     "prepush": "npm run validate",
-    "prepublish": "npm run validate && npm run build:sources",
+    "prepublish": "npm run validate && npm run build-sources",
     "validate": "npm run cover && npm run check-coverage",
     "cover": "nyc --reporter=lcov --reporter=text npm test",
     "check-coverage": "nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
@@ -39,7 +39,7 @@
     "test": "NODE_ENV=test mocha --require ./test-env --compilers js:babel-core/register src/**/*.test.js",
     "posttest": "npm run lint",
     "lint": "eslint --cache --ignore-path .gitignore .",
-    "build:sources": "rm -rf lib; mkdir lib; babel src/index.js -o lib/index.js; babel src/expand-emoji-data.js -o lib/expand-emoji-data.js"
+    "build-sources": "rm -rf lib; mkdir lib; babel src/index.js -o lib/index.js; babel src/expand-emoji-data.js -o lib/expand-emoji-data.js"
   },
   "nyc": {
     "sourceMap": false,
