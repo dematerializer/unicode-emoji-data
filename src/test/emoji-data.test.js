@@ -100,6 +100,7 @@ describe('emoji-data', () => {
 	it('should use a reasonable default url', () => {
 		expect(defaultUrl).to.equal('http://www.unicode.org/Public/emoji/5.0/emoji-data.txt');
 	});
+
 	it('should expand emoji data', () => {
 		const data = [
 			{ codepoints: '2139', property: 'Emoji' },
@@ -110,26 +111,31 @@ describe('emoji-data', () => {
 		const expandedEmojiData = expandEmojiData(data);
 		expect(expandedEmojiData).to.deep.equal(expandedEmojiDataMock);
 	});
+
 	it('should extract code points recommended for use as emoji', () => {
 		const expected = [expandedEmojiDataMock[0].codepoint];
 		const emojiCodepoints = getEmojiCodepoints(expandedEmojiDataMock);
 		expect(emojiCodepoints).to.deep.equal(expected);
 	});
+
 	it('should extract code points that should appear with an emoji presentation style by default', () => {
 		const expected = [expandedEmojiDataMock[1].codepoint, expandedEmojiDataMock[2].codepoint];
 		const emojiPresentationCodepoints = getEmojiPresentationCodepoints(expandedEmojiDataMock);
 		expect(emojiPresentationCodepoints).to.deep.equal(expected);
 	});
+
 	it('should extract code points that can be used to modify the appearance of a preceding emoji', () => {
 		const expected = [expandedEmojiDataMock[3].codepoint, expandedEmojiDataMock[4].codepoint];
 		const emojiModifierCodepoints = getEmojiModifierCodepoints(expandedEmojiDataMock);
 		expect(emojiModifierCodepoints).to.deep.equal(expected);
 	});
+
 	it('should extract code points whose appearance can be modified by a subsequent emoji modifier', () => {
 		const expected = [expandedEmojiDataMock[5].codepoint];
 		const emojiModifierBaseCodepoints = getEmojiModifierBaseCodepoints(expandedEmojiDataMock);
 		expect(emojiModifierBaseCodepoints).to.deep.equal(expected);
 	});
+
 	it('should derive a short name from a given modifier name', () => {
 		expect(getMetaForModifierName('NOT A MODIFIER')).to.equal(null);
 		expect(getMetaForModifierName('EMOJI MODIFIER FITZPATRICK TYPE-1-2')).to.deep.equal({
@@ -141,6 +147,7 @@ describe('emoji-data', () => {
 			nameExt: 'EMOJI MODIFIER FITZPATRICK TYPE-3',
 		});
 	});
+
 	it('should map each modifiable (base) code point to a precompiled modifier sequence', () => {
 		const emojiModifierBaseCodepointsMock = ['261D'];
 		const emojiModifierCodepointsMock = ['1F3FB', '1F3FC'];
@@ -169,6 +176,7 @@ describe('emoji-data', () => {
 		);
 		expect(modifierSequencesForModifiableCodepoint).to.deep.equal(expected);
 	});
+
 	it('should generate an API', (done) => {
 		fetchMock.get('*', `
 			0023          ; Emoji                # 1.1  [1] (#)       NUMBER SIGN

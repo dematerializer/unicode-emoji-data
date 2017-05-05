@@ -98,9 +98,11 @@ describe('emoji-zwj-sequences', () => {
 	it('should use a reasonable default url', () => {
 		expect(defaultUrl).to.equal('http://www.unicode.org/Public/emoji/5.0/emoji-zwj-sequences.txt');
 	});
+
 	it('should use correct zero width joiner', () => {
 		expect(zeroWidthJoiner).to.equal('200D');
 	});
+
 	it('should build additional emoji entries from zero width joiner sequences', () => {
 		const data = [
 			{ sequence: '1F468 200D 1F680', type: 'Emoji_ZWJ_Sequence', description: 'man astronaut' },
@@ -113,6 +115,7 @@ describe('emoji-zwj-sequences', () => {
 		const zwjEmoji = buildZwjEmoji(data, getNameForCodepointMock, getMetaForModifierNameMock);
 		expect(zwjEmoji).to.deep.equal(expectedZwjEmoji);
 	});
+
 	it('should generate an API', (done) => {
 		fetchMock.get('*', `
 			1F468 200D 1F680                            ; Emoji_ZWJ_Sequence  ; man astronaut                                                  # 6.0  [1] (👨‍🚀)

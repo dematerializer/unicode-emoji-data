@@ -11,10 +11,12 @@ describe('variation-sequences', () => {
 	it('should use a reasonable default url', () => {
 		expect(defaultUrl).to.equal('http://www.unicode.org/Public/emoji/5.0/emoji-variation-sequences.txt');
 	});
+
 	it('should use correct variation selectors', () => {
 		expect(variationSelectors.text).to.equal('FE0E');
 		expect(variationSelectors.emoji).to.equal('FE0F');
 	});
+
 	it('should map variation sequences grouped by style to each code point that supports both text and emoji styles', () => {
 		const data = [
 			{ sequence: '0023 FE0E', description: 'text style', comment: 'NUMBER SIGN' },
@@ -38,6 +40,7 @@ describe('variation-sequences', () => {
 		expect(variationSequencesForCodepoint['0023']).to.deep.equal(expected['0023']);
 		expect(variationSequencesForCodepoint['002A']).to.deep.equal(expected['002A']);
 	});
+
 	it('should generate an API', (done) => {
 		const mockedContent = `
 			0023 FE0E; text style;  # NUMBER SIGN

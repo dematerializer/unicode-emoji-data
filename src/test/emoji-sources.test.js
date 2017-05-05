@@ -10,6 +10,7 @@ describe('emoji-sources', () => {
 	it('should use a reasonable default url', () => {
 		expect(defaultUrl).to.equal('http://www.unicode.org/Public/10.0.0/ucd/EmojiSources-10.0.0d1.txt');
 	});
+
 	it('should map each unicode code point or sequence to one or more Shift-JIS codes for cell phone carrier symbols', () => {
 		const data = [
 			{ unicode: '00AE', docomo: 'F9DB', kddi: 'F775', softbank: 'F7EF' },
@@ -31,6 +32,7 @@ describe('emoji-sources', () => {
 		const shiftJisCodesForCodepoint = buildShiftJisCodesForCodepoint(data);
 		expect(shiftJisCodesForCodepoint).to.deep.equal(expected);
 	});
+
 	it('should generate an API', (done) => {
 		fetchMock.get('*', `
 			00AE;F9DB;F775;F7EF

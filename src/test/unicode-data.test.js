@@ -10,6 +10,7 @@ describe('unicode-data', () => {
 	it('should use a reasonable default url', () => {
 		expect(defaultUrl).to.equal('http://www.unicode.org/Public/10.0.0/ucd/UnicodeData-10.0.0d5.txt');
 	});
+
 	it('should transform data to map each code point to a name', () => {
 		const data = [
 			{ codepoint: '1F600', name: 'GRINNING FACE', comment: 'foo' },
@@ -22,6 +23,7 @@ describe('unicode-data', () => {
 		const nameForCodepoint = buildNameForCodepoint(data);
 		expect(nameForCodepoint).to.deep.equal(expected);
 	});
+
 	it('should generate an API', (done) => {
 		fetchMock.get('*', '1F4A9;PILE OF POO;So;0;ON;;;;;N;;;;;');
 		const step = buildUnicodeData({});

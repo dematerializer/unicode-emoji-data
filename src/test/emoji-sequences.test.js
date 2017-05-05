@@ -125,6 +125,7 @@ describe('emoji-sequences', () => {
 	it('should use a reasonable default url', () => {
 		expect(defaultUrl).to.equal('http://www.unicode.org/Public/emoji/5.0/emoji-sequences.txt');
 	});
+
 	it('should provide proper meta data for combining marks', () => {
 		expect(combiningMarks).to.have.all.keys('20E3', '20E0');
 		expect(combiningMarks['20E3']).to.have.all.keys('propKey', 'getCombinedName');
@@ -134,6 +135,7 @@ describe('emoji-sequences', () => {
 		expect(combiningMarks['20E3'].getCombinedName('NUMBER SIGN')).to.equal('KEYCAP NUMBER SIGN');
 		expect(combiningMarks['20E0']).to.deep.equal({});
 	});
+
 	it('should build a map of compatible code points for each combining mark while associating with them their transformed/combined name', () => {
 		const data = [
 			{ sequence: '0023 FE0F 20E3', type: 'Emoji_Keycap_Sequence' },
@@ -153,6 +155,7 @@ describe('emoji-sequences', () => {
 		const compatibleCodepointsForCombiningMark5 = buildCompatibleCodepointsForCombiningMark(data, getNameForCodepointMock);
 		expect(compatibleCodepointsForCombiningMark5).to.deep.equal(compatibleCodepointsForCombiningMarkMock);
 	});
+
 	it('should generate a data structure describing combinations for a given code point', () => {
 		expect(combinationsForCodepoint('0023', compatibleCodepointsForCombiningMarkMock, getVariationSequencesForCodepointMock))
 		.to.deep.equal({
@@ -182,6 +185,7 @@ describe('emoji-sequences', () => {
 			},
 		});
 	});
+
 	it('should build additional flag emoji', () => {
 		const data = [
 			{ sequence: '1F1E6 1F1E8', type: 'Emoji_Flag_Sequence' },
@@ -191,6 +195,7 @@ describe('emoji-sequences', () => {
 		const flagEmoji = buildFlagEmoji(data, getNameForCodepointMock);
 		expect(flagEmoji).to.deep.equal(expectedFlagEmoji);
 	});
+
 	it('should build additional subregional flag emoji', () => {
 		const data = [
 			{ sequence: '1F3F4 E0067 E0062 E0065 E006E E0067 E007F', type: 'Emoji_Tag_Sequence' },
@@ -200,6 +205,7 @@ describe('emoji-sequences', () => {
 		const tagEmoji = buildSubregionalFlagEmoji(data, getNameForCodepointMock);
 		expect(tagEmoji).to.deep.equal(expectedSubregionalFlagEmoji);
 	});
+
 	it('should generate an API', (done) => {
 		fetchMock.get('*', `
 			1F1E6 1F1E8   ; Emoji_Flag_Sequence       # 6.0  [1] (🇦🇨)      Flag for Ascension Island
