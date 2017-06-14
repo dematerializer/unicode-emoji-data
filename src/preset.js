@@ -9,5 +9,6 @@ module.exports = {
 	emojiDataUrl: 'http://unicode.org/Public/emoji/4.0/emoji-data.txt',
 	emojiZwjSequencesUrl: 'http://unicode.org/Public/emoji/4.0/emoji-zwj-sequences.txt',
 	emojiListUrl: 'http://unicode.org/emoji/charts/emoji-list.html',
+	emojiOrderingUrl: 'http://unicode.org/emoji/charts/emoji-ordering.txt',
 	localEmojiListUrl: './unicode/emoji-list.html',
 };

@@ -67,6 +67,7 @@ const expectedFlagEmoji = [
 		presentation: {
 			default: '1F1E6 1F1E8',
 		},
+		unicodeVersion: 6,
 	},
 	{
 		name: 'REGIONAL INDICATOR SYMBOL LETTER A, REGIONAL INDICATOR SYMBOL LETTER D',
@@ -74,6 +75,7 @@ const expectedFlagEmoji = [
 		presentation: {
 			default: '1F1E6 1F1E9',
 		},
+		unicodeVersion: 6,
 	},
 	{
 		name: 'REGIONAL INDICATOR SYMBOL LETTER A, REGIONAL INDICATOR SYMBOL LETTER E',
@@ -81,6 +83,7 @@ const expectedFlagEmoji = [
 		presentation: {
 			default: '1F1E6 1F1EA',
 		},
+		unicodeVersion: 6,
 	},
 ];
 
@@ -164,9 +167,9 @@ describe('emoji-sequences', () => {
 	});
 	it('should build additional flag emoji', () => {
 		const data = [
-			{ sequence: '1F1E6 1F1E8', type: 'Emoji_Flag_Sequence' },
-			{ sequence: '1F1E6 1F1E9', type: 'Emoji_Flag_Sequence' },
-			{ sequence: '1F1E6 1F1EA', type: 'Emoji_Flag_Sequence' },
+			{ sequence: '1F1E6 1F1E8', type: 'Emoji_Flag_Sequence', comment: '6.0' },
+			{ sequence: '1F1E6 1F1E9', type: 'Emoji_Flag_Sequence', comment: '6.0' },
+			{ sequence: '1F1E6 1F1EA', type: 'Emoji_Flag_Sequence', comment: '6.0' },
 		];
 		const flagEmoji = buildFlagEmoji(data, getNameForCodepointMock);
 		expect(flagEmoji).to.deep.equal(expectedFlagEmoji);

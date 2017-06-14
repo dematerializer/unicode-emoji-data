@@ -1,5 +1,5 @@
 import 'isomorphic-fetch';
-import parse from './parse';
+import parse, { parseUnicodeVersion } from './parse';
 
 // emoji-zwj-sequences.txt provides Zero-Width-Joiner sequences.
 const defaultUrl = 'http://unicode.org/Public/emoji/4.0/emoji-zwj-sequences.txt';
@@ -79,6 +79,7 @@ function buildZwjEmoji(data, getNameForCodepoint, getMetaForModifierName) {
 			presentation: {
 				default: datum.sequence,
 			},
+			unicodeVersion: parseUnicodeVersion(datum.comment),
 		};
 	});
 	data.filter(datum =>
@@ -102,6 +103,7 @@ function buildZwjEmoji(data, getNameForCodepoint, getMetaForModifierName) {
 				presentation: {
 					default: datum.sequence,
 				},
+				unicodeVersion: parseUnicodeVersion(datum.comment),
 			};
 		} // else no parent datum found for datum.sequence
 	});

@@ -75,14 +75,12 @@ function* buildForPreset(preset) {
 	// Render emoji data file containing compact, nested emoji data:
 
 	logUpdate('⇣ write data file');
-
 	const combined = [
 		...emojiData.emoji,
 		...emojiSequences.flagEmoji,
 		...emojiZwjSequences.zwjEmoji,
 	];
 	fs.writeFileSync('res/emoji-data.json', JSON.stringify(combined, null, 2));
-
 	logUpdate('✓ write data file');
 	logUpdate.done();
 

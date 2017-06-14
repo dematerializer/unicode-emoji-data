@@ -13,12 +13,12 @@ const {
 } = internals;
 
 const expandedEmojiDataMock = [
-	{ codepoint: '2139', property: 'Emoji' },
-	{ codepoint: '231A', property: 'Emoji_Presentation' },
-	{ codepoint: '231B', property: 'Emoji_Presentation' },
-	{ codepoint: '1F3FB', property: 'Emoji_Modifier' },
-	{ codepoint: '1F3FC', property: 'Emoji_Modifier' },
-	{ codepoint: '261D', property: 'Emoji_Modifier_Base' },
+	{ codepoint: '2139', property: 'Emoji', comment: '8.0' },
+	{ codepoint: '231A', property: 'Emoji_Presentation', comment: '8.0' },
+	{ codepoint: '231B', property: 'Emoji_Presentation', comment: '8.0' },
+	{ codepoint: '1F3FB', property: 'Emoji_Modifier', comment: '8.0' },
+	{ codepoint: '1F3FC', property: 'Emoji_Modifier', comment: '8.0' },
+	{ codepoint: '261D', property: 'Emoji_Modifier_Base', comment: '8.0' },
 ];
 
 const getNameForCodepointMock = (codepoint) => {
@@ -102,10 +102,10 @@ describe('emoji-data', () => {
 	});
 	it('should expand emoji data', () => {
 		const data = [
-			{ codepoints: '2139', property: 'Emoji' },
-			{ codepoints: '231A..231B', property: 'Emoji_Presentation' },
-			{ codepoints: '1F3FB..1F3FC', property: 'Emoji_Modifier' },
-			{ codepoints: '261D', property: 'Emoji_Modifier_Base' },
+			{ codepoints: '2139', property: 'Emoji', comment: '8.0' },
+			{ codepoints: '231A..231B', property: 'Emoji_Presentation', comment: '8.0' },
+			{ codepoints: '1F3FB..1F3FC', property: 'Emoji_Modifier', comment: '8.0' },
+			{ codepoints: '261D', property: 'Emoji_Modifier_Base', comment: '8.0' },
 		];
 		const expandedEmojiData = expandEmojiData(data);
 		expect(expandedEmojiData).to.deep.equal(expandedEmojiDataMock);
@@ -178,8 +178,8 @@ describe('emoji-data', () => {
 			1F3FB..1F3FC  ; Emoji_Modifier       # 8.0  [2] (🏻...🏿)    EMOJI MODIFIER FITZPATRICK TYPE-1-2..EMOJI MODIFIER FITZPATRICK TYPE-3
 			261D          ; Emoji                # 1.1  [1] (☝)       WHITE UP POINTING INDEX
 			261D          ; Emoji_Modifier_Base  # 1.1  [1] (☝)       WHITE UP POINTING INDEX
-			1F4A9         ; Emoji                # whatever
-			1F4A9         ; Emoji_Presentation   # whatever
+			1F4A9         ; Emoji                # 1.1 whatever
+			1F4A9         ; Emoji_Presentation   # 1.1 whatever
 		`);
 		const step = buildEmojiData({
 			getNameForCodepoint: getNameForCodepointMock,
@@ -222,6 +222,7 @@ describe('emoji-data', () => {
 						},
 					},
 					modification: undefined,
+					unicodeVersion: 1.1,
 				},
 				{
 					name: 'INFORMATION SOURCE',
@@ -239,6 +240,7 @@ describe('emoji-data', () => {
 					},
 					combination: undefined,
 					modification: undefined,
+					unicodeVersion: 3,
 				},
 				{
 					name: 'WATCH',
@@ -257,6 +259,7 @@ describe('emoji-data', () => {
 					},
 					combination: undefined,
 					modification: undefined,
+					unicodeVersion: 1.1,
 				},
 				{
 					name: 'HOURGLASS',
@@ -274,6 +277,7 @@ describe('emoji-data', () => {
 					},
 					combination: undefined,
 					modification: undefined,
+					unicodeVersion: 1.1,
 				},
 				{
 					name: 'WHITE UP POINTING INDEX',
@@ -309,6 +313,7 @@ describe('emoji-data', () => {
 							},
 						},
 					},
+					unicodeVersion: 1.1,
 				},
 				{
 					name: 'PILE OF POO',
@@ -324,6 +329,7 @@ describe('emoji-data', () => {
 					},
 					combination: undefined,
 					modification: undefined,
+					unicodeVersion: 1.1,
 				},
 			]);
 			done();

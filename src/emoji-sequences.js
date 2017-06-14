@@ -1,5 +1,5 @@
 import 'isomorphic-fetch';
-import parse from './parse';
+import parse, { parseUnicodeVersion } from './parse';
 
 // emoji-sequences.txt provides combining, flag and modifier sequences.
 // We use this only to get combining and flag sequences.
@@ -128,6 +128,7 @@ function buildFlagEmoji(data, getNameForCodepoint) {
 		presentation: {
 			default: datum.sequence,
 		},
+		unicodeVersion: parseUnicodeVersion(datum.comment),
 	}));
 }
 
