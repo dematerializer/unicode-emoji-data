@@ -1,8 +1,9 @@
 import 'isomorphic-fetch';
 import parse from './parse';
+import preset from './preset';
 
 // UnicodeData.txt provides code point names.
-const defaultUrl = 'http://unicode.org/Public/9.0.0/ucd/UnicodeData.txt';
+const defaultUrl = preset.unicodeDataUrl;
 
 // Transforms data to map each code point to a name, e.g.
 // {

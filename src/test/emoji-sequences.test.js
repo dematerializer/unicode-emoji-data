@@ -32,6 +32,10 @@ const getNameForCodepointMock = (codepoint) => {
 	return nameForCodepoint[codepoint];
 };
 
+const getEmojiVersionForCodepointMock = () => 4;
+
+const getUnicodeVersionForCodepointMock = () => 8;
+
 const compatibleCodepointsForCombiningMarkMock = {
 	'20E3': {
 		'0023': 'KEYCAP NUMBER SIGN',
@@ -67,7 +71,8 @@ const expectedFlagEmoji = [
 		presentation: {
 			default: '1F1E6 1F1E8',
 		},
-		unicodeVersion: 6,
+		version: 4,
+		unicodeVersion: 8,
 	},
 	{
 		name: 'REGIONAL INDICATOR SYMBOL LETTER A, REGIONAL INDICATOR SYMBOL LETTER D',
@@ -75,7 +80,8 @@ const expectedFlagEmoji = [
 		presentation: {
 			default: '1F1E6 1F1E9',
 		},
-		unicodeVersion: 6,
+		version: 4,
+		unicodeVersion: 8,
 	},
 	{
 		name: 'REGIONAL INDICATOR SYMBOL LETTER A, REGIONAL INDICATOR SYMBOL LETTER E',
@@ -83,13 +89,14 @@ const expectedFlagEmoji = [
 		presentation: {
 			default: '1F1E6 1F1EA',
 		},
-		unicodeVersion: 6,
+		version: 4,
+		unicodeVersion: 8,
 	},
 ];
 
 describe('emoji-sequences', () => {
 	it('should use a reasonable default url', () => {
-		expect(defaultUrl).to.equal('http://unicode.org/Public/emoji/3.0/emoji-sequences.txt');
+		expect(defaultUrl).to.equal('http://unicode.org/Public/emoji/4.0/emoji-sequences.txt');
 	});
 	it('should provide proper meta data for combining marks', () => {
 		expect(combiningMarks).to.have.all.keys('20E3', '20E0');
@@ -171,7 +178,7 @@ describe('emoji-sequences', () => {
 			{ sequence: '1F1E6 1F1E9', type: 'Emoji_Flag_Sequence', comment: '6.0' },
 			{ sequence: '1F1E6 1F1EA', type: 'Emoji_Flag_Sequence', comment: '6.0' },
 		];
-		const flagEmoji = buildFlagEmoji(data, getNameForCodepointMock);
+		const flagEmoji = buildFlagEmoji(data, getNameForCodepointMock, getEmojiVersionForCodepointMock, getUnicodeVersionForCodepointMock);
 		expect(flagEmoji).to.deep.equal(expectedFlagEmoji);
 	});
 	it('should generate an API', (done) => {
@@ -183,6 +190,8 @@ describe('emoji-sequences', () => {
 		const step = buildEmojiSequences({
 			getNameForCodepoint: getNameForCodepointMock,
 			getVariationSequencesForCodepoint: getVariationSequencesForCodepointMock,
+			getEmojiVersionForCodepoint: getEmojiVersionForCodepointMock,
+			getUnicodeVersionForCodepoint: getUnicodeVersionForCodepointMock,
 		});
 		step.next().value.then((content) => { // wait until first yield's promise (mocked fetch) resolves
 			const api = step.next(content).value; // manually hand over mocked content to the left side of yield

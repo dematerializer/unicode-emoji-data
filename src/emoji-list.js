@@ -1,9 +1,10 @@
 import 'isomorphic-fetch';
 import cheerio from 'cheerio';
+import preset from './preset';
 
 // emoji-list.html provides a compiled list of emoji data directly from unicode;
 // we use this list to check our generated data files against for completeness:
-const defaultUrl = 'http://unicode.org/emoji/charts/emoji-list.html';
+const defaultUrl = preset.emojiListUrl;
 
 export const internals = {
 	defaultUrl,

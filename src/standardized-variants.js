@@ -1,5 +1,6 @@
 import 'isomorphic-fetch';
 import parse from './parse';
+import preset from './preset';
 
 // StandardizedVariants.txt provides variation sequences.
 // Some Unicode characters are normally displayed as emoji; some are normally
@@ -10,7 +11,7 @@ import parse from './parse';
 // U+FE0F VARIATION SELECTOR-16 (VS16) for an emoji presentation style
 // Only the specific subset of emoji characters defined in this file can have both emoji and text presentation
 // styles - all others get their presentation style implicitly without the need to append a variation selector.
-const defaultUrl = 'http://unicode.org/Public/9.0.0/ucd/StandardizedVariants.txt';
+const defaultUrl = preset.standardizedVariantsUrl;
 
 // Variation selectors that can modify the appearance of
 // a preceding emoji character in a variation sequence:

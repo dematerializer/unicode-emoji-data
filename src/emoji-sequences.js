@@ -1,9 +1,10 @@
 import 'isomorphic-fetch';
-import parse, { parseUnicodeVersion } from './parse';
+import parse from './parse';
+import preset from './preset';
 
 // emoji-sequences.txt provides combining, flag and modifier sequences.
 // We use this only to get combining and flag sequences.
-const defaultUrl = 'http://unicode.org/Public/emoji/3.0/emoji-sequences.txt';
+const defaultUrl = preset.emojiSequencesUrl;
 
 // Combining marks can modify the appearance of a preceding
 // emoji variation sequence when used in a combining sequence.
@@ -116,7 +117,12 @@ function combinationsForCodepoint(codepoint, compatibleCodepointsForCombiningMar
 // 	}
 // 	...
 // ]
-function buildFlagEmoji(data, getNameForCodepoint) {
+function buildFlagEmoji(
+	data,
+	getNameForCodepoint,
+	getEmojiVersionForCodepoint,
+	getUnicodeVersionForCodepoint,
+) {
 	return data.filter(datum =>
 		datum.type === 'Emoji_Flag_Sequence',
 	)
@@ -128,7 +134,8 @@ function buildFlagEmoji(data, getNameForCodepoint) {
 		presentation: {
 			default: datum.sequence,
 		},
-		unicodeVersion: parseUnicodeVersion(datum.comment),
+		version: getEmojiVersionForCodepoint(datum.sequence),
+		unicodeVersion: getUnicodeVersionForCodepoint(datum.sequence),
 	}));
 }
 
@@ -140,12 +147,19 @@ export const internals = {
 	buildFlagEmoji,
 };
 
-export default function* EmojiSequences({ url = defaultUrl, emojiVersion, getNameForCodepoint, getVariationSequencesForCodepoint }) {
+export default function* EmojiSequences({
+	url = defaultUrl,
+	emojiVersion,
+	getNameForCodepoint,
+	getVariationSequencesForCodepoint,
+	getEmojiVersionForCodepoint,
+	getUnicodeVersionForCodepoint,
+}) {
 	const content = yield fetch(url).then(res => res.text());
 	const data = parse(content, ['sequence', 'type', 'description']);
 	const compatibleCodepointsForCombiningMark = buildCompatibleCodepointsForCombiningMark(emojiVersion, data, getNameForCodepoint);
 	const getCombinationsForCodepoint = codepoint => combinationsForCodepoint(codepoint, compatibleCodepointsForCombiningMark, getVariationSequencesForCodepoint);
-	const flagEmoji = buildFlagEmoji(data, getNameForCodepoint);
+	const flagEmoji = buildFlagEmoji(data, getNameForCodepoint, getEmojiVersionForCodepoint, getUnicodeVersionForCodepoint);
 	return { // API
 		getCombinationsForCodepoint,
 		flagEmoji,

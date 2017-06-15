@@ -35,6 +35,10 @@ const getNameForCodepointMock = (codepoint) => {
 	return nameForCodepoint[codepoint];
 };
 
+const getEmojiVersionForCodepointMock = () => 4;
+
+const getUnicodeVersionForCodepointMock = () => 8;
+
 const getVariationSequencesForCodepointMock = (codepoint) => {
 	const variationSequencesForCodepoint = {
 		'0023': {
@@ -98,7 +102,7 @@ const getShiftJisCodesForCodepointMock = (codepoint) => {
 
 describe('emoji-data', () => {
 	it('should use a reasonable default url', () => {
-		expect(defaultUrl).to.equal('http://unicode.org/Public/emoji/3.0/emoji-data.txt');
+		expect(defaultUrl).to.equal('http://unicode.org/Public/emoji/4.0/emoji-data.txt');
 	});
 	it('should expand emoji data', () => {
 		const data = [
@@ -152,6 +156,8 @@ describe('emoji-data', () => {
 					presentation: {
 						default: '261D 1F3FB',
 					},
+					version: 4,
+					unicodeVersion: 8,
 				},
 				'type-3': {
 					name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-3',
@@ -159,6 +165,8 @@ describe('emoji-data', () => {
 					presentation: {
 						default: '261D 1F3FC',
 					},
+					version: 4,
+					unicodeVersion: 8,
 				},
 			},
 		};
@@ -166,6 +174,8 @@ describe('emoji-data', () => {
 			emojiModifierBaseCodepointsMock,
 			emojiModifierCodepointsMock,
 			getNameForCodepointMock,
+			getEmojiVersionForCodepointMock,
+			getUnicodeVersionForCodepointMock,
 		);
 		expect(modifierSequencesForModifiableCodepoint).to.deep.equal(expected);
 	});
@@ -186,6 +196,8 @@ describe('emoji-data', () => {
 			getVariationSequencesForCodepoint: getVariationSequencesForCodepointMock,
 			getCombinationsForCodepoint: getCombinationsForCodepointMock,
 			getShiftJisCodesForCodepoint: getShiftJisCodesForCodepointMock,
+			getEmojiVersionForCodepoint: getEmojiVersionForCodepointMock,
+			getUnicodeVersionForCodepoint: getUnicodeVersionForCodepointMock,
 		});
 		step.next().value.then((content) => { // wait until first yield's promise (mocked fetch) resolves
 			const api = step.next(content).value; // manually hand over mocked content to the left side of yield
@@ -222,7 +234,8 @@ describe('emoji-data', () => {
 						},
 					},
 					modification: undefined,
-					unicodeVersion: 1.1,
+					version: 4,
+					unicodeVersion: 8,
 				},
 				{
 					name: 'INFORMATION SOURCE',
@@ -240,7 +253,8 @@ describe('emoji-data', () => {
 					},
 					combination: undefined,
 					modification: undefined,
-					unicodeVersion: 3,
+					version: 4,
+					unicodeVersion: 8,
 				},
 				{
 					name: 'WATCH',
@@ -259,7 +273,8 @@ describe('emoji-data', () => {
 					},
 					combination: undefined,
 					modification: undefined,
-					unicodeVersion: 1.1,
+					version: 4,
+					unicodeVersion: 8,
 				},
 				{
 					name: 'HOURGLASS',
@@ -277,7 +292,8 @@ describe('emoji-data', () => {
 					},
 					combination: undefined,
 					modification: undefined,
-					unicodeVersion: 1.1,
+					version: 4,
+					unicodeVersion: 8,
 				},
 				{
 					name: 'WHITE UP POINTING INDEX',
@@ -303,6 +319,8 @@ describe('emoji-data', () => {
 								presentation: {
 									default: '261D 1F3FB',
 								},
+								version: 4,
+								unicodeVersion: 8,
 							},
 							'type-3': {
 								name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-3',
@@ -310,10 +328,13 @@ describe('emoji-data', () => {
 								presentation: {
 									default: '261D 1F3FC',
 								},
+								version: 4,
+								unicodeVersion: 8,
 							},
 						},
 					},
-					unicodeVersion: 1.1,
+					version: 4,
+					unicodeVersion: 8,
 				},
 				{
 					name: 'PILE OF POO',
@@ -329,7 +350,8 @@ describe('emoji-data', () => {
 					},
 					combination: undefined,
 					modification: undefined,
-					unicodeVersion: 1.1,
+					version: 4,
+					unicodeVersion: 8,
 				},
 			]);
 			done();

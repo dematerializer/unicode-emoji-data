@@ -1,9 +1,10 @@
 import 'isomorphic-fetch';
 import parse from './parse';
+import preset from './preset';
 
 // EmojiSources.txt provides mappings between unicode code points and sequences
 // on one hand and Shift-JIS codes for cell phone carrier symbols on the other hand.
-const defaultUrl = 'http://unicode.org/Public/9.0.0/ucd/EmojiSources.txt';
+const defaultUrl = preset.emojiSourcesUrl;
 
 // Build a structure that maps each unicode code point or sequence
 // to one or more Shift-JIS codes for cell phone carrier symbols, e.g.

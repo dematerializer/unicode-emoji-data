@@ -52,8 +52,3 @@ export default function parse(text, fieldNames) {
 			return extDatum;
 		}), { comment: line.comment }));
 }
-
-// Extracts and returns the unicode version from the line comment.
-export function parseUnicodeVersion(comment) {
-	return parseFloat(comment.match(/^([0-9.]+)/)[1]);
-}
