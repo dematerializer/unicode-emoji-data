@@ -19,6 +19,11 @@ const getNameForCodepointMock = (codepoint) => {
 	};
 	return nameForCodepoint[codepoint];
 };
+
+const getEmojiVersionForCodepointMock = () => 4;
+
+const getUnicodeVersionForCodepointMock = () => 8;
+
 const getMetaForModifierNameMock = (modifierName) => {
 	const metaForModifierName = {
 		'EMOJI MODIFIER FITZPATRICK TYPE-1-2': {
@@ -52,6 +57,8 @@ const expectedZwjEmoji = [
 		presentation: {
 			default: '1F468 200D 1F680',
 		},
+		version: 4,
+		unicodeVersion: 8,
 		modification: {
 			skin: {
 				'type-1-2': { // modifier = EMOJI MODIFIER FITZPATRICK TYPE-1-2
@@ -60,6 +67,8 @@ const expectedZwjEmoji = [
 					presentation: {
 						default: '1F468 1F3FB 200D 1F680',
 					},
+					version: 4,
+					unicodeVersion: 8,
 				},
 				'type-3': { // modifier = EMOJI MODIFIER FITZPATRICK TYPE-3
 					name: 'MAN, ROCKET; EMOJI MODIFIER FITZPATRICK TYPE-3',
@@ -67,6 +76,8 @@ const expectedZwjEmoji = [
 					presentation: {
 						default: '1F468 1F3FC 200D 1F680',
 					},
+					version: 4,
+					unicodeVersion: 8,
 				},
 				'type-4': { // modifier = EMOJI MODIFIER FITZPATRICK TYPE-4
 					name: 'MAN, ROCKET; EMOJI MODIFIER FITZPATRICK TYPE-4',
@@ -74,6 +85,8 @@ const expectedZwjEmoji = [
 					presentation: {
 						default: '1F468 1F3FD 200D 1F680',
 					},
+					version: 4,
+					unicodeVersion: 8,
 				},
 				'type-5': { // modifier = EMOJI MODIFIER FITZPATRICK TYPE-5
 					name: 'MAN, ROCKET; EMOJI MODIFIER FITZPATRICK TYPE-5',
@@ -81,6 +94,8 @@ const expectedZwjEmoji = [
 					presentation: {
 						default: '1F468 1F3FE 200D 1F680',
 					},
+					version: 4,
+					unicodeVersion: 8,
 				},
 				'type-6': { // modifier = EMOJI MODIFIER FITZPATRICK TYPE-6
 					name: 'MAN, ROCKET; EMOJI MODIFIER FITZPATRICK TYPE-6',
@@ -88,6 +103,8 @@ const expectedZwjEmoji = [
 					presentation: {
 						default: '1F468 1F3FF 200D 1F680',
 					},
+					version: 4,
+					unicodeVersion: 8,
 				},
 			},
 		},
@@ -103,14 +120,14 @@ describe('emoji-zwj-sequences', () => {
 	});
 	it('should build additional emoji entries from zero width joiner sequences', () => {
 		const data = [
-			{ sequence: '1F468 200D 1F680', type: 'Emoji_ZWJ_Sequence', description: 'man astronaut' },
-			{ sequence: '1F468 1F3FB 200D 1F680', type: 'Emoji_ZWJ_Sequence', description: 'man astronaut: light skin tone' },
-			{ sequence: '1F468 1F3FC 200D 1F680', type: 'Emoji_ZWJ_Sequence', description: 'man astronaut: medium-light skin tone' },
-			{ sequence: '1F468 1F3FD 200D 1F680', type: 'Emoji_ZWJ_Sequence', description: 'man astronaut: medium skin tone' },
-			{ sequence: '1F468 1F3FE 200D 1F680', type: 'Emoji_ZWJ_Sequence', description: 'man astronaut: medium-dark skin tone' },
-			{ sequence: '1F468 1F3FF 200D 1F680', type: 'Emoji_ZWJ_Sequence', description: 'man astronaut: dark skin tone' },
+			{ sequence: '1F468 200D 1F680', type: 'Emoji_ZWJ_Sequence', description: 'man astronaut', comment: '6.0' },
+			{ sequence: '1F468 1F3FB 200D 1F680', type: 'Emoji_ZWJ_Sequence', description: 'man astronaut: light skin tone', comment: '8.0' },
+			{ sequence: '1F468 1F3FC 200D 1F680', type: 'Emoji_ZWJ_Sequence', description: 'man astronaut: medium-light skin tone', comment: '8.0' },
+			{ sequence: '1F468 1F3FD 200D 1F680', type: 'Emoji_ZWJ_Sequence', description: 'man astronaut: medium skin tone', comment: '8.0' },
+			{ sequence: '1F468 1F3FE 200D 1F680', type: 'Emoji_ZWJ_Sequence', description: 'man astronaut: medium-dark skin tone', comment: '8.0' },
+			{ sequence: '1F468 1F3FF 200D 1F680', type: 'Emoji_ZWJ_Sequence', description: 'man astronaut: dark skin tone', comment: '8.0' },
 		];
-		const zwjEmoji = buildZwjEmoji(data, getNameForCodepointMock, getMetaForModifierNameMock);
+		const zwjEmoji = buildZwjEmoji(data, getNameForCodepointMock, getMetaForModifierNameMock, getEmojiVersionForCodepointMock, getUnicodeVersionForCodepointMock);
 		expect(zwjEmoji).to.deep.equal(expectedZwjEmoji);
 	});
 	it('should generate an API', (done) => {
@@ -125,6 +142,8 @@ describe('emoji-zwj-sequences', () => {
 		const step = buildEmojiZwjSequences({
 			getNameForCodepoint: getNameForCodepointMock,
 			getMetaForModifierName: getMetaForModifierNameMock,
+			getEmojiVersionForCodepoint: getEmojiVersionForCodepointMock,
+			getUnicodeVersionForCodepoint: getUnicodeVersionForCodepointMock,
 		});
 		step.next().value.then((content) => { // wait until first yield's promise (mocked fetch) resolves
 			const api = step.next(content).value; // manually hand over mocked content to the left side of yield

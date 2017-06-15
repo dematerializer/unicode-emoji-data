@@ -1,6 +1,7 @@
 import 'isomorphic-fetch';
 import leftPad from 'left-pad'; // FTW!
 import parse from './parse';
+import preset from './preset';
 
 // emoji-data.txt provides emoji code points.
 // Property "Emoji=Yes" means "emoji character", a character that is recommended for use as emoji
@@ -11,7 +12,7 @@ import parse from './parse';
 //   a character that, by default, should appear with a text presentation style
 // Property "Emoji_Modifier=Yes" — A character that can be used to modify the appearance of a preceding emoji in an emoji modifier sequence
 // property="Emoji_Modifier_Base" - A character whose appearance can be modified by a subsequent emoji modifier in an emoji modifier sequence
-const defaultUrl = 'http://unicode.org/Public/emoji/3.0/emoji-data.txt';
+const defaultUrl = preset.emojiDataUrl;
 
 // Expands code point ranges (e.g. '1F601..1F610') into separate objects
 // [
@@ -37,7 +38,7 @@ const defaultUrl = 'http://unicode.org/Public/emoji/3.0/emoji-data.txt';
 // 	}
 // 	...
 // ]
-function expandEmojiData(data) {
+export function expandEmojiData(data) {
 	return data.reduce((expanded, datum) => {
 		if (datum.codepoints.indexOf('..') > -1) {
 			const codepointRange = datum.codepoints.split('..').map(cp => parseInt(cp, 16));
@@ -47,12 +48,14 @@ function expandEmojiData(data) {
 				expanded.push({
 					codepoint: cpHex,
 					property: datum.property,
+					comment: datum.comment,
 				});
 			}
 		} else {
 			expanded.push({
 				codepoint: datum.codepoints,
 				property: datum.property,
+				comment: datum.comment,
 			});
 		}
 		return expanded;
@@ -157,7 +160,13 @@ function getMetaForModifierName(modName) {
 // 	...
 // }
 
-function buildModifierSequencesForModifiableCodepoint(emojiModifierBase, emojiModifier, getNameForCodepoint) {
+function buildModifierSequencesForModifiableCodepoint(
+	emojiModifierBase,
+	emojiModifier,
+	getNameForCodepoint,
+	getEmojiVersionForCodepoint,
+	getUnicodeVersionForCodepoint,
+) {
 	return emojiModifierBase.reduce((seqForModBaseCp, modBaseCodepoint) => {
 		const nextSeqForModBaseCp = seqForModBaseCp;
 		const modBaseCpName = getNameForCodepoint(modBaseCodepoint);
@@ -165,12 +174,15 @@ function buildModifierSequencesForModifiableCodepoint(emojiModifierBase, emojiMo
 			const extSeqForModName = seqForModName;
 			const modName = getNameForCodepoint(modifierCodepoint);
 			const nameMeta = getMetaForModifierName(modName);
+			const sequence = `${modBaseCodepoint} ${modifierCodepoint}`;
 			extSeqForModName[nameMeta.propKey] = {
 				name: `${modBaseCpName}; ${nameMeta.nameExt}`,
 				defaultPresentation: 'emoji',
 				presentation: {
-					default: `${modBaseCodepoint} ${modifierCodepoint}`,
+					default: sequence,
 				},
+				version: getEmojiVersionForCodepoint(sequence),
+				unicodeVersion: getUnicodeVersionForCodepoint(sequence),
 			};
 			return extSeqForModName;
 		}, {});
@@ -189,7 +201,15 @@ export const internals = {
 	buildModifierSequencesForModifiableCodepoint,
 };
 
-export default function* EmojiData({ url = defaultUrl, getNameForCodepoint, getVariationSequencesForCodepoint, getCombinationsForCodepoint, getShiftJisCodesForCodepoint }) {
+export default function* EmojiData({
+	url = defaultUrl,
+	getNameForCodepoint,
+	getVariationSequencesForCodepoint,
+	getCombinationsForCodepoint,
+	getShiftJisCodesForCodepoint,
+	getEmojiVersionForCodepoint,
+	getUnicodeVersionForCodepoint,
+}) {
 	const content = yield fetch(url).then(res => res.text());
 	const data = parse(content, ['codepoints', 'property']);
 	const expandedEmojiData = expandEmojiData(data);
@@ -197,7 +217,13 @@ export default function* EmojiData({ url = defaultUrl, getNameForCodepoint, getV
 	const emojiPresentationCodepoints = getEmojiPresentationCodepoints(expandedEmojiData);
 	const emojiModifierCodepoints = getEmojiModifierCodepoints(expandedEmojiData);
 	const emojiModifierBaseCodepoints = getEmojiModifierBaseCodepoints(expandedEmojiData);
-	const modifierSequencesForModifiableCodepoint = buildModifierSequencesForModifiableCodepoint(emojiModifierBaseCodepoints, emojiModifierCodepoints, getNameForCodepoint);
+	const modifierSequencesForModifiableCodepoint = buildModifierSequencesForModifiableCodepoint(
+		emojiModifierBaseCodepoints,
+		emojiModifierCodepoints,
+		getNameForCodepoint,
+		getEmojiVersionForCodepoint,
+		getUnicodeVersionForCodepoint,
+	);
 	const enhancedEmojiData = emojiCodepoints.map((cp) => {
 		const isDefaultEmojiPresentation = emojiPresentationCodepoints.some(pCp => pCp === cp);
 		const variationSequences = getVariationSequencesForCodepoint(cp);
@@ -219,6 +245,8 @@ export default function* EmojiData({ url = defaultUrl, getNameForCodepoint, getV
 			},
 			combination: Object.keys(combinations).length > 0 ? combinations : undefined,
 			modification: modifications,
+			version: getEmojiVersionForCodepoint(cp),
+			unicodeVersion: getUnicodeVersionForCodepoint(cp),
 		};
 		// tr51: "incomplete singletons" like single regional
 		// indicators are not used as emoji by themselves:

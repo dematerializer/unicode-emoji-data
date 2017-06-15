@@ -1,8 +1,9 @@
 import 'isomorphic-fetch';
 import parse from './parse';
+import preset from './preset';
 
 // emoji-zwj-sequences.txt provides Zero-Width-Joiner sequences.
-const defaultUrl = 'http://unicode.org/Public/emoji/4.0/emoji-zwj-sequences.txt';
+const defaultUrl = preset.emojiZwjSequencesUrl;
 
 const zeroWidthJoiner = '200D';
 const anyVariationSelector = /FE0E|FE0F/g;
@@ -59,7 +60,13 @@ const anyModifier = /1F3FB|1F3FC|1F3FD|1F3FE|1F3FF/g;
 // 	},
 // 	...
 // ]
-function buildZwjEmoji(data, getNameForCodepoint, getMetaForModifierName) {
+function buildZwjEmoji(
+	data,
+	getNameForCodepoint,
+	getMetaForModifierName,
+	getEmojiVersionForCodepoint,
+	getUnicodeVersionForCodepoint,
+) {
 	const zwjEmoji = data.filter(datum =>
 		datum.sequence.match(anyModifier) == null,
 	)
@@ -67,10 +74,7 @@ function buildZwjEmoji(data, getNameForCodepoint, getMetaForModifierName) {
 		const joinedName = datum.sequence
 			.replace(anyVariationSelector, '')
 			.split(zeroWidthJoiner)
-			.map((codepoint) => {
-				const [cp] = codepoint.trim().split(' ');
-				return getNameForCodepoint(cp);
-			})
+			.map(codepoint => getNameForCodepoint(codepoint.trim().split(' ')[0]))
 			.join(', ');
 		return {
 			// no codepoint prop here because it's technically just a combination of other codepoints
@@ -79,6 +83,8 @@ function buildZwjEmoji(data, getNameForCodepoint, getMetaForModifierName) {
 			presentation: {
 				default: datum.sequence,
 			},
+			version: getEmojiVersionForCodepoint(datum.sequence),
+			unicodeVersion: getUnicodeVersionForCodepoint(datum.sequence),
 		};
 	});
 	data.filter(datum =>
@@ -102,6 +108,8 @@ function buildZwjEmoji(data, getNameForCodepoint, getMetaForModifierName) {
 				presentation: {
 					default: datum.sequence,
 				},
+				version: getEmojiVersionForCodepoint(datum.sequence),
+				unicodeVersion: getUnicodeVersionForCodepoint(datum.sequence),
 			};
 		} // else no parent datum found for datum.sequence
 	});
@@ -114,10 +122,22 @@ export const internals = {
 	buildZwjEmoji,
 };
 
-export default function* EmojiZwjSequences({ url = defaultUrl, getNameForCodepoint, getMetaForModifierName }) {
+export default function* EmojiZwjSequences({
+	url = defaultUrl,
+	getNameForCodepoint,
+	getMetaForModifierName,
+	getEmojiVersionForCodepoint,
+	getUnicodeVersionForCodepoint,
+}) {
 	const content = yield fetch(url).then(res => res.text());
 	const data = parse(content, ['sequence', 'type', 'description']);
-	const zwjEmoji = buildZwjEmoji(data, getNameForCodepoint, getMetaForModifierName);
+	const zwjEmoji = buildZwjEmoji(
+		data,
+		getNameForCodepoint,
+		getMetaForModifierName,
+		getEmojiVersionForCodepoint,
+		getUnicodeVersionForCodepoint,
+	);
 	return { // API
 		zeroWidthJoiner,
 		zwjEmoji,

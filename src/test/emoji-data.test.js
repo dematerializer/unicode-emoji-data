@@ -13,12 +13,12 @@ const {
 } = internals;
 
 const expandedEmojiDataMock = [
-	{ codepoint: '2139', property: 'Emoji' },
-	{ codepoint: '231A', property: 'Emoji_Presentation' },
-	{ codepoint: '231B', property: 'Emoji_Presentation' },
-	{ codepoint: '1F3FB', property: 'Emoji_Modifier' },
-	{ codepoint: '1F3FC', property: 'Emoji_Modifier' },
-	{ codepoint: '261D', property: 'Emoji_Modifier_Base' },
+	{ codepoint: '2139', property: 'Emoji', comment: '8.0' },
+	{ codepoint: '231A', property: 'Emoji_Presentation', comment: '8.0' },
+	{ codepoint: '231B', property: 'Emoji_Presentation', comment: '8.0' },
+	{ codepoint: '1F3FB', property: 'Emoji_Modifier', comment: '8.0' },
+	{ codepoint: '1F3FC', property: 'Emoji_Modifier', comment: '8.0' },
+	{ codepoint: '261D', property: 'Emoji_Modifier_Base', comment: '8.0' },
 ];
 
 const getNameForCodepointMock = (codepoint) => {
@@ -34,6 +34,10 @@ const getNameForCodepointMock = (codepoint) => {
 	};
 	return nameForCodepoint[codepoint];
 };
+
+const getEmojiVersionForCodepointMock = () => 4;
+
+const getUnicodeVersionForCodepointMock = () => 8;
 
 const getVariationSequencesForCodepointMock = (codepoint) => {
 	const variationSequencesForCodepoint = {
@@ -98,14 +102,14 @@ const getShiftJisCodesForCodepointMock = (codepoint) => {
 
 describe('emoji-data', () => {
 	it('should use a reasonable default url', () => {
-		expect(defaultUrl).to.equal('http://unicode.org/Public/emoji/3.0/emoji-data.txt');
+		expect(defaultUrl).to.equal('http://unicode.org/Public/emoji/4.0/emoji-data.txt');
 	});
 	it('should expand emoji data', () => {
 		const data = [
-			{ codepoints: '2139', property: 'Emoji' },
-			{ codepoints: '231A..231B', property: 'Emoji_Presentation' },
-			{ codepoints: '1F3FB..1F3FC', property: 'Emoji_Modifier' },
-			{ codepoints: '261D', property: 'Emoji_Modifier_Base' },
+			{ codepoints: '2139', property: 'Emoji', comment: '8.0' },
+			{ codepoints: '231A..231B', property: 'Emoji_Presentation', comment: '8.0' },
+			{ codepoints: '1F3FB..1F3FC', property: 'Emoji_Modifier', comment: '8.0' },
+			{ codepoints: '261D', property: 'Emoji_Modifier_Base', comment: '8.0' },
 		];
 		const expandedEmojiData = expandEmojiData(data);
 		expect(expandedEmojiData).to.deep.equal(expandedEmojiDataMock);
@@ -152,6 +156,8 @@ describe('emoji-data', () => {
 					presentation: {
 						default: '261D 1F3FB',
 					},
+					version: 4,
+					unicodeVersion: 8,
 				},
 				'type-3': {
 					name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-3',
@@ -159,6 +165,8 @@ describe('emoji-data', () => {
 					presentation: {
 						default: '261D 1F3FC',
 					},
+					version: 4,
+					unicodeVersion: 8,
 				},
 			},
 		};
@@ -166,6 +174,8 @@ describe('emoji-data', () => {
 			emojiModifierBaseCodepointsMock,
 			emojiModifierCodepointsMock,
 			getNameForCodepointMock,
+			getEmojiVersionForCodepointMock,
+			getUnicodeVersionForCodepointMock,
 		);
 		expect(modifierSequencesForModifiableCodepoint).to.deep.equal(expected);
 	});
@@ -178,14 +188,16 @@ describe('emoji-data', () => {
 			1F3FB..1F3FC  ; Emoji_Modifier       # 8.0  [2] (🏻...🏿)    EMOJI MODIFIER FITZPATRICK TYPE-1-2..EMOJI MODIFIER FITZPATRICK TYPE-3
 			261D          ; Emoji                # 1.1  [1] (☝)       WHITE UP POINTING INDEX
 			261D          ; Emoji_Modifier_Base  # 1.1  [1] (☝)       WHITE UP POINTING INDEX
-			1F4A9         ; Emoji                # whatever
-			1F4A9         ; Emoji_Presentation   # whatever
+			1F4A9         ; Emoji                # 1.1 whatever
+			1F4A9         ; Emoji_Presentation   # 1.1 whatever
 		`);
 		const step = buildEmojiData({
 			getNameForCodepoint: getNameForCodepointMock,
 			getVariationSequencesForCodepoint: getVariationSequencesForCodepointMock,
 			getCombinationsForCodepoint: getCombinationsForCodepointMock,
 			getShiftJisCodesForCodepoint: getShiftJisCodesForCodepointMock,
+			getEmojiVersionForCodepoint: getEmojiVersionForCodepointMock,
+			getUnicodeVersionForCodepoint: getUnicodeVersionForCodepointMock,
 		});
 		step.next().value.then((content) => { // wait until first yield's promise (mocked fetch) resolves
 			const api = step.next(content).value; // manually hand over mocked content to the left side of yield
@@ -222,6 +234,8 @@ describe('emoji-data', () => {
 						},
 					},
 					modification: undefined,
+					version: 4,
+					unicodeVersion: 8,
 				},
 				{
 					name: 'INFORMATION SOURCE',
@@ -239,6 +253,8 @@ describe('emoji-data', () => {
 					},
 					combination: undefined,
 					modification: undefined,
+					version: 4,
+					unicodeVersion: 8,
 				},
 				{
 					name: 'WATCH',
@@ -257,6 +273,8 @@ describe('emoji-data', () => {
 					},
 					combination: undefined,
 					modification: undefined,
+					version: 4,
+					unicodeVersion: 8,
 				},
 				{
 					name: 'HOURGLASS',
@@ -274,6 +292,8 @@ describe('emoji-data', () => {
 					},
 					combination: undefined,
 					modification: undefined,
+					version: 4,
+					unicodeVersion: 8,
 				},
 				{
 					name: 'WHITE UP POINTING INDEX',
@@ -299,6 +319,8 @@ describe('emoji-data', () => {
 								presentation: {
 									default: '261D 1F3FB',
 								},
+								version: 4,
+								unicodeVersion: 8,
 							},
 							'type-3': {
 								name: 'WHITE UP POINTING INDEX; EMOJI MODIFIER FITZPATRICK TYPE-3',
@@ -306,9 +328,13 @@ describe('emoji-data', () => {
 								presentation: {
 									default: '261D 1F3FC',
 								},
+								version: 4,
+								unicodeVersion: 8,
 							},
 						},
 					},
+					version: 4,
+					unicodeVersion: 8,
 				},
 				{
 					name: 'PILE OF POO',
@@ -324,6 +350,8 @@ describe('emoji-data', () => {
 					},
 					combination: undefined,
 					modification: undefined,
+					version: 4,
+					unicodeVersion: 8,
 				},
 			]);
 			done();

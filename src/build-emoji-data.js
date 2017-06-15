@@ -1,8 +1,8 @@
 import co from 'co';
 import fs from 'fs';
 import logUpdate from 'log-update';
-
 import buildUnicodeData from './unicode-data';
+import buildEmojiVersions from './emoji-versions';
 import buildEmojiSources from './emoji-sources';
 import buildStandardizedVariants from './standardized-variants';
 import buildEmojiSequences from './emoji-sequences';
@@ -11,7 +11,6 @@ import buildEmojiZwjSequences from './emoji-zwj-sequences';
 import expandEmojiData from './expand-emoji-data';
 import { scrapeSequencesFromEmojiList } from './emoji-list';
 import checkData from './check-data';
-
 import mainPreset from './preset';
 
 process.on('uncaughtException', (err) => { throw err; });
@@ -26,6 +25,11 @@ function* buildForPreset(preset) {
 		url: preset.unicodeDataUrl,
 	});
 	logUpdate('✓ unicode-data');
+	logUpdate.done();
+
+	logUpdate('⇣ emoji-versions');
+	const emojiVersions = yield buildEmojiVersions();
+	logUpdate('✓ emoji-versions');
 	logUpdate.done();
 
 	logUpdate('⇣ emoji-sources');
@@ -48,6 +52,8 @@ function* buildForPreset(preset) {
 		url: preset.emojiSequencesUrl,
 		getNameForCodepoint: unicodeData.getNameForCodepoint,
 		getVariationSequencesForCodepoint: standardizedVariants.getVariationSequencesForCodepoint,
+		getEmojiVersionForCodepoint: emojiVersions.getEmojiVersionForCodepoint,
+		getUnicodeVersionForCodepoint: emojiVersions.getUnicodeVersionForCodepoint,
 	});
 	logUpdate('✓ emoji-sequences');
 	logUpdate.done();
@@ -59,6 +65,8 @@ function* buildForPreset(preset) {
 		getVariationSequencesForCodepoint: standardizedVariants.getVariationSequencesForCodepoint,
 		getCombinationsForCodepoint: emojiSequences.getCombinationsForCodepoint,
 		getShiftJisCodesForCodepoint: emojiSources.getShiftJisCodesForCodepoint,
+		getEmojiVersionForCodepoint: emojiVersions.getEmojiVersionForCodepoint,
+		getUnicodeVersionForCodepoint: emojiVersions.getUnicodeVersionForCodepoint,
 	});
 	logUpdate('✓ emoji-data');
 	logUpdate.done();
@@ -68,6 +76,8 @@ function* buildForPreset(preset) {
 		url: preset.emojiZwjSequencesUrl,
 		getNameForCodepoint: unicodeData.getNameForCodepoint,
 		getMetaForModifierName: emojiData.getMetaForModifierName,
+		getEmojiVersionForCodepoint: emojiVersions.getEmojiVersionForCodepoint,
+		getUnicodeVersionForCodepoint: emojiVersions.getUnicodeVersionForCodepoint,
 	});
 	logUpdate('✓ emoji-zwj-sequences');
 	logUpdate.done();
@@ -75,14 +85,12 @@ function* buildForPreset(preset) {
 	// Render emoji data file containing compact, nested emoji data:
 
 	logUpdate('⇣ write data file');
-
 	const combined = [
 		...emojiData.emoji,
 		...emojiSequences.flagEmoji,
 		...emojiZwjSequences.zwjEmoji,
 	];
 	fs.writeFileSync('res/emoji-data.json', JSON.stringify(combined, null, 2));
-
 	logUpdate('✓ write data file');
 	logUpdate.done();
 

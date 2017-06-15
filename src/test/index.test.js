@@ -9,6 +9,8 @@ describe('unicode-emoji-data', () => {
 		expect(unicodeEmojiData).to.have.all.keys(
 			'expandEmojiData',
 			'emojiData',
+			'emojiVersionReleaseDates',
+			'unicodeVersionReleaseDates',
 		);
 	});
 
